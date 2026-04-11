@@ -15,7 +15,7 @@
 | 煩 | faan4 | troubled, annoyed | phiền não |
 | 悶悶不樂 | mun6 mun6 bat1 lok6 | depressed, unhappy | buồn rầu, không vui |
 | 壓力 | aat3 lik6 | pressure, stress | áp lực |
-| 拿捏分寸 | naa1 le4 fan1 cyun3 | to judge the appropriate limits | biết chừng mực |
+| 拿捏分寸 | naa4 nip6 fan1 cyun3 | to judge the appropriate limits | biết chừng mực |
 | 針對 | zam1 deoi3 | to target, aim at | nhắm vào, chỉ trích |
 | 困擾 | kwan3 jiu2 | troubled, perplexed | bối rối, phiền phức |
 | 溝通 | kau3 tung1 | communication | giao tiếp |
@@ -69,7 +69,7 @@
 
 **B：** 係啊，最近同啲同事相處嗰陣，間中都會覺得有啲壓力，都唔係好知道點樣先可以拿捏好分寸，驚講多錯多。
 
-> hai6 aa3, zeoi3 gan6 tung4 di1 tung4 si6 soeng1 cyu2 go2 zan6, gaan3 zung1 dou1 wui5 gok3 dak1 jau5 di1 aat3 lik6, dou1 m4 hai6 hou2 zi1 dou3 dim2 joeng2 sin1 ho2 ji5 naa1 le4 fan1 cyun3, geng1 gong2 do1 co3 do1.
+> hai6 aa3, zeoi3 gan6 tung4 di1 tung4 si6 soeng1 cyu2 go2 zan6, gaan3 zung1 dou1 wui5 gok3 dak1 jau5 di1 aat3 lik6, dou1 m4 hai6 hou2 zi1 dou3 dim2 joeng2 sin1 ho2 ji5 naa4 nip6 fan1 cyun3, geng1 gong2 do1 co3 do1.
 >
 > *Yes, recently when getting along with colleagues, I sometimes feel some pressure. I don't really know how to judge the appropriate limits — afraid that the more I speak, the more mistakes I'll make.*
 
@@ -179,7 +179,7 @@ Expresses how to achieve something.
 
 > **Pattern:** 點樣 + 先可以 + verb
 >
-> **Example:** 唔係好知道**點樣先可以**拿捏好分寸 (m4 hai6 hou2 zi1 dou3 **dim2 joeng2 sin1 ho2 ji5** naa1 le4 fan1 cyun3) — don't really know how to judge the appropriate limits
+> **Example:** 唔係好知道**點樣先可以**拿捏好分寸 (m4 hai6 hou2 zi1 dou3 **dim2 joeng2 sin1 ho2 ji5** naa4 nip6 fan1 cyun3) — don't really know how to judge the appropriate limits
 
 ### 4. 驚... (afraid that...)
 

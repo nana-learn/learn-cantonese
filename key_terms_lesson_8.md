@@ -194,50 +194,50 @@
 
 ---
 
-## 5. 拿捏分寸 (naa1 le4 fan1 cyun3) — to judge the appropriate limits
+## 5. 拿捏分寸 (naa4 nip6 fan1 cyun3) — to judge the appropriate limits
 
 **Explanation:** Means to know the right degree or limit in speech or action; to handle a situation with proper judgment and tact.
 
 ### Example Sentences
 
-1. 講嘢要識得拿捏分寸 (naa1 le4 fan1 cyun3)，唔好講得太过分。
-> gong2 je5 jiu3 sik1 dak1 naa1 le4 fan1 cyun3, m4 hou2 gong2 dak1 taai3 gwo3 fan6.
+1. 講嘢要識得拿捏分寸 (naa4 nip6 fan1 cyun3)，唔好講得太过分。
+> gong2 je5 jiu3 sik1 dak1 naa4 nip6 fan1 cyun3, m4 hou2 gong2 dak1 taai3 gwo3 fan6.
 > *When speaking, you need to know the appropriate limits; don't go too far.*
 
-2. 佢好識得拿捏分寸 (naa1 le4 fan1 cyun3)，所以大家都鍾意同佢相處。
-> keoi5 hou2 sik1 dak1 naa1 le4 fan1 cyun3, so2 ji5 daai6 gaa1 dou1 zung1 ji3 tung4 keoi5 soeng1 cyu2.
+2. 佢好識得拿捏分寸 (naa4 nip6 fan1 cyun3)，所以大家都鍾意同佢相處。
+> keoi5 hou2 sik1 dak1 naa4 nip6 fan1 cyun3, so2 ji5 daai6 gaa1 dou1 zung1 ji3 tung4 keoi5 soeng1 cyu2.
 > *He is very good at judging appropriate limits, so everyone likes getting along with him.*
 
-3. 喺職場上面，拿捏分寸 (naa1 le4 fan1 cyun3)係一門藝術。
-> hai2 zik1 coeng4 soeng6 min6, naa1 le4 fan1 cyun3 hai6 jat1 mun4 ngai6 seot6.
+3. 喺職場上面，拿捏分寸 (naa4 nip6 fan1 cyun3)係一門藝術。
+> hai2 zik1 coeng4 soeng6 min6, naa4 nip6 fan1 cyun3 hai6 jat1 mun4 ngai6 seot6.
 > *In the workplace, knowing the appropriate limits is an art.*
 
-4. 佢唔識得拿捏分寸 (naa1 le4 fan1 cyun3)，成日得罪人。
-> keoi5 m4 sik1 dak1 naa1 le4 fan1 cyun3, sing4 jat6 dak1 zeoi6 jan4.
+4. 佢唔識得拿捏分寸 (naa4 nip6 fan1 cyun3)，成日得罪人。
+> keoi5 m4 sik1 dak1 naa4 nip6 fan1 cyun3, sing4 jat6 dak1 zeoi6 jan4.
 > *He doesn't know how to judge appropriate limits and offends people all the time.*
 
-5. 同上司講嘢嗰陣要特別留意拿捏分寸 (naa1 le4 fan1 cyun3)。
-> tung4 soeng6 si1 gong2 je5 go2 zan6 jiu3 dak6 bit6 lau4 ji3 naa1 le4 fan1 cyun3.
+5. 同上司講嘢嗰陣要特別留意拿捏分寸 (naa4 nip6 fan1 cyun3)。
+> tung4 soeng6 si1 gong2 je5 go2 zan6 jiu3 dak6 bit6 lau4 ji3 naa4 nip6 fan1 cyun3.
 > *When speaking to your boss, you need to pay special attention to the appropriate limits.*
 
-6. 拿捏分寸 (naa1 le4 fan1 cyun3)唔係一朝一夕可以學識嘅。
-> naa1 le4 fan1 cyun3 m4 hai6 jat1 ziu1 jat1 zik6 ho2 ji5 hok6 sik1 ge3.
+6. 拿捏分寸 (naa4 nip6 fan1 cyun3)唔係一朝一夕可以學識嘅。
+> naa4 nip6 fan1 cyun3 m4 hai6 jat1 ziu1 jat1 zik6 ho2 ji5 hok6 sik1 ge3.
 > *Judging appropriate limits cannot be learned overnight.*
 
-7. 佢處理呢件事嘅時候拿捏分寸 (naa1 le4 fan1 cyun3)拿捏得好好。
-> keoi5 cyu2 lei5 ni1 gin6 si6 ge3 si4 hau6 naa1 le4 fan1 cyun3 naa1 le4 dak1 hou2 hou2.
+7. 佢處理呢件事嘅時候拿捏分寸 (naa4 nip6 fan1 cyun3)拿捏得好好。
+> keoi5 cyu2 lei5 ni1 gin6 si6 ge3 si4 hau6 naa4 nip6 fan1 cyun3 naa4 nip6 dak1 hou2 hou2.
 > *When handling this matter, he judged the limits very well.*
 
-8. 教小朋友嗰陣要識得拿捏分寸 (naa1 le4 fan1 cyun3)，唔好太嚴亦都唔好太鬆。
-> gaau3 siu2 pang4 jau5 go2 zan6 jiu3 sik1 dak1 naa1 le4 fan1 cyun3, m4 hou2 taai6 jim4 jik6 dou1 m4 hou2 taai3 sung1.
+8. 教小朋友嗰陣要識得拿捏分寸 (naa4 nip6 fan1 cyun3)，唔好太嚴亦都唔好太鬆。
+> gaau3 siu2 pang4 jau5 go2 zan6 jiu3 sik1 dak1 naa4 nip6 fan1 cyun3, m4 hou2 taai6 jim4 jik6 dou1 m4 hou2 taai3 sung1.
 > *When teaching children, you need to know the appropriate limits — not too strict and not too lenient.*
 
-9. 佢喺社交場合入面好識得拿捏分寸 (naa1 le4 fan1 cyun3)。
-> keoi5 hai2 se1 gaau1 coeng4 hap6 jap6 min6 hou2 sik1 dak1 naa1 le4 fan1 cyun3.
+9. 佢喺社交場合入面好識得拿捏分寸 (naa4 nip6 fan1 cyun3)。
+> keoi5 hai2 se1 gaau1 coeng4 hap6 jap6 min6 hou2 sik1 dak1 naa4 nip6 fan1 cyun3.
 > *He is very good at judging appropriate limits in social situations.*
 
-10. 學識拿捏分寸 (naa1 le4 fan1 cyun3)先可以喺社會上面立足。
-> hok6 sik1 naa1 le4 fan1 cyun3 sin1 ho2 ji5 hai2 se5 wui6 soeng6 min6 lap6 zuk1.
+10. 學識拿捏分寸 (naa4 nip6 fan1 cyun3)先可以喺社會上面立足。
+> hok6 sik1 naa4 nip6 fan1 cyun3 sin1 ho2 ji5 hai2 se5 wui6 soeng6 min6 lap6 zuk1.
 > *Only by learning to judge appropriate limits can you establish yourself in society.*
 
 ---

@@ -122,14 +122,14 @@ I will go through the dialogue **in chunks** (2-4 lines at a time). For each chu
 > *Recently you seem a bit troubled, your whole person seems a bit unhappy. Have you encountered some kind of problem in interpersonal relationships?*
 
 **B：** 係啊，最近同啲同事相處嗰陣，間中都會覺得有啲壓力，都唔係好知道點樣先可以拿捏好分寸，驚講多錯多。
-> hai6 aa3, zeoi3 gan6 tung4 di1 tung4 si6 soeng1 cyu2 go2 zan6, gaan3 zung1 dou1 wui5 gok3 dak1 jau5 di1 aat3 lik6, dou1 m4 hai6 hou2 zi1 dou3 dim2 joeng2 sin1 ho2 ji5 naa1 le4 fan1 cyun3, geng1 gong2 do1 co3 do1.
+> hai6 aa3, zeoi3 gan6 tung4 di1 tung4 si6 soeng1 cyu2 go2 zan6, gaan3 zung1 dou1 wui5 gok3 dak1 jau5 di1 aat3 lik6, dou1 m4 hai6 hou2 zi1 dou3 dim2 joeng2 sin1 ho2 ji5 naa4 nip6 fan1 cyun3, geng1 gong2 do1 co3 do1.
 > *Yes, recently when getting along with colleagues, I sometimes feel some pressure. I don't really know how to judge the appropriate limits — afraid that the more I speak, the more mistakes I'll make.*
 
 **Key points to explain:**
 - 有啲...咁 (jau5 di1... gam2) — seems a bit...
 - 悶悶不樂 (mun6 mun6 bat1 lok6) — depressed
 - 係咪...啊？ (hai6 mai6... aa3?) — Is it that...?
-- 拿捏分寸 (naa1 le4 fan1 cyun3) — judge appropriate limits
+- 拿捏分寸 (naa4 nip6 fan1 cyun3) — judge appropriate limits
 - 驚講多錯多 (geng1 gong2 do1 co3 do1) — afraid the more you speak, the more mistakes
 
 **Comprehension check:**
@@ -391,7 +391,7 @@ Find and fix the errors.
 
 3. ❌ 佢好識得鑽牛角尖，所以大家都鍾意同佢相處。
 > keoi5 hou2 sik1 dak1 zyun1 ngau5 gok3 zim1, so2 ji5 daai6 gaa1 dou1 zung1 ji3 tung4 keoi5 soeng1 cyu2.
-> ✅ 佢好識得拿捏分寸，所以大家都鍾意同佢相處。(keoi5 hou2 sik1 dak1 naa1 le4 fan1 cyun3, so2 ji5 daai6 gaa1 dou1 zung1 ji3 tung4 keoi5 soeng1 cyu2.)
+> ✅ 佢好識得拿捏分寸，所以大家都鍾意同佢相處。(keoi5 hou2 sik1 dak1 naa4 nip6 fan1 cyun3, so2 ji5 daai6 gaa1 dou1 zung1 ji3 tung4 keoi5 soeng1 cyu2.)
 
 ---
 
