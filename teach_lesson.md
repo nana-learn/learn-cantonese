@@ -65,7 +65,7 @@ I will introduce words **one at a time** using this format:
 | 2 | 溝通 | kau3 tung1 | communication |
 | 3 | 誤會 | ng6 wui6 | misunderstanding |
 | 4 | 冷靜 | laang5 zing6 | calm down |
-| 5 | 尊重 | zyun1 cung4 | respect |
+| 5 | 尊重 | zyun1 zung6 | respect |
 | 6 | 理解 | lei5 gaai2 | understand |
 | 7 | 逃避 | tou4 bei6 | escape, avoid |
 | 8 | 包容 | baau1 jung4 | tolerate |
@@ -94,7 +94,7 @@ I will say an English word → you say the Cantonese word + Jyutping.
 | communication | 溝通 kau3 tung1 |
 | misunderstanding | 誤會 ng6 wui6 |
 | calm down | 冷靜 laang5 zing6 |
-| respect | 尊重 zyun1 cung4 |
+| respect | 尊重 zyun1 zung6 |
 | understand | 理解 lei5 gaai2 |
 | avoid | 逃避 tou4 bei6 |
 | tolerate | 包容 baau1 jung4 |
@@ -198,7 +198,7 @@ I will go through the dialogue **in chunks** (2-4 lines at a time). For each chu
 > *I think avoiding the issue will only make the problem bigger and bigger. Accumulating them makes it even harder to solve. Better to communicate appropriately, everyone speak frankly about their thoughts, then mutually tolerate and empathize — this can actually make the relationship become more stable.*
 
 **Key points to explain:**
-- 尊重 (zyun1 cung4) — respect
+- 尊重 (zyun1 zung6) — respect
 - 理解 (lei5 gaai2) — understand
 - 真誠 (zan1 sing4) — sincere
 - 一味迎合 (jat1 mei6 jing4 hap6) — blindly cater to
@@ -333,7 +333,7 @@ I will teach each pattern with: explanation → examples → your practice → f
 
 I give you sentences with blanks. You choose the correct word.
 
-**Word bank:** 溝通 (kau3 tung1) / 壓力 (aat3 lik6) / 尊重 (zyun1 cung4) / 誤會 (ng6 wui6) / 冷靜 (laang5 zing6) / 逃避 (tou4 bei6) / 包容 (baau1 jung4) / 體諒 (tai2 loeng6)
+**Word bank:** 溝通 (kau3 tung1) / 壓力 (aat3 lik6) / 尊重 (zyun1 zung6) / 誤會 (ng6 wui6) / 冷靜 (laang5 zing6) / 逃避 (tou4 bei6) / 包容 (baau1 jung4) / 體諒 (tai2 loeng6)
 
 1. 遇到問題嗰陣要保持__________，唔好即刻有情緒反應。
 > jyu6 dou3 man6 tai4 go2 zan6 jiu3 bou2 ci4 __________, m4 hou2 zik1 hak1 jau5 cing4 seoi5 faan2 jing3.
@@ -352,7 +352,7 @@ I give you sentences with blanks. You choose the correct word.
 8. 人與人之間需要互相__________，唔好成日計較。
 > jan4 jyu4 jan4 zi1 gaan1 seoi1 jiu3 wu6 soeng1 __________, m4 hou2 sing4 jat6 gai3 gaau3.
 
-**Answers:** 1. 冷靜 (laang5 zing6) 2. 尊重 (zyun1 cung4) 3. 壓力 (aat3 lik6) 4. 誤會 (ng6 wui6) 5. 逃避 (tou4 bei6) 6. 溝通 (kau3 tung1) 7. 體諒 (tai2 loeng6) 8. 包容 (baau1 jung4)
+**Answers:** 1. 冷靜 (laang5 zing6) 2. 尊重 (zyun1 zung6) 3. 壓力 (aat3 lik6) 4. 誤會 (ng6 wui6) 5. 逃避 (tou4 bei6) 6. 溝通 (kau3 tung1) 7. 體諒 (tai2 loeng6) 8. 包容 (baau1 jung4)
 
 ---
 
@@ -416,7 +416,7 @@ I will play one role, you play the other. We'll do 2-3 scenarios.
 **What I'm listening for:**
 - Do you stay 冷靜 (laang5 zing6)?
 - Do you try to 溝通 (kau3 tung1)?
-- Do you use 尊重 (zyun1 cung4) or 理解 (lei5 gaai2)?
+- Do you use 尊重 (zyun1 zung6) or 理解 (lei5 gaai2)?
 - Do you 逃避 (tou4 bei6) or face it?
 
 ---
@@ -453,7 +453,7 @@ I will play one role, you play the other. We'll do 2-3 scenarios.
 
 **What I'm listening for:**
 - Do you suggest 溝通 (kau3 tung1)?
-- Do you mention 尊重 (zyun1 cung4) / 理解 (lei5 gaai2)?
+- Do you mention 尊重 (zyun1 zung6) / 理解 (lei5 gaai2)?
 - Do you advise against 逃避 (tou4 bei6)?
 - Do you use 不如 (bat1 jyu4) to make suggestions?
 
@@ -473,7 +473,7 @@ I say the English → you say the Cantonese + Jyutping (as fast as you can):
 | communication | 溝通 kau3 tung1 |
 | misunderstanding | 誤會 ng6 wui6 |
 | calm down | 冷靜 laang5 zing6 |
-| respect | 尊重 zyun1 cung4 |
+| respect | 尊重 zyun1 zung6 |
 | understand | 理解 lei5 gaai2 |
 | avoid | 逃避 tou4 bei6 |
 | tolerate | 包容 baau1 jung4 |

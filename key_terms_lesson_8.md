@@ -818,50 +818,50 @@
 
 ---
 
-## 18. 尊重 (zyun1 cung4) — respect
+## 18. 尊重 (zyun1 zung6) — respect
 
 **Explanation:** To show regard for someone's feelings, wishes, rights, or traditions. A fundamental element of healthy relationships.
 
 ### Example Sentences
 
-1. 人與人之間要互相尊重 (zyun1 cung4)。
-> jan4 jyu4 jan4 zi1 gaan1 jiu3 wu6 soeng1 zyun1 cung4.
+1. 人與人之間要互相尊重 (zyun1 zung6)。
+> jan4 jyu4 jan4 zi1 gaan1 jiu3 wu6 soeng1 zyun1 zung6.
 > *People should respect each other.*
 
-2. 佢好尊重 (zyun1 cung4)別人嘅意見。
-> keoi5 hou2 zyun1 cung4 bit6 jan4 ge3 ji3 gin3.
+2. 佢好尊重 (zyun1 zung6)別人嘅意見。
+> keoi5 hou2 zyun1 zung6 bit6 jan4 ge3 ji3 gin3.
 > *He respects other people's opinions very much.*
 
-3. 尊重 (zyun1 cung4)係建立良好關係嘅基礎。
-> zyun1 cung4 hai6 gin3 laap6 loeng5 hou2 gwaan1 hai6 ge3 gei1 co2.
+3. 尊重 (zyun1 zung6)係建立良好關係嘅基礎。
+> zyun1 zung6 hai6 gin3 laap6 loeng5 hou2 gwaan1 hai6 ge3 gei1 co2.
 > *Respect is the foundation for building good relationships.*
 
-4. 你要尊重 (zyun1 cung4)自己嘅選擇。
-> nei5 jiu3 zyun1 cung4 zi6 gei2 ge3 syun2 zaak3.
+4. 你要尊重 (zyun1 zung6)自己嘅選擇。
+> nei5 jiu3 zyun1 zung6 zi6 gei2 ge3 syun2 zaak3.
 > *You need to respect your own choices.*
 
-5. 佢嘅態度令人感到被尊重 (zyun1 cung4)。
-> keoi5 ge3 taai3 dou6 ling6 jan4 gam2 dou3 bei6 zyun1 cung4.
+5. 佢嘅態度令人感到被尊重 (zyun1 zung6)。
+> keoi5 ge3 taai3 dou6 ling6 jan4 gam2 dou3 bei6 zyun1 zung6.
 > *His attitude makes people feel respected.*
 
-6. 尊重 (zyun1 cung4)唔同嘅文化同習慣好重要。
-> zyun1 cung4 m4 tung4 ge3 man4 faa3 tung4 zaap6 gwaan3 hou2 zung3 jiu3.
+6. 尊重 (zyun1 zung6)唔同嘅文化同習慣好重要。
+> zyun1 zung6 m4 tung4 ge3 man4 faa3 tung4 zaap6 gwaan3 hou2 zung3 jiu3.
 > *Respecting different cultures and habits is very important.*
 
-7. 佢用行動表達對同事嘅尊重 (zyun1 cung4)。
-> keoi5 jung6 hang4 dung6 biu2 daat6 deoi3 tung4 si6 ge3 zyun1 cung4.
+7. 佢用行動表達對同事嘅尊重 (zyun1 zung6)。
+> keoi5 jung6 hang4 dung6 biu2 daat6 deoi3 tung4 si6 ge3 zyun1 zung6.
 > *He expressed respect for his colleagues through actions.*
 
-8. 冇人會尊重 (zyun1 cung4)一個唔尊重 (zyun1 cung4)別人嘅人。
-> mou5 jan4 wui5 zyun1 cung4 jat1 go3 m4 zyun1 cung4 bit6 jan4 ge3 jan4.
+8. 冇人會尊重 (zyun1 zung6)一個唔尊重 (zyun1 zung6)別人嘅人。
+> mou5 jan4 wui5 zyun1 zung6 jat1 go3 m4 zyun1 zung6 bit6 jan4 ge3 jan4.
 > *No one will respect a person who doesn't respect others.*
 
-9. 佢學識咗點樣尊重 (zyun1 cung4)對方嘅私人空間。
-> keoi5 hok6 sik1 zo2 dim2 joeng2 zyun1 cung4 deoi3 fong1 ge3 si1 jan4 hung1 gaan3.
+9. 佢學識咗點樣尊重 (zyun1 zung6)對方嘅私人空間。
+> keoi5 hok6 sik1 zo2 dim2 joeng2 zyun1 zung6 deoi3 fong1 ge3 si1 jan4 hung1 gaan3.
 > *He learned how to respect the other person's personal space.*
 
-10. 尊重 (zyun1 cung4)唔代表要同意對方嘅所有觀點。
-> zyun1 cung4 m4 doi6 biu2 jiu3 tung4 ji3 deoi3 fong1 ge3 so2 jau5 gun1 dim2.
+10. 尊重 (zyun1 zung6)唔代表要同意對方嘅所有觀點。
+> zyun1 zung6 m4 doi6 biu2 jiu3 tung4 ji3 deoi3 fong1 ge3 so2 jau5 gun1 dim2.
 > *Respect doesn't mean you have to agree with all of the other person's viewpoints.*
 
 ---
@@ -1361,7 +1361,7 @@
 > *The structure of this building is very stable.*
 
 3. 互相尊重可以令友誼更加穩固 (wan2 gu3)。
-> wu6 soeng1 zyun1 cung4 ho2 ji5 ling6 jau5 ji5 gaai3 gaa1 wan2 gu3.
+> wu6 soeng1 zyun1 zung6 ho2 ji5 ling6 jau5 ji5 gaai3 gaa1 wan2 gu3.
 > *Mutual respect can make friendship more stable.*
 
 4. 佢哋嘅合作關係好穩固 (wan2 gu3)。

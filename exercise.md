@@ -25,7 +25,7 @@ Match the Cantonese word with its English meaning.
 
 Fill in the blanks with the correct vocabulary word from the list below.
 
-**Word List:** 溝通 (kau3 tung1) / 壓力 (aat3 lik6) / 尊重 (zyun1 cung4) / 誤會 (ng6 wui6) / 冷靜 (laang5 zing6) / 逃避 (tou4 bei6) / 包容 (baau1 jung4) / 體諒 (tai2 loeng6) / 矛盾 (maau4 deon6) / 經驗 (ging1 jim6)
+**Word List:** 溝通 (kau3 tung1) / 壓力 (aat3 lik6) / 尊重 (zyun1 zung6) / 誤會 (ng6 wui6) / 冷靜 (laang5 zing6) / 逃避 (tou4 bei6) / 包容 (baau1 jung4) / 體諒 (tai2 loeng6) / 矛盾 (maau4 deon6) / 經驗 (ging1 jim6)
 
 1. 遇到問題嗰陣要保持__________，唔好即刻有情緒反應。
 

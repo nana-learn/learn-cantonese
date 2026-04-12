@@ -28,7 +28,7 @@
 | 立場 | laap6 coeng4 | standpoint, position | lập trường |
 | 鑽牛角尖 | zyun3 ngau4 gok3 zim1 | to split hairs, overthink | đào sâu suy nghĩ |
 | 誤會 | ng6 wui6 | misunderstanding | hiểu lầm |
-| 尊重 | zyun1 cung4 | respect | tôn trọng |
+| 尊重 | zyun1 zung6 | respect | tôn trọng |
 | 理解 | lei5 gaai2 | understand | thông cảm, hiểu |
 | 真誠 | zan1 sing4 | sincere | chân thành |
 | 迎合 | jing4 hap6 | cater to, pander to | chiều theo |
@@ -50,7 +50,7 @@
 | 立場 | laap6 coeng4 | standpoint | lập trường |
 | 表達 | biu2 daat6 | express | biểu đạt |
 | 避免 | bei2 min5 | avoid | tránh né |
-| 尊重 | zyun1 cung4 | respect | tôn trọng |
+| 尊重 | zyun1 zung6 | respect | tôn trọng |
 | 角度 | gok3 dou6 | angle, perspective | góc độ |
 | 調整 | tiu3 zing2 | adjust | điều chỉnh |
 | 適當 | sik1 dong3 | appropriate | thích đáng |
