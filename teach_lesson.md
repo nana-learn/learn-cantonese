@@ -346,7 +346,7 @@ I give you sentences with blanks. You choose the correct word.
 5. __________解決唔到任何問題。
 > __________ gaai2 kyut3 m4 dou3 jam6 ho4 man6 tai4.
 6. 良好嘅__________可以減少衝突。
-> loeng5 hou2 ge3 __________ ho2 ji5 gaam2 siu2 cung1 tuk1.
+> loeng5 hou2 ge3 __________ ho2 ji5 gaam2 siu2 cung1 dat6.
 7. 你要__________佢嘅難處。
 > nei5 jiu3 __________ keoi5 ge3 naan4 cyu2.
 8. 人與人之間需要互相__________，唔好成日計較。

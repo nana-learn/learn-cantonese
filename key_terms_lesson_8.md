@@ -889,7 +889,7 @@
 > *He finds it hard to understand why he would do that.*
 
 5. 互相理解 (lei5 gaai2)可以減少好多衝突。
-> wu6 soeng1 lei5 gaai2 ho2 ji5 gaam2 siu2 hou2 do1 cung1 tuk1.
+> wu6 soeng1 lei5 gaai2 ho2 ji5 gaam2 siu2 hou2 do1 cung1 dat6.
 > *Mutual understanding can reduce many conflicts.*
 
 6. 佢嘗試理解 (lei5 gaai2)同事嘅難處。
@@ -1106,50 +1106,50 @@
 
 ---
 
-## 24. 衝突 (cung1 tuk1) — conflict, clash
+## 24. 衝突 (cung1 dat6) — conflict, clash
 
 **Explanation:** A serious disagreement or argument, often involving strong emotions. More intense than 矛盾 and may involve direct confrontation.
 
 ### Example Sentences
 
-1. 佢哋之間發生咗好大嘅衝突 (cung1 tuk1)。
-> keoi5 dei6 zi1 gaan1 faat3 sang1 zo2 hou2 daai6 ge3 cung1 tuk1.
+1. 佢哋之間發生咗好大嘅衝突 (cung1 dat6)。
+> keoi5 dei6 zi1 gaan1 faat3 sang1 zo2 hou2 daai6 ge3 cung1 dat6.
 > *A big conflict occurred between them.*
 
-2. 避免衝突 (cung1 tuk1)最好嘅方法係溝通。
-> bei2 min5 cung1 tuk1 zeoi3 hou2 ge3 fong1 faat3 hai6 kau3 tung1.
+2. 避免衝突 (cung1 dat6)最好嘅方法係溝通。
+> bei2 min5 cung1 dat6 zeoi3 hou2 ge3 fong1 faat3 hai6 kau3 tung1.
 > *The best way to avoid conflict is communication.*
 
-3. 佢哋嘅衝突 (cung1 tuk1)源於價值觀唔同。
-> keoi5 dei6 ge3 cung1 tuk1 jyun4 jyu1 gaa3 zik6 gun1 m4 tung4.
+3. 佢哋嘅衝突 (cung1 dat6)源於價值觀唔同。
+> keoi5 dei6 ge3 cung1 dat6 jyun4 jyu1 gaa3 zik6 gun1 m4 tung4.
 > *Their conflict stems from different values.*
 
-4. 佢用和平嘅方式解決咗衝突 (cung1 tuk1)。
-> keoi5 jung6 wo4 ping4 ge3 fong1 sik1 gaai2 kyut3 zo2 cung1 tuk1.
+4. 佢用和平嘅方式解決咗衝突 (cung1 dat6)。
+> keoi5 jung6 wo4 ping4 ge3 fong1 sik1 gaai2 kyut3 zo2 cung1 dat6.
 > *He resolved the conflict in a peaceful way.*
 
-5. 文化差異有時會導致衝突 (cung1 tuk1)。
-> man4 faa3 caa1 ji6 jau5 si4 wui5 dou6 zi3 cung1 tuk1.
+5. 文化差異有時會導致衝突 (cung1 dat6)。
+> man4 faa3 caa1 ji6 jau5 si4 wui5 dou6 zi3 cung1 dat6.
 > *Cultural differences sometimes lead to conflict.*
 
-6. 佢哋喺會議上面發生咗言語衝突 (cung1 tuk1)。
-> keoi5 dei6 hai2 wui6 ji5 soeng6 min6 faat3 sang1 zo2 jin4 jyu5 cung1 tuk1.
+6. 佢哋喺會議上面發生咗言語衝突 (cung1 dat6)。
+> keoi5 dei6 hai2 wui6 ji5 soeng6 min6 faat3 sang1 zo2 jin4 jyu5 cung1 dat6.
 > *They had a verbal conflict during the meeting.*
 
-7. 衝突 (cung1 tuk1)之後，佢哋坐低嚟好好傾咗一次。
-> cung1 tuk1 zi1 hau6, keoi5 dei6 co5 dai1 lai4 hou2 hou2 king1 zo2 jat1 ci3.
+7. 衝突 (cung1 dat6)之後，佢哋坐低嚟好好傾咗一次。
+> cung1 dat6 zi1 hau6, keoi5 dei6 co5 dai1 lai4 hou2 hou2 king1 zo2 jat1 ci3.
 > *After the conflict, they sat down and had a good talk.*
 
-8. 佢學識咗點樣喺衝突 (cung1 tuk1)入面保持冷靜。
-> keoi5 hok6 sik1 zo2 dim2 joeng2 hai2 cung1 tuk1 jap6 min6 bou2 ci4 laang5 zing6.
+8. 佢學識咗點樣喺衝突 (cung1 dat6)入面保持冷靜。
+> keoi5 hok6 sik1 zo2 dim2 joeng2 hai2 cung1 dat6 jap6 min6 bou2 ci4 laang5 zing6.
 > *He learned how to stay calm during conflicts.*
 
-9. 呢場衝突 (cung1 tuk1)令到佢哋嘅關係更加緊張。
-> ni1 coeng4 cung1 tuk1 ling6 dou3 keoi5 dei6 ge3 gwaan1 hai6 gaai3 gaa1 gan2 zoeng1.
+9. 呢場衝突 (cung1 dat6)令到佢哋嘅關係更加緊張。
+> ni1 coeng4 cung1 dat6 ling6 dou3 keoi5 dei6 ge3 gwaan1 hai6 gaai3 gaa1 gan2 zoeng1.
 > *This conflict made their relationship even more tense.*
 
-10. 佢哋用第三方調解嘅方式解決咗衝突 (cung1 tuk1)。
-> keoi5 dei6 jung6 dai6 saam1 fong1 tiu4 gaai2 ge3 fong1 sik1 gaai2 kyut3 zo2 cung1 tuk1.
+10. 佢哋用第三方調解嘅方式解決咗衝突 (cung1 dat6)。
+> keoi5 dei6 jung6 dai6 saam1 fong1 tiu4 gaai2 ge3 fong1 sik1 gaai2 kyut3 zo2 cung1 dat6.
 > *They resolved the conflict through third-party mediation.*
 
 ---
