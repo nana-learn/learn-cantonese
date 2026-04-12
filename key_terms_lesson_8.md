@@ -1442,50 +1442,50 @@
 
 ---
 
-## 31. 累積 (leoi5 zeon1) — accumulate
+## 31. 累積 (leoi6 zik1) — accumulate
 
 **Explanation:** To gradually build up or gather over time. Often used for experience, knowledge, wealth, or problems.
 
 ### Example Sentences
 
-1. 經驗需要慢慢累積 (leoi5 zeon1)。
-> ging1 jim6 seoi1 jiu3 maan6 maan6 leoi5 zeon1.
+1. 經驗需要慢慢累積 (leoi6 zik1)。
+> ging1 jim6 seoi1 jiu3 maan6 maan6 leoi6 zik1.
 > *Experience needs to be accumulated slowly.*
 
-2. 佢喺呢個行業累積 (leoi5 zeon1)咗豐富嘅經驗。
-> keoi5 hai2 ni1 go3 hong4 jip6 leoi5 zeon1 zo2 fung1 fu3 ge3 ging1 jim6.
+2. 佢喺呢個行業累積 (leoi6 zik1)咗豐富嘅經驗。
+> keoi5 hai2 ni1 go3 hong4 jip6 leoi6 zik1 zo2 fung1 fu3 ge3 ging1 jim6.
 > *He has accumulated rich experience in this industry.*
 
-3. 誤會如果唔處理會越嚟越累積 (leoi5 zeon1)。
-> ng6 wui6 jyu4 gwo2 m4 cyu2 lei5 wui5 jyut6 lai4 jyut6 leoi5 zeon1.
+3. 誤會如果唔處理會越嚟越累積 (leoi6 zik1)。
+> ng6 wui6 jyu4 gwo2 m4 cyu2 lei5 wui5 jyut6 lai4 jyut6 leoi6 zik1.
 > *If misunderstandings are not handled, they will accumulate more and more.*
 
-4. 佢用十年時間累積 (leoi5 zeon1)咗大量嘅客戶資源。
-> keoi5 jung6 sap6 nin4 si4 gaan3 leoi5 zeon1 zo2 daai6 loeng4 ge3 haak3 fu3 zi1 jyun4.
+4. 佢用十年時間累積 (leoi6 zik1)咗大量嘅客戶資源。
+> keoi5 jung6 sap6 nin4 si4 gaan3 leoi6 zik1 zo2 daai6 loeng4 ge3 haak3 fu3 zi1 jyun4.
 > *He accumulated a large amount of client resources over ten years.*
 
-5. 知識係日積月累累積 (leoi5 zeon1)返嚟嘅。
-> zi1 sik1 hai6 jat6 zik1 jyut6 leoi5 leoi5 zeon1 faan1 lai4 ge3.
+5. 知識係日積月累累積 (leoi6 zik1)返嚟嘅。
+> zi1 sik1 hai6 jat6 zik1 jyut6 leoi5 leoi6 zik1 faan1 lai4 ge3.
 > *Knowledge is accumulated day by day and month by month.*
 
-6. 佢嘅財富係多年努力累積 (leoi5 zeon1)返嚟嘅。
-> keoi5 ge3 coi4 fu3 hai6 do1 nin4 nou5 lik6 leoi5 zeon1 faan1 lai4 ge3.
+6. 佢嘅財富係多年努力累積 (leoi6 zik1)返嚟嘅。
+> keoi5 ge3 coi4 fu3 hai6 do1 nin4 nou5 lik6 leoi6 zik1 faan1 lai4 ge3.
 > *His wealth is accumulated through years of hard work.*
 
-7. 壓力累積 (leoi5 zeon1)太多會影響健康。
-> aat3 lik6 leoi5 zeon1 taai3 do1 wui5 jing2 hoeng2 gin6 hong1.
+7. 壓力累積 (leoi6 zik1)太多會影響健康。
+> aat3 lik6 leoi6 zik1 taai3 do1 wui5 jing2 hoeng2 gin6 hong1.
 > *Accumulating too much stress will affect your health.*
 
-8. 佢將每次失敗嘅經驗都累積 (leoi5 zeon1)成寶貴嘅教訓。
-> keoi5 zoeng1 mui5 ci3 sat1 baai3 ge3 ging1 jim6 dou1 leoi5 zeon1 sing4 bou2 gwai3 ge3 gaau3 fan3.
+8. 佢將每次失敗嘅經驗都累積 (leoi6 zik1)成寶貴嘅教訓。
+> keoi5 zoeng1 mui5 ci3 sat1 baai3 ge3 ging1 jim6 dou1 leoi6 zik1 sing4 bou2 gwai3 ge3 gaau3 fan3.
 > *He accumulates each failure experience into valuable lessons.*
 
-9. 人際關係嘅技巧需要時間去累積 (leoi5 zeon1)。
-> jan4 zai3 gwaan1 hai6 ge3 gei3 haau2 seoi1 jiu3 si4 gaan3 heoi3 leoi5 zeon1.
+9. 人際關係嘅技巧需要時間去累積 (leoi6 zik1)。
+> jan4 zai3 gwaan1 hai6 ge3 gei3 haau2 seoi1 jiu3 si4 gaan3 heoi3 leoi6 zik1.
 > *Interpersonal skills take time to accumulate.*
 
-10. 佢哋嘅友誼係多年嚟慢慢累積 (leoi5 zeon1)返嚟嘅。
-> keoi5 dei6 ge3 jau5 ji5 hai6 do1 nin4 lai4 maan6 maan6 leoi5 zeon1 faan1 lai4 ge3.
+10. 佢哋嘅友誼係多年嚟慢慢累積 (leoi6 zik1)返嚟嘅。
+> keoi5 dei6 ge3 jau5 ji5 hai6 do1 nin4 lai4 maan6 maan6 leoi6 zik1 faan1 lai4 ge3.
 > *Their friendship has been slowly accumulated over many years.*
 
 ---
@@ -1505,7 +1505,7 @@
 > *Experience is the best teacher.*
 
 3. 佢從失敗入面累積咗好多經驗 (ging1 jim6)。
-> keoi5 cung4 sat1 baai3 jap6 min6 leoi5 zeon1 zo2 hou2 do1 ging1 jim6.
+> keoi5 cung4 sat1 baai3 jap6 min6 leoi6 zik1 zo2 hou2 do1 ging1 jim6.
 > *He accumulated a lot of experience from failures.*
 
 4. 呢次經驗 (ging1 jim6)令佢成長咗好多。

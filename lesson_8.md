@@ -41,7 +41,7 @@
 | 體諒 | tai2 loeng6 | empathize, show understanding | thông cảm |
 | 穩固 | wan2 gu3 | stable, firm | vững chắc |
 | 學問 | hok6 man3 | knowledge, learning | học vấn |
-| 累積 | leoi5 zeon1 | accumulate | tích lũy |
+| 累積 | leoi6 zik1 | accumulate | tích lũy |
 | 經驗 | ging1 jim6 | experience | kinh nghiệm |
 | 相處 | soeng1 cyu2 | get along with | chung sống, đối xử |
 | 間中 | gaan3 zung1 | occasionally | thỉnh thoảng |
@@ -149,7 +149,7 @@
 
 **B：** 冇錯，真係要慢慢累積經驗，先會做得越嚟越好。
 
-> mou5 co3, zan1 hai6 jiu3 maan6 maan6 leoi5 zeon1 ging1 jim6, sin1 wui5 zou6 dak1 jyut6 lei4 jyut6 hou2.
+> mou5 co3, zan1 hai6 jiu3 maan6 maan6 leoi6 zik1 ging1 jim6, sin1 wui5 zou6 dak1 jyut6 lei4 jyut6 hou2.
 >
 > *That's right. You really need to slowly accumulate experience before you can do better and better.*
 
@@ -265,7 +265,7 @@ Indicates a condition must be met first.
 
 > **Pattern:** 先會 + result
 >
-> **Example:** 慢慢累積經驗，**先會**做得越嚟越好 (maan6 maan6 leoi5 zeon1 ging1 jim6, **sin1 wui5** zou6 dak1 jyut6 lei4 jyut6 hou2) — slowly accumulate experience, only then will you do better and better
+> **Example:** 慢慢累積經驗，**先會**做得越嚟越好 (maan6 maan6 leoi6 zik1 ging1 jim6, **sin1 wui5** zou6 dak1 jyut6 lei4 jyut6 hou2) — slowly accumulate experience, only then will you do better and better
 
 ---
 
