@@ -169,7 +169,7 @@ I will go through the dialogue **in chunks** (2-4 lines at a time). For each chu
 ### Chunk 3: The Solution
 
 **B：** 首先我會試下先令自己冷靜落嚟，唔好即刻有情緒反應，然後試下企喺對方嘅立場諗一諗。後來發現，其實好多時候都只係因為工作需要，講嘢直接啲，未必真係有惡意。
-> sin2 sin1 ngo5 wui5 si3 haa5 sin1 ling6 zi6 gei2 laang5 zing6 lok6 lei4, m4 hou2 zik1 hak1 jau5 cing4 seoi5 faan2 jing3, jin4 hau6 si3 haa5 kei5 hai2 deoi3 fong1 ge3 laap6 coeng4 nam2 jat1 nam2. hau6 loi4 faat3 jin6, kei4 sat6 hou2 do1 si4 hau6 dou1 zi2 hai6 jan1 wai6 gung1 zok3 seoi1 jiu3, gong2 je5 zik6 zip3 di1, mei6 bit1 zan1 hai6 jau5 ok3 ji3.
+> sau2 sin1 ngo5 wui5 si3 haa5 sin1 ling6 zi6 gei2 laang5 zing6 lok6 lei4, m4 hou2 zik1 hak1 jau5 cing4 seoi5 faan2 jing3, jin4 hau6 si3 haa5 kei5 hai2 deoi3 fong1 ge3 laap6 coeng4 nam2 jat1 nam2. hau6 loi4 faat3 jin6, kei4 sat6 hou2 do1 si4 hau6 dou1 zi2 hai6 jan1 wai6 gung1 zok3 seoi1 jiu3, gong2 je5 zik6 zip3 di1, mei6 bit1 zan1 hai6 jau5 ok3 ji3.
 > *First I would try to calm myself down, not react emotionally right away, then try to stand in the other person's position and think about it. Later I discovered that actually most of the time it's just because of work needs — speaking more directly doesn't necessarily mean ill will.*
 
 **Key points to explain:**
