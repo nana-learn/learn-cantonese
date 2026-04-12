@@ -13,7 +13,7 @@
 > *His interpersonal relationships are very good; he gets along with everyone.*
 
 2. 建立良好嘅人際關係 (jan4 zai3 gwaan1 hai6)需要時間同耐心。
-> gin3 lap6 loeng5 hou2 ge3 jan4 zai3 gwaan1 hai6 seoi1 jiu3 si4 gaan3 tung4 noi4 sam1.
+> gin3 laap6 loeng5 hou2 ge3 jan4 zai3 gwaan1 hai6 seoi1 jiu3 si4 gaan3 tung4 noi4 sam1.
 > *Building good interpersonal relationships requires time and patience.*
 
 3. 人際關係 (jan4 zai3 gwaan1 hai6)喺職場上面好重要。
@@ -833,7 +833,7 @@
 > *He respects other people's opinions very much.*
 
 3. 尊重 (zyun1 cung4)係建立良好關係嘅基礎。
-> zyun1 cung4 hai6 gin3 lap6 loeng5 hou2 gwaan1 hai6 ge3 gei1 co2.
+> zyun1 cung4 hai6 gin3 laap6 loeng5 hou2 gwaan1 hai6 ge3 gei1 co2.
 > *Respect is the foundation for building good relationships.*
 
 4. 你要尊重 (zyun1 cung4)自己嘅選擇。
@@ -933,7 +933,7 @@
 > *He moved the other party with sincerity.*
 
 4. 真誠 (zan1 sing4)係建立信任嘅關鍵。
-> zan1 sing4 hai6 gin3 lap6 seon3 jam6 ge3 gwaan1 gin6.
+> zan1 sing4 hai6 gin3 laap6 seon3 jam6 ge3 gwaan1 gin6.
 > *Sincerity is the key to building trust.*
 
 5. 佢嘅笑容好真誠 (zan1 sing4)。
@@ -1225,7 +1225,7 @@
 > *He really appreciates his frankness.*
 
 5. 坦白 (taan2 baak6)係建立信任嘅第一步。
-> taan2 baak6 hai6 gin3 lap6 seon3 jam6 ge3 dai6 jat1 bou6.
+> taan2 baak6 hai6 gin3 laap6 seon3 jam6 ge3 dai6 jat1 bou6.
 > *Frankness is the first step to building trust.*
 
 6. 佢決定坦白 (taan2 baak6)咁講出成件事嘅真相。
@@ -1369,7 +1369,7 @@
 > *Their cooperative relationship is very stable.*
 
 5. 信任係建立穩固 (wan2 gu3)關係嘅基礎。
-> seon3 jam6 hai6 gin3 lap6 wan2 gu3 gwaan1 hai6 ge3 gei1 co2.
+> seon3 jam6 hai6 gin3 laap6 wan2 gu3 gwaan1 hai6 ge3 gei1 co2.
 > *Trust is the foundation for building a stable relationship.*
 
 6. 佢哋嘅婚姻經過考驗之後變得更加穩固 (wan2 gu3)。

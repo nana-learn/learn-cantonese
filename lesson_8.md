@@ -115,7 +115,7 @@
 
 **A：** 咁樣做好好喎，溝通真係好重要。咁你自己覺得，建立良好人際關係最重要係乜嘢呢？
 
-> gam2 joeng2 zou6 hou2 hou2 wo3, kau3 tung1 zan1 hai6 hou2 zung3 jiu3. gam2 nei5 zi6 gei2 gok3 dak1, gin3 lap6 loeng5 hou2 jan4 zai3 gwaan1 hai6 zeoi3 zung3 jiu3 hai6 me1 je5 ne1?
+> gam2 joeng2 zou6 hou2 hou2 wo3, kau3 tung1 zan1 hai6 hou2 zung3 jiu3. gam2 nei5 zi6 gei2 gok3 dak1, gin3 laap6 loeng5 hou2 jan4 zai3 gwaan1 hai6 zeoi3 zung3 jiu3 hai6 me1 je5 ne1?
 >
 > *That's great, communication is really important. So what do you think is the most important thing in building good interpersonal relationships?*
 
