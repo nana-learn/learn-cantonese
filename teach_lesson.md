@@ -291,7 +291,7 @@ I will teach each pattern with: explanation → examples → your practice → f
 2. 佢成日逃避，不如__________。
 > keoi5 sing4 jat6 tou4 bei6, bat1 jyu4 __________.
 3. 大家有矛盾，不如__________。
-> daai6 gaa1 jau5 maau4 deon6, bat1 jyu4 __________.
+> daai6 gaa1 jau5 maau4 teon5, bat1 jyu4 __________.
 
 **Expected answers (flexible):**
 1. 不如我哋坦白啲講清楚。(bat1 jyu4 ngo5 dei6 taan2 baak3 di1 gong2 cing1 co2.)

@@ -33,7 +33,7 @@
 | 真誠 | zan1 sing4 | sincere | chân thành |
 | 迎合 | jing4 hap6 | cater to, pander to | chiều theo |
 | 討好 | tou2 hou2 | please, flatter | làm hài lòng |
-| 矛盾 | maau4 deon6 | contradiction, conflict | mâu thuẫn |
+| 矛盾 | maau4 teon5 | contradiction, conflict | mâu thuẫn |
 | 衝突 | cung1 tuk1 | conflict, clash | xung đột |
 | 逃避 | tou4 bei6 | escape, avoid | trốn tránh |
 | 坦白 | taan2 baak6 | frank, honest | thẳng thắn |
@@ -127,7 +127,7 @@
 
 **A：** 講得好有道理。咁如果喺關係入面真係遇到矛盾或者衝突，你通常會點做？
 
-> gong2 dak1 hou2 jau5 dou6 lei5. gam2 jyu4 gwo2 hai2 gwaan1 hai6 jap6 min6 zan1 hai6 jyu6 dou3 maau4 deon6 waak6 ze2 cung1 tuk1, nei5 tung1 soeng4 wui5 dim2 zou6?
+> gong2 dak1 hou2 jau5 dou6 lei5. gam2 jyu4 gwo2 hai2 gwaan1 hai6 jap6 min6 zan1 hai6 jyu6 dou3 maau4 teon5 waak6 ze2 cung1 tuk1, nei5 tung1 soeng4 wui5 dim2 zou6?
 >
 > *That makes a lot of sense. So if you really encounter contradictions or conflicts in a relationship, what would you usually do?*
 

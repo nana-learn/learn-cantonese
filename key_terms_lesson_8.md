@@ -1058,50 +1058,50 @@
 
 ---
 
-## 23. 矛盾 (maau4 deon6) — contradiction, conflict
+## 23. 矛盾 (maau4 teon5) — contradiction, conflict
 
 **Explanation:** A situation where two or more things are in opposition or conflict with each other. Can refer to internal conflicts or disagreements between people.
 
 ### Example Sentences
 
-1. 佢哋之間嘅矛盾 (maau4 deon6)越嚟越大。
-> keoi5 dei6 zi1 gaan1 ge3 maau4 deon6 jyut6 lai4 jyut6 daai6.
+1. 佢哋之間嘅矛盾 (maau4 teon5)越嚟越大。
+> keoi5 dei6 zi1 gaan1 ge3 maau4 teon5 jyut6 lai4 jyut6 daai6.
 > *The contradiction between them is getting bigger and bigger.*
 
-2. 佢心入面充滿咗矛盾 (maau4 deon6)。
-> keoi5 sam1 jap6 min6 cung1 mun5 zo2 maau4 deon6.
+2. 佢心入面充滿咗矛盾 (maau4 teon5)。
+> keoi5 sam1 jap6 min6 cung1 mun5 zo2 maau4 teon5.
 > *His heart is filled with contradictions.*
 
-3. 化解矛盾 (maau4 deon6)需要雙方嘅努力。
-> faa3 gaai2 maau4 deon6 seoi1 jiu3 soeng1 fong1 ge3 nou5 lik6.
+3. 化解矛盾 (maau4 teon5)需要雙方嘅努力。
+> faa3 gaai2 maau4 teon5 seoi1 jiu3 soeng1 fong1 ge3 nou5 lik6.
 > *Resolving contradictions requires efforts from both sides.*
 
-4. 佢哋嘅矛盾 (maau4 deon6)源於溝通不足。
-> keoi5 dei6 ge3 maau4 deon6 jyun4 jyu1 kau3 tung1 bat1 zuk1.
+4. 佢哋嘅矛盾 (maau4 teon5)源於溝通不足。
+> keoi5 dei6 ge3 maau4 teon5 jyun4 jyu1 kau3 tung1 bat1 zuk1.
 > *Their contradiction stems from insufficient communication.*
 
-5. 佢嘅說話前後矛盾 (maau4 deon6)。
-> keoi5 ge3 syut3 waa6 cin4 hau6 maau4 deon6.
+5. 佢嘅說話前後矛盾 (maau4 teon5)。
+> keoi5 ge3 syut3 waa6 cin4 hau6 maau4 teon5.
 > *His words are self-contradictory.*
 
-6. 矛盾 (maau4 deon6)如果唔及時處理會越嚟越嚴重。
-> maau4 deon6 jyu4 gwo2 m4 kap6 si4 cyu2 lei5 wui5 jyut6 lai4 jyut6 jim4 zung6.
+6. 矛盾 (maau4 teon5)如果唔及時處理會越嚟越嚴重。
+> maau4 teon5 jyu4 gwo2 m4 kap6 si4 cyu2 lei5 wui5 jyut6 lai4 jyut6 jim4 zung6.
 > *If contradictions are not handled in time, they will become more and more serious.*
 
-7. 佢哋嘗試用對話嚟解決矛盾 (maau4 deon6)。
-> keoi5 dei6 coeng4 si3 jung6 deoi3 waa6 lai4 gaai2 kyut3 maau4 deon6.
+7. 佢哋嘗試用對話嚟解決矛盾 (maau4 teon5)。
+> keoi5 dei6 coeng4 si3 jung6 deoi3 waa6 lai4 gaai2 kyut3 maau4 teon5.
 > *They tried to resolve the contradiction through dialogue.*
 
-8. 家庭矛盾 (maau4 deon6)通常源於缺乏理解。
-> gaa1 ting4 maau4 deon6 tung1 soeng4 jyun4 jyu1 kyut3 faat3 lei5 gaai2.
+8. 家庭矛盾 (maau4 teon5)通常源於缺乏理解。
+> gaa1 ting4 maau4 teon5 tung1 soeng4 jyun4 jyu1 kyut3 faat3 lei5 gaai2.
 > *Family contradictions usually stem from a lack of understanding.*
 
-9. 佢嘅行為同佢嘅說話好矛盾 (maau4 deon6)。
-> keoi5 ge3 hang4 wai4 tung4 keoi5 ge3 syut3 waa6 hou2 maau4 deon6.
+9. 佢嘅行為同佢嘅說話好矛盾 (maau4 teon5)。
+> keoi5 ge3 hang4 wai4 tung4 keoi5 ge3 syut3 waa6 hou2 maau4 teon5.
 > *His behavior and his words are very contradictory.*
 
-10. 佢哋之間嘅矛盾 (maau4 deon6)終於得到咗解決。
-> keoi5 dei6 zi1 gaan1 ge3 maau4 deon6 zung1 jyu1 dak1 dou3 zo2 gaai2 kyut3.
+10. 佢哋之間嘅矛盾 (maau4 teon5)終於得到咗解決。
+> keoi5 dei6 zi1 gaan1 ge3 maau4 teon5 zung1 jyu1 dak1 dou3 zo2 gaai2 kyut3.
 > *The contradiction between them has finally been resolved.*
 
 ---
@@ -1277,7 +1277,7 @@
 > *What a family needs most is tolerance.*
 
 6. 佢嘅包容 (baau1 jung4)化解咗好多矛盾。
-> keoi5 ge3 baau1 jung4 faa3 gaai2 zo2 hou2 do1 maau4 deon6.
+> keoi5 ge3 baau1 jung4 faa3 gaai2 zo2 hou2 do1 maau4 teon5.
 > *His tolerance resolved many contradictions.*
 
 7. 學會包容 (baau1 jung4)係成長嘅一部分。
