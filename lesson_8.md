@@ -26,7 +26,7 @@
 | 冷靜 | laang5 zing6 | calm down | bình tĩnh |
 | 情緒 | cing4 seoi5 | emotion, mood | cảm xúc |
 | 立場 | laap6 coeng4 | standpoint, position | lập trường |
-| 鑽牛角尖 | zyun1 ngau5 gok3 zim1 | to split hairs, overthink | đào sâu suy nghĩ |
+| 鑽牛角尖 | zyun3 ngau4 gok3 zim1 | to split hairs, overthink | đào sâu suy nghĩ |
 | 誤會 | ng6 wui6 | misunderstanding | hiểu lầm |
 | 尊重 | zyun1 cung4 | respect | tôn trọng |
 | 理解 | lei5 gaai2 | understand | thông cảm, hiểu |
@@ -109,7 +109,7 @@
 
 **B：** 有啊，真係輕鬆咗唔少，冇之前咁容易鑽牛角尖。我亦都開始主動同同事溝通，多啲表達自己嘅諗法同感受，希望可以避免誤會越積越多。
 
-> jau5 aa3, zan1 hai6 hing1 sung1 zo2 m4 siu2, mou5 zi1 cin4 gam2 jung4 ji6 zyun1 ngau5 gok3 zim1. ngo5 jik6 dou1 hoi1 ci2 zyu2 dung6 tung4 tung4 si6 kau3 tung1, do1 di1 biu2 daat6 zi6 gei2 ge3 nam2 faat3 tung4 gam2 sau6, hei1 mong6 ho2 ji5 bei2 min5 ng6 wui6 jyut6 zik1 jyut6 do1.
+> jau5 aa3, zan1 hai6 hing1 sung1 zo2 m4 siu2, mou5 zi1 cin4 gam2 jung4 ji6 zyun3 ngau4 gok3 zim1. ngo5 jik6 dou1 hoi1 ci2 zyu2 dung6 tung4 tung4 si6 kau3 tung1, do1 di1 biu2 daat6 zi6 gei2 ge3 nam2 faat3 tung4 gam2 sau6, hei1 mong6 ho2 ji5 bei2 min5 ng6 wui6 jyut6 zik1 jyut6 do1.
 >
 > *Yes, I really feel much more relaxed, not as prone to overthinking as before. I also started proactively communicating with colleagues, expressing my thoughts and feelings more, hoping to avoid misunderstandings from accumulating.*
 
@@ -275,7 +275,7 @@ Indicates a condition must be met first.
 |------------|----------|---------|
 | 悶悶不樂 | mun6 mun6 bat1 lok6 | depressed, unhappy |
 | 講多錯多 | gong2 do1 co3 do1 | the more you speak, the more mistakes you make |
-| 鑽牛角尖 | zyun1 ngau5 gok3 zim1 | to split hairs, overthink, obsess over trivial details |
+| 鑽牛角尖 | zyun3 ngau4 gok3 zim1 | to split hairs, overthink, obsess over trivial details |
 | 一味迎合 | jat1 mei6 jing4 hap6 | blindly cater to others |
 | 積埋積埋 | zik1 maai4 zik1 maai4 | accumulating (problems) over time |
 

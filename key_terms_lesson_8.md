@@ -722,50 +722,50 @@
 
 ---
 
-## 16. 鑽牛角尖 (zyun1 ngau5 gok3 zim1) — to split hairs, overthink
+## 16. 鑽牛角尖 (zyun3 ngau4 gok3 zim1) — to split hairs, overthink
 
 **Explanation:** An idiom meaning to obsess over minor details or trivial matters; to overthink something to the point of being unproductive.
 
 ### Example Sentences
 
-1. 唔好成日鑽牛角尖 (zyun1 ngau5 gok3 zim1)啦，放鬆啲啦。
-> m4 hou2 sing4 jat6 zyun1 ngau5 gok3 zim1 laa1, fong3 sung4 di1 laa1.
+1. 唔好成日鑽牛角尖 (zyun3 ngau4 gok3 zim1)啦，放鬆啲啦。
+> m4 hou2 sing4 jat6 zyun3 ngau4 gok3 zim1 laa1, fong3 sung4 di1 laa1.
 > *Don't always split hairs; relax a bit.*
 
-2. 佢成日喺啲小問題上面鑽牛角尖 (zyun1 ngau5 gok3 zim1)。
-> keoi5 sing4 jat6 hai2 di1 siu2 man6 tai4 soeng6 min6 zyun1 ngau5 gok3 zim1.
+2. 佢成日喺啲小問題上面鑽牛角尖 (zyun3 ngau4 gok3 zim1)。
+> keoi5 sing4 jat6 hai2 di1 siu2 man6 tai4 soeng6 min6 zyun3 ngau4 gok3 zim1.
 > *He always splits hairs over small problems.*
 
-3. 鑽牛角尖 (zyun1 ngau5 gok3 zim1)解決唔到問題。
-> zyun1 ngau5 gok3 zim1 gaai2 kyut3 m4 dou3 man6 tai4.
+3. 鑽牛角尖 (zyun3 ngau4 gok3 zim1)解決唔到問題。
+> zyun3 ngau4 gok3 zim1 gaai2 kyut3 m4 dou3 man6 tai4.
 > *Splitting hairs won't solve problems.*
 
-4. 佢放低咗鑽牛角尖 (zyun1 ngau5 gok3 zim1)嘅習慣之後，開心咗好多。
-> keoi3 fong3 dai1 zo2 zyun1 ngau5 gok3 zim1 ge3 zaap6 gwaan3 zi1 hau6, hoi1 sam1 zo2 hou2 do1.
+4. 佢放低咗鑽牛角尖 (zyun3 ngau4 gok3 zim1)嘅習慣之後，開心咗好多。
+> keoi3 fong3 dai1 zo2 zyun3 ngau4 gok3 zim1 ge3 zaap6 gwaan3 zi1 hau6, hoi1 sam1 zo2 hou2 do1.
 > *After giving up the habit of splitting hairs, he became much happier.*
 
-5. 有時唔好鑽牛角尖 (zyun1 ngau5 gok3 zim1)，睇大方向就得。
-> jau5 si4 m4 hou2 zyun1 ngau5 gok3 zim1, tai2 daai6 fong1 hoeng3 zau6 dak1.
+5. 有時唔好鑽牛角尖 (zyun3 ngau4 gok3 zim1)，睇大方向就得。
+> jau5 si4 m4 hou2 zyun3 ngau4 gok3 zim1, tai2 daai6 fong1 hoeng3 zau6 dak1.
 > *Sometimes don't split hairs; just look at the big picture.*
 
-6. 佢一鑽牛角尖 (zyun1 ngau5 gok3 zim1)就成晚瞓唔到覺。
-> keoi5 jat1 zyun1 ngau5 gok3 zim1 zau6 sing4 maan5 fan3 m4 dou3 gaau3.
+6. 佢一鑽牛角尖 (zyun3 ngau4 gok3 zim1)就成晚瞓唔到覺。
+> keoi5 jat1 zyun3 ngau4 gok3 zim1 zau6 sing4 maan5 fan3 m4 dou3 gaau3.
 > *Once he starts splitting hairs, he can't sleep all night.*
 
-7. 你唔好喺呢件事上面鑽牛角尖 (zyun1 ngau5 gok3 zim1)。
-> nei5 m4 hou2 hai2 ni1 gin6 si6 soeng6 min6 zyun1 ngau5 gok3 zim1.
+7. 你唔好喺呢件事上面鑽牛角尖 (zyun3 ngau4 gok3 zim1)。
+> nei5 m4 hou2 hai2 ni1 gin6 si6 soeng6 min6 zyun3 ngau4 gok3 zim1.
 > *Don't split hairs over this matter.*
 
-8. 佢學識咗唔好鑽牛角尖 (zyun1 ngau5 gok3 zim1)，生活輕鬆咗好多。
-> keoi5 hok6 sik1 zo2 m4 hou2 zyun1 ngau5 gok3 zim1, sang1 wut6 hing1 sung1 zo2 hou2 do1.
+8. 佢學識咗唔好鑽牛角尖 (zyun3 ngau4 gok3 zim1)，生活輕鬆咗好多。
+> keoi5 hok6 sik1 zo2 m4 hou2 zyun3 ngau4 gok3 zim1, sang1 wut6 hing1 sung1 zo2 hou2 do1.
 > *After learning not to split hairs, his life became much more relaxed.*
 
-9. 鑽牛角尖 (zyun1 ngau5 gok3 zim1)只會令你更加痛苦。
-> zyun1 ngau5 gok3 zim1 zi2 wui5 ling6 nei5 gaai3 gaa1 tung3 fu2.
+9. 鑽牛角尖 (zyun3 ngau4 gok3 zim1)只會令你更加痛苦。
+> zyun3 ngau4 gok3 zim1 zi2 wui5 ling6 nei5 gaai3 gaa1 tung3 fu2.
 > *Splitting hairs will only make you more painful.*
 
-10. 佢嘅朋友勸佢唔好再鑽牛角尖 (zyun1 ngau5 gok3 zim1)。
-> keoi5 ge3 pang4 jau5 hyun3 keoi5 m4 hou2 zoi3 zyun1 ngau5 gok3 zim1.
+10. 佢嘅朋友勸佢唔好再鑽牛角尖 (zyun3 ngau4 gok3 zim1)。
+> keoi5 ge3 pang4 jau5 hyun3 keoi5 m4 hou2 zoi3 zyun3 ngau4 gok3 zim1.
 > *His friend advised him not to split hairs anymore.*
 
 ---

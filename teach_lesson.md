@@ -370,7 +370,7 @@ I give you English → you translate to Cantonese.
 > 你應該試下企喺對方嘅立場。(nei5 jing1 goi1 si3 haa5 kei5 hai2 deoi3 fong1 ge3 laap6 coeng4.)
 
 4. "Don't always overthink; try to calm down first."
-> 唔好成日鑽牛角尖啦，試下先冷靜返先。(m4 hou2 sing4 jat6 zyun1 ngau5 gok3 zim1 laa1, si3 haa5 sin1 laang5 zing6 faan1 sin1.)
+> 唔好成日鑽牛角尖啦，試下先冷靜返先。(m4 hou2 sing4 jat6 zyun3 ngau4 gok3 zim1 laa1, si3 haa5 sin1 laang5 zing6 faan1 sin1.)
 
 5. "I think the most important thing is respect and understanding."
 > 我覺得最重要係尊重同埋理解。(ngo5 gok3 dak1 zeoi3 zung3 jiu3 hai6 zyun1 cung6 tung4 maai4 lei5 gaai2.)
@@ -390,7 +390,7 @@ Find and fix the errors.
 > ✅ 溝通唔清楚會增加誤會。(kau3 tung1 m4 cing1 co2 wui5 zang1 gaa1 ng6 wui6.) / 溝通唔清楚會造成誤會。(kau3 tung1 m4 cing1 co2 wui6 zou6 sing4 ng6 wui6.)
 
 3. ❌ 佢好識得鑽牛角尖，所以大家都鍾意同佢相處。
-> keoi5 hou2 sik1 dak1 zyun1 ngau5 gok3 zim1, so2 ji5 daai6 gaa1 dou1 zung1 ji3 tung4 keoi5 soeng1 cyu2.
+> keoi5 hou2 sik1 dak1 zyun3 ngau4 gok3 zim1, so2 ji5 daai6 gaa1 dou1 zung1 ji3 tung4 keoi5 soeng1 cyu2.
 > ✅ 佢好識得拿捏分寸，所以大家都鍾意同佢相處。(keoi5 hou2 sik1 dak1 naa4 nip6 fan1 cyun3, so2 ji5 daai6 gaa1 dou1 zung1 ji3 tung4 keoi5 soeng1 cyu2.)
 
 ---
