@@ -16,7 +16,7 @@
 | 部門 | bou6 mun6 | department | bộ phận |
 | 新同事 | san1 tung4 si5 | new colleague | đồng nghiệp mới |
 | 平時 | ping4 si4 | usually | thường thường |
-| 非常重要 | fei1 soeng4 jiu3 zung3 jiu3 | very important | rất quan trọng |
+| 非常重要 | fei1 soeng4 jiu3 zung6 jiu3 | very important | rất quan trọng |
 | 工作環境 | gung1 zok3 waan4 ging2 | work environment | môi trường làm việc |
 | 合作 | hap6 zok3 | cooperate, collaborate | hợp tác |
 | 順利 | seon6 lei6 | smoothly | thuận lợi |
@@ -72,13 +72,13 @@
 
 **A：** 最近我哋部門嚟咗唔少新同事，你覺得平時同人相處嘅時候，最重要嘅係乜嘢啊？
 
-> zeoi3 gan6 ngo5 dei2 bou6 mun6 lai4 zo2 m4 siu2 san1 tung4 si5, nei5 gok3 dak1 ping4 si4 tung4 jan4 soeng1 cyu2 ge3 si4 hau6, zeoi3 zung3 jiu3 ge3 hai6 me1 je5 aa3?
+> zeoi3 gan6 ngo5 dei2 bou6 mun6 lai4 zo2 m4 siu2 san1 tung4 si5, nei5 gok3 dak1 ping4 si4 tung4 jan4 soeng1 cyu2 ge3 si4 hau6, zeoi3 zung6 jiu3 ge3 hai6 me1 je5 aa3?
 >
 > *Recently our department has gotten quite a few new colleagues. What do you think is the most important thing when getting along with people?*
 
 **B：** 我覺得禮貌同尊重真係好重要，尤其係喺工作環境入面。大家一齊做嘢，如果冇���本乎尊重，其實好難合作得順利。
 
-> ngo5 gok3 dak1 lai5 maau6 tung4 zyun1 zung6 zan1 hai6 hou2 zung3 jiu3, jau4 kei4 hai2 gung1 zok3 waan4 ging2 jap6 min6. daai6 gaa1 jat1 cai4 zou6 je5, jyu4 gwo2 mou5 gei1 bun2 ge3 zyun1 zung6, kei4 sat6 hou2 naan4 hap6 zok3 dak1 seon6 lei6.
+> ngo5 gok3 dak1 lai5 maau6 tung4 zyun1 zung6 zan1 hai6 hou2 zung6 jiu3, jau4 kei4 hai2 gung1 zok3 waan4 ging2 jap6 min6. daai6 gaa1 jat1 cai4 zou6 je5, jyu4 gwo2 mou5 gei1 bun2 ge3 zyun1 zung6, kei4 sat6 hou2 naan4 hap6 zok3 dak1 seon6 lei6.
 >
 > *I think etiquette and respect are really important, especially in the work environment. When everyone works together, if there's no basic respect, it's really hard to cooperate smoothly.*
 
@@ -112,7 +112,7 @@
 
 **A：** 聽落都幾重要喎。咁如果你遇到啲人態度唔係幾好，甚至有啲唔禮貌，你會點處理？
 
-> teng1 lok6 dou1 gei2 zung3 jiu3 wo3. gam2 jyu4 gwo2 nei5 jyu6 dou3 di1 jan4 taai3 dou6 m4 hei6 gei2 hou2, sam6 zi3 jau5 di1 m4 lai5 maau6, nei5 wui5 dim2 cyu2 lei5?
+> teng1 lok6 dou1 gei2 zung6 jiu3 wo3. gam2 jyu4 gwo2 nei5 jyu6 dou3 di1 jan4 taai3 dou6 m4 hei6 gei2 hou2, sam6 zi3 jau5 di1 m4 lai5 maau6, nei5 wui5 dim2 cyu2 lei5?
 >
 > *That sounds quite important. So if you encounter people with bad attitudes, or even some impolite people, how do you handle it?*
 
@@ -180,7 +180,7 @@ Emphasizes a particular case.
 
 > **Pattern:** 尤其係 + noun/phrase
 >
-> **Example:** 尊重真係好重要，**尤其係**喺工作環境入面。 (zyun1 zung6 zan1 hai6 hou2 zung3 jiu3, **jau4 kei4 hai6** hai2 gung1 zok3 waan4 ging2 jap6 min6.) — Respect is really important, especially in the work environment.
+> **Example:** 尊重真係好重要，**尤其係**喺工作環境入面。 (zyun1 zung6 zan1 hai6 hou2 zung6 jiu3, **jau4 kei4 hai6** hai2 gung1 zok3 waan4 ging2 jap6 min6.) — Respect is really important, especially in the work environment.
 
 ### 3. 如果...���... (jyu4 gwo2...ge3) — if... then...
 

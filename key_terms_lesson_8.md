@@ -17,7 +17,7 @@
 > *Building good interpersonal relationships requires time and patience.*
 
 3. 人際關係 (jan4 zai3 gwaan1 hai6)喺職場上面好重要。
-> jan4 zai3 gwaan1 hai6 hai2 zik1 coeng4 soeng6 min6 hou2 zung3 jiu3.
+> jan4 zai3 gwaan1 hai6 hai2 zik1 coeng4 soeng6 min6 hou2 zung6 jiu3.
 > *Interpersonal relationships are very important in the workplace.*
 
 4. 佢因為人際關係 (jan4 zai3 gwaan1 hai6)差，所以成日換工。
@@ -161,7 +161,7 @@
 > *Exam pressure makes him unable to sleep.*
 
 3. 學識釋放壓力 (aat3 lik6)好重要。
-> hok6 sik1 sik1 fong3 aat3 lik6 hou2 zung3 jiu3.
+> hok6 sik1 sik1 fong3 aat3 lik6 hou2 zung6 jiu3.
 > *Learning to relieve stress is very important.*
 
 4. 佢承受唔到咁大嘅壓力 (aat3 lik6)。
@@ -657,7 +657,7 @@
 > *His mood affected the atmosphere of the whole team.*
 
 7. 學識管理情緒 (cing4 seoi5)係一種重要嘅能力。
-> hok6 sik1 gun2 lei5 cing4 seoi5 hai6 jat1 zung2 zung3 jiu3 ge3 nang4 lik6.
+> hok6 sik1 gun2 lei5 cing4 seoi5 hai6 jat1 zung2 zung6 jiu3 ge3 nang4 lik6.
 > *Learning to manage emotions is an important ability.*
 
 8. 佢情緒 (cing4 seoi5)激動嘅時候講嘢特別直接。
@@ -845,7 +845,7 @@
 > *His attitude makes people feel respected.*
 
 6. 尊重 (zyun1 zung6)唔同嘅文化同習慣好重要。
-> zyun1 zung6 m4 tung4 ge3 man4 faa3 tung4 zaap6 gwaan3 hou2 zung3 jiu3.
+> zyun1 zung6 m4 tung4 ge3 man4 faa3 tung4 zaap6 gwaan3 hou2 zung6 jiu3.
 > *Respecting different cultures and habits is very important.*
 
 7. 佢用行動表達對同事嘅尊重 (zyun1 zung6)。
@@ -1433,7 +1433,7 @@
 > *He spends his whole life pursuing knowledge.*
 
 9. 學問 (hok6 man3)唔止係書本上面嘅嘢，生活經驗都好重要。
-> hok6 man3 m4 zi2 hai6 syu1 bun2 soeng6 min6 ge3 je5, sang1 wut6 ging1 jim6 dou1 hou2 zung3 jiu3.
+> hok6 man3 m4 zi2 hai6 syu1 bun2 soeng6 min6 ge3 je5, sang1 wut6 ging1 jim6 dou1 hou2 zung6 jiu3.
 > *Knowledge is not just from books; life experience is also very important.*
 
 10. 佢嘅學問 (hok6 man3)同經驗令佢成為一個好領導。

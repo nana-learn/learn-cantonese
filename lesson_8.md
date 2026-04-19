@@ -115,13 +115,13 @@
 
 **A：** 咁樣做好好喎，溝通真係好重要。咁你自己覺得，建立良好人際關係最重要係乜嘢呢？
 
-> gam2 joeng2 zou6 hou2 hou2 wo3, kau3 tung1 zan1 hai6 hou2 zung3 jiu3. gam2 nei5 zi6 gei2 gok3 dak1, gin3 laap6 loeng5 hou2 jan4 zai3 gwaan1 hai6 zeoi3 zung3 jiu3 hai6 me1 je5 ne1?
+> gam2 joeng2 zou6 hou2 hou2 wo3, kau3 tung1 zan1 hai6 hou2 zung6 jiu3. gam2 nei5 zi6 gei2 gok3 dak1, gin3 laap6 loeng5 hou2 jan4 zai3 gwaan1 hai6 zeoi3 zung6 jiu3 hai6 me1 je5 ne1?
 >
 > *That's great, communication is really important. So what do you think is the most important thing in building good interpersonal relationships?*
 
 **B：** 我覺得最重要係尊重同埋理解，大家都要試下企喺對方嘅角度諗下。另外都要保持真誠，唔好一味迎合或者討好人，咁樣反而唔長久。
 
-> ngo5 gok3 dak1 zeoi3 zung3 jiu3 hai6 zyun1 cung6 tung4 maai4 lei5 gaai2, daai6 gaa1 dou1 jiu3 si3 haa5 kei5 hai2 deoi3 fong1 ge3 gok3 dou6 nam2 haa5. ling6 ngoi6 dou1 jiu3 bou2 ci4 zan1 sing4, m4 hou2 jat1 mei6 jing4 hap6 waak6 ze2 tou2 hou2 jan4, gam2 joeng2 faan2 ji4 m4 coeng4 gau2.
+> ngo5 gok3 dak1 zeoi3 zung6 jiu3 hai6 zyun1 cung6 tung4 maai4 lei5 gaai2, daai6 gaa1 dou1 jiu3 si3 haa5 kei5 hai2 deoi3 fong1 ge3 gok3 dou6 nam2 haa5. ling6 ngoi6 dou1 jiu3 bou2 ci4 zan1 sing4, m4 hou2 jat1 mei6 jing4 hap6 waak6 ze2 tou2 hou2 jan4, gam2 joeng2 faan2 ji4 m4 coeng4 gau2.
 >
 > *I think the most important things are respect and understanding. Everyone needs to try to think from the other person's perspective. Also need to maintain sincerity — don't just cater to or flatter people, because that way won't last long anyway.*
 

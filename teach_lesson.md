@@ -190,7 +190,7 @@ I will go through the dialogue **in chunks** (2-4 lines at a time). For each chu
 ### Chunk 4: The Wisdom
 
 **B：** 我覺得最重要係尊重同埋理解，大家都要試下企喺對方嘅角度諗下。另外都要保持真誠，唔好一味迎合或者討好人，咁樣反而唔長久。
-> ngo5 gok3 dak1 zeoi3 zung3 jiu3 hai6 zyun1 cung6 tung4 maai4 lei5 gaai2, daai6 gaa1 dou1 jiu3 si3 haa5 kei5 hai2 deoi3 fong1 ge3 gok3 dou6 nam2 haa5. ling6 ngoi6 dou1 jiu3 bou2 ci4 zan1 sing4, m4 hou2 jat1 mei6 jing4 hap6 waak6 ze2 tou2 hou2 jan4, gam2 joeng2 faan2 ji4 m4 coeng4 gau2.
+> ngo5 gok3 dak1 zeoi3 zung6 jiu3 hai6 zyun1 cung6 tung4 maai4 lei5 gaai2, daai6 gaa1 dou1 jiu3 si3 haa5 kei5 hai2 deoi3 fong1 ge3 gok3 dou6 nam2 haa5. ling6 ngoi6 dou1 jiu3 bou2 ci4 zan1 sing4, m4 hou2 jat1 mei6 jing4 hap6 waak6 ze2 tou2 hou2 jan4, gam2 joeng2 faan2 ji4 m4 coeng4 gau2.
 > *I think the most important things are respect and understanding. Everyone needs to try to think from the other person's perspective. Also need to maintain sincerity — don't just cater to or flatter people, because that way won't last long anyway.*
 
 **B：** 我覺得逃避只會令到問題越嚟越大，積埋積埋就更加難解決。不如適當咁溝通，大家坦白啲講出自己嘅諗法，再互相包容同體諒，反而可以令關係變得更加穩固。
@@ -212,10 +212,10 @@ I will go through the dialogue **in chunks** (2-4 lines at a time). For each chu
 - 穩固 (wan2 gu3) — stable
 
 **Comprehension check:**
-> B 認為良好人際關係最重要係乜嘢？(B jing4 wai4 loeng5 hou2 jan4 zai3 gwaan1 hai6 zeoi3 zung3 jiu3 hai6 me1 je5?)
+> B 認為良好人際關係最重要係乜嘢？(B jing4 wai4 loeng5 hou2 jan4 zai3 gwaan1 hai6 zeoi3 zung6 jiu3 hai6 me1 je5?)
 > *(What does B think is most important for good relationships?)*
 
-**Expected answer:** 最重要係尊重同埋理解，要保持真誠。(zeoi3 zung3 jiu3 hai6 zyun1 cung6 tung4 maai4 lei5 gaai2, jiu3 bou2 ci4 zan1 sing4.)
+**Expected answer:** 最重要係尊重同埋理解，要保持真誠。(zeoi3 zung6 jiu3 hai6 zyun1 cung6 tung4 maai4 lei5 gaai2, jiu3 bou2 ci4 zan1 sing4.)
 
 ---
 
@@ -373,7 +373,7 @@ I give you English → you translate to Cantonese.
 > 唔好成日鑽牛角尖啦，試下先冷靜返先。(m4 hou2 sing4 jat6 zyun3 ngau4 gok3 zim1 laa1, si3 haa5 sin1 laang5 zing6 faan1 sin1.)
 
 5. "I think the most important thing is respect and understanding."
-> 我覺得最重要係尊重同埋理解。(ngo5 gok3 dak1 zeoi3 zung3 jiu3 hai6 zyun1 cung6 tung4 maai4 lei5 gaai2.)
+> 我覺得最重要係尊重同埋理解。(ngo5 gok3 dak1 zeoi3 zung6 jiu3 hai6 zyun1 cung6 tung4 maai4 lei5 gaai2.)
 
 ---
 
