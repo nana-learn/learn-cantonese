@@ -277,9 +277,10 @@ function renderFlashcards(L){
 const v=L.vocab[fcIndex];
 const total=L.vocab.length;
 const done=fcDone.length;
-return `<div class="flashcard-area"><div class="fc-counter">${fcIndex+1} / ${total} (${done} reviewed)</div><div class="flashcard${fcFlipped?' flipped':''}" onclick="fcFlipped=!fcFlipped;render()"><div class="flashcard-inner"><div class="flashcard-face flashcard-front"><div class="big">${v.c}</div><div class="hint">Click to reveal</div></div><div class="flashcard-face flashcard-back"><div class="big">${v.j}</div><div class="sub">${v.e}</div></div></div></div><div class="fc-controls"><button class="fc-btn skip" onclick="fcNext()">Skip</button><button class="fc-btn got-it" onclick="fcDone.push(fcIndex);fcNext()">Got it</button></div></div>`;
+return `<div class="flashcard-area"><div class="fc-counter">${fcIndex+1} / ${total} (${done} reviewed)</div><div class="flashcard${fcFlipped?' flipped':''}" onclick="fcFlip(this)"><div class="flashcard-inner"><div class="flashcard-face flashcard-front"><div class="big">${v.c}</div><div class="hint">Click to reveal</div></div><div class="flashcard-face flashcard-back"><div class="big">${v.j}</div><div class="sub">${v.e}</div></div></div></div><div class="fc-controls"><button class="fc-btn skip" onclick="fcNext()">Skip</button><button class="fc-btn got-it" onclick="fcDone.push(fcIndex);fcNext()">Got it</button></div></div>`;
 }
-function fcNext(){const L=LESSONS[currentLesson];fcFlipped=false;fcIndex=(fcIndex+1)%L.vocab.length;render();showSection('flashcards',document.querySelector('#sec-flashcards').previousElementSibling.querySelector('.tab:nth-child(3)'));document.querySelectorAll('.tabs:last-of-type .tab').forEach((t,i)=>{if(i===2)t.classList.add('active');else t.classList.remove('active')});}
+function fcFlip(el){fcFlipped=!fcFlipped;el.classList.toggle('flipped',fcFlipped)}
+function fcNext(){const L=LESSONS[currentLesson];fcFlipped=false;fcIndex=(fcIndex+1)%L.vocab.length;document.getElementById('sec-flashcards').innerHTML=renderFlashcards(L)}
 
 function renderGrammar(L){
 return L.grammar.map(g=>`<div class="grammar-card"><div class="pattern">${g.pattern}</div><div class="explanation">${g.desc}</div><div class="example">${g.ex}<br><span class="jyutping-inline">${g.en}</span></div></div>`).join('');
