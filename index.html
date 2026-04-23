@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cantonese Learner</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0f1117;--surface:#1a1d27;--surface2:#242836;--accent:#6c5ce7;--accent2:#a29bfe;--text:#e8e8f0;--text2:#9a9ab0;--green:#00b894;--red:#e17055;--yellow:#fdcb6e;--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+.app{max-width:900px;margin:0 auto;padding:20px}
+header{text-align:center;padding:30px 0;border-bottom:1px solid var(--surface2);margin-bottom:30px}
+header h1{font-size:2em;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+header p{color:var(--text2);margin-top:5px}
+.tabs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.tab{padding:10px 20px;background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);cursor:pointer;color:var(--text2);font-size:.95em;transition:all .2s}
+.tab:hover{border-color:var(--accent);color:var(--text)}
+.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.section{display:none;margin-bottom:30px}
+.section.active{display:block}
+h2{font-size:1.4em;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+h2 .icon{font-size:1.1em}
+.card{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:20px;margin-bottom:16px;transition:border-color .2s}
+.card:hover{border-color:var(--accent)}
+.dialogue-line{margin-bottom:16px;padding:12px 16px;border-radius:8px;border-left:3px solid var(--accent)}
+.dialogue-line .speaker{font-weight:700;color:var(--accent2);margin-bottom:4px}
+.dialogue-line .cantonese{font-size:1.15em;margin-bottom:6px}
+.dialogue-line .jyutping{color:var(--text2);font-style:italic;font-size:.9em;margin-bottom:4px;display:none}
+.dialogue-line .english{color:var(--yellow);font-size:.9em;display:none}
+.toggle-row{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.toggle-btn{padding:6px 14px;background:var(--surface2);border:1px solid transparent;border-radius:20px;cursor:pointer;color:var(--text2);font-size:.85em;transition:all .2s}
+.toggle-btn:hover{color:var(--text)}
+.toggle-btn.on{background:var(--accent);color:#fff}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.vocab-card{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:16px;cursor:pointer;transition:all .3s;position:relative;perspective:1000px}
+.vocab-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.vocab-card .front,.vocab-card .back{transition:opacity .3s}
+.vocab-card .back{display:none}
+.vocab-card.flipped .front{display:none}
+.vocab-card.flipped .back{display:block}
+.vocab-card .word{font-size:1.3em;font-weight:700;margin-bottom:2px}
+.vocab-card .jp{color:var(--accent2);font-size:.85em;margin-bottom:4px}
+.vocab-card .meaning{color:var(--text2);font-size:.9em}
+.vocab-card .tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.7em;margin-top:6px;background:var(--surface2);color:var(--text2)}
+.quiz-container{margin-top:10px}
+.quiz-q{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:20px;margin-bottom:16px}
+.quiz-q .q-text{font-size:1.05em;margin-bottom:12px}
+.quiz-q .q-text em{color:var(--accent2);font-style:normal;font-weight:700}
+.quiz-options{display:flex;flex-direction:column;gap:8px}
+.quiz-opt{padding:10px 14px;background:var(--surface2);border:1px solid transparent;border-radius:8px;cursor:pointer;transition:all .2s;font-size:.95em}
+.quiz-opt:hover{border-color:var(--accent)}
+.quiz-opt.correct{background:var(--green);color:#fff;border-color:var(--green)}
+.quiz-opt.wrong{background:var(--red);color:#fff;border-color:var(--red)}
+.quiz-opt.disabled{pointer-events:none;opacity:.7}
+.grammar-card{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:16px;margin-bottom:12px}
+.grammar-card .pattern{color:var(--accent2);font-weight:700;margin-bottom:6px}
+.grammar-card .example{color:var(--text);margin-bottom:4px}
+.grammar-card .example .jyutping-inline{color:var(--text2);font-size:.85em}
+.grammar-card .example .en{color:var(--yellow);font-size:.9em}
+.grammar-card .explanation{color:var(--text2);font-size:.9em;margin-top:6px}
+.score-bar{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--surface);border-radius:var(--radius);margin-bottom:20px}
+.score-bar .score{font-size:1.2em;font-weight:700;color:var(--green)}
+.score-bar .total{color:var(--text2)}
+.progress{height:4px;background:var(--surface2);border-radius:2px;flex:1}
+.progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .3s}
+.flashcard-area{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:16px}
+.flashcard{width:100%;max-width:400px;height:200px;perspective:1000px;cursor:pointer}
+.flashcard-inner{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.flashcard.flipped .flashcard-inner{transform:rotateY(180deg)}
+.flashcard-face{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px}
+.flashcard-front{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--surface2)}
+.flashcard-back{background:linear-gradient(135deg,#2d1b69,#1a1d27);border:1px solid var(--accent);transform:rotateY(180deg)}
+.flashcard-face .big{font-size:2em;font-weight:700}
+.flashcard-face .sub{color:var(--accent2);font-size:1.1em;margin-top:4px}
+.flashcard-face .hint{color:var(--text2);font-size:.85em;margin-top:8px}
+.fc-controls{display:flex;gap:10px}
+.fc-btn{padding:10px 20px;border-radius:8px;border:1px solid var(--surface2);background:var(--surface);color:var(--text);cursor:pointer;font-size:.9em;transition:all .2s}
+.fc-btn:hover{border-color:var(--accent)}
+.fc-btn.skip{border-color:var(--red);color:var(--red)}
+.fc-btn.got-it{border-color:var(--green);color:var(--green)}
+.fc-counter{color:var(--text2);font-size:.85em}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr}.dialogue-line .cantonese{font-size:1em}}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+<h1>粵語學習</h1>
+<p>Cantonese Learner — Interactive Study Tool</p>
+</header>
+<div class="tabs" id="lessonTabs"></div>
+<div id="content"></div>
+</div>
+<script>
+const LESSONS=[
+{id:8,title:"第八課：人際關係",subtitle:"jan4 zai3 gwaan1 hai6 — Interpersonal Relationships",
+vocab:[
+{c:"人際關係",j:"jan4 zai3 gwaan1 hai6",e:"interpersonal relationships"},
+{c:"壓力",j:"aat3 lik6",e:"pressure, stress"},
+{c:"溝通",j:"kau3 tung1",e:"communication"},
+{c:"誤會",j:"ng6 wui6",e:"misunderstanding"},
+{c:"冷靜",j:"laang5 zing6",e:"calm down"},
+{c:"尊重",j:"zyun1 zung6",e:"respect"},
+{c:"理解",j:"lei5 gaai2",e:"understand"},
+{c:"逃避",j:"tou4 bei6",e:"escape, avoid"},
+{c:"包容",j:"baau1 jung4",e:"tolerate"},
+{c:"體諒",j:"tai2 loeng6",e:"empathize"},
+{c:"真誠",j:"zan1 sing4",e:"sincere"},
+{c:"直接",j:"zik6 zip3",e:"direct"},
+{c:"語氣",j:"jyu5 hei3",e:"tone of voice"},
+{c:"矛盾",j:"maau4 teon5",e:"contradiction, conflict"},
+{c:"坦白",j:"taan2 baak6",e:"frank, honest"},
+{c:"穩固",j:"wan2 gu3",e:"stable, firm"},
+{c:"經驗",j:"ging1 jim6",e:"experience"},
+{c:"拿捏分寸",j:"naa4 nip6 fan1 cyun3",e:"judge appropriate limits"},
+{c:"鑽牛角尖",j:"zyun3 ngau4 gok3 zim1",e:"overthink, split hairs"},
+{c:"針對",j:"zam1 deoi3",e:"to target, aim at"}
+],
+dialogue:[
+{speaker:"A",c:"最近你好似有啲煩喎，成個人都有啲悶悶不樂咁，係咪喺人際關係方面遇到啲乜嘢問題啊？",j:"zeoi3 gan6 nei5 hou2 ci5 jau5 di1 faan4 wo3, sing4 go3 jan4 dou1 jau5 di1 mun6 mun6 bat1 lok6 gam2, hai6 mai6 hai2 jan4 zai3 gwaan1 hai6 fong1 min6 jyu6 dou3 di1 me1 je5 man6 tai4 aa3?",e:"Recently you seem a bit troubled. Have you encountered some problem in interpersonal relationships?"},
+{speaker:"B",c:"係啊，最近同啲同事相處嗰陣，間中都會覺得有啲壓力，都唔係好知道點樣先可以拿捏好分寸，驚講多錯多。",j:"hai6 aa3, zeoi3 gan6 tung4 di1 tung4 si6 soeng1 cyu2 go2 zan6, gaan3 zung1 dou1 wui5 gok3 dak1 jau5 di1 aat3 lik6, dou1 m4 hai6 hou2 zi1 dou3 dim2 joeng2 sin1 ho2 ji5 naa4 nip6 fan1 cyun3, geng1 gong2 do1 co3 do1.",e:"Yes, I sometimes feel pressure getting along with colleagues. I don't know how to judge appropriate limits — afraid that the more I speak, the more mistakes I'll make."},
+{speaker:"A",c:"咁係邊一方面令到你覺得最困擾呢？係溝通嘅問題定係大家做嘢方式唔同嘅問題？",j:"gam2 hai6 bin1 jat1 fong1 min6 ling6 dou3 nei5 gok3 dak1 zeoi3 kwan3 jiu2 ne1? hai2 kau3 tung1 ge3 man6 tai4 ding6 hai6 daai6 gaa1 zou6 je5 fong1 sik1 m4 tung4 ge3 man6 tai4?",e:"Which aspect troubles you the most? Communication or different work styles?"},
+{speaker:"B",c:"主要係有啲同事講嘢比較直接，有時語氣比較衝，我就會喺度諗，佢哋係咪針對緊我呢，搞到自己心入面有啲唔舒服，甚至會亂咁諗嘢。",j:"zyu2 jiu3 hai6 jau5 di1 tung4 si6 gong2 je5 bei2 gaau3 zik6 zip3, jau5 si4 jyu5 hei3 bei2 gaau3 cung3, ngo5 zau6 wui5 hai2 dou6 nam2, keoi5 dei6 hai6 mai6 zam1 deoi3 gan2 ngo5 ne1, gaau2 dou3 zi6 gei2 sam1 jap6 min6 jau5 di1 m4 syu1 fuk6, sam6 zi3 wui5 lyun6 gam2 nam2 je5.",e:"Some colleagues speak directly with a blunt tone. I wonder if they're targeting me, making myself feel uncomfortable."},
+{speaker:"B",c:"首先我會試下先令自己冷靜落嚟，唔好即刻有情緒反應，然後試下企喺對方嘅立場諗一諗。後來發現，其實好多時候都只係因為工作需要，講嘢直接啲，未必真係有惡意。",j:"sau2 sin1 ngo5 wui5 si3 haa5 sin1 ling6 zi6 gei2 laang5 zing6 lok6 lei4, m4 hou2 zik1 hak1 jau5 cing4 seoi5 faan2 jing3, jin4 hau6 si3 haa5 kei5 hai2 deoi3 fong1 ge3 laap6 coeng4 nam2 jat1 nam2. hau6 loi4 faat3 jin6, kei4 sat6 hou2 do1 si4 hau6 dou1 zi2 hai6 jan1 wai6 gung1 zok3 seoi1 jiu3, gong2 je5 zik6 zip3 di1, mei6 bit1 zan1 hai6 jau5 ok3 ji3.",e:"First I calm down, then try to think from their position. Later I found it's usually just work needs — not ill will."},
+{speaker:"B",c:"我覺得最重要係尊重同埋理解，大家都要試下企喺對方嘅角度諗下。另外都要保持真誠，唔好一味迎合或者討好人，咁樣反而唔長久。",j:"ngo5 gok3 dak1 zeoi3 zung6 jiu3 hai6 zyun1 zung6 tung4 maai4 lei5 gaai2, daai6 gaa1 dou1 jiu3 si3 haa5 kei5 hai2 deoi3 fong1 ge3 gok3 dou6 nam2 haa5. ling6 ngoi6 dou1 jiu3 bou2 ci4 zan1 sing4, m4 hou2 jat1 mei6 jing4 hap6 waak6 ze2 tou2 hou2 jan4, gam2 joeng2 faan2 ji4 m4 coeng4 gau2.",e:"Most important are respect and understanding. Be sincere — don't blindly cater to people."},
+{speaker:"B",c:"我覺得逃避只會令到問題越嚟越大，不如適當咁溝通，大家坦白啲講出自己嘅諗法，再互相包容同體諒，反而可以令關係變得更加穩固。",j:"ngo5 gok3 dak1 tou4 bei6 zi2 wui5 ling6 dou3 man6 tai4 jyut6 lei4 jyut6 daai6, zik1 maai4 zik1 maai4 zau6 gaai3 gaa1 naan4 gaai2 kyut3. bat1 jyu4 sik1 dong3 gam2 kau3 tung1, daai6 gaa1 taan2 baak3 di1 gong2 ceot1 zi6 gei2 ge3 nam2 faat3, zoi3 wu6 soeng1 baau1 jung4 tung4 tai2 loeng6, faan2 ji4 ho2 ji5 ling6 gwaan1 hai6 bin3 dak1 gaai3 gaa1 wan2 gu3.",e:"Avoiding only makes problems bigger. Better to communicate frankly, then tolerate and empathize — this makes relationships more stable."}
+],
+grammar:[
+{pattern:"有啲...咁 (jau5 di1... gam2)",desc:"seems a bit...",ex:"成個人都有啲悶悶不樂咁 (sing4 go3 jan4 dou1 jau5 di1 mun6 mun6 bat1 lok6 gam2)",en:"The whole person seems a bit unhappy"},
+{pattern:"係咪...啊？(hai6 mai6... aa3?)",desc:"Is it that...?",ex:"係咪喺人際關係方面遇到問題啊？(hai6 mai6 hai2 jan4 zai3 gwaan1 hai6 fong1 min6 jyu6 dou3 man6 tai4 aa3?)",en:"Have you encountered some problem?"},
+{pattern:"越...越... (jyut6... jyut6...)",desc:"the more... the more...",ex:"誤會越積越多 (ng6 wui6 jyut6 zik1 jyut6 do1)",en:"Misunderstandings accumulate more and more"},
+{pattern:"不如... (bat1 jyu4...)",desc:"better to...",ex:"不如適當咁溝通 (bat1 jyu4 sik1 dong3 gam2 kau3 tung1)",en:"Better to communicate appropriately"},
+{pattern:"搞到... (gaau2 dou3...)",desc:"causing / making it so that...",ex:"搞到自己心入面唔舒服 (gaau2 dou3 zi6 gei2 sam1 jap6 min6 m4 syu1 fuk6)",en:"Making myself feel uncomfortable inside"},
+{pattern:"先會... (sin1 wui5...)",desc:"only then will...",ex:"慢慢累積經驗，先會做得越好 (maan6 maan6 leoi6 zik1 ging1 jim6, sin1 wui5 zou6 dak1 jyut6 hou2)",en:"Slowly accumulate experience, only then will you improve"}
+],
+quiz:[
+{q:'What does "壓力" mean?',opts:["communication","pressure, stress","respect","misunderstanding"],ans:1},
+{q:'What does "體諒" mean?',opts:["tolerate","escape","empathize","argue"],ans:2},
+{q:'"鑽牛角尖" means:',opts:["to be very hardworking","to split hairs / overthink","to solve problems","to be honest"],ans:1},
+{q:'"拿捏分寸" means:',opts:["to hold something tightly","to judge appropriate limits","to measure precisely","to speak carefully"],ans:1},
+{q:'"逃避只會令到問題越嚟越大" means:',opts:["Avoiding will solve the problem","Avoiding will make the problem bigger","The problem will go away","Problems are unavoidable"],ans:1},
+{q:'"企喺對方嘅立場" means:',opts:["to stand behind someone","to agree with someone","to think from the other person's position","to confront someone"],ans:2},
+{q:'What does "包容" mean?',opts:["to argue","to complain","to tolerate","to avoid"],ans:2},
+{q:'"講多錯多" means:',opts:["speak more, learn more","the more you speak, the more mistakes","speak loudly","speak carefully"],ans:1}
+]},
+
+{id:9,title:"第九課：禮貌與尊重",subtitle:"lai5 maau6 jyu5 zyun1 zung6 — Etiquette and Respect",
+vocab:[
+{c:"禮貌",j:"lai5 maau6",e:"etiquette, politeness"},
+{c:"尊重",j:"zyun1 zung6",e:"respect"},
+{c:"部門",j:"bou6 mun6",e:"department"},
+{c:"合作",j:"hap6 zok3",e:"cooperate, collaborate"},
+{c:"順利",j:"seon6 lei6",e:"smoothly"},
+{c:"性格",j:"sing3 gok3",e:"personality"},
+{c:"謹慎",j:"gan2 seon6",e:"cautious"},
+{c:"缺乏",j:"kyut3 faat3",e:"lack"},
+{c:"誤會",j:"ng6 wui6",e:"misunderstanding"},
+{c:"衝突",j:"cung1 dat6",e:"conflict"},
+{c:"影響",j:"jing2 hoeng5",e:"affect"},
+{c:"團隊",j:"tyun4 deoi6",e:"team"},
+{c:"氣氛",j:"hei3 fan1",e:"atmosphere"},
+{c:"語氣",j:"jyu5 hei3",e:"tone of voice"},
+{c:"認真",j:"jing6 zan1",e:"attentively, seriously"},
+{c:"同意",j:"tung4 ji3",e:"agree"},
+{c:"意見",j:"ji3 gin3",e:"opinion"},
+{c:"理解",j:"lei5 gaai2",e:"understand"},
+{c:"平和",j:"ping4 wo4",e:"peaceful, calm"},
+{c:"回應",j:"wui4 jing3",e:"respond"},
+{c:"委屈",j:"wat1 kut1",e:"feel wronged"},
+{c:"保護",j:"bou2 wu6",e:"protect"},
+{c:"升級",j:"sing1 kap6",e:"escalate"},
+{c:"長遠",j:"coeng4 jyun5",e:"long-term"},
+{c:"敷衍",j:"fu1 jin5",e:"half-hearted"},
+{c:"信任",j:"seon3 jam6",e:"trust"},
+{c:"舒服",j:"syu1 fuk6",e:"comfortable"},
+{c:"穩定",j:"wan2 ding6",e:"stable"}
+],
+dialogue:[
+{speaker:"A",c:"最近我哋部門嚟咗唔少新同事，你覺得平時同人相處嘅時候，最重要嘅係乜嘢啊？",j:"zeoi3 gan6 ngo5 dei2 bou6 mun6 lai4 zo2 m4 siu2 san1 tung4 si5, nei5 gok3 dak1 ping4 si4 tung4 jan4 soeng1 cyu2 ge3 si4 hau6, zeoi3 zung6 jiu3 ge3 hai6 me1 je5 aa3?",e:"Recently our department has gotten quite a few new colleagues. What do you think is the most important thing when getting along with people?"},
+{speaker:"B",c:"我覺得禮貌同尊重真係好重要，尤其係喺工作環境入面。大家一齊做嘢，如果冇基本嘅尊重，其實好難合作得順利。",j:"ngo5 gok3 dak1 lai5 maau6 tung4 zyun1 zung6 zan1 hai6 hou2 zung6 jiu3, jau4 kei4 hai2 gung1 zok3 waan4 ging2 jap6 min6. daai6 gaa1 jat1 cai4 zou6 je5, jyu4 gwo2 mou5 gei1 bun2 ge3 zyun1 zung6, kei4 sat6 hou2 naan4 hap6 zok3 dak1 seon6 lei6.",e:"Etiquette and respect are really important, especially at work. Without basic respect, it's hard to cooperate smoothly."},
+{speaker:"B",c:"因為每個人嘅背景、性格同埋做嘢方式都唔一樣，有啲人做嘢快，有啲人就比較謹慎。如果缺乏尊重，好容易就會出現誤會，甚至引起衝突，影響成個團隊嘅氣氛。",j:"jan1 wai6 mui5 go3 jan4 ge3 bui3 ging2, sing3 gok3 tung4 maai4 zou6 je5 fong1 sik1 dou1 m4 jat1 joeng6, jau5 di1 jan4 zou6 je5 faai3, jau5 di1 jan4 zau6 bei2 gaau3 gan2 seon6. jyu4 gwo2 kyut3 faat3 zyun1 zung6, hou2 jung4 ji6 zau6 ceot1 jyut6 ng6 wui6, sam6 zi3 jau5 hei2 coeng4 cung1 dat6, jing2 hoeng5 sing4 go3 tyun4 deoi6 ge3 hei3 fan1.",e:"Everyone's background, personality, and work style are different. Without respect, misunderstandings and conflicts easily arise, affecting the team atmosphere."},
+{speaker:"B",c:"例如同同事傾偈嘅時候，我會特別注意語氣，盡量唔好太衝或者太直接；同時都會認真聽對方講嘢，唔會打斷人。就算我唔同意對方嘅意見，我都會先表示理解，再慢慢講返自己嘅睇法。",j:"lei2 ba6 tung4 tung4 si6 king1 gai2 ge3 si4 hau6, ngo5 wui5 dak6 bit6 zyu3 ji5 jyu5 hei3, zeon6 loeng6 m4 hou2 taai3 cung3 waak6 ze2 taai3 zik6 zip3; tung4 si5 dou1 wui5 jing6 zan1 teng1 deoi3 fong1 gong2 je5, m4 wui5 daa2 tyun5 jan4. zau6 syun3 ngo5 m4 tung4 ji3 deoi3 fong1 ge3 ji3 gin3, ngo5 dou1 wui5 sin1 biu2 si6 lei5 gaai2, zoi3 maan6 maan6 gong2 faan1 zi6 gei2 ge3 tai2 faat3.",e:"For example, I pay attention to my tone, listen without interrupting. Even if I disagree, I first show understanding, then share my view."},
+{speaker:"B",c:"我通常都會盡量保持冷靜，用比較平和嘅方式回應，唔會用情緒去對抗情緒。因為一旦雙方都情緒化，事情只會越搞越差。",j:"ngo5 tung1 soeng4 dou1 wui5 zeon6 loeng6 bou2 ci4 laang5 zing6, jung6 bei2 gaau3 ping4 wo4 ge3 fong1 sik1 wui4 jing3, m4 wui5 jung6 cing4 seoi5 heoi3 deoi3 kong3 cing4 seoi5. jan1 wai6 jat1 daan6 soeng1 fong1 dou1 cing4 seoi5 waa3, si6 cing4 zi2 wui5 gaau2 jyut6 caa1.",e:"I stay calm and respond peacefully. If both sides get emotional, things only get worse."},
+{speaker:"B",c:"真正嘅禮貌其實係發自內心嘅尊重，而唔係敷衍或者做戲。如果只係表面客氣，但內心唔尊重人，其實對方都感受到，反而會影響信任。",j:"zan1 hai6 lai5 maau6 kei4 sat6 hai6 faat3 zi6 noi6 sam1 ge3 zyun1 zung6, ji4 m4 hai6 fu1 jin5 waak6 zou6 hei3. jyu4 gwo2 zi2 hai6 biu2 min6 hak3 hei3, daan6 noi6 sam1 m4 zyun1 zung6 jan4, kei4 sat6 deoi3 fong1 dou1 gam2 sau6 dou3, faan2 ji4 wui5 jing2 hoeng5 seon3 jam6.",e:"Real etiquette comes from the heart, not half-hearted actions. Superficial politeness without real respect destroys trust."}
+],
+grammar:[
+{pattern:"尤其係 (jau4 kei4 hai6)",desc:"especially",ex:"尤其係喺工作環境入面 (jau4 kei4 hai2 gung1 zok3 waan4 ging2 jap6 min6)",en:"Especially in the work environment"},
+{pattern:"就算...都... (zau6 syun3... dou1...)",desc:"even if... still...",ex:"就算我唔同意，我都會先表示理解 (zau6 syun3 ngo5 m4 tung4 ji3, ngo5 dou1 wui5 sin1 biu2 si6 lei5 gaai2)",en:"Even if I disagree, I still express understanding first"},
+{pattern:"而唔係 (ji4 m4 hai6)",desc:"rather than / not... but...",ex:"而唔係敷衍或者做戲 (ji4 m4 hai6 fu1 jin5 waak6 zou6 hei3)",en:"Rather than being half-hearted or putting on a show"},
+{pattern:"長遠嚟講 (coeng4 jyun4 lai4 gong2)",desc:"in the long run",ex:"長遠嚟講，對自己同對團隊都係一件好事 (coeng4 jyun4 lai4 gong2, deoi3 zi6 gei2 tung4 deoi3 tyun4 deoi6 dou1 hai6 jat1 gin6 hou2 si6)",en:"In the long run, it's good for yourself and the team"},
+{pattern:"反而 (faan2 ji4)",desc:"on the contrary / instead",ex:"反而會影響信任 (faan2 ji4 wui5 jing2 hoeng5 seon3 jam6)",en:"On the contrary, it will affect trust"},
+{pattern:"如果... (jyu4 gwo2...)",desc:"if...",ex:"如果缺乏尊重，好容易就會出現誤會 (jyu4 gwo2 kyut3 faat3 zyun1 zung6, hou2 jung4 ji6 zau6 ceot1 jyut6 ng6 wui6)",en:"If there's a lack of respect, misunderstandings easily arise"}
+],
+quiz:[
+{q:'What does "禮貌" mean?',opts:["respect","etiquette, politeness","honesty","patience"],ans:1},
+{q:'What does "謹慎" mean?',opts:["careful, cautious","fast","lazy","angry"],ans:0},
+{q:'"缺乏" means:',opts:["to have enough","to lack","to increase","to improve"],ans:1},
+{q:'"敷衍" means:',opts:["sincere","careful","half-hearted","polite"],ans:2},
+{q:'"發自內心" means:',opts:["from the surface","from the heart","from the team","from the past"],ans:1},
+{q:'"就算...都..." means:',opts:["because...so...","even if...still...","not only...but also...","either...or..."],ans:1},
+{q:'What does "委屈" mean?',opts:["happy","angry","feel wronged","excited"],ans:2},
+{q:'"長遠嚟講" means:',opts:["in the short term","in the long run","right now","never"],ans:1}
+]}
+];
+
+let currentLesson=0;
+let showJp=false,showEn=false;
+let fcIndex=0,fcFlipped=false,fcDone=[];
+let quizAnswered=0,quizCorrect=0;
+
+function init(){
+const tabs=document.getElementById('lessonTabs');
+LESSONS.forEach((l,i)=>{
+const t=document.createElement('div');
+t.className='tab'+(i===0?' active':'');
+t.textContent=l.title;
+t.onclick=()=>switchLesson(i);
+tabs.appendChild(t);
+});
+render();
+}
+
+function switchLesson(i){
+currentLesson=i;
+document.querySelectorAll('.tab').forEach((t,idx)=>t.classList.toggle('active',idx===i));
+fcIndex=0;fcFlipped=false;fcDone=[];
+quizAnswered=0;quizCorrect=0;
+showJp=false;showEn=false;
+render();
+}
+
+function render(){
+const L=LESSONS[currentLesson];
+const c=document.getElementById('content');
+c.innerHTML=`
+<div class="tabs" style="margin-bottom:16px">
+<div class="tab active" onclick="showSection('dialogue',this)">💬 Dialogue</div>
+<div class="tab" onclick="showSection('vocab',this)">📚 Vocabulary</div>
+<div class="tab" onclick="showSection('flashcards',this)">🃏 Flashcards</div>
+<div class="tab" onclick="showSection('grammar',this)">🔑 Grammar</div>
+<div class="tab" onclick="showSection('quiz',this)">❓ Quiz</div>
+</div>
+<div id="sec-dialogue" class="section active">${renderDialogue(L)}</div>
+<div id="sec-vocab" class="section">${renderVocab(L)}</div>
+<div id="sec-flashcards" class="section">${renderFlashcards(L)}</div>
+<div id="sec-grammar" class="section">${renderGrammar(L)}</div>
+<div id="sec-quiz" class="section">${renderQuiz(L)}</div>`;
+}
+
+function showSection(id,el){
+document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+document.getElementById('sec-'+id).classList.add('active');
+el.parentElement.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+el.classList.add('active');
+}
+
+function toggleJp(){showJp=!showJp;document.querySelectorAll('.dialogue-line .jyutping').forEach(e=>e.style.display=showJp?'block':'none');document.getElementById('btn-jp').classList.toggle('on',showJp)}
+function toggleEn(){showEn=!showEn;document.querySelectorAll('.dialogue-line .english').forEach(e=>e.style.display=showEn?'block':'none');document.getElementById('btn-en').classList.toggle('on',showEn)}
+
+function renderDialogue(L){
+let html=`<div class="toggle-row"><button id="btn-jp" class="toggle-btn${showJp?' on':''}" onclick="toggleJp()">Jyutping</button><button id="btn-en" class="toggle-btn${showEn?' on':''}" onclick="toggleEn()">English</button><button class="toggle-btn" onclick="toggleJp();toggleEn()">Toggle All</button></div>`;
+L.dialogue.forEach(d=>{
+html+=`<div class="dialogue-line"><div class="speaker">${d.speaker}</div><div class="cantonese">${d.c}</div><div class="jyutping" style="display:${showJp?'block':'none'}">${d.j}</div><div class="english" style="display:${showEn?'block':'none'}">${d.e}</div></div>`;
+});
+return html;
+}
+
+function renderVocab(L){
+let html=`<p style="color:var(--text2);margin-bottom:12px">Click a card to see the English meaning</p><div class="vocab-grid">`;
+L.vocab.forEach(v=>{
+html+=`<div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="front"><div class="word">${v.c}</div><div class="jp">${v.j}</div><div class="tag">click to flip</div></div><div class="back"><div class="word" style="color:var(--yellow)">${v.e}</div><div class="jp">${v.c}</div><div class="meaning">${v.j}</div></div></div>`;
+});
+return html+'</div>';
+}
+
+function renderFlashcards(L){
+const v=L.vocab[fcIndex];
+const total=L.vocab.length;
+const done=fcDone.length;
+return `<div class="flashcard-area"><div class="fc-counter">${fcIndex+1} / ${total} (${done} reviewed)</div><div class="flashcard${fcFlipped?' flipped':''}" onclick="fcFlipped=!fcFlipped;render()"><div class="flashcard-inner"><div class="flashcard-face flashcard-front"><div class="big">${v.c}</div><div class="hint">Click to reveal</div></div><div class="flashcard-face flashcard-back"><div class="big">${v.j}</div><div class="sub">${v.e}</div></div></div></div><div class="fc-controls"><button class="fc-btn skip" onclick="fcNext()">Skip</button><button class="fc-btn got-it" onclick="fcDone.push(fcIndex);fcNext()">Got it</button></div></div>`;
+}
+function fcNext(){const L=LESSONS[currentLesson];fcFlipped=false;fcIndex=(fcIndex+1)%L.vocab.length;render();showSection('flashcards',document.querySelector('#sec-flashcards').previousElementSibling.querySelector('.tab:nth-child(3)'));document.querySelectorAll('.tabs:last-of-type .tab').forEach((t,i)=>{if(i===2)t.classList.add('active');else t.classList.remove('active')});}
+
+function renderGrammar(L){
+return L.grammar.map(g=>`<div class="grammar-card"><div class="pattern">${g.pattern}</div><div class="explanation">${g.desc}</div><div class="example">${g.ex}<br><span class="jyutping-inline">${g.en}</span></div></div>`).join('');
+}
+
+function renderQuiz(L){
+let html=`<div class="score-bar"><span class="score">${quizCorrect}</span><span class="total">/ ${L.quiz.length}</span><div class="progress"><div class="progress-fill" style="width:${quizAnswered/L.quiz.length*100}%"></div></div></div><div class="quiz-container">`;
+L.quiz.forEach((q,qi)=>{
+const answered=qi<quizAnswered;
+html+=`<div class="quiz-q"><div class="q-text">${qi+1}. ${q.q}</div><div class="quiz-options">`;
+q.opts.forEach((o,oi)=>{
+let cls='quiz-opt';
+if(answered){cls+=' disabled';if(oi===q.ans)cls+=' correct'}
+html+=`<div class="${cls}" onclick="answerQuiz(${qi},${oi})">${o}</div>`;
+});
+html+=`</div></div>`;
+});
+return html+'</div>';
+}
+
+function answerQuiz(qi,oi){
+const L=LESSONS[currentLesson];
+if(qi<quizAnswered)return;
+const correct=oi===L.quiz[qi].ans;
+if(correct)quizCorrect++;
+quizAnswered++;
+const opts=document.querySelectorAll(`#sec-quiz .quiz-q:nth-child(${qi+1}) .quiz-opt`);
+opts.forEach((o,i)=>{o.classList.add('disabled');if(i===L.quiz[qi].ans)o.classList.add('correct');if(i===oi&&!correct)o.classList.add('wrong')});
+const bar=document.querySelector('.progress-fill');
+if(bar)bar.style.width=quizAnswered/L.quiz.length*100+'%';
+const score=document.querySelector('.score');
+if(score)score.textContent=quizCorrect;
+}
+
+init();
+</script>
+</body>
+</html>
