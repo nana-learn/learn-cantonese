@@ -16,14 +16,14 @@
 | 部門 | bou6 mun6 | department | bộ phận |
 | 新同事 | san1 tung4 si5 | new colleague | đồng nghiệp mới |
 | 平時 | ping4 si4 | usually | thường thường |
-| 非常重要 | fei1 soeng4 jiu3 zung6 jiu3 | very important | rất quan trọng |
+| 非常重要 | fei1 soeng4 zung6 jiu3 | very important | rất quan trọng |
 | 工作環境 | gung1 zok3 waan4 ging2 | work environment | môi trường làm việc |
 | 合作 | hap6 zok3 | cooperate, collaborate | hợp tác |
 | 順利 | seon6 lei6 | smoothly | thuận lợi |
 | 性格 | sing3 gok3 | personality | tính cách |
 | 方式 | fong1 sik1 | way, method | cách thức |
-| 謹慎 | gan2 san6 | cautious | cẩn thận |
-| 缺乏 | kut1 faat3 | lack | thiếu |
+| 謹慎 | gan2 seon6 | cautious | cẩn thận |
+| 缺乏 | kyut3 faat3 | lack | thiếu |
 | 誤會 | ng6 wui6 | misunderstanding | hiểu lầm |
 | 衝突 | cung1 dat6 | conflict | xung đột |
 | 影響 | jing2 hoeng5 | affect | ảnh hưởng |
@@ -34,7 +34,7 @@
 | 盡量 | zeon6 loeng6 | as much as possible | cố gắng |
 | 衝 | cung3 | blunt, impulsive | thô |
 | 直接 | zik6 zip3 | direct | trực tiếp |
-| 認真 | jan6 zan1 | attentively, seriously | nghiêm túc |
+| 認真 | jing6 zan1 | attentively, seriously | nghiêm túc |
 | 打斷 | daa2 tyun5 | interrupt | ngắt lời |
 | 同意 | tung4 ji3 | agree | đồng ý |
 | 意見 | ji3 gin3 | opinion | ý kiến |
@@ -43,18 +43,18 @@
 | 慢慢 | maan6 maan6 | slowly | từ từ |
 | 睇法 | tai2 faat3 | view, perspective | quan điểm |
 | 接受 | zip3 sau6 | accept | tiếp nhận |
-| 平和 | ping4 wa4 | peaceful, calm | bình thản |
+| 平和 | ping4 wo4 | peaceful, calm | bình thản |
 | 回應 | wui4 jing3 | respond | đáp lại |
 | 對抗 | deoi3 kong3 |对抗 | đối kháng |
 | 情緒化 | cing4 seoi5 waa3 | emotional | bị cảm xúc chi phối |
 | 搞越差 | gaau2 jyut6 caa1 | make things worse | làm tệ hơn |
 | 委屈 | wat1 kut1 | feel wronged | ức |
 | 保護 | bou2 wu6 | protect | bảo vệ |
-| 升級 | sing1 kap1 | escalate | leo thang |
+| 升級 | sing1 kap6 | escalate | leo thang |
 | 長遠 | coeng4 jyun5 | long-term | dài hạn |
-| 表面功能 | biu2 min6 gung1 nang4 | superficial function | chức năng bề mặt |
+| 表面功夫 | biu2 min6 gung1 fu1 | superficial effort | công sức bề mặt |
 | 發自內心 | faat3 zi6 noi6 sam1 | come from the heart | phát xuất từ nội tâm |
-| 敷衍 | fu1 jin2 | half-hearted | qua loa |
+| 敷衍 | fu1 jin5 | half-hearted | qua loa |
 | 做戲 | zou6 hei3 | put on a show | đóng kịch |
 | 面對 | min6 deoi3 | face | đối mặt |
 | 客氣 | hak3 hei3 | polite | khách khí |
@@ -90,7 +90,7 @@
 
 **B：** 因為每個人嘅背景、性格同埋做嘢方式都唔一樣，有啲人做嘢快，有啲人就比較謹慎。如果缺乏尊重，好容易就会出现誤會，甚至引起衝突，影響成個團隊嘅氣氛。
 
-> jan1 wai6 mui5 go3 jan4 ge3 bui3 ging2, sing3 gok3 tung4 maai4 zou6 je5 fong1 sik1 dou1 m4 jat1 joeng6, jau5 di1 jan4 zou6 je5 faai3, jau5 di1 jan4 zau6 bei2 gaau3 gan2 san6. jyu4 gwo2 kut1 faat3 zyun1 zung6, hou2 jung4 ji6 zau6 ceot1 jyut6 ng6 wui6, sam6 zi3 jau5 hei2 coeng4 cung1 dat6, jing2 hoeng5 sing4 go3 tyun4 deoi6 ge3 hei3 fan1.
+> jan1 wai6 mui5 go3 jan4 ge3 bui3 ging2, sing3 gok3 tung4 maai4 zou6 je5 fong1 sik1 dou1 m4 jat1 joeng6, jau5 di1 jan4 zou6 je5 faai3, jau5 di1 jan4 zau6 bei2 gaau3 gan2 seon6. jyu4 gwo2 kyut3 faat3 zyun1 zung6, hou2 jung4 ji6 zau6 ceot1 jyut6 ng6 wui6, sam6 zi3 jau5 hei2 coeng4 cung1 dat6, jing2 hoeng5 sing4 go3 tyun4 deoi6 ge3 hei3 fan1.
 >
 > *Because everyone's background, personality, and way of working are different — some people work fast, some are more cautious. If there's a lack of respect, misunderstandings can easily arise, even causing conflicts that affect the entire team's atmosphere.*
 
@@ -106,7 +106,7 @@
 
 **B：** 例如同同事傾偈嘅時候，我會特別注意語氣，盡量唔好太衝或者太直接；同時都會認真聽對方講嘢，唔會打斷人。就算我唔同意對方嘅意見，我都會先表示理解，再慢慢講返自己嘅睇法，咁樣大家會比較容易接受。
 
-> lei2 ba6 tung4 tung4 si6 king1 gai2 ge3 si4 hau6, ngo5 wui5 dak6 bit6 zyu3 ji5 jyu5 hei3, zeon6 loeng6 m4 hou2 taai3 cung3 waak6 ze2 taai3 zik6 zip3; tung4 si5 dou1 wui5 jan6 zan1 teng1 deoi3 fong1 gong2 je5, m4 wui5 daa2 tyun5 jan4. zau6 syun3 ngo5 m4 tung4 ji3 deoi3 fong1 ge3 ji3 gin3, ngo5 dou1 wui5 sin1 biu2 si6 lei5 gaai2, zoi3 maan6 maan6 gong2 faan1 zi6 gei2 ge3 tai2 faat3, gam2 joeng2 daai6 gaa1 wui5 bei2 gaau3 jung4 ji6 zip3 sau6.
+> lei2 ba6 tung4 tung4 si6 king1 gai2 ge3 si4 hau6, ngo5 wui5 dak6 bit6 zyu3 ji5 jyu5 hei3, zeon6 loeng6 m4 hou2 taai3 cung3 waak6 ze2 taai3 zik6 zip3; tung4 si5 dou1 wui5 jing6 zan1 teng1 deoi3 fong1 gong2 je5, m4 wui5 daa2 tyun5 jan4. zau6 syun3 ngo5 m4 tung4 ji3 deoi3 fong1 ge3 ji3 gin3, ngo5 dou1 wui5 sin1 biu2 si6 lei5 gaai2, zoi3 maan6 maan6 gong2 faan1 zi6 gei2 ge3 tai2 faat3, gam2 joeng2 daai6 gaa1 wui5 bei2 gaau3 jung4 ji6 zip3 sau6.
 >
 > *For example, when talking with colleagues, I pay special attention to my tone, trying not to be too blunt or too direct; at the same time, I listen attentively to what the other person says without interrupting. Even if I don't agree with their opinion, I first express understanding, then slowly share my own view — that way people are more likely to accept.*
 
@@ -118,7 +118,7 @@
 
 **B：** 我通常都會盡量保持冷靜，用比較平和嘅方式回應，唔會用情緒去對抗情緒。因為一旦雙方都情緒化，事情只會越搞越差，最後對工作同關係都冇好處。
 
-> ngo5 tung1 soeng4 dou1 wui5 zeon6 loeng6 bou2 ci4 laang5 zing6, jung6 bei2 gaau3 ping4 wa4 ge3 fong1 sik1 wui4 jing3, m4 wui5 jung6 cing4 seoi5 heoi3 deoi3 kong3 cing4 seoi5. jan1 wai6 jat1 daan6 soeng1 fong1 dou1 cing4 seoi5 waa3, si6 cing4 zi2 wui5 gaau2 jyut6 caa1, zeoi3 hau6 deui3 gung1 zok3 tung4 gwaan1 hai6 dou1 mou5 hou2 cyu3.
+> ngo5 tung1 soeng4 dou1 wui5 zeon6 loeng6 bou2 ci4 laang5 zing6, jung6 bei2 gaau3 ping4 wo4 ge3 fong1 sik1 wui4 jing3, m4 wui5 jung6 cing4 seoi5 heoi3 deoi3 kong3 cing4 seoi5. jan1 wai6 jat1 daan6 soeng1 fong1 dou1 cing4 seoi5 waa3, si6 cing4 zi2 wui5 gaau2 jyut6 caa1, zeoi3 hau6 deui3 gung1 zok3 tung4 gwaan1 hai6 dou1 mou5 hou2 cyu3.
 >
 > *I usually try to stay calm, responding in a more peaceful way, not using emotions to fight emotions. Because once both sides become emotional, things only get worse, and in the end it's not good for work or relationships.*
 
@@ -134,19 +134,19 @@
 
 **B：** 老實講，有時真係會有少少唔舒服。不過我會提醒自己，尊重別人其實都係保護自己，避免事情升級。長遠嚟講，對自己同對團隊都係一件好事。
 
-> lou5 sat6 gong2, jau5 si4 zan1 hai6 wui5 jau5 siu2 siu2 m4 syu1 fuk6. bat1 gwo2 ngo5 wui5 tai4 sing4 zi6 gei2, zyun1 zung6 bit6 jan4 kei4 sat6 dou1 hai6 bou2 wu6 zi6 gei2, bei2 min5 si6 cing4 sing1 kap1. coeng4 jyun4 lai4 gong2, deui3 zi6 gei2 tung4 deui3 tyun4 deoi6 dou1 hai6 jat1 gin6 hou2 si6.
+> lou5 sat6 gong2, jau5 si4 zan1 hai6 wui5 jau5 siu2 siu2 m4 syu1 fuk6. bat1 gwo2 ngo5 wui5 tai4 sing2 zi6 gei2, zyun1 zung6 bit6 jan4 kei4 sat6 dou1 hai6 bou2 wu6 zi6 gei2, bei2 min5 si6 cing4 sing1 kap6. coeng4 jyun4 lai4 gong2, deui3 zi6 gei2 tung4 deui3 tyun4 deoi6 dou1 hai6 jat1 gin6 hou2 si6.
 >
 > *Honestly, sometimes I really feel a bit uncomfortable. However, I remind myself that respecting others is actually protecting yourself, preventing things from escalating. In the long run, it's a good thing for both yourself and the team.*
 
 **A：** 咁你覺得「禮貌」會唔會只係一種表面功夫，做畀人睇㗎啫？
 
-> gam2 nei5 gok3 dak1 "lai5 maau6" wui5 m4 wui5 zi2 hai6 jat1 zung2 biu2 min6 gung1 nang4, zou6 bei2 jan4 tai2 wo3 ze1?
+> gam2 nei5 gok3 dak1 "lai5 maau6" wui5 m4 wui5 zi2 hai6 jat1 zung2 biu2 min6 gung1 fu1, zou6 bei2 jan4 tai2 wo3 ze1?
 >
 > *So do you think "etiquette" is just some superficial thing you do for people to see?*
 
 **B：** 我就唔係咁睇。真係禮貌其實係發自內心嘅尊重，而唔係敷衍或者做戲。如果只係表面客氣，但內心唔尊重人，其實對方都感受到，反而會影響信任。
 
-> ngo5 zau6 m4 hai6 gam2 tai2. zan1 hai6 lai5 maau6 kei4 sat6 hai6 faat3 zi6 noi6 sam1 ge3 zyun1 zung6, ji4 m4 hai6 fu1 jin2 waak6 zou6 hei3. jyu4 gwo2 zi2 hai6 biu2 min6 hak3 hei3, daan6 noi6 sam1 m4 zyun1 zung6 jan4, kei4 sat6 deoi3 fong1 dou1 gam2 sau6 dou3, faan2 ji4 wui5 jing2 hoeng5 seon3 jam6.
+> ngo5 zau6 m4 hai6 gam2 tai2. zan1 hai6 lai5 maau6 kei4 sat6 hai6 faat3 zi6 noi6 sam1 ge3 zyun1 zung6, ji4 m4 hai6 fu1 jin5 waak6 zou6 hei3. jyu4 gwo2 zi2 hai6 biu2 min6 hak3 hei3, daan6 noi6 sam1 m4 zyun1 zung6 jan4, kei4 sat6 deoi3 fong1 dou1 gam2 sau6 dou3, faan2 ji4 wui5 jing2 hoeng5 seon3 jam6.
 >
 > *I don't see it that way. Real etiquette actually comes from respect in your heart, not half-hearted actions or putting on a show. If you're just superficially polite but don't really respect people inside, the other person can feel it, and it will actually affect trust.*
 
@@ -228,7 +228,7 @@ Contrast structure showing what something is not.
 
 > **Pattern:** 而唔係 + negative
 >
-> **Example:** 真既禮貌其實係發自內心既尊重，**而唔係**敷衍或者做戲。 (zan1 ge3 lai5 maau6 kei4 sat6 hai6 faat3 zi6 noi6 sam1 ge3 zyun1 zung6, **ji4 m4 hai6** fu1 jin2 waak6 zou6 hei3.) — Real etiquette actually comes from the heart, not half-hearted actions or putting on a show.
+> **Example:** 真既禮貌其實係發自內心既尊重，**而唔係**敷衍或者做戲。 (zan1 ge3 lai5 maau6 kei4 sat6 hai6 faat3 zi6 noi6 sam1 ge3 zyun1 zung6, **ji4 m4 hai6** fu1 jin5 waak6 zou6 hei3.) — Real etiquette actually comes from the heart, not half-hearted actions or putting on a show.
 
 ### 9. 反而 (faan2 ji4) — on the contrary / instead
 
@@ -305,13 +305,13 @@ Shows automatic or natural outcome.
 
 ### Showing Respect
 - 尊重別人既意見 (zyun1 zung6 bit6 jan4 ge3 ji3 gin3) — Respect others' opinions
-- 認真聆聽對方 (jan6 zan1 ling4 teng1 deoi3 fong1) — Listen attentively
+- 認真聆聽對方 (jing6 zan1 ling4 teng1 deoi3 fong1) — Listen attentively
 - 先表示理解 (sin1 biu2 si6 lei5 gaai2) — First show understanding
 
 ### Handling Conflicts
 - 保持冷靜 (bou2 ci4 laang5 zing6) — Stay calm
-- 用平和既方式回應 (jung6 ping4 wa4 ge3 fong1 sik1 wui4 jing3) — Respond in a peaceful way
-- 避免事情升級 (bei2 min5 si6 cing4 sing1 kap1) — Prevent escalation
+- 用平和既方式回應 (jung6 ping4 wo4 ge3 fong1 sik1 wui4 jing3) — Respond in a peaceful way
+- 避免事情升級 (bei2 min5 si6 cing4 sing1 kap6) — Prevent escalation
 
 ### Expressing Views
 - 慢慢講返自己既睇法 (maan6 maan6 gong2 faan1 zi6 gei2 ge3 tai2 faat3) — Slowly share your view
