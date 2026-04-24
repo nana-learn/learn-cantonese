@@ -132,56 +132,59 @@ h2{font-size:1.4em;margin-bottom:16px}
 </div>
 <script>
 const LESSONS=[
-{id:1,title:"第一課：日常生活",subtitle:"jat6 soeng4 sang1 wut6 — Daily Life",
+{id:1,title:"第一課：時間管理同生活節奏",subtitle:"si4 gaan3 gun2 lei5 tung4 sang1 wut6 zik3 zau3 — Time Management and Life Rhythm",
 vocab:[
-{c:"習慣",j:"zaap6 gwaan3",e:"habit"},
-{c:"準時",j:"zeon2 si4",e:"punctual"},
-{c:"忙碌",j:"mong4 luk1",e:"busy"},
-{c:"輕鬆",j:"hing1 sung1",e:"relaxed"},
-{c:"固定",j:"gu3 ding3",e:"fixed; regular"},
-{c:"安排",j:"on1 paai4",e:"arrangement; to plan"},
-{c:"規律",j:"kwai1 leot6",e:"routine; rule"},
-{c:"搭車",j:"daap3 ce1",e:"to take a bus/train"},
-{c:"返工",j:"faan1 gung1",e:"to go to work"},
-{c:"放工",j:"fong3 gung1",e:"to get off work"},
-{c:"休息",j:"jau1 sik1",e:"to rest"},
-{c:"睡眠",j:"seoi6 min4",e:"sleep"},
-{c:"早餐",j:"zou2 caan1",e:"breakfast"},
-{c:"午餐",j:"ng5 caan1",e:"lunch"},
-{c:"晚餐",j:"maan5 caan1",e:"dinner"},
-{c:"鍛煉",j:"dyun3 lin6",e:"to exercise"},
+{c:"分配",j:"fan1 pui3",e:"to allocate, distribute"},
+{c:"取捨",j:"ceoi2 se3",e:"trade-off, make choices"},
+{c:"優先",j:"jau1 sin1",e:"priority"},
+{c:"規劃",j:"kwai1 waak6",e:"to plan, map out"},
+{c:"專注",j:"zyun1 zyu3",e:"to focus, concentrate"},
+{c:"干擾",j:"gon1 jiu5",e:"distraction, interference"},
+{c:"拖延",j:"to1 jin4",e:"to procrastinate"},
+{c:"自律",j:"zi6 leot6",e:"self-discipline"},
+{c:"充電",j:"cung1 din6",e:"to recharge"},
+{c:"緩衝",j:"wun4 cung1",e:"buffer, cushion"},
+{c:"繃緊",j:"bang1 gan2",e:"tense, strained"},
+{c:"減壓",j:"gaam2 aat3",e:"to relieve stress"},
+{c:"充實",j:"cung1 sat1",e:"fulfilling, enriched"},
+{c:"精力",j:"zing1 lik6",e:"energy, vigor"},
+{c:"分心",j:"fan1 sam1",e:"to get distracted"},
+{c:"次序",j:"ci3 seoi5",e:"order, sequence"},
+{c:"突發",j:"dat6 faat3",e:"sudden, unexpected"},
+{c:"持之以恆",j:"ci4 zi2 ji5 hang4",e:"persevere consistently"},
 {c:"效率",j:"haau6 leot2",e:"efficiency"},
-{c:"精神",j:"zing1 san4",e:"energy; spirit"},
-{c:"疲勞",j:"pei4 lou4",e:"fatigue"},
-{c:"節奏",j:"zik3 zau3",e:"rhythm; pace"},
+{c:"節奏",j:"zik3 zau3",e:"rhythm, pace"},
 {c:"調整",j:"tiu4 zing2",e:"to adjust"},
-{c:"鬧鐘",j:"naau6 zung1",e:"alarm clock"}
+{c:"培養",j:"pui4 joeng5",e:"to cultivate, develop"},
+{c:"手忙腳亂",j:"sau2 mong4 goek3 lyun6",e:"in a frantic rush"}
 ],
 dialogue:[
-{speaker:"A",c:"你平時幾點起身啊？",j:"nei5 ping4 si4 gei2 dim2 hei2 san1 aa3?",e:"What time do you usually wake up?"},
-{speaker:"B",c:"我通常六點半就起身，七點出門口返工。",j:"ngo5 tung1 soeng4 luk6 dim2 bun3 zau6 hei2 san1, cat1 dim2 ceot1 mun4 hau2 faan1 gung1.",e:"I usually wake up at 6:30 and leave home at 7 to go to work."},
-{speaker:"A",c:"咁早？你搭車要幾耐呀？你放工之後通常做啲咩？",j:"gam2 zou2? nei5 daap3 ce1 jiu3 gei2 noi6 aa3? nei5 fong3 gung1 zi1 hau6 tung1 soeng4 zou6 di1 me1?",e:"So early? How long does your commute take? What do you usually do after work?"},
-{speaker:"B",c:"大約四十五分鐘車程。返到屋企會先沖個涼，然後煮晚餐。食完飯就休息下，睇下電視。",j:"daai6 joek3 sei3 sap6 ng5 fan1 zung1 ce1 cing4. faan1 dou3 uk1 kei2 wui5 sin1 cung1 go3 loeng4, jin4 hau6 zyu2 maan5 caan1. sik6 jyun4 faan6 zau6 jau1 sik1 haa5, tai2 haa5 din6 si6.",e:"About 45 minutes. When I get home I'll first take a shower, then cook dinner. After eating I rest a bit and watch TV."},
-{speaker:"A",c:"你有冇固定嘅生活規律？我覺得有規律精神會好啲。",j:"nei5 jau5 mou5 gu3 ding3 ge3 sang1 wut6 kwai1 leot6? ngo5 gok3 dak1 jau5 kwai1 leot6 zing1 san4 wui5 hou2 di1.",e:"Do you have a fixed daily routine? I think having a routine gives you better energy."},
-{speaker:"B",c:"有嘅，我盡量十一點前瞓覺。不過最近工作忙，有時會好疲勞，要慢慢調整返節奏。",j:"jau5 ge3, ngo5 zeon6 loeng6 sap6 jat1 dim2 cin4 fan3 gaau3. bat1 gwo3 zeoi3 gan6 gung1 zok3 mong4, jau5 si4 wui5 hou2 pei4 lou4, jiu3 maan6 maan6 tiu4 zing2 faan1 zik3 zau3.",e:"Yes, I try to sleep before 11. But work has been busy lately, sometimes I get quite tired and need to slowly adjust my pace back."}
+{speaker:"A",c:"最近我覺得時間永遠都唔夠用，做完一樣嘢又有下一樣，好似永遠都追唔上個節奏。你平時點樣分配時間㗎？",j:"zeoi3 gan6 ngo5 gok3 dak1 si4 gaan3 wing5 jyun5 dou1 m4 gau3 jung6, zou6 jyun4 jat1 joeng6 je5 jau6 jau5 haa6 jat1 joeng6, hou2 ci5 wing5 jyun5 dou1 zeoi1 m4 soeng5 go3 zik3 zau3. nei5 ping4 si4 dim2 joeng2 fan1 pui3 si4 gaan3 gaa3?",e:"I feel like time is never enough lately. After finishing one thing there's the next — like I can never catch up with the pace. How do you allocate your time?"},
+{speaker:"B",c:"我以前都係咁，成日覺得唔夠時間用，後來發現問題唔係時間唔夠，而係唔識得做取捨。乜嘢都想做，結果乜嘢都做唔好，反而浪費咗好多精力。",j:"ngo5 ji5 cin4 dou1 hai6 gam2, seng4 jat6 gok3 dak1 m4 gau3 si4 gaan3 jung6, hau6 loi4 faat3 jin6 man6 tai4 m4 hai6 si4 gaan3 m4 gau3, ji4 hai6 m4 sik1 dak1 zou6 ceoi2 se3. me1 je5 dou1 soeng2 zou6, git3 gwo2 me1 je5 dou1 zou6 m4 hou2, faan2 ji4 long6 fai3 zo2 hou2 do1 zing1 lik6.",e:"I used to be like that too, always feeling short on time. Later I realized the problem wasn't not having enough time, but not knowing how to make trade-offs. Wanting to do everything, and ending up doing nothing well — actually wasted a lot of energy."},
+{speaker:"A",c:"咁你而家係點樣做取捨㗎？我有時都知自己應該專注做最重要嘅嘢，但係好多時候都會被其他嘢干擾，容易分心。",j:"gam2 nei5 ji4 gaa1 hai6 dim2 joeng2 zou6 ceoi2 se3 gaa3? ngo5 jau5 si4 dou1 zi1 zi6 gei2 jing1 goi1 zyun1 zyu3 zou6 zeoi3 zung6 jiu3 ge3 je5, daan6 hai6 hou2 do1 si4 hau6 dou1 wui5 bei6 kei4 taa1 je5 gon1 jiu5, jung4 ji6 fan1 sam1.",e:"So how do you make trade-offs now? Sometimes I know I should focus on the most important things, but I often get distracted by other things and lose focus easily."},
+{speaker:"B",c:"我學識咗將所有嘢按優先次序排列，最緊要嘅放最前。同埋我會規劃好每個禮拜嘅時間表，預留啲緩衝時間，唔好將每一分鐘都排得滿滿。咁樣就算有突發事情都唔會搞到手忙腳亂。",j:"ngo5 hok6 sik1 zo2 zoeng1 so2 jau5 je5 on3 jau1 sin1 ci3 seoi5 paai4 lit6, zeoi3 gan2 jiu3 ge3 fong3 zeoi3 cin4. tung4 maai4 ngo5 wui5 kwai1 waak6 hou2 mui5 go3 lai5 baai3 ge3 si4 gaan3 biu1, jyu6 lau4 di1 wun4 cung1 si4 gaan3, m4 hou2 zoeng3 mui5 jat1 fan1 zung1 dou1 paai4 dak1 mun5 mun5. gam2 joeng2 zau6 syun3 jau5 dat6 faat3 si6 cing4 dou1 m4 wui5 gaau2 dou3 sau2 mong4 goek3 lyun6.",e:"I learned to arrange everything by priority, putting the most important first. And I plan out a weekly schedule, leaving buffer time — not packing every minute full. That way even if something unexpected comes up, it won't throw everything into chaos."},
+{speaker:"A",c:"聽落好有道理。不過我有個壞習慣就係容易拖延，明明知道要做，但係就係唔想開始，成日等到最後一刻先至做，搞到自己好大壓力。",j:"teng1 lok6 hou2 jau5 dou6 lei5. bat1 gwo3 ngo5 jau5 go3 waai6 zaap6 gwaan3 zau6 hai6 jung4 ji6 to1 jin4, ming4 ming4 zi1 dou3 jiu3 zou6, daan6 hai6 zau6 hai6 m4 soeng2 hoi1 ci2, seng4 jat6 dang3 dou3 zeoi3 hau6 jat1 hak1 sin1 zi3 zou6, gaau2 dou3 zi6 gei2 hou2 daai6 aat3 lik6.",e:"That sounds very reasonable. But I have a bad habit of procrastinating — I know I need to do something but just don't want to start. Always waiting until the last minute, putting myself under huge pressure."},
+{speaker:"B",c:"拖延其實好多時候係因為驚做唔好，或者覺得任務太大唔知點開始。你可以試下將大任務拆細，每次只專注做一小部分，咁樣就冇咁容易覺得有壓力。最重要係培養自律，持之以恆。",j:"to1 jin4 kei4 sat6 hou2 do1 si4 hau6 hai6 jan1 wai6 geng1 zou6 m4 hou2, waak6 ze2 gok3 dak1 jam6 mou6 taai3 daai6 m4 zi1 dim2 hoi1 ci2. nei5 ho2 ji5 si3 haa5 zoeng1 daai6 jam6 mou6 caak3 sai3, mui5 ci3 zi2 zyun1 zyu3 zou6 jat1 siu2 bou6 fan6, gam2 joeng2 zau6 mou5 gam2 jung4 ji6 gok3 dak1 jau5 aat3 lik6. zeoi3 zung6 jiu3 hai6 pui4 joeng5 zi6 leot6, ci4 zi2 ji5 hang4.",e:"Procrastination is often because you're afraid of not doing well, or feel the task is too big to know where to start. Try breaking big tasks into smaller pieces, focusing on just one part at a time — that way it's less overwhelming. The key is cultivating self-discipline and sticking with it."},
+{speaker:"A",c:"你講得啱，我都要學下點樣管理自己嘅時間同心態。唔通你又冇覺得累嘅時候咩？你點樣充電？",j:"nei5 gong2 dak1 ngaam1, ngo5 dou1 jiu3 hok6 haa5 dim2 joeng2 gun2 lei5 zi6 gei2 ge3 si4 gaan3 tung4 sam1 taai3. m4 tung1 nei5 jau6 mou5 gok3 dak1 leoi6 ge3 si4 hau6 me1? nei5 dim2 joeng2 cung1 din6?",e:"You're right, I need to learn how to manage my time and mindset too. But don't you ever feel tired? How do you recharge?"},
+{speaker:"B",c:"當然有啦，人都係人。我每個禮拜都會預留一段時間俾自己完全放低工作，去做啲自己鍾意嘅嘢，譬如行下山、睇下書。適當嘅休息唔係浪費時間，而係為咗更長遠嘅效率。繃緊嘅弦係會斷㗎，要識得減壓先至行得更遠。",j:"dong1 jin4 jau5 laa1, jan4 dou1 hai6 jan4. ngo5 mui5 go3 lai5 baai3 dou1 wui5 jyu6 lau4 jat1 dyun6 si4 gaan3 bei2 zi6 gei2 jyun4 cyun4 fong3 dai1 gung1 zok3, heoi3 zou6 di1 zi6 gei2 zung1 ji3 ge3 je5, pei3 jyu2 haang4 haa5 saan1, tai2 haa5 syu1. sik1 dong3 ge3 jau1 sik1 m4 hai6 long6 fai3 si4 gaan3, ji4 hai6 wai6 zo2 gaa3 coeng4 jyun5 ge3 haau6 leot2. bang1 gan2 ge3 jin4 hai6 wui5 tyun5 gaa3, jiu3 sik1 dak1 gaam2 aat3 sin1 zi3 haang4 dak1 gaa3 jyun5.",e:"Of course I do, I'm only human. Every week I set aside time to completely put down work and do things I enjoy, like hiking or reading. Proper rest isn't wasting time — it's for longer-term efficiency. A taut string will break; you need to know how to relieve stress to go further."}
 ],
 grammar:[
-{pattern:"平時 + verb (ping4 si4)",desc:"usually — describes habitual actions",ex:"你平時幾點起身？ (nei5 ping4 si4 gei2 dim2 hei2 san1?)",en:"What time do you usually wake up?"},
-{pattern:"就 (zau6)",desc:"emphasizes immediacy — right at / as early as",ex:"六點半就起身 (luk6 dim2 bun3 zau6 hei2 san1)",en:"Wake up right at 6:30"},
-{pattern:"大約 + quantity (daai6 joek3)",desc:"approximately / about — for estimations",ex:"大約四十五分鐘 (daai6 joek3 sei3 sap6 ng5 fan1 zung1)",en:"About 45 minutes"},
-{pattern:"會先...然後... (wui5 sin1...jin4 hau6...)",desc:"will first... then... — describes a sequence",ex:"會先沖個涼，然後煮晚餐 (wui5 sin1 cung1 go3 loeng4, jin4 hau6 zyu2 maan5 caan1)",en:"Will first take a shower, then cook dinner"},
-{pattern:"盡量 + verb (zeon6 loeng6)",desc:"as much as possible / try one's best to",ex:"我盡量十一點前瞓覺 (ngo5 zeon6 loeng6 sap6 jat1 dim2 cin4 fan3 gaau3)",en:"I try my best to sleep before 11"},
-{pattern:"Verb + 返 (verb + faan1)",desc:"restore or re-adjust back to a previous state",ex:"調整返節奏 (tiu4 zing2 faan1 zik3 zau3)",en:"Adjust the pace back"}
+{pattern:"唔係...而係... (m4 hai6... ji4 hai6...)",desc:"not... but rather...",ex:"問題唔係時間唔夠，而係唔識得做取捨 (man6 tai4 m4 hai6 si4 gaan3 m4 gau3, ji4 hai6 m4 sik1 dak1 zou6 ceoi2 se3)",en:"The problem isn't not enough time, but not knowing how to make trade-offs"},
+{pattern:"搞到 + result (gaau2 dou3)",desc:"causing / making it so that...",ex:"搞到自己好大壓力 (gaau2 dou3 zi6 gei2 hou2 daai6 aat3 lik6)",en:"Putting myself under huge pressure"},
+{pattern:"按 + noun + 次序排列 (on3 ci3 seoi5 paai4 lit6)",desc:"arrange according to order/priority",ex:"按優先次序排列 (on3 jau1 sin1 ci3 seoi5 paai4 lit6)",en:"Arrange by priority"},
+{pattern:"咁樣就算...都... (gam2 joeng2 zau6 syun3... dou1...)",desc:"that way, even if... still...",ex:"咁樣就算有突發事情都唔會手忙腳亂 (gam2 joeng2 zau6 syun3 jau5 dat6 faat3 si6 cing4 dou1 m4 wui5 sau2 mong4 goek3 lyun6)",en:"That way even if something unexpected happens, it won't cause chaos"},
+{pattern:"唔通...咩？(m4 tung1... me1?)",desc:"rhetorical question — don't tell me...",ex:"唔通你又冇覺得累嘅時候咩？(m4 tung1 nei5 jau6 mou5 gok3 dak1 leoi6 ge3 si4 hau6 me1?)",en:"Don't tell me you never feel tired?"},
+{pattern:"唔係 X 而係為咗 Y (m4 hai6 X ji4 hai6 wai6 zo2 Y)",desc:"not X, but for the purpose of Y",ex:"唔係浪費時間，而係為咗更長遠嘅效率 (m4 hai6 long6 fai3 si4 gaan3, ji4 hai6 wai6 zo2 gaa3 coeng4 jyun5 ge3 haau6 leot2)",en:"Not wasting time, but for longer-term efficiency"}
 ],
 quiz:[
-{q:'What does "忙碌" mean?',opts:["relaxed","busy","punctual","fatigued"],ans:1},
-{q:'"我盡量十一點前瞓覺"中，"盡量" means:',opts:["never","sometimes","as much as possible","already"],ans:2},
-{q:'What does "返工" mean?',opts:["get off work","go to work","take a bus","have lunch"],ans:1},
-{q:'What is the Jyutping for "鍛煉"?',opts:["dyun3 lin6","haau6 leot2","mong4 luk1","zik3 zau3"],ans:0},
-{q:'"調整" means:',opts:["arrange","adjust","efficient","punctual"],ans:1},
-{q:'What does "大約" mean in "大約四十五分鐘"?',opts:["exactly","approximately","at least","more than"],ans:1},
-{q:'What does "固定" mean?',opts:["tired","early","fixed; regular","slow"],ans:2},
-{q:'"節奏" means:',opts:["habit","alarm","rhythm; pace","efficiency"],ans:2}
+{q:'What does "取捨" mean?',opts:["to give up completely","trade-off, making choices","to arrange","to rush"],ans:1},
+{q:'"拖延" means:',opts:["to focus","to relax","to procrastinate","to plan"],ans:2},
+{q:'What does "持之以恆" mean?',opts:["occasionally","as quickly as possible","persevere consistently","temporarily"],ans:2},
+{q:'"搞到自己好大壓力" means:',opts:["I feel very happy","I put myself under huge pressure","I solved the problem","I finished early"],ans:1},
+{q:'What does "緩衝時間" mean?',opts:["wasted time","overtime","buffer time","deadline"],ans:2},
+{q:'"繃緊嘅弦係會斷" is a metaphor meaning:',opts:["too much tension leads to breaking down","music helps you relax","strings are expensive","you should play an instrument"],ans:0},
+{q:'What does "充電" mean in this context?',opts:["to charge a phone","to recharge oneself","to turn off","to sleep late"],ans:1},
+{q:'"唔係浪費時間，而係為咗更長遠嘅效率" means:',opts:["resting is a waste of time","proper rest is for longer-term efficiency","you should never rest","work is more important than rest"],ans:1}
 ]},
 
 {id:2,title:"第二課：飲食文化",subtitle:"jam2 sik6 man4 faa3 — Food Culture",
@@ -620,6 +623,7 @@ const BOX_LABELS=['Box 1 — New','Box 2 — Soon','Box 3 — Familiar','Box 4 �
 let progress=loadProgress();
 let currentLesson=0;
 let showJp=false,showEn=false;
+let currentSection='dialogue';
 let fcMode='due',fcQueue=[],fcQueuePos=0,fcFlipped=false,fcSessionDone=false;
 let fcSessionCorrect=0,fcSessionWrong=0,fcMistakes=[];
 let quizMode='meaning',quizQuestions=[],quizAnswered=0,quizCorrect=0;
@@ -714,24 +718,26 @@ function switchLesson(i){
 
 function render(){
   const L=LESSONS[currentLesson];
+  const s=currentSection;
   document.getElementById('content').innerHTML=
     '<div class="tabs" style="margin-bottom:16px">'+
-    '<div class="tab active" onclick="showSection(\'dialogue\',this)">💬 Dialogue</div>'+
-    '<div class="tab" onclick="showSection(\'vocab\',this)">📚 Vocabulary</div>'+
-    '<div class="tab" onclick="showSection(\'flashcards\',this)">🃏 Flashcards</div>'+
-    '<div class="tab" onclick="showSection(\'grammar\',this)">🔑 Grammar</div>'+
-    '<div class="tab" onclick="showSection(\'quiz\',this)">❓ Quiz</div>'+
-    '<div class="tab" onclick="showSection(\'progress\',this)">📊 Progress</div>'+
+    '<div class="tab'+(s==='dialogue'?' active':'')+'" onclick="showSection(\'dialogue\',this)">💬 Dialogue</div>'+
+    '<div class="tab'+(s==='vocab'?' active':'')+'" onclick="showSection(\'vocab\',this)">📚 Vocabulary</div>'+
+    '<div class="tab'+(s==='flashcards'?' active':'')+'" onclick="showSection(\'flashcards\',this)">🃏 Flashcards</div>'+
+    '<div class="tab'+(s==='grammar'?' active':'')+'" onclick="showSection(\'grammar\',this)">🔑 Grammar</div>'+
+    '<div class="tab'+(s==='quiz'?' active':'')+'" onclick="showSection(\'quiz\',this)">❓ Quiz</div>'+
+    '<div class="tab'+(s==='progress'?' active':'')+'" onclick="showSection(\'progress\',this)">📊 Progress</div>'+
     '</div>'+
-    '<div id="sec-dialogue" class="section active">'+renderDialogue(L)+'</div>'+
-    '<div id="sec-vocab" class="section">'+renderVocab(L)+'</div>'+
-    '<div id="sec-flashcards" class="section">'+renderFlashcards(L)+'</div>'+
-    '<div id="sec-grammar" class="section">'+renderGrammar(L)+'</div>'+
-    '<div id="sec-quiz" class="section">'+renderQuiz(L)+'</div>'+
-    '<div id="sec-progress" class="section">'+renderProgress(L)+'</div>';
+    '<div id="sec-dialogue" class="section'+(s==='dialogue'?' active':'')+'">'+renderDialogue(L)+'</div>'+
+    '<div id="sec-vocab" class="section'+(s==='vocab'?' active':'')+'">'+renderVocab(L)+'</div>'+
+    '<div id="sec-flashcards" class="section'+(s==='flashcards'?' active':'')+'">'+renderFlashcards(L)+'</div>'+
+    '<div id="sec-grammar" class="section'+(s==='grammar'?' active':'')+'">'+renderGrammar(L)+'</div>'+
+    '<div id="sec-quiz" class="section'+(s==='quiz'?' active':'')+'">'+renderQuiz(L)+'</div>'+
+    '<div id="sec-progress" class="section'+(s==='progress'?' active':'')+'">'+renderProgress(L)+'</div>';
 }
 
 function showSection(id,el){
+  currentSection=id;
   document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
   document.getElementById('sec-'+id).classList.add('active');
   el.parentElement.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
