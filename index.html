@@ -118,6 +118,20 @@ h2{font-size:1.4em;margin-bottom:16px}
 .action-btn:hover{border-color:var(--accent)}
 .action-btn.danger{border-color:var(--red);color:var(--red)}
 .hidden-input{display:none}
+.speak-btn{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;border:1px solid var(--surface2);background:var(--surface);cursor:pointer;font-size:.8em;transition:all .2s;vertical-align:top;margin-left:4px;line-height:1}
+.speak-btn:hover{border-color:var(--accent);background:var(--accent)}
+.speak-btn.speaking{background:var(--accent);animation:pulse .5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.sentence-mode-row{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.sentence-mode-btn{padding:5px 12px;background:var(--surface2);border:1px solid transparent;border-radius:16px;cursor:pointer;color:var(--text2);font-size:.8em;transition:all .2s}
+.sentence-mode-btn:hover{color:var(--text)}
+.sentence-mode-btn.active{background:var(--accent);color:#fff}
+.sentence-card{background:var(--surface);border:1px solid var(--surface2);border-radius:8px;padding:12px 14px;margin-bottom:10px;display:flex;align-items:flex-start;gap:8px}
+.sentence-card .sn-num{color:var(--accent);font-weight:700;min-width:20px;font-size:.85em;padding-top:1px}
+.sentence-card .sn-text{flex:1}
+.sentence-card .sn-zh{font-size:1.1em;margin-bottom:3px}
+.sentence-card .sn-jp{color:var(--text2);font-style:italic;font-size:.8em;display:none}
+.sentence-card .sn-en{color:var(--yellow);font-size:.85em;display:none}
 @media(max-width:600px){.vocab-grid{grid-template-columns:1fr}.dialogue-line .cantonese{font-size:1em}.stats-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
@@ -135,7 +149,7 @@ const LESSONS=[
 {id:1,title:"第一課：時間管理同生活節奏",subtitle:"si4 gaan3 gun2 lei5 tung4 sang1 wut6 zik3 zau3 — Time Management and Life Rhythm",
 vocab:[
 {c:"分配",j:"fan1 pui3",e:"to allocate, distribute"},
-{c:"取捨",j:"ceoi2 se3",e:"trade-off, make choices"},
+{c:"取捨",j:"ceoi2 se2",e:"trade-off, make choices"},
 {c:"優先",j:"jau1 sin1",e:"priority"},
 {c:"規劃",j:"kwai1 waak6",e:"to plan, map out"},
 {c:"專注",j:"zyun1 zyu3",e:"to focus, concentrate"},
@@ -143,30 +157,30 @@ vocab:[
 {c:"拖延",j:"to1 jin4",e:"to procrastinate"},
 {c:"自律",j:"zi6 leot6",e:"self-discipline"},
 {c:"充電",j:"cung1 din6",e:"to recharge"},
-{c:"緩衝",j:"wun4 cung1",e:"buffer, cushion"},
+{c:"緩衝",j:"wun6 cung1",e:"buffer, cushion"},
 {c:"繃緊",j:"bang1 gan2",e:"tense, strained"},
 {c:"減壓",j:"gaam2 aat3",e:"to relieve stress"},
-{c:"充實",j:"cung1 sat1",e:"fulfilling, enriched"},
+{c:"充實",j:"cung1 sat6",e:"fulfilling, enriched"},
 {c:"精力",j:"zing1 lik6",e:"energy, vigor"},
 {c:"分心",j:"fan1 sam1",e:"to get distracted"},
-{c:"次序",j:"ci3 seoi5",e:"order, sequence"},
+{c:"次序",j:"ci3 zeoi6",e:"order, sequence"},
 {c:"突發",j:"dat6 faat3",e:"sudden, unexpected"},
-{c:"持之以恆",j:"ci4 zi2 ji5 hang4",e:"persevere consistently"},
-{c:"效率",j:"haau6 leot2",e:"efficiency"},
-{c:"節奏",j:"zik3 zau3",e:"rhythm, pace"},
+{c:"持之以恆",j:"ci4 zi1 ji5 hang4",e:"persevere consistently"},
+{c:"效率",j:"haau6 leot6",e:"efficiency"},
+{c:"節奏",j:"zit3 zau3",e:"rhythm, pace"},
 {c:"調整",j:"tiu4 zing2",e:"to adjust"},
 {c:"培養",j:"pui4 joeng5",e:"to cultivate, develop"},
 {c:"手忙腳亂",j:"sau2 mong4 goek3 lyun6",e:"in a frantic rush"}
 ],
 dialogue:[
-{speaker:"A",c:"最近我覺得時間永遠都唔夠用，做完一樣嘢又有下一樣，好似永遠都追唔上個節奏。你平時點樣分配時間㗎？",j:"zeoi3 gan6 ngo5 gok3 dak1 si4 gaan3 wing5 jyun5 dou1 m4 gau3 jung6, zou6 jyun4 jat1 joeng6 je5 jau6 jau5 haa6 jat1 joeng6, hou2 ci5 wing5 jyun5 dou1 zeoi1 m4 soeng5 go3 zik3 zau3. nei5 ping4 si4 dim2 joeng2 fan1 pui3 si4 gaan3 gaa3?",e:"I feel like time is never enough lately. After finishing one thing there's the next — like I can never catch up with the pace. How do you allocate your time?"},
-{speaker:"B",c:"我以前都係咁，成日覺得唔夠時間用，後來發現問題唔係時間唔夠，而係唔識得做取捨。乜嘢都想做，結果乜嘢都做唔好，反而浪費咗好多精力。",j:"ngo5 ji5 cin4 dou1 hai6 gam2, seng4 jat6 gok3 dak1 m4 gau3 si4 gaan3 jung6, hau6 loi4 faat3 jin6 man6 tai4 m4 hai6 si4 gaan3 m4 gau3, ji4 hai6 m4 sik1 dak1 zou6 ceoi2 se3. me1 je5 dou1 soeng2 zou6, git3 gwo2 me1 je5 dou1 zou6 m4 hou2, faan2 ji4 long6 fai3 zo2 hou2 do1 zing1 lik6.",e:"I used to be like that too, always feeling short on time. Later I realized the problem wasn't not having enough time, but not knowing how to make trade-offs. Wanting to do everything, and ending up doing nothing well — actually wasted a lot of energy."},
-{speaker:"A",c:"咁你而家係點樣做取捨㗎？我有時都知自己應該專注做最重要嘅嘢，但係好多時候都會被其他嘢干擾，容易分心。",j:"gam2 nei5 ji4 gaa1 hai6 dim2 joeng2 zou6 ceoi2 se3 gaa3? ngo5 jau5 si4 dou1 zi1 zi6 gei2 jing1 goi1 zyun1 zyu3 zou6 zeoi3 zung6 jiu3 ge3 je5, daan6 hai6 hou2 do1 si4 hau6 dou1 wui5 bei6 kei4 taa1 je5 gon1 jiu5, jung4 ji6 fan1 sam1.",e:"So how do you make trade-offs now? Sometimes I know I should focus on the most important things, but I often get distracted by other things and lose focus easily."},
-{speaker:"B",c:"我學識咗將所有嘢按優先次序排列，最緊要嘅放最前。同埋我會規劃好每個禮拜嘅時間表，預留啲緩衝時間，唔好將每一分鐘都排得滿滿。咁樣就算有突發事情都唔會搞到手忙腳亂。",j:"ngo5 hok6 sik1 zo2 zoeng1 so2 jau5 je5 on3 jau1 sin1 ci3 seoi5 paai4 lit6, zeoi3 gan2 jiu3 ge3 fong3 zeoi3 cin4. tung4 maai4 ngo5 wui5 kwai1 waak6 hou2 mui5 go3 lai5 baai3 ge3 si4 gaan3 biu1, jyu6 lau4 di1 wun4 cung1 si4 gaan3, m4 hou2 zoeng3 mui5 jat1 fan1 zung1 dou1 paai4 dak1 mun5 mun5. gam2 joeng2 zau6 syun3 jau5 dat6 faat3 si6 cing4 dou1 m4 wui5 gaau2 dou3 sau2 mong4 goek3 lyun6.",e:"I learned to arrange everything by priority, putting the most important first. And I plan out a weekly schedule, leaving buffer time — not packing every minute full. That way even if something unexpected comes up, it won't throw everything into chaos."},
-{speaker:"A",c:"聽落好有道理。不過我有個壞習慣就係容易拖延，明明知道要做，但係就係唔想開始，成日等到最後一刻先至做，搞到自己好大壓力。",j:"teng1 lok6 hou2 jau5 dou6 lei5. bat1 gwo3 ngo5 jau5 go3 waai6 zaap6 gwaan3 zau6 hai6 jung4 ji6 to1 jin4, ming4 ming4 zi1 dou3 jiu3 zou6, daan6 hai6 zau6 hai6 m4 soeng2 hoi1 ci2, seng4 jat6 dang3 dou3 zeoi3 hau6 jat1 hak1 sin1 zi3 zou6, gaau2 dou3 zi6 gei2 hou2 daai6 aat3 lik6.",e:"That sounds very reasonable. But I have a bad habit of procrastinating — I know I need to do something but just don't want to start. Always waiting until the last minute, putting myself under huge pressure."},
-{speaker:"B",c:"拖延其實好多時候係因為驚做唔好，或者覺得任務太大唔知點開始。你可以試下將大任務拆細，每次只專注做一小部分，咁樣就冇咁容易覺得有壓力。最重要係培養自律，持之以恆。",j:"to1 jin4 kei4 sat6 hou2 do1 si4 hau6 hai6 jan1 wai6 geng1 zou6 m4 hou2, waak6 ze2 gok3 dak1 jam6 mou6 taai3 daai6 m4 zi1 dim2 hoi1 ci2. nei5 ho2 ji5 si3 haa5 zoeng1 daai6 jam6 mou6 caak3 sai3, mui5 ci3 zi2 zyun1 zyu3 zou6 jat1 siu2 bou6 fan6, gam2 joeng2 zau6 mou5 gam2 jung4 ji6 gok3 dak1 jau5 aat3 lik6. zeoi3 zung6 jiu3 hai6 pui4 joeng5 zi6 leot6, ci4 zi2 ji5 hang4.",e:"Procrastination is often because you're afraid of not doing well, or feel the task is too big to know where to start. Try breaking big tasks into smaller pieces, focusing on just one part at a time — that way it's less overwhelming. The key is cultivating self-discipline and sticking with it."},
-{speaker:"A",c:"你講得啱，我都要學下點樣管理自己嘅時間同心態。唔通你又冇覺得累嘅時候咩？你點樣充電？",j:"nei5 gong2 dak1 ngaam1, ngo5 dou1 jiu3 hok6 haa5 dim2 joeng2 gun2 lei5 zi6 gei2 ge3 si4 gaan3 tung4 sam1 taai3. m4 tung1 nei5 jau6 mou5 gok3 dak1 leoi6 ge3 si4 hau6 me1? nei5 dim2 joeng2 cung1 din6?",e:"You're right, I need to learn how to manage my time and mindset too. But don't you ever feel tired? How do you recharge?"},
-{speaker:"B",c:"當然有啦，人都係人。我每個禮拜都會預留一段時間俾自己完全放低工作，去做啲自己鍾意嘅嘢，譬如行下山、睇下書。適當嘅休息唔係浪費時間，而係為咗更長遠嘅效率。繃緊嘅弦係會斷㗎，要識得減壓先至行得更遠。",j:"dong1 jin4 jau5 laa1, jan4 dou1 hai6 jan4. ngo5 mui5 go3 lai5 baai3 dou1 wui5 jyu6 lau4 jat1 dyun6 si4 gaan3 bei2 zi6 gei2 jyun4 cyun4 fong3 dai1 gung1 zok3, heoi3 zou6 di1 zi6 gei2 zung1 ji3 ge3 je5, pei3 jyu2 haang4 haa5 saan1, tai2 haa5 syu1. sik1 dong3 ge3 jau1 sik1 m4 hai6 long6 fai3 si4 gaan3, ji4 hai6 wai6 zo2 gaa3 coeng4 jyun5 ge3 haau6 leot2. bang1 gan2 ge3 jin4 hai6 wui5 tyun5 gaa3, jiu3 sik1 dak1 gaam2 aat3 sin1 zi3 haang4 dak1 gaa3 jyun5.",e:"Of course I do, I'm only human. Every week I set aside time to completely put down work and do things I enjoy, like hiking or reading. Proper rest isn't wasting time — it's for longer-term efficiency. A taut string will break; you need to know how to relieve stress to go further."}
+{speaker:"A",c:"最近我覺得時間永遠都唔夠用，做完一樣嘢又有下一樣，好似永遠都追唔上個節奏。你平時點樣分配時間㗎？",j:"zeoi3 gan6 ngo5 gok3 dak1 si4 gaan3 wing5 jyun5 dou1 m4 gau3 jung6 zou6 jyun4 jat1 joeng6 je5 jau6 jau5 haa6 jat1 joeng6 hou2 ci5 wing5 jyun5 dou1 zeoi1 m4 soeng6 go3 zit3 zau3 nei5 ping4 si4 dim2 joeng2 fan1 pui3 si4 gaan3 ga3",e:"I feel like time is never enough lately. After finishing one thing there's the next — like I can never catch up with the pace. How do you allocate your time?"},
+{speaker:"B",c:"我以前都係咁，成日覺得唔夠時間用，後來發現問題唔係時間唔夠，而係唔識得做取捨。乜嘢都想做，結果乜嘢都做唔好，反而浪費咗好多精力。",j:"ngo5 ji5 cin4 dou1 hai6 gam3 sing4 jat6 gok3 dak1 m4 gau3 si4 gaan3 jung6 hau6 loi4 faat3 jin6 man6 tai4 m4 hai6 si4 gaan3 m4 gau3 ji4 hai6 m4 sik1 dak1 zou6 ceoi2 se2 mat1 je5 dou1 soeng2 zou6 git3 gwo2 mat1 je5 dou1 zou6 m4 hou2 faan2 ji4 long6 fai3 zo2 hou2 do1 zing1 lik6",e:"I used to be like that too, always feeling short on time. Later I realized the problem wasn't not having enough time, but not knowing how to make trade-offs. Wanting to do everything, and ending up doing nothing well — actually wasted a lot of energy."},
+{speaker:"A",c:"咁你而家係點樣做取捨㗎？我有時都知自己應該專注做最重要嘅嘢，但係好多時候都會被其他嘢干擾，容易分心。",j:"gam3 nei5 ji4 gaa1 hai6 dim2 joeng2 zou6 ceoi2 se2 ga3 ngo5 jau5 si4 dou1 zi1 zi6 gei2 jing1 goi1 zyun1 zyu3 zou6 zeoi3 zung6 jiu3 ge3 je5 daan6 hai6 hou2 do1 si4 hau6 dou1 wui6 bei6 kei4 taa1 je5 gon1 jiu5 jung4 ji6 fan1 sam1",e:"So how do you make trade-offs now? Sometimes I know I should focus on the most important things, but I often get distracted by other things and lose focus easily."},
+{speaker:"B",c:"我學識咗將所有嘢按優先次序排列，最緊要嘅放最前。同埋我會規劃好每個禮拜嘅時間表，預留啲緩衝時間，唔好將每一分鐘都排得滿滿。咁樣就算有突發事情都唔會搞到手忙腳亂。",j:"ngo5 hok6 sik1 zo2 zoeng1 so2 jau5 je5 on3 jau1 sin1 ci3 zeoi6 paai4 lit6 zeoi3 gan2 jiu3 ge3 fong3 zeoi3 cin4 tung4 maai4 ngo5 wui6 kwai1 waak6 hou2 mui5 go3 lai5 baai3 ge3 si4 gaan3 biu2 jyu6 lau4 di1 wun6 cung1 si4 gaan3 m4 hou2 zoeng1 mui5 jat1 fan1 zung1 dou1 paai4 dak1 mun5 mun5 gam3 joeng6 zau6 syun3 jau5 dat6 faat3 si6 cing4 dou1 m4 wui6 gaau2 dou3 sau2 mong4 goek3 lyun6",e:"I learned to arrange everything by priority, putting the most important first. And I plan out a weekly schedule, leaving buffer time — not packing every minute full. That way even if something unexpected comes up, it won't throw everything into chaos."},
+{speaker:"A",c:"聽落好有道理。不過我有個壞習慣就係容易拖延，明明知道要做，但係就係唔想開始，成日等到最後一刻先至做，搞到自己好大壓力。",j:"ting3 lok6 hou2 jau5 dou6 lei5 bat1 gwo3 ngo5 jau5 go3 waai6 zaap6 gwaan3 zau6 hai6 jung4 ji6 to1 jin4 ming4 ming4 zi1 dou3 jiu3 zou6 daan6 hai6 zau6 hai6 m4 soeng2 hoi1 ci2 sing4 jat6 dang2 dou3 zeoi3 hau6 jat1 hak1 sin1 zi3 zou6 gaau2 dou3 zi6 gei2 hou2 daai6 aat3 lik6",e:"That sounds very reasonable. But I have a bad habit of procrastinating — I know I need to do something but just don't want to start. Always waiting until the last minute, putting myself under huge pressure."},
+{speaker:"B",c:"拖延其實好多時候係因為驚做唔好，或者覺得任務太大唔知點開始。你可以試下將大任務拆細，每次只專注做一小部分，咁樣就冇咁容易覺得有壓力。最重要係培養自律，持之以恆。",j:"to1 jin4 kei4 sat6 hou2 do1 si4 hau6 hai6 jan1 wai6 ging1 zou6 m4 hou2 waak6 ze2 gok3 dak1 jam6 mou6 taai3 daai6 m4 zi1 dim2 hoi1 ci2 nei5 ho2 ji5 si3 haa6 zoeng1 daai6 jam6 mou6 caak3 sai3 mui5 ci3 zi2 zyun1 zyu3 zou6 jat1 siu2 bou6 fan1 gam3 joeng6 zau6 mou5 gam3 jung4 ji6 gok3 dak1 jau5 aat3 lik6 zeoi3 zung6 jiu3 hai6 pui4 joeng5 zi6 leot6 ci4 zi1 ji5 hang4",e:"Procrastination is often because you're afraid of not doing well, or feel the task is too big to know where to start. Try breaking big tasks into smaller pieces, focusing on just one part at a time — that way it's less overwhelming. The key is cultivating self-discipline and sticking with it."},
+{speaker:"A",c:"你講得啱，我都要學下點樣管理自己嘅時間同心態。唔通你又冇覺得累嘅時候咩？你點樣充電？",j:"nei5 gong2 dak1 ngaam1 ngo5 dou1 jiu3 hok6 haa6 dim2 joeng2 gun2 lei5 zi6 gei2 ge3 si4 gaan3 tung4 sam1 taai3 m4 tung1 nei5 jau6 mou5 gok3 dak1 leoi6 ge3 si4 hau6 me1 nei5 dim2 joeng2 cung1 din6",e:"You're right, I need to learn how to manage my time and mindset too. But don't you ever feel tired? How do you recharge?"},
+{speaker:"B",c:"當然有啦，人都係人。我每個禮拜都會預留一段時間俾自己完全放低工作，去做啲自己鍾意嘅嘢，譬如行下山、睇下書。適當嘅休息唔係浪費時間，而係為咗更長遠嘅效率。繃緊嘅弦係會斷㗎，要識得減壓先至行得更遠。",j:"dong1 jin4 jau5 laa1 jan4 dou1 hai6 jan4 ngo5 mui5 go3 lai5 baai3 dou1 wui6 jyu6 lau4 jat1 dyun6 si4 gaan3 bei2 zi6 gei2 jyun4 cyun4 fong3 dai1 gung1 zok3 heoi3 zou6 di1 zi6 gei2 zung1 ji3 ge3 je5 pei3 jyu4 hong6 haa6 saan1 tai2 haa6 syu1 sik1 dong3 ge3 jau1 sik1 m4 hai6 long6 fai3 si4 gaan3 ji4 hai6 wai6 zo2 gang3 coeng4 jyun5 ge3 haau6 seot1 bang1 gan2 ge3 jyun4 hai6 wui6 dyun6 ga3 jiu3 sik1 dak1 gaam2 aat3 sin1 zi3 hong6 dak1 gang3 jyun5",e:"Of course I do, I'm only human. Every week I set aside time to completely put down work and do things I enjoy, like hiking or reading. Proper rest isn't wasting time — it's for longer-term efficiency. A taut string will break; you need to know how to relieve stress to go further."}
 ],
 grammar:[
 {pattern:"唔係...而係... (m4 hai6... ji4 hai6...)",desc:"not... but rather...",ex:"問題唔係時間唔夠，而係唔識得做取捨 (man6 tai4 m4 hai6 si4 gaan3 m4 gau3, ji4 hai6 m4 sik1 dak1 zou6 ceoi2 se3)",en:"The problem isn't not enough time, but not knowing how to make trade-offs"},
@@ -187,330 +201,357 @@ quiz:[
 {q:'"唔係浪費時間，而係為咗更長遠嘅效率" means:',opts:["resting is a waste of time","proper rest is for longer-term efficiency","you should never rest","work is more important than rest"],ans:1}
 ]},
 
-{id:2,title:"第二課：飲食文化",subtitle:"jam2 sik6 man4 faa3 — Food Culture",
+{id:2,title:"第二課：飲食文化與人情味",subtitle:"jam2 sik6 man4 faa3 jyu5 jan4 cing4 mei6 — Food Culture and Human Warmth",
 vocab:[
+{c:"飲茶",j:"jam2 caa4",e:"yum cha; dim sum culture"},
 {c:"點心",j:"dim2 sam1",e:"dim sum"},
-{c:"飲茶",j:"jam2 caa4",e:"yum cha; dim sum meal"},
-{c:"菜式",j:"coi3 sik1",e:"dish; cuisine"},
-{c:"口味",j:"hau2 mei6",e:"taste preference"},
-{c:"材料",j:"coi4 liu2",e:"ingredient"},
-{c:"新鮮",j:"san1 sin1",e:"fresh"},
-{c:"煲湯",j:"bou1 tong1",e:"to make soup"},
-{c:"蒸",j:"zing1",e:"to steam"},
-{c:"炒",j:"caau2",e:"to stir-fry"},
-{c:"炸",j:"zaa3",e:"to deep-fry"},
-{c:"鹹",j:"haam4",e:"salty"},
-{c:"甜",j:"tim4",e:"sweet"},
-{c:"酸",j:"syun1",e:"sour"},
-{c:"辣",j:"laat6",e:"spicy"},
-{c:"餐廳",j:"caan1 teng1",e:"restaurant"},
-{c:"外賣",j:"ngoi6 maai6",e:"takeaway; delivery"},
-{c:"食譜",j:"sik6 pou2",e:"recipe"},
-{c:"烹飪",j:"paang1 jam6",e:"cooking; culinary"},
+{c:"聚餐",j:"zeoi6 caan1",e:"gather for a meal"},
+{c:"應酬",j:"jing3 cau4",e:"socialize; entertain (formal)"},
+{c:"宴客",j:"jin3 haak3",e:"host guests for a meal"},
+{c:"招待",j:"ziu1 doi6",e:"entertain; host"},
+{c:"手藝",j:"sau2 ngai6",e:"culinary skill; craftsmanship"},
+{c:"心意",j:"sam1 ji3",e:"thoughtfulness; intention"},
+{c:"講究",j:"gong2 gau3",e:"particular; fastidious about"},
+{c:"傳統",j:"cyun4 tung2",e:"tradition"},
+{c:"氛圍",j:"fan1 wai4",e:"atmosphere"},
+{c:"誠意",j:"sing4 ji3",e:"sincerity"},
+{c:"盛情",j:"sing6 cing4",e:"warm hospitality"},
+{c:"回味",j:"wui4 mei6",e:"to savor the memory"},
+{c:"親手",j:"can1 sau2",e:"with one's own hands"},
 {c:"招牌菜",j:"ziu1 paai4 coi3",e:"signature dish"},
-{c:"搭配",j:"daap3 pui3",e:"pairing; combination"},
-{c:"營養",j:"jing4 joeng5",e:"nutrition"},
-{c:"飽",j:"baau2",e:"full (from eating)"},
-{c:"餓",j:"ngo6",e:"hungry"}
+{c:"烹飪",j:"paang1 jam6",e:"cooking; culinary art"},
+{c:"家常菜",j:"gaa1 soeng4 coi3",e:"home-cooked dishes"},
+{c:"牽掛",j:"hin1 gwaa3",e:"to care about; worry about"},
+{c:"珍惜",j:"zan1 sik1",e:"to cherish"},
+{c:"人情味",j:"jan4 cing4 mei6",e:"human warmth; personal touch"},
+{c:"食得是福",j:"sik6 dak1 si6 fuk1",e:"eating well is a blessing (idiom)"},
+{c:"一盅兩件",j:"jat1 zung1 loeng5 gin6",e:"one cup of tea, two dim sum items (idiom for yum cha)"}
 ],
 dialogue:[
-{speaker:"A",c:"今日想去邊度食飯呀？",j:"gam1 jat1 soeng2 heoi3 bin1 dou6 sik6 faan6 aa3?",e:"Where do you want to eat today?"},
-{speaker:"B",c:"我都唔知呀，你好耐冇飲茶喇，不如去食點心啦。",j:"ngo5 dou1 m4 zi1 aa3, nei5 hou2 noi6 mou5 jam2 caa4 laa3, bat1 jyu4 heoi3 sik6 dim2 sam1 laa1.",e:"I'm not sure either. You haven't had dim sum in a while, how about we go for dim sum?"},
-{speaker:"A",c:"好呀！你最鍾意食咩點心？蒸嘅定係炸嘅？",j:"hou2 aa3! nei5 zeoi3 zung1 ji3 sik6 me1 dim2 sam1? zing1 ge3 ding6 hai6 zaa3 ge3?",e:"Sure! What dim sum do you like the most? Steamed or deep-fried?"},
-{speaker:"B",c:"我最鍾意蝦餃同埋燒賣，仲有腸粉。蒸嘅比較健康，炸嘅就熱氣啲。",j:"ngo5 zeoi3 zung1 ji3 haa1 gaau2 tung4 maai4 siu1 maai2, zung6 jau5 ceong4 fan2. zing1 ge3 bei2 gaau3 gin6 hong1, zaa3 ge3 zau6 jit6 hei3 di1.",e:"I like shrimp dumplings and siu mai the most, and also rice noodle rolls. Steamed ones are relatively healthier, deep-fried ones cause more internal heat."},
-{speaker:"A",c:"你識唔識煮飯㗎？平時多數自己煮定係叫外賣？",j:"nei5 sik1 m4 sik1 zyu2 faan6 gaa3? ping4 si4 do1 sou3 zi6 gei2 zyu2 ding6 hai6 giu3 ngoi6 maai6?",e:"Do you know how to cook? Do you mostly cook at home or order delivery?"},
-{speaker:"B",c:"我識煮少少，平時會煲湯同炒下菜。我最常煲蓮藕排骨湯，材料簡單又有營養。你下次嚟我屋企，我煮俾你食！",j:"ngo5 sik1 zyu2 siu2 siu2, ping4 si4 wui5 bou1 tong1 tung4 caau2 haa5 coi3. ngo5 zeoi3 soeng4 bou1 lin4 ngau5 paai4 gwat1 tong1, coi4 liu2 gaan2 daan1 jau6 jau5 jing4 joeng5. nei5 haa6 ci3 lei4 ngo5 uk1 kei2, ngo5 zyu2 bei2 nei5 sik6!",e:"I know how to cook a little. I usually make soup and stir-fry vegetables. The soup I make most often is lotus root and pork rib soup — simple and nutritious. Come over next time, I'll cook for you!"}
+{speaker:"A",c:"最近成日都出去食飯，反而開始懷念以前屋企人一齊食飯嗰種感覺。你覺唔覺得而家嘅人越嚟越少自己煮飯？",j:"zeoi3 gan6 sing4 jat6 dou1 ceot1 heoi3 sik6 faan6 faan2 ji4 hoi1 ci2 waai4 nim6 ji5 cin4 uk1 kei2 jan4 jat1 cai4 sik6 faan6 go2 zung3 gam2 gok3 nei5 gok3 m4 gok3 dak1 ji4 gaa1 ge3 jan4 jyut6 lai4 jyut6 siu2 zi6 gei2 zyu2 faan6",e:"Recently I've been eating out all the time, and ironically I'm starting to miss the feeling of eating together with family. Do you feel like people nowadays cook less and less at home?"},
+{speaker:"B",c:"覺呀，以前細個嗰陣，每個禮拜日都會同屋企人去飲茶，嗰種氛圍真係好有人情味。一盅兩件，重點唔係食咩，而係一家人坐低傾下偈。",j:"gok3 aa4 ji5 cin4 sai3 go3 go2 zan6 mui5 go3 lai5 baai3 jat6 dou1 wui6 tung4 uk1 kei2 jan4 heoi3 jam2 caa4 go2 zung3 fan1 wai4 zan1 hai6 hou2 jau5 jan4 cing4 mei6 jat1 zung1 loeng5 gin6 zung6 dim2 m4 hai6 sik6 me1 ji4 hai6 jat1 gaa1 jan4 co5 dai1 king1 haa6 gai2",e:"I do. When I was young, every Sunday our family would go for yum cha. That atmosphere was full of human warmth. One cup of tea, two dim sum items — the point wasn't what to eat, but the family sitting down together and chatting."},
+{speaker:"A",c:"講得啱，飲茶文化真係好講究，唔單止係為咗食，更加係一種聯繫感情嘅方式。而家好多年輕人寧願叫外賣都唔想出去飲茶。",j:"gong2 dak1 ngaam1 jam2 caa4 man4 faa3 zan1 hai6 hou2 gong2 gau3 m4 daan1 zi2 hai6 wai6 zo2 sik6 gang3 gaa1 hai6 jat1 zung3 lyun4 hai6 gam2 cing4 ge3 fong1 sik1 ji4 gaa1 hou2 do1 nin4 hing1 jan4 ning4 jyun6 giu3 ngoi6 maai6 dou1 m4 soeng2 ceot1 heoi3 jam2 caa4",e:"Well said. Yum cha culture is quite particular — it's not just about eating, but more a way of connecting emotionally. Nowadays many young people would rather order delivery than go out for yum cha."},
+{speaker:"B",c:"咁都係，生活節奏快咗嘛。不過我覺得最令人回味嘅，唔係餐廳嘅招牌菜，而係屋企人親手煮嘅家常菜。嗰份心意同誠意，係外面食唔到嘅。",j:"gam3 dou1 hai6 sang1 wut6 zit3 zau3 faai3 zo2 maa3 bat1 gwo3 ngo5 gok3 dak1 zeoi3 ling6 jan4 wui4 mei6 ge3 m4 hai6 caan1 teng1 ge3 ziu1 paai4 coi3 ji4 hai6 uk1 kei2 jan4 can1 sau2 zyu2 ge3 gaa1 soeng4 coi3 go2 fan6 sam1 ji3 tung4 sing4 ji3 hai6 ngoi6 min6 sik6 m4 dou3 ge3",e:"That's true, the pace of life has gotten faster. But I think what's most memorable isn't a restaurant's signature dish, but home-cooked meals made by family with their own hands. That thoughtfulness and sincerity — you can't get that eating out."},
+{speaker:"A",c:"你講到我諗起我阿媽嘅手藝，佢煲嘅湯真係一絕。以前覺得冇咩特別，而家先發現原來每一碗湯都藏住佢對我哋嘅牽掛同關心。",j:"nei5 gong2 dou3 ngo5 nam2 hei2 ngo5 aa3 maa1 ge3 sau2 ngai6 keoi5 bou1 ge3 tong1 zan1 hai6 jat1 zyut6 ji5 cin4 gok3 dak1 mou5 me1 dak6 bit6 ji4 gaa1 sin1 faat3 jin6 jyun4 loi4 mui5 jat1 wun2 tong1 dou1 cong4 zyu6 keoi5 deoi3 ngo5 dei6 ge3 hin1 gwaa3 tung4 gwaan1 sam1",e:"You're making me think of my mom's culinary skill — the soup she makes is truly exceptional. I used to think it was nothing special, but now I realize every bowl of soup holds her care and concern for us."},
+{speaker:"B",c:"食得是福呢句話真係有道理。我覺得願意花時間親自下廚宴客嘅人，一定係好重視嗰段關係。比起出去食一餐貴嘅，自己煮反而更加有盛情。",j:"sik6 dak1 si6 fuk1 ne1 geoi3 waa6 zan1 hai6 jau5 dou6 lei5 ngo5 gok3 dak1 jyun6 ji3 faa1 si4 gaan3 can1 zi6 haa6 cyu4 jin3 haak3 ge3 jan4 jat1 ding6 hai6 hou2 zung6 si6 go2 dyun6 gwaan1 hai6 bei2 hei2 ceot1 heoi3 sik6 jat1 caan1 gwai3 ge3 zi6 gei2 zyu2 faan2 ji4 gang3 gaa1 jau5 sing6 cing4",e:"'Eating well is a blessing' — that saying really makes sense. I think someone willing to spend time cooking to host guests must really value that relationship. Compared to eating an expensive meal out, cooking yourself actually shows more warm hospitality."},
+{speaker:"A",c:"所以我而家開始學煮飯，希望可以傳承呢種傳統。唔係話要煮得幾出色，而係想將呢份心意延續落去，等下一代都感受到嗰種人情味。",j:"so2 ji5 ngo5 ji4 gaa1 hoi1 ci2 hok6 zyu2 faan6 hei1 mong6 ho2 ji5 cyun4 sing4 ne1 zung3 cyun4 tung2 m4 hai6 waa6 jiu3 zyu2 dak1 gei2 ceot1 sik1 ji4 hai6 soeng2 zoeng1 ne1 fan6 sam1 ji3 jin4 zuk6 lok6 heoi3 dang2 haa6 jat1 doi6 dou1 gam2 sau6 dou3 go2 zung3 jan4 cing4 mei6",e:"So I've started learning to cook, hoping to carry on this tradition. It's not about cooking exceptionally well, but about continuing this thoughtfulness, so the next generation can also feel that human warmth."},
+{speaker:"B",c:"呢個諗法好好，珍惜同身邊人一齊食飯嘅時光，先至係真正嘅美食之道。",j:"ne1 go3 nam2 faat3 hou2 hou2 zan1 sik1 tung4 san1 bin1 jan4 jat1 cai4 sik6 faan6 ge3 si4 gwong1 sin1 zi3 hai6 zan1 zing3 ge3 mei5 sik6 zi1 dou6",e:"That's a wonderful way of thinking. Cherishing the time spent eating with people around you — that is the true way of gastronomy."}
 ],
 grammar:[
-{pattern:"不如...啦 (bat1 jyu4...laa1)",desc:"how about / why don't we — makes a suggestion",ex:"不如去食點心啦 (bat1 jyu4 heoi3 sik6 dim2 sam1 laa1)",en:"How about we go eat dim sum?"},
-{pattern:"最鍾意 (zeoi3 zung1 ji3)",desc:"like the most / favorite",ex:"你最鍾意食咩點心 (nei5 zeoi3 zung1 ji3 sik6 me1 dim2 sam1)",en:"What dim sum do you like the most?"},
-{pattern:"...定係... (...ding6 hai6...)",desc:"or — used in alternative questions",ex:"蒸嘅定係炸嘅 (zing1 ge3 ding6 hai6 zaa3 ge3)",en:"Steamed ones or deep-fried ones?"},
-{pattern:"比較 + adj (bei2 gaau3)",desc:"relatively / comparatively — softens a comparison",ex:"蒸嘅比較健康 (zing1 ge3 bei2 gaau3 gin6 hong1)",en:"Steamed ones are relatively healthier"},
-{pattern:"識唔識 + verb (sik1 m4 sik1)",desc:"know how to (do something) or not",ex:"你識唔識煮飯 (nei5 sik1 m4 sik1 zyu2 faan6)",en:"Do you know how to cook?"},
-{pattern:"俾 + person + verb (bei2)",desc:"for (someone) to (do) — doing something for someone",ex:"我煮俾你食 (ngo5 zyu2 bei2 nei5 sik6)",en:"I'll cook for you to eat"}
+{pattern:"唔單止...更加... (m4 daan1 zi2... gang3 gaa1...)",desc:"not only... but even more so — emphasizes escalation",ex:"唔單止係為咗食，更加係一種聯繫感情嘅方式 (m4 daan1 zi2 hai6 wai6 zo2 sik6 gang3 gaa1 hai6 jat1 zung3 lyun4 hai6 gam2 cing4 ge3 fong1 sik1)",en:"It's not just about eating, but even more a way of connecting emotionally"},
+{pattern:"重點唔係...而係... (zung6 dim2 m4 hai6... ji4 hai6...)",desc:"the point is not... but rather... — redirects focus",ex:"重點唔係食咩，而係一家人坐低傾下偈 (zung6 dim2 m4 hai6 sik6 me1 ji4 hai6 jat1 gaa1 jan4 co5 dai1 king1 haa6 gai2)",en:"The point isn't what to eat, but the family sitting down and chatting"},
+{pattern:"比起...反而... (bei2 hei2... faan2 ji4...)",desc:"compared to... on the contrary... — contrasts expectations",ex:"比起出去食一餐貴嘅，自己煮反而更加有盛情 (bei2 hei2 ceot1 heoi3 sik6 jat1 caan1 gwui3 ge3 zi6 gei2 zyu2 faan2 ji4 gang3 gaa1 jau5 sing6 cing4)",en:"Compared to eating an expensive meal out, cooking yourself actually shows more warmth"},
+{pattern:"寧願...都唔... (ning4 jyun6... dou1 m4...)",desc:"would rather... than... — expresses strong preference",ex:"寧願叫外賣都唔想出去飲茶 (ning4 jyun6 giu3 ngoi6 maai6 dou1 m4 soeng2 ceot1 heoi3 jam2 caa4)",en:"Would rather order delivery than go out for yum cha"},
+{pattern:"先至發現...原來... (sin1 zi3 faat3 jin6... jyun4 loi4...)",desc:"only then discovered... it turns out... — delayed realization",ex:"而家先發現原來每一碗湯都藏住佢嘅牽掛 (ji4 gaa1 sin1 faat3 jin6 jyun4 loi4 mui5 jat1 wun2 tong1 dou1 cong4 zyu6 keoi5 ge3 hin1 gwaa3)",en:"Only now discovered that every bowl of soup held her care"},
+{pattern:"唔係話...而係... (m4 hai6 waa6... ji4 hai6...)",desc:"it's not about saying... but rather — clarifies intention",ex:"唔係話要煮得幾出色，而係想將呢份心意延續落去 (m4 hai6 waa6 jiu3 zyu2 dak1 gei2 ceot1 sik1 ji4 hai6 soeng2 zoeng1 ne1 fan6 sam1 ji3 jin4 zuk6 lok6 heoi3)",en:"It's not about cooking exceptionally well, but about continuing this thoughtfulness"}
 ],
 quiz:[
-{q:'What does "飲茶" typically mean in Cantonese?',opts:["just drinking tea","a dim sum meal","cooking at home","ordering delivery"],ans:1},
-{q:'"蒸嘅比較健康"中，"比較" means:',opts:["very","relatively","absolutely","not"],ans:1},
-{q:'What is the Jyutping for "辣"?',opts:["haam4","syun1","laat6","tim4"],ans:2},
-{q:'"你識唔識煮飯？"中，"識唔識" means:',opts:["like or not","know how to or not","want to or not","need to or not"],ans:1},
-{q:'What does "招牌菜" mean?',opts:["cheap dish","signature dish","spicy dish","dessert"],ans:1},
-{q:'"熱氣" in Cantonese usually describes:',opts:["hot weather","fresh food","discomfort from fried food","poor restaurant atmosphere"],ans:2},
-{q:'What is the Jyutping for "營養"?',opts:["coi4 liu2","jing4 joeng5","san1 sin1","sik6 pou2"],ans:1},
-{q:'"我煮俾你食"中，"俾" is used to:',opts:["compare","suggest","do something for someone","refuse"],ans:2}
+{q:'"一盅兩件" refers to which Cantonese dining tradition?',opts:["hot pot at home","yum cha (dim sum culture)","ordering takeaway","cooking for guests"],ans:1},
+{q:'"最令人回味嘅" 中，"回味" means:',opts:["to swallow","to feel full","to savor the memory","to cook again"],ans:2},
+{q:'What is the Jyutping for "人情味"?',opts:["jan4 zai3 gwaan1 hai6","jan4 cing4 mei6","sam1 ji3","sing6 cing4"],ans:1},
+{q:'"唔單止係為咗食，更加係聯繫感情嘅方式" uses which grammar pattern?',opts:["唔單止...更加...","寧願...都唔...","比起...反而...","唔係話...而係..."],ans:0},
+{q:'What does "食得是福" mean?',opts:["food is expensive","eating well is a blessing","cooking is hard","restaurants are better"],ans:1},
+{q:'"寧願叫外賣都唔想出去飲茶" expresses:',opts:["a comparison","a strong preference (would rather)","a suggestion","a question"],ans:1},
+{q:'What is the Jyutping for "牽掛"?',opts:["hin1 gwaa3","gwaan1 hai6","sam1 ji3","zyun1 zung6"],ans:0},
+{q:'The dialogue suggests the best expression of care through food is:',opts:["eating at expensive restaurants","ordering elaborate delivery","cooking for someone yourself","buying exotic ingredients"],ans:2}
 ]},
 
-{id:3,title:"第三課：買嘢同消費",subtitle:"maai5 je5 tung4 siu1 fai3 — Shopping and Spending",
+{id:3,title:"第三課：消費主義同價值觀",subtitle:"siu1 fai3 zyu2 ji6 tung4 gaa3 zik6 gun1 — Consumerism and Values",
 vocab:[
-{c:"價錢",j:"gaa3 cin4",e:"price"},
-{c:"折扣",j:"zit3 kau3",e:"discount"},
-{c:"比較",j:"bei2 gaau3",e:"to compare"},
-{c:"質素",j:"zat1 sou3",e:"quality"},
-{c:"牌子",j:"paai4 zi2",e:"brand"},
-{c:"預算",j:"jyu6 syun3",e:"budget"},
-{c:"浪費",j:"long6 fai3",e:"to waste"},
-{c:"實用",j:"sat6 jung6",e:"practical"},
-{c:"耐用",j:"noi6 jung6",e:"durable"},
-{c:"款式",j:"fun2 sik1",e:"style; model"},
-{c:"選擇",j:"syun2 zaak6",e:"choice; to choose"},
-{c:"評價",j:"ping4 gaa3",e:"review; evaluation"},
-{c:"網購",j:"mong5 kau3",e:"online shopping"},
-{c:"店鋪",j:"dim3 pou3",e:"store; shop"},
-{c:"退換",j:"teoi3 wun6",e:"to return and exchange"},
-{c:"試用",j:"si3 jung6",e:"to try out"},
-{c:"推介",j:"teoi1 gaai3",e:"recommendation"},
-{c:"花費",j:"faa1 fai3",e:"expense; to spend"},
-{c:"儲蓄",j:"cuk1 zuk1",e:"savings; to save money"},
-{c:"抵買",j:"dai2 maai5",e:"worth buying"},
-{c:"貨品",j:"fo3 ban2",e:"goods; product"},
-{c:"訂購",j:"ding3 kau3",e:"to place an order"}
+{c:"消費主義",j:"siu1 fai3 zyu2 ji6",e:"consumerism"},
+{c:"物質",j:"mat6 zat1",e:"material; material goods"},
+{c:"心態",j:"sam1 taai3",e:"mindset; attitude"},
+{c:"滿足",j:"mun5 zuk1",e:"satisfied; fulfillment"},
+{c:"欲望",j:"juk6 mong6",e:"desire; craving"},
+{c:"追求",j:"zeoi1 kau4",e:"to pursue; seek"},
+{c:"簡約",j:"gaan2 joek3",e:"minimalist; simple"},
+{c:"節制",j:"zit3 zai3",e:"restraint; moderation"},
+{c:"衝動",j:"cung1 dung6",e:"impulsive"},
+{c:"理性",j:"lei5 sing3",e:"rational"},
+{c:"衡量",j:"hang4 loeng6",e:"to weigh; evaluate"},
+{c:"價值",j:"gaa3 zik6",e:"value; worth"},
+{c:"需要",j:"seoi1 jiu3",e:"to need; necessity"},
+{c:"想要",j:"soeng2 jiu3",e:"to want (desire, not need)"},
+{c:"盲目",j:"maang4 muk6",e:"blindly"},
+{c:"攀比",j:"paan1 bei2",e:"to compare with others competitively"},
+{c:"虛榮",j:"heoi1 wing4",e:"vanity"},
+{c:"踏實",j:"daap6 sat6",e:"grounded; practical and honest"},
+{c:"知足",j:"zi1 zuk1",e:"content with what one has"},
+{c:"豐富",j:"fung1 fu3",e:"rich; abundant"},
+{c:"精神",j:"zing1 san4",e:"spirit; mental"},
+{c:"廣告",j:"gwong2 gou3",e:"advertisement"},
+{c:"誘惑",j:"jau5 waak6",e:"temptation"},
+{c:"反思",j:"faan2 si1",e:"to reflect; introspect"},
+{c:"意義",j:"ji3 ji6",e:"meaning; significance"},
+{c:"適可而止",j:"sik1 ho2 ji4 zi2",e:"stop before going too far (idiom)"},
+{c:"量入為出",j:"loeng6 jap6 wai6 ceot1",e:"live within one's means (idiom)"},
+{c:"知足常樂",j:"zi1 zuk1 soeng4 lok6",e:"contentment brings happiness (idiom)"}
 ],
 dialogue:[
-{speaker:"A",c:"我最近想買部新電腦，但係唔知邊款好，你有咩推介啊？",j:"ngo5 zeoi3 gan6 soeng2 maai5 bou6 san1 din6 nou5, daan6 hai6 m4 zi1 bin1 fun2 hou2, nei5 jau5 me1 teoi1 gaai3 aa3?",e:"I've been wanting to buy a new laptop lately, but I don't know which model is good. Do you have any recommendations?"},
-{speaker:"B",c:"你預算大約幾多錢啊？如果你主要係用嚟做嘢，我覺得 MacBook Air 幾抵買。",j:"nei5 jyu6 syun3 daai6 joek3 gei2 do1 cin4 aa3? jyu4 gwo2 nei5 zyu2 jiu3 hai6 jung6 lei4 zou6 je5, ngo5 gok3 dak1 MacBook Air gei2 dai2 maai5.",e:"What's your budget roughly? If you mainly use it for work, I think MacBook Air is quite worth buying."},
-{speaker:"A",c:"大約一萬蚊左右啦。其實我都諗過，不過我想比較下唔同牌子嘅質素同價錢先。",j:"daai6 joek3 jat1 maan6 man1 zo2 jau6 laa1. kei4 sat6 ngo5 dou1 nam2 gwo3, bat1 gwo3 ngo5 soeng2 bei2 gaau3 haa5 m4 tung4 paai4 zi2 ge3 zat1 sou3 tung4 gaa3 cin4 sin1.",e:"Around ten thousand dollars. I've actually thought about it, but I want to compare the quality and prices of different brands first."},
-{speaker:"B",c:"咁你可以去深水埗黃金電腦商場睇下，嗰度有好多選擇。你仲可以上網睇下其他用家嘅評價。",j:"gam2 nei5 ho2 ji5 heoi3 sam1 seoi2 pok2 wong4 gam1 din6 nou5 soeng1 coeng4 tai2 haa5, go2 dou6 jau5 hou2 do1 syun2 zaak6. nei5 zung6 ho2 ji5 soeng5 mong5 tai2 haa5 kei4 taa1 jung6 gaa1 ge3 ping4 gaa3.",e:"Then you can go check out the Golden Computer Arcade in Sham Shui Po, there are lots of choices. You can also look at online reviews from other users."},
-{speaker:"A",c:"網購會唔會平啲啊？我見有啲網站打折扣，不過我怕退換唔方便。",j:"mong5 kau3 wui5 m4 wui5 peng4 di1 aa3? ngo5 gin3 jau5 di1 mong5 zaam6 daa2 zit3 kau3, bat1 gwo3 ngo5 paa3 teoi3 wun6 m4 fong1 bin6.",e:"Would online shopping be cheaper? I see some websites have discounts, but I'm worried that returns might not be convenient."},
-{speaker:"B",c:"網購通常會平少少，但係你要留意退換政策。我建議你先去店鋪試用下，覺得啱用先至網上訂購，咁就穩陣啲。",j:"mong5 kau3 tung1 soeng4 wui5 peng4 siu2 siu2, daan6 hai6 nei5 jiu3 lau4 ji3 teoi3 wun6 zing3 caak3. ngo5 gin3 ji3 nei5 sin1 heoi3 dim3 pou3 si3 jung6 haa5, gok3 dak1 ngaam1 jung6 sin1 zi3 mong5 soeng6 ding3 kau3, gam2 zau6 wan2 zan6 di1.",e:"Online shopping is usually a bit cheaper, but you need to check the return policy. I suggest you go try it out in a store first, and only order online when you're sure it suits you — that's safer."}
+{speaker:"A",c:"最近我發覺自己成日都喺度網購，買咗好多嘢返嚟但其實唔係真正需要。你有冇咁嘅感覺？",j:"zeoi3 gan6 ngo5 faat3 gok3 zi6 gei2 sing4 jat6 dou1 hai2 dou6 mong5 kau3 maai5 zo2 hou2 do1 je5 faan1 lai4 daan6 kei4 sat6 m4 hai6 zan1 zing3 seoi1 jiu3 nei5 jau5 mou5 gam3 ge3 gam2 gok3",e:"Recently I noticed I've been online shopping all the time, buying lots of things that I don't truly need. Have you ever felt this way?"},
+{speaker:"B",c:"有呀，而家消費主義咁盛行，廣告同社交媒體日日都喺度製造欲望，令人好容易衝動消費。買嗰陣好開心，但係好快就冇咗嗰種滿足感。",j:"jau5 aa4 ji4 gaa1 siu1 fai3 zyu2 ji6 gam3 sing6 hang4 gwong2 gou3 tung4 se5 gaau1 mui4 tai2 jat6 jat6 dou1 hai2 dou6 zai3 zou6 juk6 mong6 ling6 jan4 hou2 jung4 ji6 cung1 dung6 siu1 fai3 maai5 go2 zan6 hou2 hoi1 sam1 daan6 hai6 hou2 faai3 zau6 mou5 zo2 go2 zung3 mun5 zuk1 gam2",e:"Yes, consumerism is so prevalent nowadays. Advertisements and social media create desire every day, making impulsive spending so easy. You feel happy when buying, but that sense of satisfaction fades quickly."},
+{speaker:"A",c:"講得啱，好多時候我哋追求嘅唔係件物品本身，而係嗰種短暫嘅快樂。買完之後先發現，真正令我哋開心嘅嘢，往往係錢買唔到嘅。",j:"gong2 dak1 ngaam1 hou2 do1 si4 hau6 ngo5 dei6 zeoi1 kau4 ge3 m4 hai6 gin6 mat6 ban2 bun2 san1 ji4 hai6 go2 zung3 dyun2 zaam6 ge3 faai3 lok6 maai5 jyun4 zi1 hau6 sin1 faat3 jin6 zan1 zing3 ling6 ngo5 dei6 hoi1 sam1 ge3 je5 wong5 wong5 hai6 cin2 maai5 m4 dou3 ge3",e:"Well said. A lot of times what we pursue isn't the object itself, but that brief moment of happiness. After buying, we realize that what truly makes us happy is often things money can't buy."},
+{speaker:"B",c:"咁你覺得點樣先可以喺物質同精神之間取得平衡呢？完全唔買又好似太極端。",j:"gam3 nei5 gok3 dak1 dim2 joeng2 sin1 ho2 ji5 hai2 mat6 zat1 tung4 zing1 san4 zi1 gaan1 ceoi2 dak1 ping4 hang4 ne1 jyun4 cyun4 m4 maai5 jau6 hou2 ci5 taai3 gik6 dyun1",e:"So how do you think we can strike a balance between the material and the spiritual? Not buying anything at all seems too extreme."},
+{speaker:"A",c:"我覺得關鍵在於分清楚需要同想要。買嘢之前衡量一下係咪真正有用，定係只係因為攀比或者虛榮心作祟。適可而止，量入為出，咁樣至係理性嘅消費態度。",j:"ngo5 gok3 dak1 gwaan1 gin6 zoi6 jyu1 fan1 cing1 co2 seoi1 jiu3 tung4 soeng2 jiu3 maai5 je5 zi1 cin4 hang4 loeng6 jat1 haa5 hai6 mi1 zan1 zing3 jau5 jung6 ding6 hai6 zi2 hai6 jan1 wai6 paan1 bei2 waak6 ze2 heoi1 wing4 sam1 zok3 seoi6 sik1 ho2 ji4 zi2 loeng6 jap6 wai6 ceot1 gam3 joeng6 zi3 hai6 lei5 sing3 ge3 siu1 fai3 taai3 dou6",e:"I think the key is distinguishing between needs and wants. Before buying, evaluate whether it's genuinely useful, or just driven by comparison or vanity. Stop before going too far, live within your means — that's a rational attitude toward consumption."},
+{speaker:"B",c:"你講得好有道理。我以前成日同人攀比，見到人買咩自己又想買，結果屋企堆滿晒嘢，但係心入面反而覺得空虛。而家開始學簡約生活，需要的先買，想要的就停一停諗下先。",j:"nei5 gong2 dak1 hou2 jau5 dou6 lei5 ngo5 ji5 cin4 sing4 jat6 tung4 jan4 paan1 bei2 gin3 dou2 jan4 maai5 me1 zi6 gei2 jau6 soeng2 maai5 git3 gwo2 uk1 kei2 deoi1 mun5 saai3 je5 daan6 hai6 sam1 jap6 min6 faan2 ji4 gok3 dak1 hung1 heoi1 ji4 gaa1 hoi1 ci2 hok6 gaan2 joek3 sang1 wut6 seoi1 jiu3 dik1 sin1 maai5 soeng2 jiu3 dik1 zau6 ting4 jat1 ting4 nam2 haa6 sin1",e:"You make a great point. I used to constantly compare with others — seeing what people bought, I'd want it too. Result: my home was piled with stuff, but inside I felt empty. Now I'm learning minimalist living: buy what you need, and for what you want, pause and think first."},
+{speaker:"A",c:"知足常樂呢句話真係有道理。真正豐富嘅人生唔係擁有幾多物質，而係內心有幾滿足。我寧願花錢喺經歷同體驗上面，好似旅行同學習，呢啲先至係真正嘅財富。",j:"zi1 zuk1 soeng4 lok6 ne1 geoi3 waa6 zan1 hai6 jau5 dou6 lei5 zan1 zing3 fung1 fu3 ge3 jan4 sang1 m4 hai6 jung2 jau5 gei2 do1 mat6 zat1 ji4 hai6 noi6 sam1 jau5 gei2 mun5 zuk1 ngo5 ning4 jyun6 faa1 cin2 hai2 ging1 lik6 tung4 tai2 jim6 soeng6 min6 hou2 ci5 leoi5 hang4 tung4 hok6 zaap6 ne1 di1 sin1 zi3 hai6 zan1 zing3 ge3 coi4 fu3",e:"'Contentment brings happiness' — that saying really holds true. A truly rich life isn't about how much you own materially, but how fulfilled you feel inside. I'd rather spend money on experiences — like travel and learning. Those are real wealth."},
+{speaker:"B",c:"呢個諗法好踏實。消費本身唔係壞事，最緊要係有節制，唔好畀物質控制咗自己嘅生活。反思自己嘅消費習慣，先至可以過得真正自在。",j:"ne1 go3 nam2 faat3 hou2 daap6 sat6 siu1 fai3 bun2 san1 m4 hai6 waai6 si6 zeoi3 gan2 jiu3 hai6 jau5 zit3 zai3 m4 hou2 bei2 mat6 zat1 hung3 zai3 zo2 zi6 gei2 ge3 sang1 wut6 faan2 si1 zi6 gei2 ge3 siu1 fai3 zaap6 gwaan3 sin1 zi3 ho2 ji5 gwo3 dak1 zan1 zing3 zi6 zoi6",e:"That's a very grounded way of thinking. Consumption itself isn't bad — what matters is having restraint, not letting material things control your life. Reflect on your spending habits, and only then can you live truly freely."}
 ],
 grammar:[
-{pattern:"想 + verb (soeng2)",desc:"expressing desire or intention",ex:"我想買部新電腦 (ngo5 soeng2 maai5 bou6 san1 din6 nou5)",en:"I want to buy a new computer"},
-{pattern:"唔知 + question word + 好 (m4 zi1...hou2)",desc:"expressing uncertainty about which option is best",ex:"唔知邊款好 (m4 zi1 bin1 fun2 hou2)",en:"Don't know which model is good"},
-{pattern:"如果... (jyu4 gwo2...)",desc:"if — expressing a condition",ex:"如果你主要係用嚟做嘢 (jyu4 gwo2 nei5 zyu2 jiu3 hai6 jung6 lei4 zou6 je5)",en:"If you mainly use it for work"},
-{pattern:"會唔會 + verb/adj (wui5 m4 wui5)",desc:"forming a yes/no question about possibility",ex:"網購會唔會平啲啊？(mong5 kau3 wui5 m4 wui5 peng4 di1 aa3?)",en:"Would online shopping be cheaper?"},
-{pattern:"先至 + verb (sin1 zi3)",desc:"only then / not until then",ex:"覺得啱用先至買 (gok3 dak1 ngaam1 jung6 sin1 zi3 maai5)",en:"Only buy it after you feel it suits you"},
-{pattern:"用嚟 + verb (jung6 lei4)",desc:"used for / used to",ex:"主要係用嚟做嘢 (zyu2 jiu3 hai6 jung6 lei4 zou6 je5)",en:"Mainly used for work"}
+{pattern:"唔係...而係... (m4 hai6... ji4 hai6...)",desc:"it's not... but rather... — redirects understanding",ex:"追求嘅唔係件物品本身，而係嗰種短暫嘅快樂 (zeoi1 kau4 ge3 m4 hai6 gin6 mat6 ban2 bun2 san1 ji4 hai6 go2 zung3 dyun2 zaam6 ge3 faai3 lok6)",en:"What we pursue isn't the object itself, but that brief happiness"},
+{pattern:"好多時候...往往... (hou2 do1 si4 hau6... wong5 wong5...)",desc:"a lot of times... often/usually... — generalization",ex:"好多時候我哋追求嘅嘢，往往係錢買唔到嘅 (hou2 do1 si4 hau6 ngo5 dei6 zeoi1 kau4 ge3 je5 wong5 wong5 hai6 cin2 maai5 m4 dou3 ge3)",en:"A lot of times what we pursue is often things money can't buy"},
+{pattern:"寧願...都... (ning4 jyun6... dou1...)",desc:"would rather... even if... — strong preference",ex:"我寧願花錢喺經歷上面 (ngo5 ning4 jyun6 faa1 cin2 hai2 ging1 lik6 soeng6 min6)",en:"I'd rather spend money on experiences"},
+{pattern:"關鍵在於... (gwaan1 gin6 zoi6 jyu1...)",desc:"the key lies in... — identifies the core point",ex:"關鍵在於分清楚需要同想要 (gwaan1 gin6 zoi6 jyu1 fan1 cing1 co2 seoi1 jiu3 tung4 soeng2 jiu3)",en:"The key lies in distinguishing needs from wants"},
+{pattern:"定係... (ding6 hai6...)",desc:"or is it... — presents alternatives in questions",ex:"係真正有用，定係只係虛榮心作祟？(hai6 zan1 zing3 jau5 jung6 ding6 hai6 zi2 hai6 heoi1 wing4 sam1 zok3 seoi6)",en:"Is it genuinely useful, or just vanity at work?"},
+{pattern:"先至可以... (sin1 zi3 ho2 ji5...)",desc:"only then can... — conditional result",ex:"反思消費習慣，先至可以過得自在 (faan2 si1 siu1 fai3 zaap6 gwaan3 sin1 zi3 ho2 ji5 gwo3 dak1 zi6 zoi6)",en:"Reflect on spending habits, only then can you live freely"}
 ],
 quiz:[
-{q:'What does "價錢" mean?',opts:["discount","price","quality","brand"],ans:1},
-{q:'"呢部電腦幾抵買" means:',opts:["this computer is expensive","this computer is worth buying","this computer is hard to use","this computer is beautiful"],ans:1},
-{q:'What is the Cantonese term for "online shopping"?',opts:["網購","店鋪","訂購","退換"],ans:0},
-{q:'What is the Jyutping for "質素"?',opts:["zat1 sou3","zat1 sau3","zaat1 sou3","zaat1 sau3"],ans:0},
-{q:'"如果你主要係用嚟做嘢，___買呢部。" Fill in the blank:',opts:["先至","不過","都","就"],ans:3},
-{q:'What is the opposite of "花費" (to spend)?',opts:["浪費","儲蓄","消費","購買"],ans:1},
-{q:'Which sentence uses "先至"?',opts:["我唔想買","覺得啱用先至買","網購會平啲","我想比較下"],ans:1},
-{q:'"呢件貨品可以退換" means:',opts:["you can give this product away","you can return or exchange this product","this product is cheap","this product is durable"],ans:1}
+{q:'"消費主義" means:',opts:["minimalism","consumerism","materialism","frugality"],ans:1},
+{q:'"好多時候我哋追求嘅唔係物品本身，而係短暫嘅快樂" uses which pattern?',opts:["寧願...都...","唔係...而係...","關鍵在於...","定係..."],ans:1},
+{q:'What is the Jyutping for "知足常樂"?',opts:["zi1 zuk1 soeng4 lok6","zi1 zuk1 soeng4 ngok6","zi1 zok1 soeng4 lok6","zi1 zok1 soeng4 ngok6"],ans:0},
+{q:'"關鍵在於分清楚需要同想要" means the key is to distinguish:',opts:["cheap vs expensive","needs vs wants","brands vs quality","online vs in-store"],ans:1},
+{q:'"攀比" (paan1 bei2) means:',opts:["to save money","to compare competitively with others","to be frugal","to window-shop"],ans:1},
+{q:'"我寧願花錢喺經歷上面" expresses:',opts:["a regret","a comparison","a strong preference","a question"],ans:2},
+{q:'What does "適可而止" mean?',opts:["buy as much as possible","stop before going too far","everything is on sale","spend freely"],ans:1},
+{q:'The dialogue concludes that true wealth is:',opts:["owning many luxury brands","having a high salary","inner fulfillment and life experiences","winning shopping competitions"],ans:2}
 ]},
 
-{id:4,title:"第四課：健康同運動",subtitle:"gin6 hong1 tung4 wan6 dung6 — Health and Exercise",
+{id:4,title:"第四課：身心平衡同養生之道",subtitle:"san1 sam1 ping4 hang4 tung4 joeng5 sang1 zi1 dou6 — Body-Mind Balance and the Way of Wellness",
 vocab:[
-{c:"運動",j:"wan6 dung6",e:"exercise; sports"},
-{c:"跑步",j:"paau2 bou6",e:"running"},
-{c:"游水",j:"jau4 seoi2",e:"swimming"},
-{c:"健康",j:"gin6 hong1",e:"health"},
-{c:"體能",j:"tai2 nang4",e:"physical fitness"},
-{c:"作息",j:"zok3 zik1",e:"daily routine (work and rest)"},
-{c:"維持",j:"wai4 ci4",e:"to maintain"},
-{c:"拉筋",j:"laai1 gan1",e:"stretching"},
-{c:"出汗",j:"ceot1 hong6",e:"to sweat"},
-{c:"體力",j:"tai2 lik6",e:"physical strength; stamina"},
-{c:"恢復",j:"fui1 fuk6",e:"to recover"},
-{c:"毅力",j:"ngai6 lik6",e:"perseverance; willpower"},
-{c:"適量",j:"sik1 loeng6",e:"in moderation"},
-{c:"過度",j:"gwo3 dou6",e:"excessive; overdoing"},
-{c:"傷害",j:"soeng1 hoi6",e:"injury; harm"},
-{c:"暖身",j:"nyun5 san1",e:"warm up"},
+{c:"身心",j:"san1 sam1",e:"body and mind"},
+{c:"亞健康",j:"aa3 gin6 hong1",e:"sub-health (not sick but not well)"},
+{c:"疲勞",j:"pei4 lou4",e:"fatigue; exhaustion"},
+{c:"免疫力",j:"min5 jik6 lik6",e:"immunity"},
+{c:"睡眠質素",j:"seoi6 min4 zat1 sou3",e:"sleep quality"},
+{c:"壓力",j:"aat3 lik6",e:"pressure; stress"},
+{c:"透支",j:"tau3 zi1",e:"to overdraw; exhaust reserves"},
+{c:"警號",j:"ging2 hou6",e:"warning sign"},
+{c:"忽視",j:"fat1 si6",e:"to neglect; ignore"},
+{c:"重視",j:"zung6 si6",e:"to value; take seriously"},
+{c:"調節",j:"tiu4 zit3",e:"to regulate; adjust"},
+{c:"作息",j:"zok3 sik1",e:"work-rest routine"},
+{c:"規律",j:"kwai1 leot6",e:"regularity; routine"},
+{c:"自律",j:"zi6 leot6",e:"self-discipline"},
+{c:"堅持",j:"gin1 ci4",e:"to persist; stick to"},
+{c:"恆心",j:"hang4 sam1",e:"perseverance"},
+{c:"養生",j:"joeng5 sang1",e:"wellness; health preservation"},
+{c:"預防",j:"jyu6 fong4",e:"to prevent"},
+{c:"治療",j:"zi6 liu4",e:"treatment; to treat"},
+{c:"負荷",j:"fu6 ho6",e:"burden; load"},
 {c:"消耗",j:"siu1 hou3",e:"to consume; deplete"},
-{c:"補充",j:"bou2 cung1",e:"to supplement; replenish"},
-{c:"狀態",j:"zong6 taai3",e:"condition; state"},
 {c:"放鬆",j:"fong3 sung1",e:"to relax"},
-{c:"規律",j:"kwai1 leot6",e:"regular pattern; routine"},
-{c:"恆心",j:"hang4 sam1",e:"perseverance; persistence"}
+{c:"恢復",j:"fui1 fuk6",e:"to recover"},
+{c:"積勞成疾",j:"zik1 lou4 sing4 zat6",e:"chronic illness from overwork (idiom)"},
+{c:"預防勝於治療",j:"jyu6 fong4 sing3 jyu1 zi6 liu4",e:"prevention is better than cure (idiom)"},
+{c:"身心合一",j:"san1 sam1 hap6 jat1",e:"unity of body and mind (idiom)"},
+{c:"飲食均衡",j:"jam2 sik6 gwan1 hang4",e:"balanced diet (idiom)"},
+{c:"適可而止",j:"sik1 ho2 ji4 zi2",e:"stop before going too far (idiom)"}
 ],
 dialogue:[
-{speaker:"A",c:"我最近成日覺得好攰，返工冇咩精神，係唔係唔夠運動啊？",j:"ngo5 zeoi3 gan6 seng4 jat6 gok3 dak1 hou2 gui6, faan1 gung1 mou5 me1 zing1 san4, hai6 m4 hai6 m4 gau3 wan6 dung6 aa3?",e:"I've been feeling tired all the time lately, no energy at work. Is it because I'm not getting enough exercise?"},
-{speaker:"B",c:"好有可能㗎。你平時有冇做運動㗎？我每朝早都會去跑步，做完之後成個人精神好多。",j:"hou2 ho2 nang4 gaa3. nei5 ping4 si4 jau5 mou5 zou6 wan6 dung6 gaa3? ngo5 mui5 ziu1 zou2 dou1 wui5 heoi3 paau2 bou6, zou6 jyun4 zi1 hau6 seng4 go3 jan4 zing1 san4 hou2 do1.",e:"Very likely. Do you normally exercise? I go running every morning, and I feel so much more energetic afterwards."},
-{speaker:"A",c:"我好少做運動，返到屋企就淨係攤喺梳化睇電視。我都想開始做運動，但係唔知由咩開始好。",j:"ngo5 hou2 siu2 zou6 wan6 dung6, faan1 dou3 uk1 kei2 zau6 zing6 hai6 taan1 hai2 so1 faa2 tai2 din6 si6. ngo5 dou1 soeng2 hoi1 ci2 zou6 wan6 dung6, daan6 hai6 m4 zi1 jau4 me1 hoi1 ci2 hou2.",e:"I rarely exercise. When I get home I just lie on the sofa watching TV. I do want to start exercising, but I don't know where to begin."},
-{speaker:"B",c:"你可以由跑步開始，每次跑二十分鐘就夠㗎啦。記住要做暖身同拉筋，唔係好容易受傷害㗎。",j:"nei5 ho2 ji5 jau4 paau2 bou6 hoi1 ci2, mui5 ci3 paau2 ji6 sap6 fan1 zung1 zau6 gau3 gaa3 laa1. gei3 zyu6 jiu3 zou6 nyun5 san1 tung4 laai1 gan1, m4 hai6 hou2 jung4 ji6 sau6 soeng1 hoi6 gaa3.",e:"You can start with running, twenty minutes each time is enough. Remember to warm up and stretch, otherwise it's easy to get injured."},
-{speaker:"A",c:"跑步會唔會好辛苦啊？我怕我體力應付唔到。",j:"paau2 bou6 wui5 m4 wui5 hou2 san1 fu2 aa3? ngo5 paa3 ngo5 tai2 lik6 jing1 fu6 m4 dou3.",e:"Would running be too hard? I'm worried I won't have the stamina for it."},
-{speaker:"B",c:"一開始唔使太過度，適量就得㗎啦。你仲要注意休息同營養，作息定時，咁先至可以恢復體力。我游水嗰陣都覺得好放鬆，你可以試下㗎。",j:"jat1 hoi1 ci2 m4 sai2 taai3 gwo3 dou6, sik1 loeng6 zau6 dak1 gaa3 laa1. nei5 zung6 jiu3 ziu3 ji3 jau1 sik1 tung4 jing4 joeng5, zok3 zik1 ding6 si4, gam2 sin1 zi3 ho2 ji5 fui1 fuk6 tai2 lik6. ngo5 jau4 seoi2 go2 zan6 dou1 gok3 dak1 hou2 fong3 sung1, nei5 ho2 ji5 si3 haa5 gaa3.",e:"You don't need to overdo it at first, moderate exercise is fine. You also need to pay attention to rest and nutrition, keep a regular routine, and only then can you recover your stamina. I feel really relaxed when swimming, you could give it a try."}
+{speaker:"A",c:"最近我成日都覺得好攰，就算瞓夠都係冇咩精神，去睇醫生先發現原來係亞健康狀態。你知唔知咩係亞健康？",j:"zeoi3 gan6 ngo5 sing4 jat6 dou1 gok3 dak1 hou2 gui6 zau6 syun3 fan3 gau3 dou1 hai6 mou5 me1 zing1 san4 heoi3 tai2 ji1 sang1 sin1 faat3 jin6 jyun4 loi4 hai6 aa3 gin6 hong1 zong6 taai3 nei5 zi1 m4 zi1 me1 hai6 aa3 gin6 hong1",e:"Recently I've been feeling exhausted all the time. Even after enough sleep I still have no energy. Went to the doctor and discovered it's a sub-health condition. Do you know what sub-health is?"},
+{speaker:"B",c:"知呀，就係身體未至於有病，但係成日覺得疲勞、睡眠質素差、免疫力下降嗰種狀態。其實而家好多人都有呢個問題，尤其係打工仔，長期處於高壓力之下，身體俾你透支咗都唔知。",j:"zi1 aa4 zau6 hai6 san1 tai2 mei6 zi3 jyu1 jau5 beng6 daan6 hai6 sing4 jat6 gok3 dak1 pei4 lou4 seoi6 min4 zat1 sou3 caa1 min5 jik6 lik6 haa6 gong3 go2 zung3 zong6 taai3 kei4 sat6 ji4 gaa1 hou2 do1 jan4 dou1 jau5 ne1 go3 man6 tai4 jau4 kei4 hai6 daa2 gung1 zai2 coeng4 kei4 cyu5 jyu1 gou1 aat3 lik6 zi1 haa6 san1 tai2 bei2 nei5 tau3 zi1 zo2 dou1 m4 zi1",e:"Yes — it's when your body isn't exactly sick, but you constantly feel fatigued, sleep poorly, and have weakened immunity. Actually many people have this problem nowadays, especially office workers under long-term high stress. Your body is being overdrawn and you don't even know it."},
+{speaker:"A",c:"講得好啱，我以前覺得後生唔使理健康，有咩不舒服頂下就過。但係而家先明白，健康唔係理所當然嘅，身體發出嘅警號如果一直忽視，遲早會積勞成疾。",j:"gong2 dak1 hou2 ngaam1 ngo5 ji5 cin4 gok3 dak1 hau6 saang1 m4 sai2 lei5 gin6 hong1 jau5 me1 bat1 syu1 fuk6 ding2 haa6 zau6 gwo3 daan6 hai6 ji4 gaa1 sin1 ming4 baak6 gin6 hong1 m4 hai6 lei5 so2 dong1 jin4 ge3 san1 tai2 faat3 ceot1 ge3 ging2 hou6 jyu4 gwo2 jat1 zik6 fat1 si6 ci4 zou2 wui6 zik1 lou4 sing4 zat6",e:"So true. I used to think being young meant I didn't need to worry about health — any discomfort, just tough it out. But now I understand health isn't a given. If you keep ignoring your body's warning signs, sooner or later chronic illness from overwork will catch up."},
+{speaker:"B",c:"所以預防勝於治療呢句話真係好有道理。唔好等到出咗問題先至去正視，平日就要注重養生。你而家有冇開始做啲咩嚟改善？",j:"so2 ji5 jyu6 fong4 sing3 jyu1 zi6 liu4 ne1 geoi3 waa6 zan1 hai6 hou2 jau5 dou6 lei5 m4 hou2 dang2 dou3 ceot1 zo2 man6 tai4 sin1 zi3 heoi3 zing3 si6 ping4 jat6 zau6 jiu3 zyu3 zung6 joeng5 sang1 nei5 ji4 gaa1 jau5 mou5 hoi1 ci2 zou6 di1 me1 lai4 goi2 sin6",e:"So 'prevention is better than cure' really makes sense. Don't wait until problems arise to take it seriously. You need to focus on wellness in your daily life. Have you started doing anything to improve?"},
+{speaker:"A",c:"有呀，我開始重視作息規律，盡量早啲瞓，唔好再捱夜。同埋每個禮拜固定做三次運動，跑步或者游水，等身體出汗之後成個人都精神好多。原來運動唔單止強身健體，仲可以調節自律神經，對減壓好有幫助。",j:"jau5 aa4 ngo5 hoi1 ci2 zung6 si6 zok3 sik1 kwai1 leot6 zeon6 loeng6 zou2 di1 fan3 m4 hou2 zoi3 ngaai4 je2 tung4 maai4 mui5 go3 lai5 baai3 gu3 ding6 zou6 saam1 ci3 wan6 dung6 paau2 bou6 waak6 ze2 jau4 seoi2 dang2 san1 tai2 ceot1 hon6 zi1 hau6 seng4 go3 jan4 dou1 zing1 san4 hou2 do1 jyun4 loi4 wan6 dung6 m4 daan1 zi2 koeng4 san1 gin6 tai2 zung6 ho2 ji5 tiu4 zit3 zi6 leot6 san4 ging1 deoi3 gaam2 aat3 hou2 jau5 bong1 zo6",e:"Yes, I've started valuing a regular routine — trying to sleep earlier, no more late nights. And I do fixed exercise three times a week: running or swimming. After sweating, my whole being feels more energetic. Turns out exercise doesn't just strengthen the body, it also regulates the autonomic nervous system — really helps with stress reduction."},
+{speaker:"B",c:"真係咁有效？我一直都知道運動好，但係就係缺乏恆心，堅持唔到。每次開始咗兩三個禮拜就放棄，搞到好有挫敗感。",j:"zan1 hai6 gam3 jau5 haau6 ngo5 jat1 zik6 dou1 zi1 dou3 wan6 dung6 hou2 daan6 hai6 zau6 hai6 kyut3 fat6 hang4 sam1 gin1 ci4 m4 dou3 mui5 ci3 hoi1 ci2 zo2 loeng5 saam1 go3 lai5 baai3 zau6 fong3 hei3 gaau2 dou3 hou2 jau5 co3 baai6 gam2",e:"Is it really that effective? I've always known exercise is good, but I lack perseverance — can't stick with it. Every time I start, after two or three weeks I give up. Makes me feel quite defeated."},
+{speaker:"A",c:"一開始唔使給自己太大壓力，由細小嘅習慣開始培養。譬如每日行多十分鐘路，或者做十五分鐘拉筋，慢慢建立咗規律之後自然就會有動力繼續。最重要係聽自己身體嘅聲音，唔好過度消耗，適可而止先至可以長遠維持。",j:"jat1 hoi1 ci2 m4 sai2 kap1 zi6 gei2 taai3 daai6 aat3 lik6 jau4 sai3 siu2 ge3 zaap6 gwaan3 hoi1 ci2 pui4 joeng5 pei3 jyu4 mui5 jat6 hong6 do1 sap6 fan1 zung1 lou6 waak6 ze2 zou6 sap6 ng5 fan1 zung1 laai1 gan1 maan6 maan2 gin3 lap6 zo2 kwai1 leot6 zi1 hau6 zi6 jin4 zau6 wui6 jau5 dung6 lik6 gai3 zuk6 zeoi3 zung6 jiu3 hai6 ting3 zi6 gei2 san1 tai2 ge3 sing1 jam1 m4 hou2 gwo3 dou6 siu1 hou3 sik1 ho2 ji4 zi2 sin1 zi3 ho2 ji5 coeng4 jyun5 wai4 ci4",e:"Don't put too much pressure on yourself at the start. Cultivate it from small habits — like walking an extra ten minutes a day, or doing fifteen minutes of stretching. Once you gradually build a routine, you'll naturally have the motivation to continue. Most importantly, listen to your body's signals — don't overconsume yourself. Stop before going too far, so you can sustain it long-term."},
+{speaker:"B",c:"你講得啱，健康係一場持久戰，唔係鬥一時嘅爆發力。身心合一，唔單止要照顧身體，仲要關注精神上嘅需要。飲食均衡、適量運動、充足休息，再加上好心態，先至係真正嘅養生之道。",j:"nei5 gong2 dak1 ngaam1 gin6 hong1 hai6 jat1 coeng4 ci4 gau2 zin3 m4 hai6 dau3 jat1 si4 ge3 baau3 faat3 lik6 san1 sam1 hap6 jat1 m4 daan1 zi2 jiu3 ziu3 gu3 san1 tai2 zung6 jiu3 gwaan1 zyu3 zing1 san4 soeng6 ge3 seoi1 jiu3 jam2 sik6 gwan1 hang4 sik1 loeng6 wan6 dung6 cung1 zuk1 jau1 sik1 zoi3 gaa1 soeng5 hou2 sam1 taai3 sin1 zi3 hai6 zan1 zing3 ge3 joeng5 sang1 zi1 dou6",e:"You're right. Health is a long campaign, not a sprint of explosive power. Body and mind are one — not only do you need to take care of your body, but also attend to your mental needs. Balanced diet, moderate exercise, adequate rest, plus a positive mindset — that is the true way of wellness."}
 ],
 grammar:[
-{pattern:"成日 + verb (seng4 jat6)",desc:"all the time / frequently",ex:"我最近成日覺得好攰 (ngo5 zeoi3 gan6 seng4 jat6 gok3 dak1 hou2 gui6)",en:"I've been feeling tired all the time lately"},
-{pattern:"有冇 + verb (jau5 mou5)",desc:"forming a yes/no question about having done something",ex:"你平時有冇做運動？(nei5 ping4 si4 jau5 mou5 zou6 wan6 dung6?)",en:"Do you usually exercise?"},
-{pattern:"唔使 + adj/verb (m4 sai2)",desc:"no need to / don't have to",ex:"一開始唔使太過度 (jat1 hoi1 ci2 m4 sai2 taai3 gwo3 dou6)",en:"You don't need to overdo it at the beginning"},
-{pattern:"咁先至可以 + verb (gam2 sin1 zi3 ho2 ji5)",desc:"only then can (something happen)",ex:"作息定時，咁先至可以恢復體力 (zok3 zik1 ding6 si4, gam2 sin1 zi3 ho2 ji5 fui1 fuk6 tai2 lik6)",en:"Keep a regular routine, only then can you recover your stamina"},
-{pattern:"由 + noun + 開始 (jau4...hoi1 ci2)",desc:"to start with / begin from",ex:"你可以由跑步開始 (nei5 ho2 ji5 jau4 paau2 bou6 hoi1 ci2)",en:"You can start with running"},
-{pattern:"淨係 + verb (zing6 hai6)",desc:"only / just (doing something)",ex:"淨係攤喺梳化睇電視 (zing6 hai6 taan1 hai2 so1 faa2 tai2 din6 si6)",en:"Just lie on the sofa watching TV"}
+{pattern:"就算...都係... (zau6 syun3...dou1 hai6...)",desc:"even if... still... — concession with persistent result",ex:"就算瞓夠都係冇精神 (zau6 syun3 fan3 gau3 dou1 hai6 mou5 zing1 san4)",en:"Even after sleeping enough, still no energy"},
+{pattern:"唔單止...仲可以... (m4 daan1 zi2...zung6 ho2 ji5...)",desc:"not only... but also can... — escalation",ex:"運動唔單止強身健體，仲可以調節神經 (wan6 dung6 m4 daan1 zi2 koeng4 san1 gin6 tai2 zung6 ho2 ji5 tiu4 zit3 san4 ging1)",en:"Exercise not only strengthens the body, but can also regulate the nervous system"},
+{pattern:"如果一直...遲早會... (jyu4 gwo2 jat1 zik6...ci4 zou2 wui6...)",desc:"if you keep... sooner or later... — warning pattern",ex:"如果一直忽視，遲早會積勞成疾 (jyu4 gwo2 jat1 zik6 fat1 si6 ci4 zou2 wui6 zik1 lou4 sing4 zat6)",en:"If you keep ignoring it, sooner or later chronic illness will result"},
+{pattern:"唔好等到...先至... (m4 hou2 dang2 dou3...sin1 zi3...)",desc:"don't wait until... before... — advice against delay",ex:"唔好等到出咗問題先至正視 (m4 hou2 dang2 dou3 ceot1 zo2 man6 tai4 sin1 zi3 zing3 si6)",en:"Don't wait until problems arise before taking it seriously"},
+{pattern:"由...開始培養 (jau4...hoi1 ci2 pui4 joeng5)",desc:"start cultivating from... — gradual approach",ex:"由細小嘅習慣開始培養 (jau4 sai3 siu2 ge3 zaap6 gwaan3 hoi1 ci2 pui4 joeng5)",en:"Start cultivating from small habits"},
+{pattern:"唔係...而係... (m4 hai6...ji4 hai6...)",desc:"it's not... but rather... — reframing",ex:"健康唔係鬥一時嘅爆發力，而係持久戰 (gin6 hong1 m4 hai6 dau3 jat1 si4 ge3 baau3 faat3 lik6 ji4 hai6 ci4 gau2 zin3)",en:"Health isn't about a burst of explosive power, but a long campaign"}
 ],
 quiz:[
-{q:'What does "攰" mean?',opts:["happy","tired","hungry","thirsty"],ans:1},
-{q:'What is the Jyutping for "暖身"?',opts:["lyun5 san1","nyun5 san1","nyun5 san4","lyun5 san4"],ans:1},
-{q:'"你可以___跑步開始。" Fill in the blank:',opts:["由","喺","去","同"],ans:0},
-{q:'"作息定時" means:',opts:["work is very busy","keep a regular work-rest schedule","keep working","wake up early"],ans:1},
-{q:'Which word means doing exercise too much?',opts:["適量","暖身","過度","拉筋"],ans:2},
-{q:'"我每朝早都會去跑步"中，"每朝早" means:',opts:["every night","every afternoon","every morning","sometimes"],ans:2},
-{q:'What is the Jyutping for "恢復體力"?',opts:["fui1 fuk6 tai2 lik6","fui1 fuk6 tai2 nang4","wui4 fuk6 tai2 lik6","fui3 fuk6 tai2 lik6"],ans:0},
-{q:'"唔使太過度" means:',opts:["you must do more","no need to overdo it","overdoing is fine","you must overdo it"],ans:1}
+{q:'"亞健康" (aa3 gin6 hong1) refers to:',opts:["excellent health","a serious disease","sub-health: not sick but not well","a type of exercise"],ans:2},
+{q:'"預防勝於治療" means:',opts:["treatment is always necessary","prevention is better than cure","medicine cures everything","exercise is the only solution"],ans:1},
+{q:'What is the Jyutping for "積勞成疾"?',opts:["zik1 lou4 sing4 zat6","zik1 lou4 sing4 zat1","zik1 lou6 sing4 zat6","zik6 lou4 sing4 zat6"],ans:0},
+{q:'"就算瞓夠都係冇精神" uses which grammar pattern?',opts:["唔單止...仲可以...","就算...都係...","如果一直...遲早會...","唔係...而係..."],ans:1},
+{q:'"透支健康" (tau3 zi1 gin6 hong1) means:',opts:["to improve health","to overdraw/exhaust one's health reserves","to check health","to restore health"],ans:1},
+{q:'The dialogue says exercise helps with:',opts:["only building muscle","only losing weight","both physical strength and stress reduction","only socializing"],ans:2},
+{q:'What does "身心合一" mean?',opts:["body is more important than mind","mind is more important than body","unity of body and mind","separate body and mind"],ans:2},
+{q:'The dialogue concludes true wellness requires:',opts:["only exercise","only good diet","body, mind, diet, exercise, rest and mindset combined","taking supplements"],ans:2}
 ]},
 
-{id:5,title:"第五課：工作同職場",subtitle:"gung1 zok3 tung4 zik1 coeng4 — Work and Career",
+{id:5,title:"第五課：事業方向同人生追求",subtitle:"si6 jip6 fong1 hoeng3 tung4 jan4 sang1 zeoi1 kau4 — Career Direction and Life Pursuit",
 vocab:[
-{c:"職業",j:"zik1 jip6",e:"profession; career"},
-{c:"面試",j:"min6 si3",e:"interview"},
-{c:"薪酬",j:"san1 cau4",e:"salary; compensation"},
-{c:"升職",j:"sing1 zik1",e:"promotion"},
-{c:"辭職",j:"ci4 zik1",e:"to resign"},
-{c:"轉工",j:"zyun3 gung1",e:"to change jobs"},
-{c:"職責",j:"zik1 zaak3",e:"responsibilities"},
-{c:"能力",j:"nang4 lik6",e:"ability"},
-{c:"挑戰",j:"tiu1 zin3",e:"challenge"},
-{c:"機會",j:"gei1 wui6",e:"opportunity"},
-{c:"發展",j:"faat3 zin2",e:"development"},
-{c:"上司",j:"soeng6 si1",e:"supervisor; boss"},
-{c:"下屬",j:"haa6 suk6",e:"subordinate"},
-{c:"客戶",j:"haak3 wu6",e:"client; customer"},
-{c:"項目",j:"hong6 muk6",e:"project"},
-{c:"報告",j:"bou3 gou3",e:"report"},
-{c:"期限",j:"kei4 haan6",e:"deadline"},
-{c:"加班",j:"gaa1 baan1",e:"to work overtime"},
-{c:"平衡",j:"ping4 hang4",e:"balance"},
-{c:"目標",j:"muk6 biu1",e:"goal"},
-{c:"計劃",j:"gai3 waak6",e:"plan"},
-{c:"晉升",j:"zeon3 sing1",e:"to advance; promote"},
-{c:"待遇",j:"doi6 jyu5",e:"treatment; working conditions"}
+{c:"事業",j:"si6 jip6",e:"career; enterprise"},
+{c:"職場",j:"zik1 coeng4",e:"workplace"},
+{c:"成就感",j:"sing4 zau6 gam2",e:"sense of achievement"},
+{c:"歸屬感",j:"gwai1 suk6 gam2",e:"sense of belonging"},
+{c:"使命感",j:"si5 ming6 gam2",e:"sense of mission/purpose"},
+{c:"瓶頸",j:"ping4 geng2",e:"bottleneck; plateau"},
+{c:"迷茫",j:"mai4 mong4",e:"confused; lost"},
+{c:"堅持",j:"gin1 ci4",e:"to persist; stick to"},
+{c:"妥協",j:"to5 hip3",e:"to compromise"},
+{c:"轉型",j:"zyun2 jing4",e:"to pivot; change direction"},
+{c:"投入",j:"tau4 jap6",e:"to be engaged; invest oneself"},
+{c:"付出",j:"fu6 ceot1",e:"to give; contribute effort"},
+{c:"回報",j:"wui4 bou3",e:"reward; return"},
+{c:"代價",j:"doi6 gaa3",e:"price; cost"},
+{c:"燃盡",j:"jin4 zeon6",e:"burnout"},
+{c:"熱情",j:"jit6 cing4",e:"passion; enthusiasm"},
+{c:"初心",j:"co1 sam1",e:"original aspiration"},
+{c:"踏實",j:"daap6 sat6",e:"grounded; practical"},
+{c:"安穩",j:"on1 wan2",e:"stable and secure"},
+{c:"冒險",j:"mou6 him2",e:"to take risks; venture"},
+{c:"滿足感",j:"mun5 zuk1 gam2",e:"sense of fulfillment"},
+{c:"充實",j:"cung1 sat6",e:"fulfilling; enriched"},
+{c:"虛耗",j:"heoi1 hou3",e:"to waste away; fritter"},
+{c:"理想",j:"lei5 soeng2",e:"ideal; dream"},
+{c:"現實",j:"jin6 sat6",e:"reality"},
+{c:"魚與熊掌",j:"jyu2 jyu5 hung4 zoeng2",e:"fish and bear's paw — can't have both (idiom)"},
+{c:"功成名就",j:"gung1 sing4 ming4 zau6",e:"accomplished and successful (idiom)"},
+{c:"隨遇而安",j:"ceoi4 jyu6 ji4 on1",e:"go with the flow and be content (idiom)"},
+{c:"知足常樂",j:"zi1 zuk1 soeng4 lok6",e:"contentment brings happiness (idiom)"}
 ],
 dialogue:[
-{speaker:"A",c:"你最近做緊咩工呀？我聽講你轉咗新工。",j:"nei5 zeoi3 gan6 zou6 gan2 me1 gung1 aa3? ngo5 teng1 gong2 nei5 zyun3 zo2 san1 gung1.",e:"What job are you doing recently? I heard you changed to a new job."},
-{speaker:"B",c:"係呀，我依家喺一間科技公司做項目管理。工作量幾大，不過發展機會都唔錯。",j:"hai6 aa3, ngo5 ji1 gaa1 hai2 jat1 gaan1 fo1 gei6 gung1 si1 zou6 hong6 muk6 gun2 lei5. gung1 zok3 loeng6 gei2 daai6, bat1 gwo3 faat3 zin2 gei1 wui6 dou1 m4 co3.",e:"Yeah, I'm now doing project management at a tech company. The workload is quite heavy, but the development opportunities aren't bad."},
-{speaker:"A",c:"咁就好啦！你個新上司點呀？對下屬好唔好？",j:"gam2 zau6 hou2 laa1! nei5 go3 san1 soeng6 si1 dim2 aa3? deoi3 haa6 suk6 hou2 m4 hou2?",e:"That's good then! How's your new boss? Are they good to subordinates?"},
-{speaker:"B",c:"佢幾好，好有經驗，而且俾好多機會我哋。就係有時期限太緊，成日要加班。",j:"keoi5 gei2 hou2, hou2 jau5 ging1 jim6, ji4 ce2 bei2 hou2 do1 gei1 wui6 ngo5 dei6. zau6 hai6 jau5 si4 kei4 haan6 taai3 gan2, seng4 jat6 jiu3 gaa1 baan1.",e:"Pretty good, very experienced, and gives us lots of opportunities. It's just that sometimes deadlines are too tight, so we always have to work overtime."},
-{speaker:"A",c:"咁辛苦！你有冇諗過爭取升職？定係想轉其他行業？",j:"gam2 san1 fu2! nei5 jau5 mou5 nam2 gwo3 zaang1 ceoi2 sing1 zik1? ding6 hai6 soeng2 zyun3 kei4 taa1 hong4 jip6?",e:"That's rough! Have you ever thought about going for a promotion? Or do you want to switch to another industry?"},
-{speaker:"B",c:"我都想晉升，不過要考慮薪酬同待遇。最重要係想平衡到工作同生活，呢個先係我嘅目標。",j:"ngo5 dou1 soeng2 zeon3 sing1, bat1 gwo3 jiu3 haau2 leoi6 san1 cau4 tung4 doi6 jyu5. zeoi3 zung6 jiu3 hai6 soeng2 ping4 hang4 dou3 gung1 zok3 tung4 sang1 wut6, ni1 go3 sin1 hai6 ngo5 ge3 muk6 biu1.",e:"I do want to advance, but I need to consider salary and conditions. The most important thing is wanting to balance work and life — that's truly my goal."}
+{speaker:"A",c:"最近我成日喺度諗，做咗呢行咁多年，係時候反思一下自己嘅事業方向。你有冇試過對住份工覺得好迷茫？",j:"zeoi3 gan6 ngo5 sing4 jat6 hai2 dou6 nam2 zou6 zo2 ne1 hong6 gam3 do1 nin4 hai6 si4 hau6 faan2 si1 jat1 haa6 zi6 gei2 ge3 si6 jip6 fong1 hoeng3 nei5 jau5 mou5 si3 gwo3 deoi3 zyu6 fan6 gung1 gok3 dak1 hou2 mai4 mong4",e:"Recently I keep reflecting — after so many years in this field, it's time to reconsider my career direction. Have you ever felt lost in your job?"},
+{speaker:"B",c:"有呀，尤其係遇到瓶頸嗰陣，日日做住同樣嘅嘢，就會開始懷疑自己究竟係為咗乜嘢。係為咗成就感、定係只係為咗份人工？",j:"jau5 aa4 jau4 kei4 hai6 jyu6 dou3 ping4 geng2 go2 zan6 jat6 jat6 zou6 zyu6 tung4 joeng6 ge3 je5 zau6 wui6 hoi1 ci2 waai4 ji4 zi6 gei2 gau3 ging2 hai6 wai6 zo2 mat1 je5 hai6 wai6 zo2 sing4 zau6 gam2 ding6 hai6 zi2 hai6 wai6 zo2 fan6 jan4 gung1",e:"Yes, especially when you hit a bottleneck — doing the same thing every day, you start asking yourself what it's all for. Is it for a sense of achievement, or just for the paycheck?"},
+{speaker:"A",c:"我覺得最難嘅係喺理想同現實之間搵平衡。大家都想追求有意義嘅工作，但係現實中好多時候要妥協，有啲嘢唔係你話想點就點。",j:"ngo5 gok3 dak1 zeoi3 naan4 ge3 hai6 hai2 lei5 soeng2 tung4 jin6 sat6 zi1 gaan1 wan2 ping4 hang4 daai6 gaa1 dou1 soeng2 zeoi1 kau4 jau5 ji3 ji6 ge3 gung1 zok3 daan6 hai6 jin6 sat6 zung1 hou2 do1 si4 hau6 jiu3 to5 hip3 jau5 di1 je5 m4 hai6 nei5 waa6 soeng2 dim2 zau6 dim2",e:"I think the hardest part is finding balance between ideals and reality. Everyone wants meaningful work, but in reality you often have to compromise — things don't always go the way you want."},
+{speaker:"B",c:"咁你覺得咩先算係一份好工？係咪一定要功成名就先算成功？",j:"gam3 nei5 gok3 dak1 me1 sin1 syun3 hai6 jat1 fan6 hou2 gung1 hai6 mi1 jat1 ding6 jiu3 gung1 sing4 ming4 zau6 sin1 syun3 sing4 gung1",e:"So what do you think makes a good job? Is it necessary to be accomplished and successful to count as success?"},
+{speaker:"A",c:"我而家覺得唔係咁睇。一份好工應該俾到你歸屬感同使命感，令你願意投入同付出，而唔係每日返工就等收工，純粹虛耗時間。當然，合理嘅回報都好重要，但係如果淨係為錢而做，好容易就會燃盡。",j:"ngo5 ji4 gaa1 gok3 dak1 m4 hai6 gam3 tai2 jat1 fan6 hou2 gung1 jing1 goi1 bei2 dou3 nei5 gwai1 suk6 gam2 tung4 si2 ming6 gam2 ling6 nei5 jyun6 ji3 tau4 jap6 tung4 fu6 ceot1 ji4 m4 hai6 mui5 jat6 faan1 gung1 zau6 dang2 sau1 gung1 seon4 seoi6 heoi1 hou3 si4 gaan3 dong1 jin4 hap6 lei5 ge3 wui4 bou3 dou1 hou2 zung6 jiu3 daan6 hai6 jyu4 gwo2 zing6 hai6 wai6 cin2 ji4 zou6 hou2 jung4 ji6 zau6 wui6 jin4 zeon6",e:"I now think differently. A good job should give you a sense of belonging and purpose, making you willing to invest and give — not just clocking in and out every day, purely wasting time. Of course fair rewards matter, but if you're only in it for money, burnout comes easily."},
+{speaker:"B",c:"講得好有道理。我以前就係淨係追求高人工，結果搞到自己身心俱疲，完全冇咗對工作嘅熱情。後來轉型去做自己真正有興趣嘅嘢，雖然收入少咗，但係活得充實好多，每日都有動力起身。",j:"gong2 dak1 hou2 jau5 dou6 lei5 ngo5 ji5 cin4 zau6 hai6 zing6 hai6 zeoi1 kau4 gou1 jan4 gung1 git3 gwo2 gaau2 dou3 zi6 gei2 san1 sam1 keoi1 pei4 jyun4 cyun4 mou5 zo2 deoi3 gung1 zok3 ge3 jit6 cing4 hau6 loi4 zyun2 jing4 heoi3 zou6 zi6 gei2 zan1 zing3 jau5 hing3 ceoi3 ge3 je5 seoi1 jin4 sau1 jap6 siu2 zo2 daan6 hai6 wut6 dak1 cung1 sat6 hou2 do1 mui5 jat6 dou1 jau5 dung6 lik6 hei2 san1",e:"That makes a lot of sense. I used to only chase a high salary, and ended up physically and mentally exhausted, losing all passion for work. Later I pivoted to do what I'm genuinely interested in — even though the income decreased, my life is much more fulfilling. Every day I wake up motivated."},
+{speaker:"A",c:"魚與熊掌不可兼得，有時候確實要作出取捨。不過我覺得最重要係唔好忘記自己嘅初心，唔好為咗迎合別人嘅期望而放棄自己真正想要嘅生活。踏實咁行自己嘅路，隨遇而安，先至係長遠之道。",j:"jyu2 jyu5 hung4 zoeng2 bat1 ho2 gim1 dak1 jau5 si4 hau6 kok3 sat6 jiu3 zok3 ceot1 ceoi2 se2 bat1 gwo3 ngo5 gok3 dak1 zeoi3 zung6 jiu3 hai6 m4 hou2 mong4 gei3 zi6 gei2 ge3 co1 sam1 m4 hou2 wai6 zo2 jing4 hap6 bit6 jan4 ge3 kei4 mong6 ji4 fong3 hei3 zi6 gei2 zan1 zing3 soeng2 jiu3 ge3 sang1 wut6 daap6 sat6 gam3 hong6 zi6 gei2 ge3 lou6 ceoi4 jyu6 ji4 on1 sin1 zi3 hai6 coeng4 jyun5 zi1 dou6",e:"You can't have both fish and bear's paw — sometimes you really have to make trade-offs. But I think the most important thing is not to forget your original aspiration, not to abandon the life you truly want just to meet others' expectations. Walk your own path with grounded steps, go with the flow and be content — that's the long-term way."},
+{speaker:"B",c:"呢個諗法好難得。事業唔係淨係一條直路，有彎有拐先至係真正嘅人生。最緊要係每一個選擇都係跟住自己嘅心去做，咁樣先至無悔。",j:"ne1 go3 nam2 faat3 hou2 naan4 dak1 si6 jip6 m4 hai6 zing6 hai6 jat1 tiu4 zik6 lou6 jau5 waan1 jau5 gwaai2 sin1 zi3 hai6 zan1 zing3 ge3 jan4 sang1 zeoi3 gan2 jiu3 hai6 mui5 jat1 go3 syun2 zaak6 dou1 hai6 gan1 zyu6 zi6 gei2 ge3 sam1 heoi3 zou6 gam3 joeng6 sin1 zi3 mou4 fui3",e:"That's a precious way of thinking. A career isn't just a straight road — twists and turns are what real life is about. The most important thing is that every choice follows your heart. That way, you'll have no regrets."}
 ],
 grammar:[
-{pattern:"Verb + 緊 (gan2)",desc:"progressive aspect — currently doing",ex:"做緊咩工呀 (zou6 gan2 me1 gung1 aa3)",en:"What job are you currently doing?"},
-{pattern:"成日 + verb (seng4 jat6)",desc:"always / constantly doing something",ex:"成日要加班 (seng4 jat6 jiu3 gaa1 baan1)",en:"Always have to work overtime"},
-{pattern:"有冇 + 諗過 (jau5 mou5 nam2 gwo3)",desc:"have you ever thought about",ex:"你有冇諗過爭取升職？(nei5 jau5 mou5 nam2 gwo3 zaang1 ceoi2 sing1 zik1?)",en:"Have you ever thought about going for a promotion?"},
-{pattern:"定係 (ding6 hai6)",desc:"or — used in alternative questions",ex:"定係想轉其他行業？(ding6 hai6 soeng2 zyun3 kei4 taa1 hong4 jip6?)",en:"Or do you want to change to another industry?"},
-{pattern:"最重要 + 係 (zeoi3 zung6 jiu3 hai6)",desc:"the most important thing is",ex:"最重要係想平衡到工作同生活 (zeoi3 zung6 jiu3 hai6 soeng2 ping4 hang4 dou3 gung1 zok3 tung4 sang1 wut6)",en:"The most important thing is wanting to balance work and life"},
-{pattern:"先係 (sin1 hai6)",desc:"is truly / is the real one",ex:"呢個先係我嘅目標 (ni1 go3 sin1 hai6 ngo5 ge3 muk6 biu1)",en:"This is truly my goal"}
+{pattern:"究竟...定係... (gau3 ging2... ding6 hai6...)",desc:"at the end of the day, is it... or is it... — deep questioning",ex:"究竟係為咗成就感，定係只係為咗份人工？(gau3 ging2 hai6 wai6 zo2 sing4 zau6 gam2 ding6 hai6 zi2 hai6 wai6 zo2 fan6 jan4 gung1)",en:"Is it for a sense of achievement, or just for the paycheck?"},
+{pattern:"唔係你話想點就點 (m4 hai6 nei5 waa6 soeng2 dim2 zau6 dim2)",desc:"things don't go the way you want — accepting limits",ex:"有啲嘢唔係你話想點就點 (jau5 di1 je5 m4 hai6 nei5 waa6 soeng2 dim2 zau6 dim2)",en:"Some things don't go the way you want"},
+{pattern:"咁你覺得咩先算係... (gam3 nei5 gok3 dak1 me1 sin1 syun3 hai6...)",desc:"so what do you think counts as... — opinion inquiry",ex:"咁你覺得咩先算係一份好工？(gam3 nei5 gok3 dak1 me1 sin1 syun3 hai6 jat1 fan6 hou2 gung1)",en:"So what do you think makes a good job?"},
+{pattern:"唔好為咗...而... (m4 hou2 wai6 zo2... ji4...)",desc:"don't... just for the sake of... — caution against trade-offs",ex:"唔好為咗迎合別人嘅期望而放棄自己想要嘅生活 (m4 hou2 wai6 zo2 jing4 hap6 bit6 jan4 ge3 kei4 mong6 ji4 fong3 hei3 zi6 gei2 soeng2 jiu3 ge3 sang1 wut6)",en:"Don't abandon the life you want just to meet others' expectations"},
+{pattern:"先至係... (sin1 zi3 hai6...)",desc:"is truly the real... — emphatic assertion",ex:"先至係真正嘅人生 (sin1 zi3 hai6 zan1 zing3 ge3 jan4 sang1)",en:"That's truly real life"},
+{pattern:"係時候 + verb (hai6 si4 hau6)",desc:"it's time to... — signals readiness for change",ex:"係時候反思一下自己嘅事業方向 (hai6 si4 hau6 faan2 si1 jat1 haa6 zi6 gei2 ge3 si6 jip6 fong1 hoeng3)",en:"It's time to reflect on your career direction"}
 ],
 quiz:[
-{q:'What is the Jyutping for "項目管理"?',opts:["hong6 muk6 gun2 lei5","hong6 mat6 gun2 lei5","hung6 muk6 gun2 lei5","hong6 muk6 gan2 lei5"],ans:0},
-{q:'How does B describe their new boss?',opts:["strict, no opportunities","good, gives lots of opportunities","ignores subordinates","always scolds people"],ans:1},
-{q:'"成日要加班" means:',opts:["always finish work on time","frequently need to work overtime","don't need to work","work on holidays"],ans:1},
-{q:'What does B consider most important?',opts:["quick promotion","switching companies","balancing work and life","finding more clients"],ans:2},
-{q:'"期限" refers to:',opts:["report","project","deadline","plan"],ans:2},
-{q:'"待遇" in a work context means:',opts:["working hours","work location","work content","working conditions and compensation"],ans:3},
-{q:'What does "轉工" mean?',opts:["to get promoted","to change jobs","to work overtime","to interview"],ans:1},
-{q:'"呢個先係我嘅目標"中，"先係" means:',opts:["maybe","is not","is truly","probably"],ans:2}
+{q:'"事業方向" (si6 jip6 fong1 hoeng3) means:',opts:["workplace rules","career direction","business plan","job application"],ans:1},
+{q:'"瓶頸" (ping4 geng2) refers to:',opts:["a promotion","a career bottleneck or plateau","a job offer","an interview"],ans:1},
+{q:'What is the Jyutping for "燃盡"?',opts:["jin4 zeon6","jin6 zeon6","jin4 zik6","jin6 zik6"],ans:0},
+{q:'"究竟係為咗成就感，定係為咗人工？" uses:',opts:["唔係...而係...","究竟...定係...","係時候...","唔好為咗...而..."],ans:1},
+{q:'"魚與熊掌" (jyu2 jyu5 hung4 zoeng2) means:',opts:["ordered fish and bear meat","you cannot have everything","ordered food","emotion about food"],ans:1},
+{q:'"初心" (co1 sam1) refers to:',opts:["new job","original salary","original aspiration/passion","interview"],ans:2},
+{q:'The dialogue suggests the key to a fulfilling career is:',opts:["highest salary possible","fastest promotion","sense of purpose and following your heart","pleasing others"],ans:2},
+{q:'"隨遇而安" (ceoi4 jyu6 ji4 on1) means:',opts:["always plan ahead","go with the flow and be content","fight for everything","never compromise"],ans:1}
 ]},
 
-{id:6,title:"第六課：社交同朋友",subtitle:"se5 gaau1 tung4 pang4 jau5 — Socializing and Friends",
+{id:6,title:"第六課：友誼的本質同深度",subtitle:"jau5 ji6 ge3 bun2 zat1 tung4 sam1 dou6 — The Nature and Depth of Friendship",
 vocab:[
-{c:"聚會",j:"zeoi6 wui6",e:"gathering; party"},
-{c:"電影",j:"din6 jing2",e:"movie"},
-{c:"行山",j:"haang4 saan1",e:"hiking"},
-{c:"唱歌",j:"coeng3 go1",e:"singing"},
-{c:"旅行",j:"leoi5 hang4",e:"travel; trip"},
-{c:"電話",j:"din6 waa6",e:"telephone; phone call"},
-{c:"聯絡",j:"lyun4 lok3",e:"to contact"},
-{c:"關係",j:"gwaan1 hai6",e:"relationship"},
+{c:"友誼",j:"jau5 ji6",e:"friendship"},
+{c:"深交",j:"sam1 gaau1",e:"deep friendship"},
+{c:"知己",j:"zi1 gei2",e:"bosom friend; kindred spirit"},
+{c:"疏遠",j:"so1 jyun5",e:"to drift apart"},
+{c:"維持",j:"wai4 ci4",e:"to maintain; sustain"},
+{c:"階段",j:"gaai1 dyun6",e:"stage; phase"},
+{c:"質素",j:"zat1 sou3",e:"quality"},
+{c:"默契",j:"mak6 kai3",e:"tacit understanding"},
+{c:"坦誠",j:"taan2 sing4",e:"frank and honest"},
+{c:"扶持",j:"fu4 ci4",e:"to support; help"},
+{c:"信任",j:"seon3 jam6",e:"trust"},
+{c:"用心",j:"jung6 sam1",e:"to put heart into"},
+{c:"疏忽",j:"so1 fat1",e:"to neglect"},
+{c:"表面",j:"biu2 min6",e:"superficial; surface-level"},
+{c:"虛擬",j:"heoi1 ji4",e:"virtual"},
+{c:"真實",j:"zan1 sat6",e:"real; genuine"},
+{c:"連結",j:"lin4 git3",e:"connection; bond"},
+{c:"孤獨",j:"gu1 duk6",e:"lonely"},
+{c:"冷清",j:"laang5 cing1",e:"desolate; quiet"},
 {c:"熱鬧",j:"jit6 naau6",e:"lively; bustling"},
-{c:"安靜",j:"on1 zing6",e:"quiet"},
-{c:"場合",j:"coeng4 hap6",e:"occasion"},
-{c:"禮物",j:"lai5 mat6",e:"gift"},
-{c:"慶祝",j:"hing3 zuk1",e:"to celebrate"},
-{c:"邀請",j:"jiu1 cing2",e:"to invite"},
-{c:"參加",j:"caam1 gaa1",e:"to participate"},
-{c:"組織",j:"zou2 zik1",e:"to organize"},
-{c:"話題",j:"waa6 tai4",e:"topic"},
-{c:"分享",j:"fan1 hoeng2",e:"to share"},
-{c:"陪伴",j:"pui4 bun6",e:"to accompany"},
-{c:"離別",j:"lei4 bit6",e:"farewell; parting"},
-{c:"重逢",j:"cung4 fung4",e:"reunion"},
-{c:"友誼",j:"jau5 ji4",e:"friendship"},
-{c:"約",j:"joek3",e:"to invite; to make an appointment"},
-{c:"得閒",j:"dak1 haan4",e:"to be free; available"}
+{c:"志同道合",j:"zi3 tung4 dou6 hap6",e:"sharing the same ideals (idiom)"},
+{c:"患難見真情",j:"waan6 naan4 gin3 zan1 cing4",e:"true feelings revealed in hardship (idiom)"},
+{c:"君子之交淡如水",j:"gwan1 zi2 zi1 gaau1 taam5 jyu4 seoi2",e:"a gentleman's friendship is as plain as water (idiom)"},
+{c:"日久見人心",j:"jat6 gau2 gin3 jan4 sam1",e:"time reveals a person's heart (idiom)"}
 ],
 dialogue:[
-{speaker:"A",c:"喂，你今個禮拜有冇空呀？我想約你出嚟聚下。",j:"wai3, nei5 gam1 go3 lai5 baai3 jau5 mou5 hung3 aa3? ngo5 soeng2 joek3 nei5 ceot1 lei4 zeoi6 haa5.",e:"Hey, are you free this week? I want to ask you out to catch up."},
-{speaker:"B",c:"有呀！咁啱我都想搵人去行山。你有冇興趣？",j:"jau5 aa3! gam2 ngaam1 ngo5 dou1 soeng2 wan2 jan4 heoi3 haang4 saan1. nei5 jau5 mou5 hing1 ceoi3?",e:"I am! Coincidentally I also want to find someone to go hiking. Are you interested?"},
-{speaker:"A",c:"好呀！幾時去？我想叫埋阿明同小玲一齊去。",j:"hou2 aa3! gei2 si4 heoi3? ngo5 soeng2 giu3 maai4 aa3 ming4 tung4 siu2 ling4 jat1 cai4 heoi3.",e:"Sure! When shall we go? I want to invite Ah Ming and Siu Ling to go together."},
-{speaker:"B",c:"聽日朝早得唔得？我打電話聯絡佢哋先，睇下佢哋得唔得閒。",j:"ting1 jat6 ziu1 zou2 dak1 m4 dak1? ngo5 daa2 din6 waa6 lyun4 lok3 keoi5 dei6 sin1, tai2 haa5 keoi5 dei6 dak1 m4 dak1 haan4.",e:"Is tomorrow morning okay? I'll call them first, see if they're free."},
-{speaker:"A",c:"得！行完山之後我哋去食晚餐啦，順便傾下近況。",j:"dak1! haang4 jyun4 saan1 zi1 hau6 ngo5 dei6 heoi3 sik6 maan5 caan1 laa1, seon6 bin6 king1 haa5 gan6 fong3.",e:"Sure! After hiking let's go have dinner, and catch up on how things are going."},
-{speaker:"B",c:"好主意！我好耐冇見佢哋，友誼真係要用心維持。",j:"hou2 zyu2 ji3! ngo5 hou2 noi6 mou5 gin3 keoi5 dei6, jau5 ji4 zan1 hai6 jiu3 jung6 sam1 wai4 ci4.",e:"Good idea! I haven't seen them for a long time, friendship really needs to be maintained with effort."},
-{speaker:"A",c:"係呀，定期聚會好重要。咁我哋約幾點呀？",j:"hai6 aa3, ding6 kei4 zeoi6 wui6 hou2 zung6 jiu3. gam2 ngo5 dei6 joek3 gei2 dim2 aa3?",e:"Yeah, regular gatherings are really important. So what time should we meet?"}
+{speaker:"A",c:"最近我喺度諗，人越大，朋友好似越嚟越少。以前讀書嗰陣成日一大班人出去玩，而家個個都各忙各，連約食餐飯都要約成個月先至約到。你有冇同樣嘅感覺？",j:"zeoi3 gan6 ngo5 hai2 dou6 nam2 jan4 jyut6 daai6 pang4 jau5 hou2 ci5 jyut6 lai4 jyut6 siu2 ji5 cin4 duk6 syu1 go2 zan6 sing4 jat6 jat1 daai6 baan1 jan4 ceot1 heoi3 waan2 ji4 gaa1 go3 go3 dou1 gok3 mong4 gok3 lin4 joek3 sik6 caan1 faan6 dou1 jiu3 joek3 seng4 go3 jyut6 sin1 zi3 joek3 dou3 nei5 jau5 mou5 tung4 joeng6 ge3 gam2 gok3",e:"Lately I've been thinking: the older we get, the fewer friends we seem to have. Back in school we'd always go out in big groups, now everyone is busy with their own stuff — even arranging a meal takes a whole month to book. Do you feel the same?"},
+{speaker:"B",c:"當然有啦，呢個係人生必經嘅階段。隨住年紀大咗，時間有限，你就會開始篩選邊啲關係係真正值得投入嘅。朋友嘅質素遠比數量重要，一個知己好過十個泛泛之交。",j:"dong1 jin4 jau5 laa1 ne1 go3 hai6 jan4 sang1 bit1 ging1 ge3 gaai1 dyun6 ceoi4 zyu6 nin4 gei2 daai6 zo2 si4 gaan3 jau5 haan6 nei5 zau6 wui6 hoi1 ci2 sai1 syun2 bin1 di1 gwaan1 hai6 hai6 zan1 zing3 zik6 dak1 tau4 jap6 ge3 pang4 jau5 ge3 zat1 sou3 jyun5 bei2 sou3 loeng6 zung6 jiu3 jat1 go3 zi1 gei2 hou2 gwo3 sap6 go3 faan6 faan6 zi1 gaau1",e:"Of course. This is an inevitable stage of life. As you get older and time becomes limited, you start filtering which relationships are truly worth investing in. The quality of friends far outweighs quantity — one true bosom friend beats ten casual acquaintances."},
+{speaker:"A",c:"講得好啱，深交嘅朋友真係好難得。我同一個老友識咗十幾年，平時大家都好忙，可能幾個月先見一次，但係每次一坐低傾偈，就好似完全冇隔膜咁，嗰種默契真係好珍貴。",j:"gong2 dak1 hou2 ngaam1 sam1 gaau1 ge3 pang4 jau5 zan1 hai6 hou2 naan4 dak1 ngo5 tung4 jat1 go3 lou5 jau5 sik1 zo2 sap6 gei2 nin4 ping4 si4 daai6 gaa1 dou1 hou2 mong4 ho2 nang4 gei2 go3 jyut6 sin1 gin3 jat1 ci3 daan6 hai6 mui5 ci3 jat1 co5 dai1 king1 gai2 zau6 hou2 ci5 jyun4 cyun4 mou5 gaak3 mok6 gam3 go2 zung3 mak6 kai3 zan1 hai6 hou2 zan1 gwai3",e:"So true. Deep friendships are rare. I've known an old friend for over ten years. Usually we're both busy — maybe we only see each other once every few months. But every time we sit down to chat, it's like there's no barrier at all. That kind of tacit understanding is truly precious."},
+{speaker:"B",c:"呢種就係「君子之交淡如水」啦。真正嘅友誼唔係成日黐埋一齊，而係心入面有個位係畀對方嘅，有需要嘅時候一定會第一個企出嚟幫忙。",j:"ne1 zung3 zau6 hai6 gwan1 zi2 zi1 gaau1 taam5 jyu4 seoi2 laa1 zan1 zing3 ge3 jau5 ji6 m4 hai6 sing4 jat6 ci1 maai4 jat1 cai4 ji4 hai6 sam1 jap6 min6 jau5 go3 wai6 hai6 bei2 deoi3 fong1 ge3 jau5 seoi1 jiu3 ge3 si4 hau6 jat1 ding6 wui6 dai6 jat1 go3 kei5 ceot1 lai4 bong1 mong4",e:"That's exactly 'a gentleman's friendship is as plain as water.' True friendship isn't about being stuck together all the time — it's about having a place in your heart for the other person, and when they need you, you'll be the first to step up and help."},
+{speaker:"A",c:"不過而家社交媒體咁普及，好多人以為喺網上留個言、讚個好就叫做維持友誼。但係呢啲互動好多時候都好表面，取代唔到面對面嘅溝通同真實嘅連結。",j:"bat1 gwo3 ji4 gaa1 se5 gaau1 mui4 tai2 gam3 pou2 kap6 hou2 do1 jan4 ji5 wai4 hai2 mong5 soeng6 lau4 go3 jin4 zaan3 go3 hou2 zau6 giu3 zou6 wai4 ci4 jau5 ji6 daan6 hai6 ne1 di1 wu6 dung6 hou2 do1 si4 hau6 dou1 hou2 biu2 min6 ceoi2 doi6 m4 dou3 min6 deoi3 min6 ge3 kau1 tung1 tung4 zan1 sat6 ge3 lin4 git3",e:"But nowadays with social media so prevalent, many people think leaving a comment or liking a post online counts as maintaining friendship. However, these interactions are often quite superficial — they can't replace face-to-face communication and genuine connection."},
+{speaker:"B",c:"冇錯，網絡可以幫我哋保持聯絡，但係冇辦法取代嗰種面對面傾偈嘅溫度。我有時候會刻意約啲好耐冇見嘅朋友出嚟食飯，就咁坐低傾下近況，感覺真係好唔同。",j:"mou5 co3 mong5 lok6 ho2 ji5 bong1 ngo5 dei6 bou2 ci4 lyun4 lok6 daan6 hai6 mou5 baan6 faat3 ceoi2 doi6 go2 zung3 min6 deoi3 min6 king1 gai2 ge3 wan1 dou6 ngo5 jau5 si4 hau6 wui6 hak1 ji3 joek3 di1 hou2 noi6 mou5 gin3 ge3 pang4 jau5 ceot1 lai4 sik6 faan6 zau6 gam3 co5 dai1 king1 haa6 gan6 fong3 gam2 gok3 zan1 hai6 hou2 m4 tung4",e:"Exactly. The internet can help us stay in touch, but it can't replace the warmth of face-to-face conversation. Sometimes I deliberately invite friends I haven't seen in a long time out for a meal — just sitting down and catching up feels so different."},
+{speaker:"A",c:"患難見真情呢句話從來都冇錯。真正嘅友誼唔係喺你風光嘅時候有幾多人圍住你，而係喺你最困難嘅時候有邊個願意扶你一把。日久見人心，時間會幫你篩選邊個係真正嘅朋友。",j:"waan6 naan4 gin3 zan1 cing4 ne1 geoi3 waa6 cung4 loi4 dou1 mou5 co3 zan1 zing3 ge3 jau5 ji6 m4 hai6 hai2 nei5 fung1 gwong1 ge3 si4 hau6 jau5 gei2 do1 jan4 wai4 zyu6 nei5 ji4 hai6 hai2 nei5 zeoi3 kwan3 naan4 ge3 si4 hau6 jau5 bin1 go3 jyun6 ji3 fu4 nei5 jat1 baa2 jat6 gau2 gin3 jan4 sam1 si4 gaan3 wui6 bong1 nei5 sai1 syun2 bin1 go3 hai6 zan1 zing3 ge3 pang4 jau5",e:"'True feelings are revealed in hardship' — this saying is never wrong. Real friendship isn't about how many people surround you when you're doing well, but who is willing to lend you a hand when you're at your lowest. Time reveals a person's heart — time will help filter who your true friends are."},
+{speaker:"B",c:"你講得好有智慧。友誼其實同植物一樣，要用心去灌溉先至會生長得好。疏忽咗就會慢慢枯萎。所以我而家會更加珍惜身邊每一個真心對我嘅朋友，唔好等到失去咗先至後悔。",j:"nei5 gong2 dak1 hou2 jau5 zi3 wai3 jau5 ji6 kei4 sat6 tung4 zik6 mat6 jat1 joeng6 jiu3 jung6 sam1 heoi3 gun3 koi3 sin1 zi3 wui6 sang1 zoeng6 dak1 hou2 so1 fat1 zo2 zau6 wui6 maan6 maan2 fu1 wai2 so2 ji5 ngo5 ji4 gaa1 wui6 gang3 gaa1 zan1 sik1 san1 bin1 mui5 jat1 go3 zan1 sam1 deoi3 ngo5 ge3 pang4 jau5 m4 hou2 dang2 dou3 sat1 heoi3 zo2 sin1 zi3 hau6 fui3",e:"You speak with such wisdom. Friendship is actually like a plant — it needs heartfelt nurturing to grow well. Neglect it and it'll slowly wither. So now I cherish every friend who is genuinely good to me even more. Don't wait until you lose them to regret it."}
 ],
 grammar:[
-{pattern:"叫埋 + person + 一齊 (giu3 maai4...jat1 cai4)",desc:"to invite someone along together",ex:"我想叫埋阿明同小玲一齊去 (ngo5 soeng2 giu3 maai4 aa3 ming4 tung4 siu2 ling4 jat1 cai4 heoi3)",en:"I want to invite Ah Ming and Siu Ling to go together"},
-{pattern:"得唔得 (dak1 m4 dak1)",desc:"is it okay / does it work",ex:"聽日朝早得唔得？(ting1 jat6 ziu1 zou2 dak1 m4 dak1?)",en:"Is tomorrow morning okay?"},
-{pattern:"Verb + 先 (sin1)",desc:"to do something first — placed at end of sentence",ex:"我打電話聯絡佢哋先 (ngo5 daa2 din6 waa6 lyun4 lok3 keoi5 dei6 sin1)",en:"I'll call and contact them first"},
-{pattern:"Verb + 完 + 之後 (jyun4 zi1 hau6)",desc:"after finishing something",ex:"行完山之後我哋去食晚餐 (haang4 jyun4 saan1 zi1 hau6 ngo5 dei6 heoi3 sik6 maan5 caan1)",en:"After hiking, we'll go have dinner"},
-{pattern:"好耐冇 + verb (hou2 noi6 mou5)",desc:"haven't done something in a long time",ex:"我好耐冇見佢哋 (ngo5 hou2 noi6 mou5 gin3 keoi5 dei6)",en:"I haven't seen them for a long time"},
-{pattern:"用心 + verb (jung6 sam1)",desc:"to do something with effort / sincerely",ex:"友誼真係要用心維持 (jau5 ji4 zan1 hai6 jiu3 jung6 sam1 wai4 ci4)",en:"Friendship really needs to be maintained with effort"}
+{pattern:"隨住...就會... (ceoi4 zyu6...zau6 wui6...)",desc:"as... (something happens)... then (result) — natural progression",ex:"隨住年紀大咗，你就會開始篩選關係 (ceoi4 zyu6 nin4 gei2 daai6 zo2 nei5 zau6 wui6 hoi1 ci2 sai1 syun2 gwaan1 hai6)",en:"As you get older, you'll start filtering relationships"},
+{pattern:"唔係...而係... (m4 hai6...ji4 hai6...)",desc:"it's not... but rather... — redirection",ex:"友誼唔係成日黐埋一齊，而係心入面有個位畀對方 (jau5 ji6 m4 hai6 sing4 jat6 ci1 maai4 jat1 cai4 ji4 hai6 sam1 jap6 min6 jau5 go3 wai6 bei2 deoi3 fong1)",en:"Friendship isn't sticking together all the time, but having a place in your heart for the other"},
+{pattern:"有...嘅時候...就... (jau5...ge3 si4 hau6...zau6...)",desc:"when there's (something)... then... — conditional response",ex:"有需要嘅時候一定會企出嚟幫忙 (jau5 seoi1 jiu3 ge3 si4 hau6 jat1 ding6 wui6 kei5 ceot1 lai4 bong1 mong4)",en:"When there's a need, you'll definitely step up to help"},
+{pattern:"以為...就叫做... (ji5 wai4...zau6 giu3 zou6...)",desc:"mistakenly think... counts as... — exposing false belief",ex:"好多人以為留個言就叫做維持友誼 (hou2 do1 jan4 ji5 wai4 lau4 go3 jin4 zau6 giu3 zou6 wai4 ci4 jau5 ji6)",en:"Many mistakenly think leaving a comment counts as maintaining friendship"},
+{pattern:"要...先至會... (jiu3...sin1 zi3 wui6...)",desc:"need to... only then will... — conditional cause-effect",ex:"要用心灌溉先至會生長得好 (jiu3 jung6 sam1 gun3 koi3 sin1 zi3 wui6 sang1 zoeng6 dak1 hou2)",en:"Need to nurture it with heart before it will grow well"},
+{pattern:"唔好等到...先至... (m4 hou2 dang2 dou3...sin1 zi3...)",desc:"don't wait until... before... — advice against delay",ex:"唔好等到失去咗先至後悔 (m4 hou2 dang2 dou3 sat1 heoi3 zo2 sin1 zi3 hau6 fui3)",en:"Don't wait until you've lost them before regretting"}
 ],
 quiz:[
-{q:'What is the Jyutping for "行山"?',opts:["hang4 saan1","haang4 saan1","haang4 saan3","hang4 saan3"],ans:1},
-{q:'What activity does B suggest?',opts:["watch a movie","sing karaoke","go hiking","travel"],ans:2},
-{q:'What does "咁啱" mean?',opts:["unfortunately","coincidentally","strangely","troublesome"],ans:1},
-{q:'Who does A want to invite along?',opts:["Ah Ming and Siu Ling","Ah Ming and Ah Keung","Siu Ling and Ah Wai","Ah Keung and Siu Ling"],ans:0},
-{q:'"得唔得閒" means:',opts:["do you have money","do you have free time","do you have ability","do you have interest"],ans:1},
-{q:'What does A suggest after hiking?',opts:["go sing karaoke","go shopping","go have dinner","go home"],ans:2},
-{q:'How does B think friendship should be maintained?',opts:["with money","with effort","with time","with gifts"],ans:1},
-{q:'What is the Jyutping for "聯絡"?',opts:["lyun4 lok3","lin4 lok3","lyun4 luk3","lin4 luk6"],ans:0}
-]}
-,
+{q:'"知己" (zi1 gei2) means:',opts:["yourself","a bosom friend/kindred spirit","knowing yourself","thinking of yourself"],ans:1},
+{q:'"君子之交淡如水" means:',opts:["friendships should always be close","a gentleman's friendship is plain but lasting","gentlemen drink water together","friends need gifts"],ans:1},
+{q:'What is the Jyutping for "患難見真情"?',opts:["waan6 naan4 gin3 zan1 cing4","waan6 naan6 gin3 zan1 cing4","waan6 naan4 gin3 zan1 sing4","waan6 naan6 gin3 zan1 sing4"],ans:0},
+{q:'The dialogue says quality of friends is:',opts:["less important than quantity","equally important as quantity","far more important than quantity","not important at all"],ans:2},
+{q:'What is described as the "warmth" that online communication lacks?',opts:["being in large groups","face-to-face conversation","texting quickly","sending stickers"],ans:1},
+{q:'"日久見人心" means:',opts:["long days test patience","time reveals a person's true character","days pass quickly","people like long days"],ans:1},
+{q:'What metaphor does B use for friendship?',opts:["a machine","a plant that needs nurturing","a transaction","a competition"],ans:1},
+{q:'The dialogue concludes that one should:',opts:["never maintain friendships","cherish friends before losing them","collect as many friends as possible","only socialize online"],ans:1}
+]},
 {id:7,title:"第七課：表達意見同討論",subtitle:"biu2 daat6 ji3 gin3 tung4 tou2 leon6 — Expressing Opinions and Discussion",
 vocab:[
-{c:"建議",j:"gin3 ji3",e:"suggestion, advice"},
-{c:"觀點",j:"gun1 dim2",e:"viewpoint, perspective"},
-{c:"批評",j:"pai1 ping4",e:"criticism"},
-{c:"改善",j:"goi2 sin6",e:"improve"},
-{c:"妥協",j:"to3 hip6",e:"compromise"},
-{c:"堅持",j:"gin1 ci4",e:"insist, persist"},
-{c:"討論",j:"tou2 leon6",e:"discuss"},
-{c:"分析",j:"fan1 sik1",e:"analyze"},
-{c:"考慮",j:"haau2 leoi6",e:"consider"},
-{c:"決定",j:"kyut3 ding6",e:"decide"},
-{c:"傾向",j:"king1 hoeng3",e:"tend to, lean toward"},
-{c:"反映",j:"faan2 jing3",e:"reflect, report"},
-{c:"接受",j:"zip3 sau6",e:"accept"},
-{c:"拒絕",j:"keoi5 zyut6",e:"reject, refuse"},
+{c:"建議",j:"gin3 ji5",e:"suggestion; to suggest"},
+{c:"觀點",j:"gun1 dim2",e:"viewpoint; perspective"},
+{c:"批評",j:"pai1 ping4",e:"criticism; to criticize"},
+{c:"改善",j:"goi2 sin6",e:"to improve"},
+{c:"妥協",j:"to5 hip3",e:"to compromise"},
+{c:"堅持",j:"gin1 ci4",e:"to insist; persist"},
+{c:"討論",j:"tou2 leon6",e:"to discuss; discussion"},
+{c:"分析",j:"fan1 sik1",e:"to analyze"},
+{c:"考慮",j:"haau2 leoi6",e:"to consider"},
+{c:"決定",j:"kyut3 ding6",e:"to decide"},
+{c:"傾向",j:"king1 hoeng3",e:"tendency; inclination"},
+{c:"反映",j:"faan2 jing2",e:"to reflect; reflection"},
+{c:"接受",j:"zip3 sau6",e:"to accept"},
+{c:"拒絕",j:"keoi5 zyut6",e:"to refuse; reject"},
 {c:"態度",j:"taai3 dou6",e:"attitude"},
-{c:"立場",j:"laap6 coeng4",e:"stance, position"},
+{c:"立場",j:"lap6 coeng4",e:"standpoint"},
 {c:"共識",j:"gung6 sik1",e:"consensus"},
-{c:"爭論",j:"zaang1 leon6",e:"argue, debate"},
-{c:"讓步",j:"joeng6 bou6",e:"make a concession"},
-{c:"協商",j:"hip6 soeng1",e:"negotiate"},
-{c:"達成",j:"daat6 sing4",e:"achieve, reach"},
-{c:"睇法",j:"tai2 faat3",e:"opinion, view (colloquial)"},
-{c:"諗法",j:"nam2 faat3",e:"thought, idea (colloquial)"},
-{c:"贊成",j:"zaan3 sing4",e:"agree, support"}
+{c:"爭論",j:"zang1 leon6",e:"to argue; dispute"},
+{c:"讓步",j:"joeng6 bou6",e:"to concede; give way"},
+{c:"協商",j:"hip3 soeng1",e:"to negotiate"},
+{c:"達成",j:"daat6 sing4",e:"to reach; achieve"},
+{c:"睇法",j:"tai2 faat3",e:"view; opinion"},
+{c:"諗法",j:"nam2 faat3",e:"thought; idea"},
+{c:"贊成",j:"zaan3 sing4",e:"to approve; agree with"}
 ],
 dialogue:[
-{speaker:"A",c:"聽日我哋要開會討論新項目嘅方案，你對呢件事有咩睇法啊？",j:"ting1 jat6 ngo5 dei2 jiu3 hoi1 wui2 tou2 leon6 san1 hong6 muk6 ge3 fong1 on3, nei5 deoi3 ni1 gin6 si6 jau5 me1 tai2 faat3 aa3?",e:"We need to have a meeting tomorrow to discuss the new project proposal. What's your opinion on this?"},
-{speaker:"B",c:"我個人傾向用比較保守嘅方案，雖然進展會慢啲，但係風險相對細好多。之前我哋試過太急進，結果反而出咗問題。",j:"ngo5 go3 jan4 king1 hoeng3 jung6 bei2 gaau3 bou2 sau2 ge3 fong1 on3, seoi1 jin4 zeon3 zin2 wui5 maan6 di1, daan6 hai6 fung1 him2 soeng1 deoi3 sai3 hou2 do1. zi1 cin4 ngo5 dei2 si3 gwo3 taai3 gap1 zeon3, git3 gwo2 faan2 ji4 ceot1 zo2 man6 tai4.",e:"I personally lean toward a more conservative approach. Though progress will be slower, the risk is much lower. We've tried being too aggressive before and it backfired."},
-{speaker:"A",c:"我理解你嘅考慮，不過我覺得我哋應該要大膽啲嘗試。市場競爭咁激烈，如果我哋唔創新，好容易就會被淘汰。",j:"ngo5 lei5 gaai2 nei5 ge3 haau2 leoi6, bat1 gwo3 ngo5 gok3 dak1 ngo5 dei2 jing1 goi1 jiu3 daai6 dim2 di1 soeng4 si3. si5 coeng4 ging6 zau1 gam3 gik1 lit6, jyu4 gwo2 ngo5 dei2 m4 cong3 san1, hou2 jung4 ji6 zau6 wui5 bei6 tou4 taai3.",e:"I understand your concern, but I think we should be bolder. Market competition is fierce — if we don't innovate, we'll easily be eliminated."},
-{speaker:"B",c:"咁我哋不如各自準備一個方案，聽日開會嘅時候詳細分析兩邊嘅優點同缺點，再一齊決定點樣做。唔好爭論邊個啱，最重要係達成共識。",j:"gam2 ngo5 dei2 bat1 jyu4 gok3 zi6 zeon2 bei6 jat1 go3 fong1 on3, ting1 jat6 hoi1 wui2 ge3 si4 hau6 joeng4 sik1 fan1 sik1 loeng5 bin1 ge3 jau1 dim2 tung4 kyut3 dim2, zoi3 jat1 cai4 kyut3 ding6 dim2 joeng2 zou6. m4 hou2 zaang1 leon6 bin1 go3 ngaam1, zeoi3 zung6 jiu3 hai6 daat6 sing4 gung6 sik1.",e:"How about we each prepare a proposal, then analyze the pros and cons in detail at tomorrow's meeting, and decide together. No need to argue about who's right — the key is reaching consensus."},
-{speaker:"A",c:"好提議！其實就算我哋嘅觀點唔同，都唔係一件壞事。唔同嘅角度可以先至更全面嘅分析。最緊要係大家保持開放嘅態度，願意接受不同意見。",j:"hou2 tai4 ji3! kei4 sat6 zau6 syun3 ngo5 dei2 ge3 gun1 dim2 m4 tung4, dou1 m4 hai6 jat1 gin6 waai6 si6. m4 tung4 ge3 gok3 dou6 ho2 ji5 sin1 zi3 gaa3 cyun4 min6 ge3 fan1 sik1. zeoi3 gan2 jiu3 hai6 daai6 gaa1 bou2 ci4 hoi1 fong3 ge3 taai3 dou6, jyun6 ji3 zip3 sau6 m4 tung4 ji3 gin3.",e:"Good suggestion! Actually, having different viewpoints isn't a bad thing. Different angles lead to more comprehensive analysis. The most important thing is keeping an open attitude and being willing to accept different opinions."},
-{speaker:"B",c:"無錯，討論唔係為咗贏，而係為咗搵出最好嘅解決方案。有時候需要適當咁讓步，咁先至可以協商到一個大家都接受到嘅結果。",j:"mou4 co3, tou2 leon6 m4 hai6 wai6 zo2 jeng4, ji4 hai6 wai6 zo2 wan2 ceot1 zeoi3 hou2 ge3 gaai2 kyut3 fong1 on3. jau5 si4 hau6 seoi1 jiu3 sik1 dong3 gam2 joeng6 bou6, gam2 sin1 zi3 ho2 ji5 hip6 soeng1 dou3 jat1 go3 daai6 gaa1 dou1 zip3 sau6 dou3 ge3 git3 gwo2.",e:"Exactly. Discussion isn't about winning, but about finding the best solution. Sometimes you need to make appropriate concessions — that's how you negotiate a result everyone can accept."}
+{speaker:"A",c:"聽日我哋要開會討論新項目嘅方案，你對呢件事有咩睇法啊？",j:"ting1 jat6 ngo5 dei6 jiu3 hoi1 wui2 tou2 leon6 san1 hong6 muk6 ge3 fong1 on3 nei5 deoi3 ne1 gin6 si6 jau5 me1 tai2 faat3 aa3",e:"Tomorrow we have a meeting to discuss the new project proposal. What's your view on this?"},
+{speaker:"B",c:"我個人傾向用比較保守嘅方案，雖然進展會慢啲，但係風險相對細好多。之前我哋試過太急進，結果反而出咗問題。",j:"ngo5 go3 jan4 king1 hoeng3 jung6 bei2 gaau3 bou2 sau2 ge3 fong1 on3 seoi1 jin4 zeon3 zin2 wui6 maan6 di1 daan6 hai6 fung1 him2 soeng1 deoi3 sai3 hou2 do1 zi1 cin4 ngo5 dei6 si3 gwo3 taai3 gap1 zeon3 git3 gwo2 faan2 ji4 ceot1 zo2 man6 tai4",e:"I personally lean toward a more conservative approach. Although progress would be slower, the risks are much smaller. Before we tried being too aggressive and it backfired."},
+{speaker:"A",c:"我理解你嘅考慮，不過我覺得我哋應該要大膽啲嘗試。市場競爭咁激烈，如果我哋唔創新，好容易就會被淘汰。",j:"ngo5 lei5 gaai2 nei5 ge3 haau2 leoi6 bat1 gwo3 ngo5 gok3 dak1 ngo5 dei6 jing1 goi1 jiu3 daai6 daam2 di1 soeng4 si3 si5 coeng4 ging6 zang1 gam3 gik1 lit6 jyu4 gwo2 ngo5 dei6 m4 cong3 san1 hou2 jung4 ji6 zau6 wui6 bei6 tou4 taai3",e:"I understand your concerns, but I think we should be bolder. Market competition is so intense — if we don't innovate, we'll be quickly eliminated."},
+{speaker:"B",c:"咁我哋不如各自準備一個方案，聽日開會嘅時候詳細分析兩邊嘅優點同缺點，再一齊決定點樣做。唔好爭論邊個啱，最重要係達成共識。",j:"gam3 ngo5 dei6 bat1 jyu4 gok3 zi6 zeon2 bei6 jat1 go3 fong1 on3 ting1 jat6 hoi1 wui2 ge3 si4 hau6 coeng4 sai3 fan1 sik1 loeng5 bin1 ge3 jau1 dim2 tung4 kyut3 dim2 zoi3 jat1 cai4 kyut3 ding6 dim2 joeng2 zou6 m4 hou2 zang1 leon6 bin1 go3 ngaam1 zeoi3 zung6 jiu3 hai6 daat6 sing4 gung6 sik1",e:"Then why don't we each prepare a proposal? At the meeting tomorrow we'll analyze the pros and cons of both sides in detail, then decide together. Don't argue about who's right — the most important thing is reaching consensus."},
+{speaker:"A",c:"好提議！其實就算我哋嘅觀點唔同，都唔係一件壞事。唔同嘅角度可以先至更全面嘅分析。最緊要係大家保持開放嘅態度，願意接受不同意見。",j:"hou2 tai4 ji5 kei4 sat6 zau6 syun3 ngo5 dei6 ge3 gun1 dim2 m4 tung4 dou1 m4 hai6 jat1 gin6 waai6 si6 m4 tung4 ge3 gok3 dou6 ho2 ji5 sin1 zi3 gang3 cyun4 min6 ge3 fan1 sik1 zeoi3 gan2 jiu3 hai6 daai6 gaa1 bou2 ci4 hoi1 fong3 ge3 taai3 dou6 jyun6 ji3 zip3 sau6 bat1 tung4 ji3 gin3",e:"Great suggestion! Actually, even if our views differ, it's not a bad thing. Different perspectives enable a more comprehensive analysis. The key is maintaining an open attitude and being willing to accept different opinions."},
+{speaker:"B",c:"無錯，討論唔係為咗贏，而係為咗搵出最好嘅解決方案。有時候需要適當咁讓步，咁先至可以協商到一個大家都接受到嘅結果。",j:"mou4 co3 tou2 leon6 m4 hai6 wai6 zo2 jeng4 ji4 hai6 wai6 zo2 wan2 ceot1 zeoi3 hou2 ge3 gaai2 kyut3 fong1 on3 jau5 si4 hau6 seoi1 jiu3 sik1 dong3 gam3 joeng6 bou6 gam3 sin1 zi3 ho2 ji5 hip3 soeng1 dou3 jat1 go3 daai6 gaa1 dou1 zip3 sau6 dou3 ge3 git3 gwo2",e:"Exactly. Discussion isn't about winning — it's about finding the best solution. Sometimes you need to make appropriate concessions so you can negotiate a result that everyone can accept."},
+{speaker:"A",c:"原來一個好嘅討論唔單止係講道理，仲要識得聽人哋嘅角度。接受批評同反映返自己嘅立場，先至可以真正改善團隊嘅決策質素。",j:"jyun4 loi4 jat1 go3 hou2 ge3 tou2 leon6 m4 daan1 zi2 hai6 gong2 dou6 lei5 zung6 jiu3 sik1 dak1 ting3 jan4 dei6 ge3 gok3 dou6 zip3 sau6 pai1 ping4 tung4 faan2 jing2 faan2 zi6 gei2 ge3 lap6 coeng4 sin1 zi3 ho2 ji5 zan1 zing3 goi2 sin6 tyun4 deoi6 ge3 kyut3 caak3 zat1 sou3",e:"So a good discussion isn't just about making your case — you also need to know how to listen to others' perspectives. Accept criticism and reflect back your own position, only then can you truly improve the team's decision-making quality."},
+{speaker:"B",c:"學到嘢啊，今日嘅討論令我明白到，團隊合作裏面，達成共識比堅持己見更加重要。適當嘅妥協，其實係一種智慧。",j:"hok6 dou3 je5 aa3 gam1 jat6 ge3 tou2 leon6 ling6 ngo5 ming4 baak6 dou3 tyun4 deoi2 hap6 zok3 leoi5 min6 daat6 sing4 gung6 sik1 bei2 gin1 ci4 gei2 gin3 gang3 gaa1 zung6 jiu3 sik1 dong3 ge3 to5 hip3 kei4 sat6 hai6 jat1 zung3 zi3 wai3",e:"I learned something today. This discussion made me realize that in teamwork, reaching consensus is more important than sticking to your own views. Appropriate compromise is actually a form of wisdom."}
 ],
 grammar:[
-{pattern:"傾向... (king1 hoeng3...)",desc:"tend to / lean toward",ex:"我個人傾向用比較保守嘅方案 (ngo5 go3 jan4 king1 hoeng3 jung6 bei2 gaau3 bou2 sau2 ge3 fong1 on3)",en:"I personally lean toward a more conservative approach"},
-{pattern:"唔係...而係... (m4 hai6... ji4 hai6...)",desc:"not... but rather...",ex:"唔係為咗贏，而係為咗搵出最好嘅方案 (m4 hai6 wai6 zo2 jeng4, ji4 hai6 wai6 zo2 wan2 ceot1 zeoi3 hou2 ge3 fong1 on3)",en:"Not about winning, but about finding the best solution"},
-{pattern:"最緊要係 (zeoi3 gan2 jiu3 hai6)",desc:"the most important thing is...",ex:"最緊要係大家保持開放嘅態度 (zeoi3 gan2 jiu3 hai6 daai6 gaa1 bou2 ci4 hoi1 fong3 ge3 taai3 dou6)",en:"The most important thing is everyone keeps an open attitude"},
-{pattern:"咁先至可以... (gam2 sin1 zi3 ho2 ji5...)",desc:"only then can we...",ex:"咁先至可以協商到一個大家都接受到嘅結果 (gam2 sin1 zi3 ho2 ji5 hip6 soeng1 dou3 jat1 go3 daai6 gaa1 dou1 zip3 sau6 dou3 ge3 git3 gwo2)",en:"Only then can we negotiate a result everyone can accept"},
-{pattern:"為咗... (wai6 zo2...)",desc:"for the purpose of / in order to",ex:"為咗搵出最好嘅解決方案 (wai6 zo2 wan2 ceot1 zeoi3 hou2 ge3 gaai2 kyut3 fong1 on3)",en:"In order to find the best solution"},
-{pattern:"各自... (gok3 zi6...)",desc:"each on one's own / respectively",ex:"各自準備一個方案 (gok3 zi6 zeon2 bei6 jat1 go3 fong1 on3)",en:"Each prepare a proposal on our own"}
+{pattern:"傾向 + verb (king1 hoeng3)",desc:"tend to; lean toward — expressing inclination",ex:"我傾向用保守嘅方案 (ngo5 king1 hoeng3 jung6 bou2 sau2 ge3 fong1 on3)",en:"I tend to favor a conservative approach"},
+{pattern:"就算...都唔係... (zau6 syun3...dou1 m4 hai6...)",desc:"even if... it's still not... — downplaying contrast",ex:"就算觀點唔同，都唔係一件壞事 (zau6 syun3 gun1 dim2 m4 tung4 dou1 m4 hai6 jat1 gin6 waai6 si6)",en:"Even if views differ, it's still not a bad thing"},
+{pattern:"唔好...最重要係... (m4 hou2...zeoi3 zung6 jiu3 hai6...)",desc:"don't... the most important thing is... — priority framing",ex:"唔好爭論邊個啱，最重要係達成共識 (m4 hou2 zang1 leon6 bin1 go3 ngaam1 zeoi3 zung6 jiu3 hai6 daat6 sing4 gung6 sik1)",en:"Don't argue about who's right — the most important thing is reaching consensus"},
+{pattern:"唔單止...仲要... (m4 daan1 zi2...zung6 jiu3...)",desc:"not only... but also need to... — dual requirement",ex:"唔單止講道理，仲要識得聽人哋嘅角度 (m4 daan1 zi2 gong2 dou6 lei5 zung6 jiu3 sik1 dak1 ting3 jan4 dei6 ge3 gok3 dou6)",en:"Not just making your case, but also knowing how to listen to others' perspectives"},
+{pattern:"比...更加... (bei2...gang3 gaa1...)",desc:"more than... even more... — comparison of importance",ex:"達成共識比堅持己見更加重要 (daat6 sing4 gung6 sik1 bei2 gin1 ci4 gei2 gin3 gang3 gaa1 zung6 jiu3)",en:"Reaching consensus is more important than insisting on your own view"},
+{pattern:"唔係為咗...而係為咗... (m4 hai6 wai6 zo2...ji4 hai6 wai6 zo2...)",desc:"not for... but for... — clarifying true purpose",ex:"討論唔係為咗贏，而係為咗搵出最好嘅方案 (tou2 leon6 m4 hai6 wai6 zo2 jeng4 ji4 hai6 wai6 zo2 wan2 ceot1 zeoi3 hou2 ge3 fong1 on3)",en:"Discussion isn't for winning, but for finding the best solution"}
 ],
 quiz:[
-{q:'What does "傾向" mean?',opts:["to reject","to agree","tend to, lean toward","to decide"],ans:2},
-{q:'"妥協" means:',opts:["to insist","to compromise","to argue","to accept"],ans:1},
-{q:'What does "共識" mean?',opts:["argument","consensus","criticism","suggestion"],ans:1},
-{q:'"討論唔係為咗贏，而係為咗搵出最好嘅解決方案" means:',opts:["Discussion is about winning","Discussion isn't about winning, but about finding the best solution","Discussion is a waste of time","Discussion should be avoided"],ans:1},
-{q:'What does "讓步" mean?',opts:["to step forward","to argue harder","to make a concession","to give up completely"],ans:2},
-{q:'"最緊要係" means:',opts:["the biggest problem is","the most important thing is","the first step is","the last thing is"],ans:1},
-{q:'What does "拒絕" mean?',opts:["to accept","to consider","to reject, refuse","to suggest"],ans:2},
-{q:'"咁先至可以協商到" means:',opts:["we can negotiate immediately","only then can we negotiate","we should negotiate later","we cannot negotiate"],ans:1}
-]}
-,
+{q:'"達成共識" means:',opts:["reaching consensus","winning an argument","ignoring others","making a decision alone"],ans:0},
+{q:'"妥協" (to5 hip3) means:',opts:["to insist","to compromise","to ignore","to quit"],ans:1},
+{q:'What is the Jyutping for "立場"?',opts:["laap6 coeng4","lap6 coeng4","laap6 ceong4","lap6 ceong4"],ans:1},
+{q:'"討論唔係為咗贏，而係為咗搵出最好嘅方案" expresses:',opts:["discussing to win","the true purpose of discussion","how to lose a debate","arguing is fun"],ans:1},
+{q:'The dialogue says about different viewpoints:',opts:["they are always bad","they can lead to more comprehensive analysis","they should be suppressed","they cause confusion always"],ans:1},
+{q:'"就算觀點唔同，都唔係一件壞事" uses:',opts:["就算...都唔係...","唔單止...仲要...","比...更加...","傾向..."],ans:0},
+{q:'What does B say is "a form of wisdom"?',opts:["stubbornness","appropriate compromise","refusing to discuss","always winning"],ans:1},
+{q:'"學到嘢啊" means:',opts:["I forgot everything","I learned something valuable","learning is useless","I already knew that"],ans:1}
+]},
 {id:8,title:"第八課：人際關係",subtitle:"jan4 zai3 gwaan1 hai6 — Interpersonal Relationships",
 vocab:[
 {c:"人際關係",j:"jan4 zai3 gwaan1 hai6",e:"interpersonal relationships"},
 {c:"壓力",j:"aat3 lik6",e:"pressure, stress"},
-{c:"溝通",j:"kau3 tung1",e:"communication"},
+{c:"溝通",j:"kau1 tung1",e:"communication"},
 {c:"誤會",j:"ng6 wui6",e:"misunderstanding"},
 {c:"冷靜",j:"laang5 zing6",e:"calm down"},
 {c:"尊重",j:"zyun1 zung6",e:"respect"},
@@ -530,46 +571,47 @@ vocab:[
 {c:"針對",j:"zam1 deoi3",e:"to target, aim at"}
 ],
 dialogue:[
-{speaker:"A",c:"最近你好似有啲煩喎，成個人都有啲悶悶不樂咁，係咪喺人際關係方面遇到啲乜嘢問題啊？",j:"zeoi3 gan6 nei5 hou2 ci5 jau5 di1 faan4 wo3, sing4 go3 jan4 dou1 jau5 di1 mun6 mun6 bat1 lok6 gam2, hai6 mai6 hai2 jan4 zai3 gwaan1 hai6 fong1 min6 jyu6 dou3 di1 me1 je5 man6 tai4 aa3?",e:"Recently you seem a bit troubled. Have you encountered some problem in interpersonal relationships?"},
-{speaker:"B",c:"係啊，最近同啲同事相處嗰陣，間中都會覺得有啲壓力，都唔係好知道點樣先可以拿捏好分寸，驚講多錯多。",j:"hai6 aa3, zeoi3 gan6 tung4 di1 tung4 si6 soeng1 cyu2 go2 zan6, gaan3 zung1 dou1 wui5 gok3 dak1 jau5 di1 aat3 lik6, dou1 m4 hai6 hou2 zi1 dou3 dim2 joeng2 sin1 ho2 ji5 naa4 nip6 fan1 cyun3, geng1 gong2 do1 co3 do1.",e:"Yes, I sometimes feel pressure getting along with colleagues. I don't know how to judge appropriate limits — afraid that the more I speak, the more mistakes I'll make."},
-{speaker:"A",c:"咁係邊一方面令到你覺得最困擾呢？係溝通嘅問題定係大家做嘢方式唔同嘅問題？",j:"gam2 hai6 bin1 jat1 fong1 min6 ling6 dou3 nei5 gok3 dak1 zeoi3 kwan3 jiu2 ne1? hai2 kau3 tung1 ge3 man6 tai4 ding6 hai6 daai6 gaa1 zou6 je5 fong1 sik1 m4 tung4 ge3 man6 tai4?",e:"Which aspect troubles you the most? Communication or different work styles?"},
-{speaker:"B",c:"主要係有啲同事講嘢比較直接，有時語氣比較衝，我就會喺度諗，佢哋係咪針對緊我呢，搞到自己心入面有啲唔舒服，甚至會亂咁諗嘢。",j:"zyu2 jiu3 hai6 jau5 di1 tung4 si6 gong2 je5 bei2 gaau3 zik6 zip3, jau5 si4 jyu5 hei3 bei2 gaau3 cung3, ngo5 zau6 wui5 hai2 dou6 nam2, keoi5 dei6 hai6 mai6 zam1 deoi3 gan2 ngo5 ne1, gaau2 dou3 zi6 gei2 sam1 jap6 min6 jau5 di1 m4 syu1 fuk6, sam6 zi3 wui5 lyun6 gam2 nam2 je5.",e:"Some colleagues speak directly with a blunt tone. I wonder if they're targeting me, making myself feel uncomfortable."},
-{speaker:"B",c:"首先我會試下先令自己冷靜落嚟，唔好即刻有情緒反應，然後試下企喺對方嘅立場諗一諗。後來發現，其實好多時候都只係因為工作需要，講嘢直接啲，未必真係有惡意。",j:"sau2 sin1 ngo5 wui5 si3 haa5 sin1 ling6 zi6 gei2 laang5 zing6 lok6 lei4, m4 hou2 zik1 hak1 jau5 cing4 seoi5 faan2 jing3, jin4 hau6 si3 haa5 kei5 hai2 deoi3 fong1 ge3 laap6 coeng4 nam2 jat1 nam2. hau6 loi4 faat3 jin6, kei4 sat6 hou2 do1 si4 hau6 dou1 zi2 hai6 jan1 wai6 gung1 zok3 seoi1 jiu3, gong2 je5 zik6 zip3 di1, mei6 bit1 zan1 hai6 jau5 ok3 ji3.",e:"First I calm down, then try to think from their position. Later I found it's usually just work needs — not ill will."},
-{speaker:"B",c:"我覺得最重要係尊重同埋理解，大家都要試下企喺對方嘅角度諗下。另外都要保持真誠，唔好一味迎合或者討好人，咁樣反而唔長久。",j:"ngo5 gok3 dak1 zeoi3 zung6 jiu3 hai6 zyun1 zung6 tung4 maai4 lei5 gaai2, daai6 gaa1 dou1 jiu3 si3 haa5 kei5 hai2 deoi3 fong1 ge3 gok3 dou6 nam2 haa5. ling6 ngoi6 dou1 jiu3 bou2 ci4 zan1 sing4, m4 hou2 jat1 mei6 jing4 hap6 waak6 ze2 tou2 hou2 jan4, gam2 joeng2 faan2 ji4 m4 coeng4 gau2.",e:"Most important are respect and understanding. Be sincere — don't blindly cater to people."},
-{speaker:"B",c:"我覺得逃避只會令到問題越嚟越大，不如適當咁溝通，大家坦白啲講出自己嘅諗法，再互相包容同體諒，反而可以令關係變得更加穩固。",j:"ngo5 gok3 dak1 tou4 bei6 zi2 wui5 ling6 dou3 man6 tai4 jyut6 lei4 jyut6 daai6, zik1 maai4 zik1 maai4 zau6 gaai3 gaa1 naan4 gaai2 kyut3. bat1 jyu4 sik1 dong3 gam2 kau3 tung1, daai6 gaa1 taan2 baak3 di1 gong2 ceot1 zi6 gei2 ge3 nam2 faat3, zoi3 wu6 soeng1 baau1 jung4 tung4 tai2 loeng6, faan2 ji4 ho2 ji5 ling6 gwaan1 hai6 bin3 dak1 gaai3 gaa1 wan2 gu3.",e:"Avoiding only makes problems bigger. Better to communicate frankly, then tolerate and empathize — this makes relationships more stable."}
+{speaker:"A",c:"最近你好似有啲煩喎，成個人都有啲悶悶不樂咁，係咪喺人際關係方面遇到啲乜嘢問題啊？",j:"zeoi3 gan6 nei5 hou2 ci5 jau5 di1 faan4 wo3 seng4 go3 jan4 dou1 jau5 di1 mun6 mun6 bat1 lok6 gam3 hai6 mi1 hai2 jan4 zai3 gwaan1 hai6 fong1 min6 jyu6 dou3 di1 mat1 je5 man6 tai4 aa3",e:"Recently you seem a bit troubled, you seem unhappy. Have you encountered some problem in interpersonal relationships?"},
+{speaker:"B",c:"係啊，最近同啲同事相處嗰陣，間中都會覺得有啲壓力，都唔係好知道點樣先可以拿捏好分寸，驚講多錯多。",j:"hai6 aa3 zeoi3 gan6 tung4 di1 tung4 si6 soeng1 cyu3 go2 zan6 gaan3 zung1 dou1 wui6 gok3 dak1 jau5 di1 aat3 lik6 dou1 m4 hai6 hou2 zi1 dou3 dim2 joeng2 sin1 ho2 ji5 naa4 nip6 hou2 fan1 cyun3 ging1 gong2 do1 co3 do1",e:"Yes, recently when getting along with colleagues I sometimes feel pressure. I don't really know how to judge the appropriate limits — afraid the more I speak, the more mistakes."},
+{speaker:"A",c:"咁係邊一方面令到你覺得最困擾呢？係溝通嘅問題定係大家做嘢方式唔同嘅問題？",j:"gam3 hai6 bin1 jat1 fong1 min6 ling6 dou3 nei5 gok3 dak1 zeoi3 kwan3 jiu5 ne1 hai6 kau1 tung1 ge3 man6 tai4 ding6 hai6 daai6 gaa1 zou6 je5 fong1 sik1 m4 tung4 ge3 man6 tai4",e:"So which aspect troubles you most? Is it a communication problem, or different ways of doing things?"},
+{speaker:"B",c:"主要係有啲同事講嘢比較直接，有時語氣比較衝，我就會喺度諗，佢哋係咪針對緊我呢，搞到自己心入面有啲唔舒服，甚至會亂咁諗嘢。",j:"zyu2 jiu3 hai6 jau5 di1 tung4 si6 gong2 je5 bei2 gaau3 zik6 zip3 jau5 si4 jyu5 hei3 bei2 gaau3 cung1 ngo5 zau6 wui6 hai2 dou6 nam2 keoi5 dei6 hai6 mi1 zam1 deoi3 gan2 ngo5 ne1 gaau2 dou3 zi6 gei2 sam1 jap6 min6 jau5 di1 m4 syu1 fuk6 sam6 zi3 wui6 lyun6 gam3 nam2 je5",e:"Mainly some colleagues speak quite directly, sometimes their tone is blunt. I wonder if they're targeting me, making myself uncomfortable inside, even overthinking things."},
+{speaker:"A",c:"首先我會試下先令自己冷靜落嚟，唔好即刻有情緒反應，然後試下企喺對方嘅立場諗一諗。後來發現，其實好多時候都只係因為工作需要，講嘢直接啲，未必真係有惡意。",j:"sau2 sin1 ngo5 wui6 si3 haa6 sin1 ling6 zi6 gei2 laang5 zing6 lok6 lai4 m4 hou2 zik1 hak1 jau5 cing4 seoi5 faan2 jing3 jin4 hau6 si3 haa6 kei5 hai2 deoi3 fong1 ge3 lap6 coeng4 nam2 jat1 nam2 hau6 loi4 faat3 jin6 kei4 sat6 hou2 do1 si4 hau6 dou1 zi2 hai6 jan1 wai6 gung1 zok3 seoi1 jiu3 gong2 je5 zik6 zip3 di1 mei6 bit1 zan1 hai6 jau5 ok3 ji3",e:"First I'd try to calm down, not react emotionally, then try to stand in their position. Later I discovered most of the time it's just work needs — speaking directly doesn't necessarily mean ill will."},
+{speaker:"B",c:"我覺得最重要係尊重同埋理解，大家都要試下企喺對方嘅角度諗下。另外都要保持真誠，唔好一味迎合或者討好人，咁樣反而唔長久。",j:"ngo5 gok3 dak1 zeoi3 zung6 jiu3 hai6 zyun1 zung6 tung4 maai4 lei5 gaai2 daai6 gaa1 dou1 jiu3 si3 haa6 kei5 hai2 deoi3 fong1 ge3 gok3 dou6 nam2 haa6 ling6 ngoi6 dou1 jiu3 bou2 ci4 zan1 sing4 m4 hou2 jat1 mei6 jing4 hap6 waak6 ze2 tou2 hou2 jan4 gam3 joeng6 faan2 ji4 m4 zoeng6 gau2",e:"I think the most important things are respect and understanding. Everyone needs to try thinking from the other's perspective. Also maintain sincerity — don't just cater to or flatter people, that won't last."},
+{speaker:"A",c:"我覺得逃避只會令到問題越嚟越大，不如適當咁溝通，大家坦白啲講出自己嘅諗法，再互相包容同體諒，反而可以令關係變得更加穩固。",j:"ngo5 gok3 dak1 tou4 bei6 zi2 wui6 ling6 dou3 man6 tai4 jyut6 lai4 jyut6 daai6 bat1 jyu4 sik1 dong3 gam3 kau1 tung1 daai6 gaa1 taan2 baak6 di1 gong2 ceot1 zi6 gei2 ge3 nam2 faat3 zoi3 wu6 soeng1 baau1 jung4 tung4 tai2 loeng6 faan2 ji4 ho2 ji5 ling6 gwaan1 hai6 bin3 dak1 gang3 gaa1 wan2 gu3",e:"I think avoiding only makes problems bigger. Better to communicate appropriately, everyone speak frankly about their thoughts, then mutually tolerate and empathize — this can instead make the relationship more stable."},
+{speaker:"B",c:"冇錯，真係要慢慢累積經驗，先會做得越嚟越好。",j:"mou5 co3 zan1 hai6 jiu3 maan6 maan2 leoi6 zik1 ging1 jim6 sin1 wui6 zou6 dak1 jyut6 lai4 jyut6 hou2",e:"That's right. You really need to slowly accumulate experience before you can do better and better."}
 ],
 grammar:[
-{pattern:"有啲...咁 (jau5 di1... gam2)",desc:"seems a bit...",ex:"成個人都有啲悶悶不樂咁 (sing4 go3 jan4 dou1 jau5 di1 mun6 mun6 bat1 lok6 gam2)",en:"The whole person seems a bit unhappy"},
-{pattern:"係咪...啊？(hai6 mai6... aa3?)",desc:"Is it that...?",ex:"係咪喺人際關係方面遇到問題啊？(hai6 mai6 hai2 jan4 zai3 gwaan1 hai6 fong1 min6 jyu6 dou3 man6 tai4 aa3?)",en:"Have you encountered some problem?"},
-{pattern:"越...越... (jyut6... jyut6...)",desc:"the more... the more...",ex:"誤會越積越多 (ng6 wui6 jyut6 zik1 jyut6 do1)",en:"Misunderstandings accumulate more and more"},
-{pattern:"不如... (bat1 jyu4...)",desc:"better to...",ex:"不如適當咁溝通 (bat1 jyu4 sik1 dong3 gam2 kau3 tung1)",en:"Better to communicate appropriately"},
-{pattern:"搞到... (gaau2 dou3...)",desc:"causing / making it so that...",ex:"搞到自己心入面唔舒服 (gaau2 dou3 zi6 gei2 sam1 jap6 min6 m4 syu1 fuk6)",en:"Making myself feel uncomfortable inside"},
-{pattern:"先會... (sin1 wui5...)",desc:"only then will...",ex:"慢慢累積經驗，先會做得越好 (maan6 maan6 leoi6 zik1 ging1 jim6, sin1 wui5 zou6 dak1 jyut6 hou2)",en:"Slowly accumulate experience, only then will you improve"}
+{pattern:"有啲...咁 (jau5 di1...gam2)",desc:"seems a bit... — describing state or appearance",ex:"成個人都有啲悶悶不樂咁 (sing4 go3 jan4 dou1 jau5 di1 mun6 mun6 bat1 lok6 gam2)",en:"The whole person seems a bit unhappy"},
+{pattern:"係咪...啊？(hai6 mai6...aa3?)",desc:"is it that...? — confirming something",ex:"係咪喺人際關係方面遇到問題啊？(hai6 mai6 hai2 jan4 zai3 gwaan1 hai6 fong1 min6 jyu6 dou3 man6 tai4 aa3)",en:"Is it that you've encountered problems in relationships?"},
+{pattern:"點樣先可以... (dim2 joeng2 sin1 ho2 ji5...)",desc:"how to be able to... — asking how to achieve",ex:"點樣先可以拿捏好分寸？(dim2 joeng2 sin1 ho2 ji5 naa4 nip6 hou2 fan1 cyun3)",en:"How to judge the appropriate limits?"},
+{pattern:"驚... (geng1)",desc:"afraid that... — expressing worry",ex:"驚講多錯多 (ging1 gong2 do1 co3 do1)",en:"Afraid that the more I speak, the more mistakes"},
+{pattern:"搞到... (gaau2 dou3)",desc:"making it so that... — causing a result",ex:"搞到自己心入面有啲唔舒服 (gaau2 dou3 zi6 gei2 sam1 jap6 min6 jau5 di1 m4 syu1 fuk6)",en:"Making myself feel uncomfortable inside"},
+{pattern:"只會令到... (zi2 wui5 ling6 dou3)",desc:"will only make... — negative consequence",ex:"逃避只會令到問題越嚟越大 (tou4 bei6 zi2 wui5 ling6 dou3 man6 tai4 jyut6 lai4 jyut6 daai6)",en:"Avoiding will only make the problem bigger"}
 ],
 quiz:[
-{q:'What does "壓力" mean?',opts:["communication","pressure, stress","respect","misunderstanding"],ans:1},
-{q:'What does "體諒" mean?',opts:["tolerate","escape","empathize","argue"],ans:2},
-{q:'"鑽牛角尖" means:',opts:["to be very hardworking","to split hairs / overthink","to solve problems","to be honest"],ans:1},
-{q:'"拿捏分寸" means:',opts:["to hold something tightly","to judge appropriate limits","to measure precisely","to speak carefully"],ans:1},
-{q:'"逃避只會令到問題越嚟越大" means:',opts:["Avoiding will solve the problem","Avoiding will make the problem bigger","The problem will go away","Problems are unavoidable"],ans:1},
-{q:'"企喺對方嘅立場" means:',opts:["to stand behind someone","to agree with someone","to think from the other person's position","to confront someone"],ans:2},
-{q:'What does "包容" mean?',opts:["to argue","to complain","to tolerate","to avoid"],ans:2},
-{q:'"講多錯多" means:',opts:["speak more, learn more","the more you speak, the more mistakes","speak loudly","speak carefully"],ans:1}
+{q:'"人際關係" means:',opts:["self-improvement","interpersonal relationships","work deadlines","personal goals"],ans:1},
+{q:'"鑽牛角尖" (zyun3 ngau4 gok3 zim1) means:',opts:["to work hard","to overthink/split hairs","to study diligently","to be productive"],ans:1},
+{q:'What does "拿捏分寸" mean?',opts:["to measure things","to judge appropriate limits","to argue","to agree"],ans:1},
+{q:'"講多錯多" means:',opts:["more speech, fewer mistakes","the more you speak, the more mistakes","speaking is always wrong","never speak"],ans:1},
+{q:'The dialogue suggests handling tension by:',opts:["immediately arguing back","calming down and seeing the other perspective","ignoring the problem","complaining to others"],ans:1},
+{q:'"逃避只會令到問題越嚟越大" means:',opts:["avoiding solves problems","avoiding only makes problems bigger","problems fix themselves","ignoring is the best solution"],ans:1},
+{q:'What is the Jyutping for "誤會"?',opts:["ng6 wui6","ng6 faai3","wu6 wui6","wu6 faai3"],ans:0},
+{q:'The dialogue concludes relationships need:',opts:["constant arguing","accumulated experience and gradual improvement","always avoiding","instant perfection"],ans:1}
 ]},
 {id:9,title:"第九課：禮貌與尊重",subtitle:"lai5 maau6 jyu5 zyun1 zung6 — Etiquette and Respect",
 vocab:[
 {c:"禮貌",j:"lai5 maau6",e:"etiquette, politeness"},
 {c:"尊重",j:"zyun1 zung6",e:"respect"},
-{c:"部門",j:"bou6 mun6",e:"department"},
+{c:"部門",j:"bou6 mun4",e:"department"},
 {c:"合作",j:"hap6 zok3",e:"cooperate, collaborate"},
 {c:"順利",j:"seon6 lei6",e:"smoothly"},
-{c:"性格",j:"sing3 gok3",e:"personality"},
-{c:"謹慎",j:"gan2 seon6",e:"cautious"},
-{c:"缺乏",j:"kyut3 faat3",e:"lack"},
+{c:"性格",j:"sing3 gaak3",e:"personality"},
+{c:"謹慎",j:"gan2 san6",e:"cautious"},
+{c:"缺乏",j:"kyut3 fat6",e:"lack"},
 {c:"誤會",j:"ng6 wui6",e:"misunderstanding"},
 {c:"衝突",j:"cung1 dat6",e:"conflict"},
-{c:"影響",j:"jing2 hoeng5",e:"affect"},
-{c:"團隊",j:"tyun4 deoi6",e:"team"},
+{c:"影響",j:"jing2 hoeng2",e:"affect"},
+{c:"團隊",j:"tyun4 deoi2",e:"team"},
 {c:"氣氛",j:"hei3 fan1",e:"atmosphere"},
 {c:"語氣",j:"jyu5 hei3",e:"tone of voice"},
 {c:"認真",j:"jing6 zan1",e:"attentively, seriously"},
@@ -578,22 +620,22 @@ vocab:[
 {c:"理解",j:"lei5 gaai2",e:"understand"},
 {c:"平和",j:"ping4 wo4",e:"peaceful, calm"},
 {c:"回應",j:"wui4 jing3",e:"respond"},
-{c:"委屈",j:"wat1 kut1",e:"feel wronged"},
+{c:"委屈",j:"wai2 wat1",e:"feel wronged"},
 {c:"保護",j:"bou2 wu6",e:"protect"},
-{c:"升級",j:"sing1 kap6",e:"escalate"},
+{c:"升級",j:"sing1 kap1",e:"escalate"},
 {c:"長遠",j:"coeng4 jyun5",e:"long-term"},
-{c:"敷衍",j:"fu1 jin5",e:"half-hearted"},
+{c:"敷衍",j:"fu1 hin2",e:"half-hearted"},
 {c:"信任",j:"seon3 jam6",e:"trust"},
 {c:"舒服",j:"syu1 fuk6",e:"comfortable"},
 {c:"穩定",j:"wan2 ding6",e:"stable"}
 ],
 dialogue:[
-{speaker:"A",c:"最近我哋部門嚟咗唔少新同事，你覺得平時同人相處嘅時候，最重要嘅係乜嘢啊？",j:"zeoi3 gan6 ngo5 dei2 bou6 mun6 lai4 zo2 m4 siu2 san1 tung4 si5, nei5 gok3 dak1 ping4 si4 tung4 jan4 soeng1 cyu2 ge3 si4 hau6, zeoi3 zung6 jiu3 ge3 hai6 me1 je5 aa3?",e:"Recently our department has gotten quite a few new colleagues. What do you think is the most important thing when getting along with people?"},
-{speaker:"B",c:"我覺得禮貌同尊重真係好重要，尤其係喺工作環境入面。大家一齊做嘢，如果冇基本嘅尊重，其實好難合作得順利。",j:"ngo5 gok3 dak1 lai5 maau6 tung4 zyun1 zung6 zan1 hai6 hou2 zung6 jiu3, jau4 kei4 hai2 gung1 zok3 waan4 ging2 jap6 min6. daai6 gaa1 jat1 cai4 zou6 je5, jyu4 gwo2 mou5 gei1 bun2 ge3 zyun1 zung6, kei4 sat6 hou2 naan4 hap6 zok3 dak1 seon6 lei6.",e:"Etiquette and respect are really important, especially at work. Without basic respect, it's hard to cooperate smoothly."},
-{speaker:"B",c:"因為每個人嘅背景、性格同埋做嘢方式都唔一樣，有啲人做嘢快，有啲人就比較謹慎。如果缺乏尊重，好容易就會出現誤會，甚至引起衝突，影響成個團隊嘅氣氛。",j:"jan1 wai6 mui5 go3 jan4 ge3 bui3 ging2, sing3 gok3 tung4 maai4 zou6 je5 fong1 sik1 dou1 m4 jat1 joeng6, jau5 di1 jan4 zou6 je5 faai3, jau5 di1 jan4 zau6 bei2 gaau3 gan2 seon6. jyu4 gwo2 kyut3 faat3 zyun1 zung6, hou2 jung4 ji6 zau6 ceot1 jyut6 ng6 wui6, sam6 zi3 jau5 hei2 coeng4 cung1 dat6, jing2 hoeng5 sing4 go3 tyun4 deoi6 ge3 hei3 fan1.",e:"Everyone's background, personality, and work style are different. Without respect, misunderstandings and conflicts easily arise, affecting the team atmosphere."},
-{speaker:"B",c:"例如同同事傾偈嘅時候，我會特別注意語氣，盡量唔好太衝或者太直接；同時都會認真聽對方講嘢，唔會打斷人。就算我唔同意對方嘅意見，我都會先表示理解，再慢慢講返自己嘅睇法。",j:"lei2 ba6 tung4 tung4 si6 king1 gai2 ge3 si4 hau6, ngo5 wui5 dak6 bit6 zyu3 ji5 jyu5 hei3, zeon6 loeng6 m4 hou2 taai3 cung3 waak6 ze2 taai3 zik6 zip3; tung4 si5 dou1 wui5 jing6 zan1 teng1 deoi3 fong1 gong2 je5, m4 wui5 daa2 tyun5 jan4. zau6 syun3 ngo5 m4 tung4 ji3 deoi3 fong1 ge3 ji3 gin3, ngo5 dou1 wui5 sin1 biu2 si6 lei5 gaai2, zoi3 maan6 maan6 gong2 faan1 zi6 gei2 ge3 tai2 faat3.",e:"For example, I pay attention to my tone, listen without interrupting. Even if I disagree, I first show understanding, then share my view."},
-{speaker:"B",c:"我通常都會盡量保持冷靜，用比較平和嘅方式回應，唔會用情緒去對抗情緒。因為一旦雙方都情緒化，事情只會越搞越差。",j:"ngo5 tung1 soeng4 dou1 wui5 zeon6 loeng6 bou2 ci4 laang5 zing6, jung6 bei2 gaau3 ping4 wo4 ge3 fong1 sik1 wui4 jing3, m4 wui5 jung6 cing4 seoi5 heoi3 deoi3 kong3 cing4 seoi5. jan1 wai6 jat1 daan6 soeng1 fong1 dou1 cing4 seoi5 waa3, si6 cing4 zi2 wui5 gaau2 jyut6 caa1.",e:"I stay calm and respond peacefully. If both sides get emotional, things only get worse."},
-{speaker:"B",c:"真正嘅禮貌其實係發自內心嘅尊重，而唔係敷衍或者做戲。如果只係表面客氣，但內心唔尊重人，其實對方都感受到，反而會影響信任。",j:"zan1 hai6 lai5 maau6 kei4 sat6 hai6 faat3 zi6 noi6 sam1 ge3 zyun1 zung6, ji4 m4 hai6 fu1 jin5 waak6 zou6 hei3. jyu4 gwo2 zi2 hai6 biu2 min6 hak3 hei3, daan6 noi6 sam1 m4 zyun1 zung6 jan4, kei4 sat6 deoi3 fong1 dou1 gam2 sau6 dou3, faan2 ji4 wui5 jing2 hoeng5 seon3 jam6.",e:"Real etiquette comes from the heart, not half-hearted actions. Superficial politeness without real respect destroys trust."}
+{speaker:"A",c:"最近我哋部門嚟咗唔少新同事，你覺得平時同人相處嘅時候，最重要嘅係乜嘢啊？",j:"zeoi3 gan6 ngo5 dei6 bou6 mun4 lai4 zo2 m4 siu2 san1 tung4 si6 nei5 gok3 dak1 ping4 si4 tung4 jan4 soeng1 cyu3 ge3 si4 hau6 zeoi3 zung6 jiu3 ge3 hai6 mat1 je5 aa3",e:"Recently our department has gotten quite a few new colleagues. What do you think is the most important thing when getting along with people?"},
+{speaker:"B",c:"我覺得禮貌同尊重真係好重要，尤其係喺工作環境入面。大家一齊做嘢，如果冇基本嘅尊重，其實好難合作得順利。",j:"ngo5 gok3 dak1 lai5 maau6 tung4 zyun1 zung6 zan1 hai6 hou2 zung6 jiu3 jau4 kei4 hai6 hai2 gung1 zok3 waan4 ging2 jap6 min6 daai6 gaa1 jat1 cai4 zou6 je5 jyu4 gwo2 mou5 gei1 bun2 ge3 zyun1 zung6 kei4 sat6 hou2 naan4 hap6 zok3 dak1 seon6 lei6",e:"Etiquette and respect are really important, especially at work. Without basic respect, it's hard to cooperate smoothly."},
+{speaker:"B",c:"因為每個人嘅背景、性格同埋做嘢方式都唔一樣，有啲人做嘢快，有啲人就比較謹慎。如果缺乏尊重，好容易就會出現誤會，甚至引起衝突，影響成個團隊嘅氣氛。",j:"jan1 wai6 mui5 go3 jan4 ge3 bui3 ging2 sing3 gaak3 tung4 maai4 zou6 je5 fong1 sik1 dou1 m4 jat1 joeng6 jau5 di1 jan4 zou6 je5 faai3 jau5 di1 jan4 zau6 bei2 gaau3 gan2 san6 jyu4 gwo2 kyut3 fat6 zyun1 zung6 hou2 jung4 ji6 zau6 wui6 ceot1 jin6 ng6 wui6 sam6 zi3 jan5 hei2 cung1 dat6 jing2 hoeng2 seng4 go3 tyun4 deoi2 ge3 hei3 fan1",e:"Everyone's background, personality, and work style are different. Without respect, misunderstandings and conflicts easily arise, affecting the team atmosphere."},
+{speaker:"B",c:"例如同同事傾偈嘅時候，我會特別注意語氣，盡量唔好太衝或者太直接；同時都會認真聽對方講嘢，唔會打斷人。就算我唔同意對方嘅意見，我都會先表示理解，再慢慢講返自己嘅睇法。",j:"lai6 jyu4 tung4 tung4 si6 king1 gai2 ge3 si4 hau6 ngo5 wui6 dak6 bit6 zyu3 ji3 jyu5 hei3 zeon6 loeng6 m4 hou2 taai3 cung1 waak6 ze2 taai3 zik6 zip3 tung4 si4 dou1 wui6 jing6 zan1 ting3 deoi3 fong1 gong2 je5 m4 wui6 daa2 dyun6 jan4 zau6 syun3 ngo5 m4 tung4 ji3 deoi3 fong1 ge3 ji3 gin3 ngo5 dou1 wui6 sin1 biu2 si6 lei5 gaai2 zoi3 maan6 maan2 gong2 faan2 zi6 gei2 ge3 tai2 faat3",e:"For example, I pay attention to my tone, listen without interrupting. Even if I disagree, I first show understanding, then share my view."},
+{speaker:"B",c:"我通常都會盡量保持冷靜，用比較平和嘅方式回應，唔會用情緒去對抗情緒。因為一旦雙方都情緒化，事情只會越搞越差。",j:"ngo5 tung1 soeng4 dou1 wui6 zeon6 loeng6 bou2 ci4 laang5 zing6 jung6 bei2 gaau3 ping4 wo4 ge3 fong1 sik1 wui4 jing3 m4 wui6 jung6 cing4 seoi5 heoi3 deoi3 kong3 cing4 seoi5 jan1 wai6 jat1 daan3 soeng1 fong1 dou1 cing4 seoi5 faa3 si6 cing4 zi2 wui6 jyut6 gaau2 jyut6 caa1",e:"I stay calm and respond peacefully. If both sides get emotional, things only get worse."},
+{speaker:"B",c:"真正嘅禮貌其實係發自內心嘅尊重，而唔係敷衍或者做戲。如果只係表面客氣，但內心唔尊重人，其實對方都感受到，反而會影響信任。",j:"zan1 zing3 ge3 lai5 maau6 kei4 sat6 hai6 faat3 zi6 noi6 sam1 ge3 zyun1 zung6 ji4 m4 hai6 fu1 hin2 waak6 ze2 zou6 hei3 jyu4 gwo2 zi2 hai6 biu2 min6 haak3 hei3 daan6 noi6 sam1 m4 zyun1 zung6 jan4 kei4 sat6 deoi3 fong1 dou1 gam2 sau6 dou3 faan2 ji4 wui6 jing2 hoeng2 seon3 jam6",e:"Real etiquette comes from the heart, not half-hearted actions. Superficial politeness without real respect destroys trust."}
 ],
 grammar:[
 {pattern:"尤其係 (jau4 kei4 hai6)",desc:"especially",ex:"尤其係喺工作環境入面 (jau4 kei4 hai2 gung1 zok3 waan4 ging2 jap6 min6)",en:"Especially in the work environment"},
@@ -744,21 +786,68 @@ function showSection(id,el){
   el.classList.add('active');
 }
 
-function toggleJp(){showJp=!showJp;document.querySelectorAll('.dialogue-line .jyutping').forEach(e=>e.style.display=showJp?'block':'none');document.getElementById('btn-jp').classList.toggle('on',showJp)}
-function toggleEn(){showEn=!showEn;document.querySelectorAll('.dialogue-line .english').forEach(e=>e.style.display=showEn?'block':'none');document.getElementById('btn-en').classList.toggle('on',showEn)}
+let dialogueMode=localStorage.getItem('dialogueMode')||'full';
 
+function speak(text){
+  if(window.speechSynthesis.speaking){window.speechSynthesis.cancel();return}
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='zh-HK';u.rate=0.85;
+  u.onend=()=>{document.querySelectorAll('.speak-btn.speaking').forEach(b=>b.classList.remove('speaking'))};
+  u.onerror=()=>{document.querySelectorAll('.speak-btn.speaking').forEach(b=>b.classList.remove('speaking'))};
+  document.querySelectorAll('.speak-btn.speaking').forEach(b=>b.classList.remove('speaking'));
+  const btns=[...document.querySelectorAll('.speak-btn')].filter(b=>{const s=b.dataset.speak;return s===text||s===text.replace(/[，。？！、；：！？]/g,'')});
+  btns.forEach(b=>b.classList.add('speaking'));
+  speechSynthesis.speak(u);
+}
+
+function toggleJp(){
+  showJp=!showJp;
+  document.querySelectorAll('.dialogue-line .jyutping,.sentence-card .sn-jp').forEach(e=>e.style.display=showJp?'block':'none');
+  const b=document.getElementById('btn-jp');if(b)b.classList.toggle('on',showJp);
+}
+function toggleEn(){
+  showEn=!showEn;
+  document.querySelectorAll('.dialogue-line .english,.sentence-card .sn-en').forEach(e=>e.style.display=showEn?'block':'none');
+  const b=document.getElementById('btn-en');if(b)b.classList.toggle('on',showEn);
+}
+
+function splitSentences(text){
+  const parts=text.split(/(?<=[。？！])/);
+  return parts.filter(p=>p.trim());
+}
 function renderDialogue(L){
   let h='<div class="toggle-row"><button id="btn-jp" class="toggle-btn'+(showJp?' on':'')+'" onclick="toggleJp()">Jyutping</button><button id="btn-en" class="toggle-btn'+(showEn?' on':'')+'" onclick="toggleEn()">English</button><button class="toggle-btn" onclick="toggleJp();toggleEn()">Toggle All</button></div>';
-  L.dialogue.forEach(d=>{
-    h+='<div class="dialogue-line"><div class="speaker">'+d.speaker+'</div><div class="cantonese">'+d.c+'</div><div class="jyutping" style="display:'+(showJp?'block':'none')+'">'+d.j+'</div><div class="english" style="display:'+(showEn?'block':'none')+'">'+d.e+'</div></div>';
-  });
+  h+='<div class="sentence-mode-row"><button class="sentence-mode-btn'+(dialogueMode==='full'?' active':'')+'" onclick="setDialogueMode(\'full\')">Full</button><button class="sentence-mode-btn'+(dialogueMode==='sentence'?' active':'')+'" onclick="setDialogueMode(\'sentence\')">Sentence by Sentence</button></div>';
+  if(dialogueMode==='sentence'){
+    let sn=0;
+    L.dialogue.forEach(d=>{
+      const sents=splitSentences(d.c);
+      const jsents=splitSentences(d.j);
+      const esents=splitSentences(d.e);
+      h+='<div class="sentence-card"><div class="sn-num">'+(++sn)+'</div><div class="sn-text"><div class="sn-zh"><span style="font-weight:700;color:var(--accent2)">'+d.speaker+':</span> '+sents[0]+'<button class="speak-btn" data-speak="'+sents[0].replace(/"/g,'&quot;')+'" onclick="speak(this.dataset.speak)" title="Listen">🔊</button></div><div class="sn-jp" style="display:'+(showJp?'block':'none')+'">'+(jsents[0]||d.j)+'</div><div class="sn-en" style="display:'+(showEn?'block':'none')+'">'+(esents[0]||d.e)+'</div></div></div>';
+      for(let i=1;i<sents.length;i++){
+        h+='<div class="sentence-card"><div class="sn-num">'+(++sn)+'</div><div class="sn-text"><div class="sn-zh">'+sents[i]+'<button class="speak-btn" data-speak="'+sents[i].replace(/"/g,'&quot;')+'" onclick="speak(this.dataset.speak)" title="Listen">🔊</button></div><div class="sn-jp" style="display:'+(showJp?'block':'none')+'">'+(jsents[i]||'')+'</div><div class="sn-en" style="display:'+(showEn?'block':'none')+'">'+(esents[i]||'')+'</div></div></div>';
+      }
+    });
+  }else{
+    L.dialogue.forEach(d=>{
+      h+='<div class="dialogue-line"><div class="speaker">'+d.speaker+' <button class="speak-btn" data-speak="'+d.c.replace(/"/g,'&quot;')+'" onclick="speak(this.dataset.speak)" title="Listen">🔊</button></div><div class="cantonese">'+d.c+'</div><div class="jyutping" style="display:'+(showJp?'block':'none')+'">'+d.j+'</div><div class="english" style="display:'+(showEn?'block':'none')+'">'+d.e+'</div></div>';
+    });
+  }
   return h;
+}
+
+function setDialogueMode(mode){
+  dialogueMode=mode;
+  localStorage.setItem('dialogueMode',mode);
+  const L=LESSONS[currentLesson];
+  document.getElementById('sec-dialogue').innerHTML=renderDialogue(L);
 }
 
 function renderVocab(L){
   let h='<p style="color:var(--text2);margin-bottom:12px">Click a card to see the English meaning</p><div class="vocab-grid">';
   L.vocab.forEach(v=>{
-    h+='<div class="vocab-card" onclick="this.classList.toggle(\'flipped\')"><div class="front"><div class="word">'+v.c+'</div><div class="jp">'+v.j+'</div>'+masteryDots(v.c)+'<div class="tag">click to flip</div></div><div class="back"><div class="word" style="color:var(--yellow)">'+v.e+'</div><div class="jp">'+v.c+'</div><div class="meaning">'+v.j+'</div></div></div>';
+    h+='<div class="vocab-card" onclick="this.classList.toggle(\'flipped\')"><div class="front"><div class="word">'+v.c+' <button class="speak-btn" data-speak="'+v.c.replace(/"/g,'&quot;')+'" onclick="event.stopPropagation();speak(this.dataset.speak)" title="Listen">🔊</button></div><div class="jp">'+v.j+'</div>'+masteryDots(v.c)+'<div class="tag">click to flip</div></div><div class="back"><div class="word" style="color:var(--yellow)">'+v.e+'</div><div class="jp">'+v.c+'</div><div class="meaning">'+v.j+'</div></div></div>';
   });
   return h+'</div>';
 }
