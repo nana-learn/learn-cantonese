@@ -6,7 +6,7 @@
 <title>Cantonese Learner</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0f1117;--surface:#1a1d27;--surface2:#242836;--accent:#6c5ce7;--accent2:#a29bfe;--text:#e8e8f0;--text2:#9a9ab0;--green:#00b894;--red:#e17055;--yellow:#fdcb6e;--radius:12px}
+:root{--bg:#0f1117;--surface:#1a1d27;--surface2:#242836;--accent:#6c5ce7;--accent2:#a29bfe;--text:#e8e8f0;--text2:#9a9ab0;--green:#00b894;--red:#e17055;--yellow:#fdcb6e;--blue:#74b9ff;--radius:12px}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
 .app{max-width:900px;margin:0 auto;padding:20px}
 header{text-align:center;padding:30px 0;border-bottom:1px solid var(--surface2);margin-bottom:30px}
@@ -18,10 +18,7 @@ header p{color:var(--text2);margin-top:5px}
 .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
 .section{display:none;margin-bottom:30px}
 .section.active{display:block}
-h2{font-size:1.4em;margin-bottom:16px;display:flex;align-items:center;gap:8px}
-h2 .icon{font-size:1.1em}
-.card{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:20px;margin-bottom:16px;transition:border-color .2s}
-.card:hover{border-color:var(--accent)}
+h2{font-size:1.4em;margin-bottom:16px}
 .dialogue-line{margin-bottom:16px;padding:12px 16px;border-radius:8px;border-left:3px solid var(--accent)}
 .dialogue-line .speaker{font-weight:700;color:var(--accent2);margin-bottom:4px}
 .dialogue-line .cantonese{font-size:1.15em;margin-bottom:6px}
@@ -32,7 +29,7 @@ h2 .icon{font-size:1.1em}
 .toggle-btn:hover{color:var(--text)}
 .toggle-btn.on{background:var(--accent);color:#fff}
 .vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
-.vocab-card{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:16px;cursor:pointer;transition:all .3s;position:relative;perspective:1000px}
+.vocab-card{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:16px;cursor:pointer;transition:all .3s;position:relative}
 .vocab-card:hover{border-color:var(--accent);transform:translateY(-2px)}
 .vocab-card .front,.vocab-card .back{transition:opacity .3s}
 .vocab-card .back{display:none}
@@ -42,21 +39,16 @@ h2 .icon{font-size:1.1em}
 .vocab-card .jp{color:var(--accent2);font-size:.85em;margin-bottom:4px}
 .vocab-card .meaning{color:var(--text2);font-size:.9em}
 .vocab-card .tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.7em;margin-top:6px;background:var(--surface2);color:var(--text2)}
-.quiz-container{margin-top:10px}
-.quiz-q{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:20px;margin-bottom:16px}
-.quiz-q .q-text{font-size:1.05em;margin-bottom:12px}
-.quiz-q .q-text em{color:var(--accent2);font-style:normal;font-weight:700}
-.quiz-options{display:flex;flex-direction:column;gap:8px}
-.quiz-opt{padding:10px 14px;background:var(--surface2);border:1px solid transparent;border-radius:8px;cursor:pointer;transition:all .2s;font-size:.95em}
-.quiz-opt:hover{border-color:var(--accent)}
-.quiz-opt.correct{background:var(--green);color:#fff;border-color:var(--green)}
-.quiz-opt.wrong{background:var(--red);color:#fff;border-color:var(--red)}
-.quiz-opt.disabled{pointer-events:none;opacity:.7}
+.mastery-dots{display:flex;gap:3px;margin-top:6px}
+.mastery-dots .dot{width:8px;height:8px;border-radius:50%;background:var(--surface2);transition:background .3s}
+.mastery-dots .dot.f1{background:var(--red)}
+.mastery-dots .dot.f2{background:var(--yellow)}
+.mastery-dots .dot.f3{background:var(--blue)}
+.mastery-dots .dot.f4{background:var(--green)}
+.mastery-dots .dot.f5{background:var(--accent2)}
 .grammar-card{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:16px;margin-bottom:12px}
 .grammar-card .pattern{color:var(--accent2);font-weight:700;margin-bottom:6px}
 .grammar-card .example{color:var(--text);margin-bottom:4px}
-.grammar-card .example .jyutping-inline{color:var(--text2);font-size:.85em}
-.grammar-card .example .en{color:var(--yellow);font-size:.9em}
 .grammar-card .explanation{color:var(--text2);font-size:.9em;margin-top:6px}
 .score-bar{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--surface);border-radius:var(--radius);margin-bottom:20px}
 .score-bar .score{font-size:1.2em;font-weight:700;color:var(--green)}
@@ -64,7 +56,7 @@ h2 .icon{font-size:1.1em}
 .progress{height:4px;background:var(--surface2);border-radius:2px;flex:1}
 .progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .3s}
 .flashcard-area{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:16px}
-.flashcard{width:100%;max-width:400px;height:200px;perspective:1000px;cursor:pointer}
+.flashcard{width:100%;max-width:400px;height:220px;perspective:1000px;cursor:pointer}
 .flashcard-inner{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
 .flashcard.flipped .flashcard-inner{transform:rotateY(180deg)}
 .flashcard-face{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px}
@@ -78,8 +70,55 @@ h2 .icon{font-size:1.1em}
 .fc-btn:hover{border-color:var(--accent)}
 .fc-btn.skip{border-color:var(--red);color:var(--red)}
 .fc-btn.got-it{border-color:var(--green);color:var(--green)}
+.fc-btn:disabled{opacity:.35;cursor:default}
 .fc-counter{color:var(--text2);font-size:.85em}
-@media(max-width:600px){.vocab-grid{grid-template-columns:1fr}.dialogue-line .cantonese{font-size:1em}}
+.fc-mode-row{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.kb-hint{color:var(--text2);font-size:.75em;text-align:center}
+.session-summary{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:24px;text-align:center;max-width:420px}
+.session-summary h3{font-size:1.3em;margin-bottom:8px}
+.session-stats{display:flex;justify-content:center;gap:24px;margin:16px 0}
+.session-stats .stat{display:flex;flex-direction:column;align-items:center}
+.session-stats .num{font-size:2em;font-weight:700}
+.session-stats .label{color:var(--text2);font-size:.85em}
+.quiz-container{margin-top:10px}
+.quiz-q{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:20px;margin-bottom:16px}
+.quiz-q .q-text{font-size:1.05em;margin-bottom:12px}
+.quiz-options{display:flex;flex-direction:column;gap:8px}
+.quiz-opt{padding:10px 14px;background:var(--surface2);border:1px solid transparent;border-radius:8px;cursor:pointer;transition:all .2s;font-size:.95em}
+.quiz-opt:hover{border-color:var(--accent)}
+.quiz-opt.correct{background:var(--green);color:#fff;border-color:var(--green)}
+.quiz-opt.wrong{background:var(--red);color:#fff;border-color:var(--red)}
+.quiz-opt.disabled{pointer-events:none;opacity:.7}
+.quiz-modes{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.qmode-btn{padding:6px 14px;background:var(--surface2);border:1px solid transparent;border-radius:20px;cursor:pointer;color:var(--text2);font-size:.85em;transition:all .2s}
+.qmode-btn:hover{color:var(--text)}
+.qmode-btn.active{background:var(--accent);color:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;margin-bottom:24px}
+.stat-card{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:16px;text-align:center}
+.stat-card .num{font-size:1.8em;font-weight:700}
+.stat-card .label{color:var(--text2);font-size:.85em;margin-top:2px}
+.stat-card.green .num{color:var(--green)}
+.stat-card.yellow .num{color:var(--yellow)}
+.stat-card.accent .num{color:var(--accent)}
+.stat-card.blue .num{color:var(--blue)}
+.stat-card.red .num{color:var(--red)}
+.streak-display{display:flex;align-items:center;gap:8px;padding:12px 16px;background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);margin-bottom:20px}
+.streak-display .fire{font-size:1.5em}
+.streak-display .count{font-size:1.3em;font-weight:700;color:var(--yellow)}
+.streak-display .label{color:var(--text2)}
+.mastery-chart{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:16px;margin-bottom:20px}
+.mastery-chart h3{font-size:1.1em;margin-bottom:12px}
+.chart-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.chart-row .box-label{width:80px;color:var(--text2);font-size:.85em}
+.chart-row .bar-track{flex:1;height:20px;background:var(--surface2);border-radius:4px;overflow:hidden}
+.chart-row .bar-fill{height:100%;border-radius:4px;transition:width .3s}
+.chart-row .count{color:var(--text);font-size:.85em;min-width:30px;text-align:right;font-weight:600}
+.action-row{display:flex;gap:10px;flex-wrap:wrap}
+.action-btn{padding:10px 18px;border-radius:8px;border:1px solid var(--surface2);background:var(--surface);color:var(--text);cursor:pointer;font-size:.9em;transition:all .2s}
+.action-btn:hover{border-color:var(--accent)}
+.action-btn.danger{border-color:var(--red);color:var(--red)}
+.hidden-input{display:none}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr}.dialogue-line .cantonese{font-size:1em}.stats-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -203,117 +242,406 @@ quiz:[
 ]}
 ];
 
+const INTERVALS=[0,86400000,259200000,604800000,1209600000];
+const BOX_COLORS=['var(--red)','var(--yellow)','var(--blue)','var(--green)','var(--accent2)'];
+const BOX_LABELS=['Box 1 — New','Box 2 — Soon','Box 3 — Familiar','Box 4 — Known','Box 5 — Mastered'];
+
+let progress=loadProgress();
 let currentLesson=0;
 let showJp=false,showEn=false;
-let fcIndex=0,fcFlipped=false,fcDone=[];
-let quizAnswered=0,quizCorrect=0;
+let fcMode='due',fcQueue=[],fcQueuePos=0,fcFlipped=false,fcSessionDone=false;
+let fcSessionCorrect=0,fcSessionWrong=0,fcMistakes=[];
+let quizMode='meaning',quizQuestions=[],quizAnswered=0,quizCorrect=0;
+
+function loadProgress(){
+  try{const d=JSON.parse(localStorage.getItem('cantonese_progress'));if(d&&d.version===1)return d}catch(e){}
+  return{version:1,streak:{lastDate:'',count:0},words:{}};
+}
+function saveProgress(){localStorage.setItem('cantonese_progress',JSON.stringify(progress))}
+
+function markWord(char,correct){
+  if(!progress.words[char])progress.words[char]={box:1,lastReview:0,nextReview:0,correct:0,wrong:0};
+  const w=progress.words[char];
+  w.lastReview=Date.now();
+  if(correct){w.box=Math.min(5,w.box+1);w.correct++}
+  else{w.box=1;w.wrong++}
+  w.nextReview=INTERVALS[w.box-1]===0?0:w.lastReview+INTERVALS[w.box-1];
+  updateStreak();
+  saveProgress();
+}
+
+function isDue(char){
+  const w=progress.words[char];
+  if(!w)return true;
+  return Date.now()>=w.nextReview;
+}
+
+function getBox(char){
+  const w=progress.words[char];
+  return w?w.box:0;
+}
+
+function updateStreak(){
+  const today=new Date().toDateString();
+  const s=progress.streak;
+  if(s.lastDate===today)return;
+  const yesterday=new Date(Date.now()-86400000).toDateString();
+  s.count=s.lastDate===yesterday?s.count+1:1;
+  s.lastDate=today;
+  saveProgress();
+}
+
+function masteryDots(char){
+  const box=getBox(char);
+  let h='<div class="mastery-dots">';
+  for(let i=1;i<=5;i++){
+    h+='<div class="dot'+(i<=box?' f'+box:'')+'"></div>';
+  }
+  return h+'</div>';
+}
+
+function getLessonStats(L){
+  const boxes=[0,0,0,0,0];
+  let newC=0;
+  L.vocab.forEach(v=>{
+    const w=progress.words[v.c];
+    if(!w)newC++;else boxes[w.box-1]++;
+  });
+  return{total:L.vocab.length,new:newC,learning:boxes[0]+boxes[1]+boxes[2],mastered:boxes[3]+boxes[4],boxes};
+}
+
+function shuffle(arr){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}
+  return a;
+}
 
 function init(){
-const tabs=document.getElementById('lessonTabs');
-LESSONS.forEach((l,i)=>{
-const t=document.createElement('div');
-t.className='tab'+(i===0?' active':'');
-t.textContent=l.title;
-t.onclick=()=>switchLesson(i);
-tabs.appendChild(t);
-});
-render();
+  const tabs=document.getElementById('lessonTabs');
+  LESSONS.forEach((l,i)=>{
+    const t=document.createElement('div');
+    t.className='tab'+(i===0?' active':'');
+    t.textContent=l.title;
+    t.onclick=()=>switchLesson(i);
+    tabs.appendChild(t);
+  });
+  initFcSession();
+  quizQuestions=LESSONS[0].quiz.map(q=>({...q}));
+  render();
 }
 
 function switchLesson(i){
-currentLesson=i;
-document.querySelectorAll('.tab').forEach((t,idx)=>t.classList.toggle('active',idx===i));
-fcIndex=0;fcFlipped=false;fcDone=[];
-quizAnswered=0;quizCorrect=0;
-showJp=false;showEn=false;
-render();
+  currentLesson=i;
+  document.querySelectorAll('#lessonTabs .tab').forEach((t,idx)=>t.classList.toggle('active',idx===i));
+  showJp=false;showEn=false;
+  initFcSession();
+  quizMode='meaning';
+  quizQuestions=LESSONS[i].quiz.map(q=>({...q}));
+  quizAnswered=0;quizCorrect=0;
+  render();
 }
 
 function render(){
-const L=LESSONS[currentLesson];
-const c=document.getElementById('content');
-c.innerHTML=`
-<div class="tabs" style="margin-bottom:16px">
-<div class="tab active" onclick="showSection('dialogue',this)">💬 Dialogue</div>
-<div class="tab" onclick="showSection('vocab',this)">📚 Vocabulary</div>
-<div class="tab" onclick="showSection('flashcards',this)">🃏 Flashcards</div>
-<div class="tab" onclick="showSection('grammar',this)">🔑 Grammar</div>
-<div class="tab" onclick="showSection('quiz',this)">❓ Quiz</div>
-</div>
-<div id="sec-dialogue" class="section active">${renderDialogue(L)}</div>
-<div id="sec-vocab" class="section">${renderVocab(L)}</div>
-<div id="sec-flashcards" class="section">${renderFlashcards(L)}</div>
-<div id="sec-grammar" class="section">${renderGrammar(L)}</div>
-<div id="sec-quiz" class="section">${renderQuiz(L)}</div>`;
+  const L=LESSONS[currentLesson];
+  document.getElementById('content').innerHTML=
+    '<div class="tabs" style="margin-bottom:16px">'+
+    '<div class="tab active" onclick="showSection(\'dialogue\',this)">💬 Dialogue</div>'+
+    '<div class="tab" onclick="showSection(\'vocab\',this)">📚 Vocabulary</div>'+
+    '<div class="tab" onclick="showSection(\'flashcards\',this)">🃏 Flashcards</div>'+
+    '<div class="tab" onclick="showSection(\'grammar\',this)">🔑 Grammar</div>'+
+    '<div class="tab" onclick="showSection(\'quiz\',this)">❓ Quiz</div>'+
+    '<div class="tab" onclick="showSection(\'progress\',this)">📊 Progress</div>'+
+    '</div>'+
+    '<div id="sec-dialogue" class="section active">'+renderDialogue(L)+'</div>'+
+    '<div id="sec-vocab" class="section">'+renderVocab(L)+'</div>'+
+    '<div id="sec-flashcards" class="section">'+renderFlashcards(L)+'</div>'+
+    '<div id="sec-grammar" class="section">'+renderGrammar(L)+'</div>'+
+    '<div id="sec-quiz" class="section">'+renderQuiz(L)+'</div>'+
+    '<div id="sec-progress" class="section">'+renderProgress(L)+'</div>';
 }
 
 function showSection(id,el){
-document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-document.getElementById('sec-'+id).classList.add('active');
-el.parentElement.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-el.classList.add('active');
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.getElementById('sec-'+id).classList.add('active');
+  el.parentElement.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
 }
 
 function toggleJp(){showJp=!showJp;document.querySelectorAll('.dialogue-line .jyutping').forEach(e=>e.style.display=showJp?'block':'none');document.getElementById('btn-jp').classList.toggle('on',showJp)}
 function toggleEn(){showEn=!showEn;document.querySelectorAll('.dialogue-line .english').forEach(e=>e.style.display=showEn?'block':'none');document.getElementById('btn-en').classList.toggle('on',showEn)}
 
 function renderDialogue(L){
-let html=`<div class="toggle-row"><button id="btn-jp" class="toggle-btn${showJp?' on':''}" onclick="toggleJp()">Jyutping</button><button id="btn-en" class="toggle-btn${showEn?' on':''}" onclick="toggleEn()">English</button><button class="toggle-btn" onclick="toggleJp();toggleEn()">Toggle All</button></div>`;
-L.dialogue.forEach(d=>{
-html+=`<div class="dialogue-line"><div class="speaker">${d.speaker}</div><div class="cantonese">${d.c}</div><div class="jyutping" style="display:${showJp?'block':'none'}">${d.j}</div><div class="english" style="display:${showEn?'block':'none'}">${d.e}</div></div>`;
-});
-return html;
+  let h='<div class="toggle-row"><button id="btn-jp" class="toggle-btn'+(showJp?' on':'')+'" onclick="toggleJp()">Jyutping</button><button id="btn-en" class="toggle-btn'+(showEn?' on':'')+'" onclick="toggleEn()">English</button><button class="toggle-btn" onclick="toggleJp();toggleEn()">Toggle All</button></div>';
+  L.dialogue.forEach(d=>{
+    h+='<div class="dialogue-line"><div class="speaker">'+d.speaker+'</div><div class="cantonese">'+d.c+'</div><div class="jyutping" style="display:'+(showJp?'block':'none')+'">'+d.j+'</div><div class="english" style="display:'+(showEn?'block':'none')+'">'+d.e+'</div></div>';
+  });
+  return h;
 }
 
 function renderVocab(L){
-let html=`<p style="color:var(--text2);margin-bottom:12px">Click a card to see the English meaning</p><div class="vocab-grid">`;
-L.vocab.forEach(v=>{
-html+=`<div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="front"><div class="word">${v.c}</div><div class="jp">${v.j}</div><div class="tag">click to flip</div></div><div class="back"><div class="word" style="color:var(--yellow)">${v.e}</div><div class="jp">${v.c}</div><div class="meaning">${v.j}</div></div></div>`;
-});
-return html+'</div>';
+  let h='<p style="color:var(--text2);margin-bottom:12px">Click a card to see the English meaning</p><div class="vocab-grid">';
+  L.vocab.forEach(v=>{
+    h+='<div class="vocab-card" onclick="this.classList.toggle(\'flipped\')"><div class="front"><div class="word">'+v.c+'</div><div class="jp">'+v.j+'</div>'+masteryDots(v.c)+'<div class="tag">click to flip</div></div><div class="back"><div class="word" style="color:var(--yellow)">'+v.e+'</div><div class="jp">'+v.c+'</div><div class="meaning">'+v.j+'</div></div></div>';
+  });
+  return h+'</div>';
+}
+
+function initFcSession(){
+  const L=LESSONS[currentLesson];
+  fcMode='due';fcFlipped=false;fcSessionDone=false;
+  fcSessionCorrect=0;fcSessionWrong=0;fcMistakes=[];
+  fcQueue=[];
+  L.vocab.forEach((v,i)=>{if(isDue(v.c))fcQueue.push(i)});
+  fcQueue=shuffle(fcQueue);
+  fcQueuePos=0;
+}
+
+function startFcSession(mode){
+  const L=LESSONS[currentLesson];
+  fcMode=mode;fcFlipped=false;fcSessionDone=false;
+  fcSessionCorrect=0;fcSessionWrong=0;fcMistakes=[];
+  if(mode==='due'){
+    fcQueue=[];
+    L.vocab.forEach((v,i)=>{if(isDue(v.c))fcQueue.push(i)});
+  }else{
+    fcQueue=[...Array(L.vocab.length).keys()];
+  }
+  fcQueue=shuffle(fcQueue);
+  fcQueuePos=0;
+  document.getElementById('sec-flashcards').innerHTML=renderFlashcards(L);
+}
+
+function startFcMistakes(){
+  if(fcMistakes.length===0)return;
+  const L=LESSONS[currentLesson];
+  fcQueue=shuffle(fcMistakes);
+  fcMistakes=[];
+  fcQueuePos=0;fcFlipped=false;fcSessionDone=false;
+  fcSessionCorrect=0;fcSessionWrong=0;
+  document.getElementById('sec-flashcards').innerHTML=renderFlashcards(L);
 }
 
 function renderFlashcards(L){
-const v=L.vocab[fcIndex];
-const total=L.vocab.length;
-const done=fcDone.length;
-return `<div class="flashcard-area"><div class="fc-counter">${fcIndex+1} / ${total} (${done} reviewed)</div><div class="flashcard${fcFlipped?' flipped':''}" onclick="fcFlip(this)"><div class="flashcard-inner"><div class="flashcard-face flashcard-front"><div class="big">${v.c}</div><div class="hint">Click to reveal</div></div><div class="flashcard-face flashcard-back"><div class="big">${v.j}</div><div class="sub">${v.e}</div></div></div></div><div class="fc-controls"><button class="fc-btn skip" onclick="fcNext()">Skip</button><button class="fc-btn got-it" onclick="fcDone.push(fcIndex);fcNext()">Got it</button></div></div>`;
+  const dueCount=L.vocab.filter(v=>isDue(v.c)).length;
+  const totalCount=L.vocab.length;
+
+  let h='<div class="fc-mode-row">'+
+    '<button class="toggle-btn'+(fcMode==='due'?' on':'')+'" onclick="startFcSession(\'due\')">📋 Due ('+dueCount+')</button>'+
+    '<button class="toggle-btn'+(fcMode==='all'?' on':'')+'" onclick="startFcSession(\'all\')">📚 All ('+totalCount+')</button>'+
+    '</div>';
+
+  if(fcQueue.length===0&&fcMode==='due'){
+    h+='<div class="session-summary"><h3>All caught up!</h3><p style="color:var(--text2);margin:12px 0">No cards due for review right now. Great work!</p><div class="fc-controls" style="justify-content:center"><button class="fc-btn got-it" onclick="startFcSession(\'all\')">Review All</button></div></div>';
+    return h;
+  }
+
+  if(fcSessionDone){
+    const pct=fcQueue.length>0?Math.round(fcSessionCorrect/fcQueue.length*100):0;
+    h+='<div class="session-summary"><h3>Session Complete!</h3><div class="session-stats">'+
+      '<div class="stat"><div class="num" style="color:var(--green)">'+fcSessionCorrect+'</div><div class="label">Correct</div></div>'+
+      '<div class="stat"><div class="num" style="color:var(--red)">'+fcSessionWrong+'</div><div class="label">Need Practice</div></div>'+
+      '<div class="stat"><div class="num" style="color:var(--accent)">'+pct+'%</div><div class="label">Accuracy</div></div>'+
+      '</div><div class="fc-controls" style="justify-content:center;gap:10px">';
+    if(fcSessionWrong>0)h+='<button class="fc-btn skip" onclick="startFcMistakes()">Review Mistakes ('+fcSessionWrong+')</button>';
+    h+='<button class="fc-btn got-it" onclick="startFcSession(\''+fcMode+'\')">Start Over</button></div></div>';
+    return h;
+  }
+
+  const vi=fcQueue[fcQueuePos];
+  const v=L.vocab[vi];
+  const w=progress.words[v.c];
+  const box=w?w.box:0;
+
+  h+='<div class="flashcard-area"><div class="fc-counter">'+(fcQueuePos+1)+' / '+fcQueue.length+'</div>'+
+    masteryDots(v.c)+
+    '<div class="flashcard'+(fcFlipped?' flipped':'')+'" onclick="fcFlip(this)"><div class="flashcard-inner">'+
+    '<div class="flashcard-face flashcard-front"><div class="big">'+v.c+'</div><div class="hint">Click to reveal</div></div>'+
+    '<div class="flashcard-face flashcard-back"><div class="big">'+v.j+'</div><div class="sub">'+v.e+'</div></div>'+
+    '</div></div>'+
+    '<div class="fc-controls">'+
+    '<button class="fc-btn skip" onclick="fcAnswer(false)"'+(fcFlipped?'':' disabled')+'>Don\'t Know</button>'+
+    '<button class="fc-btn got-it" onclick="fcAnswer(true)"'+(fcFlipped?'':' disabled')+'>Got It</button>'+
+    '</div><div class="kb-hint">Space: flip &middot; &larr; Don\'t Know &middot; &rarr; Got It</div></div>';
+  return h;
 }
+
 function fcFlip(el){fcFlipped=!fcFlipped;el.classList.toggle('flipped',fcFlipped)}
-function fcNext(){const L=LESSONS[currentLesson];fcFlipped=false;fcIndex=(fcIndex+1)%L.vocab.length;document.getElementById('sec-flashcards').innerHTML=renderFlashcards(L)}
+
+function fcAnswer(correct){
+  if(!fcFlipped||fcSessionDone)return;
+  const L=LESSONS[currentLesson];
+  const vi=fcQueue[fcQueuePos];
+  const v=L.vocab[vi];
+  markWord(v.c,correct);
+  if(correct)fcSessionCorrect++;else{fcSessionWrong++;fcMistakes.push(vi)}
+  fcQueuePos++;fcFlipped=false;
+  if(fcQueuePos>=fcQueue.length)fcSessionDone=true;
+  document.getElementById('sec-flashcards').innerHTML=renderFlashcards(L);
+}
 
 function renderGrammar(L){
-return L.grammar.map(g=>`<div class="grammar-card"><div class="pattern">${g.pattern}</div><div class="explanation">${g.desc}</div><div class="example">${g.ex}<br><span class="jyutping-inline">${g.en}</span></div></div>`).join('');
+  return L.grammar.map(g=>'<div class="grammar-card"><div class="pattern">'+g.pattern+'</div><div class="explanation">'+g.desc+'</div><div class="example">'+g.ex+'<br><span style="color:var(--yellow);font-size:.9em">'+g.en+'</span></div></div>').join('');
+}
+
+function generateAutoQuiz(L,mode){
+  const picked=shuffle([...Array(L.vocab.length).keys()]).slice(0,10);
+  return picked.map(vi=>{
+    const v=L.vocab[vi];
+    const others=shuffle(L.vocab.filter((_,j)=>j!==vi)).slice(0,3);
+    let opts,q;
+    if(mode==='reverse'){
+      q='Which Cantonese word means "'+v.e+'"?';
+      opts=[v.c,...others.map(d=>d.c)];
+    }else{
+      q='What is the Jyutping for "'+v.c+'"?';
+      opts=[v.j,...others.map(d=>d.j)];
+    }
+    const correctOpt=opts[0];
+    const shuffled=shuffle(opts);
+    return{q,opts:shuffled,ans:shuffled.indexOf(correctOpt),wordKey:v.c};
+  });
+}
+
+function setQuizMode(mode){
+  quizMode=mode;quizAnswered=0;quizCorrect=0;
+  const L=LESSONS[currentLesson];
+  quizQuestions=mode==='meaning'?L.quiz.map(q=>({...q})):generateAutoQuiz(L,mode);
+  document.getElementById('sec-quiz').innerHTML=renderQuiz(L);
 }
 
 function renderQuiz(L){
-let html=`<div class="score-bar"><span class="score">${quizCorrect}</span><span class="total">/ ${L.quiz.length}</span><div class="progress"><div class="progress-fill" style="width:${quizAnswered/L.quiz.length*100}%"></div></div></div><div class="quiz-container">`;
-L.quiz.forEach((q,qi)=>{
-const answered=qi<quizAnswered;
-html+=`<div class="quiz-q"><div class="q-text">${qi+1}. ${q.q}</div><div class="quiz-options">`;
-q.opts.forEach((o,oi)=>{
-let cls='quiz-opt';
-if(answered){cls+=' disabled';if(oi===q.ans)cls+=' correct'}
-html+=`<div class="${cls}" onclick="answerQuiz(${qi},${oi})">${o}</div>`;
-});
-html+=`</div></div>`;
-});
-return html+'</div>';
+  let h='<div class="quiz-modes">'+
+    '<button class="qmode-btn'+(quizMode==='meaning'?' active':'')+'" onclick="setQuizMode(\'meaning\')">Cantonese → English</button>'+
+    '<button class="qmode-btn'+(quizMode==='reverse'?' active':'')+'" onclick="setQuizMode(\'reverse\')">English → Cantonese</button>'+
+    '<button class="qmode-btn'+(quizMode==='jyutping'?' active':'')+'" onclick="setQuizMode(\'jyutping\')">Jyutping Match</button>'+
+    '</div>';
+
+  if(quizQuestions.length===0)return h+'<p style="color:var(--text2)">Select a quiz mode above.</p>';
+
+  h+='<div class="score-bar"><span class="score">'+quizCorrect+'</span><span class="total">/ '+quizQuestions.length+'</span><div class="progress"><div class="progress-fill" style="width:'+quizAnswered/quizQuestions.length*100+'%"></div></div>';
+  if(quizAnswered>=quizQuestions.length&&quizMode!=='meaning')h+='<button class="action-btn" onclick="setQuizMode(\''+quizMode+'\')" style="margin-left:auto;font-size:.8em">New Set</button>';
+  h+='</div><div class="quiz-container">';
+
+  quizQuestions.forEach((q,qi)=>{
+    const answered=qi<quizAnswered;
+    h+='<div class="quiz-q"><div class="q-text">'+(qi+1)+'. '+q.q+'</div><div class="quiz-options">';
+    q.opts.forEach((o,oi)=>{
+      let cls='quiz-opt';
+      if(answered){cls+=' disabled';if(oi===q.ans)cls+=' correct'}
+      h+='<div class="'+cls+'" onclick="answerQuiz('+qi+','+oi+')">'+o+'</div>';
+    });
+    h+='</div></div>';
+  });
+  return h+'</div>';
 }
 
 function answerQuiz(qi,oi){
-const L=LESSONS[currentLesson];
-if(qi<quizAnswered)return;
-const correct=oi===L.quiz[qi].ans;
-if(correct)quizCorrect++;
-quizAnswered++;
-const opts=document.querySelectorAll(`#sec-quiz .quiz-q:nth-child(${qi+1}) .quiz-opt`);
-opts.forEach((o,i)=>{o.classList.add('disabled');if(i===L.quiz[qi].ans)o.classList.add('correct');if(i===oi&&!correct)o.classList.add('wrong')});
-const bar=document.querySelector('.progress-fill');
-if(bar)bar.style.width=quizAnswered/L.quiz.length*100+'%';
-const score=document.querySelector('.score');
-if(score)score.textContent=quizCorrect;
+  if(qi<quizAnswered)return;
+  const q=quizQuestions[qi];
+  const correct=oi===q.ans;
+  if(correct)quizCorrect++;
+  quizAnswered++;
+  if(q.wordKey)markWord(q.wordKey,correct);
+  const L=LESSONS[currentLesson];
+  const sec=document.getElementById('sec-quiz');
+  const opts=sec.querySelectorAll('.quiz-q:nth-child('+(qi+1)+') .quiz-opt');
+  opts.forEach((o,i)=>{o.classList.add('disabled');if(i===q.ans)o.classList.add('correct');if(i===oi&&!correct)o.classList.add('wrong')});
+  const bar=sec.querySelector('.progress-fill');
+  if(bar)bar.style.width=quizAnswered/quizQuestions.length*100+'%';
+  const score=sec.querySelector('.score');
+  if(score)score.textContent=quizCorrect;
 }
+
+function renderProgress(L){
+  const st=getLessonStats(L);
+  const allTotal=LESSONS.reduce((s,l)=>s+l.vocab.length,0);
+  const allMastered=LESSONS.reduce((s,l)=>s+getLessonStats(l).mastered,0);
+  const allWords={};
+  LESSONS.forEach(l=>l.vocab.forEach(v=>{const w=progress.words[v.c];if(w)allWords[v.c]=w}));
+  const allUnique=Object.keys(allWords).length;
+
+  let h='<h2>📊 Progress — '+L.title+'</h2>';
+
+  h+='<div class="stats-grid">'+
+    '<div class="stat-card accent"><div class="num">'+st.total+'</div><div class="label">Total Words</div></div>'+
+    '<div class="stat-card green"><div class="num">'+st.mastered+'</div><div class="label">Mastered (Box 4-5)</div></div>'+
+    '<div class="stat-card yellow"><div class="num">'+st.learning+'</div><div class="label">Learning (Box 1-3)</div></div>'+
+    '<div class="stat-card blue"><div class="num">'+st.new+'</div><div class="label">Not Seen Yet</div></div>'+
+    '</div>';
+
+  const sk=progress.streak;
+  h+='<div class="streak-display"><span class="fire">🔥</span><span class="count">'+sk.count+'</span><span class="label">day streak</span></div>';
+
+  h+='<div class="mastery-chart"><h3>Mastery Distribution</h3>';
+  const maxBox=Math.max(...st.boxes,1);
+  for(let i=0;i<5;i++){
+    const pct=Math.round(st.boxes[i]/maxBox*100);
+    h+='<div class="chart-row"><div class="box-label">'+BOX_LABELS[i]+'</div><div class="bar-track"><div class="bar-fill" style="width:'+pct+'%;background:'+BOX_COLORS[i]+'"></div></div><div class="count">'+st.boxes[i]+'</div></div>';
+  }
+  h+='</div>';
+
+  h+='<p style="color:var(--text2);margin-bottom:20px;font-size:.9em">Across all lessons: '+allMastered+' mastered out of '+allTotal+' total words ('+allUnique+' unique words studied).</p>';
+
+  h+='<div class="action-row">'+
+    '<button class="action-btn" onclick="exportProgress()">📥 Export Progress</button>'+
+    '<button class="action-btn" onclick="document.getElementById(\'importFile\').click()">📤 Import Progress</button>'+
+    '<button class="action-btn danger" onclick="resetProgress()">🗑 Reset All Progress</button>'+
+    '<input type="file" id="importFile" class="hidden-input" accept=".json" onchange="importProgress(this)">'+
+    '</div>';
+
+  return h;
+}
+
+function exportProgress(){
+  const blob=new Blob([JSON.stringify(progress,null,2)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='cantonese-progress-'+new Date().toISOString().slice(0,10)+'.json';
+  a.click();
+}
+
+function importProgress(input){
+  const file=input.files[0];
+  if(!file)return;
+  const reader=new FileReader();
+  reader.onload=function(e){
+    try{
+      const d=JSON.parse(e.target.result);
+      if(d.version===1&&d.words){
+        progress=d;saveProgress();
+        initFcSession();
+        quizQuestions=LESSONS[currentLesson].quiz.map(q=>({...q}));
+        quizAnswered=0;quizCorrect=0;
+        render();
+      }else{alert('Invalid file format')}
+    }catch(err){alert('Invalid file format')}
+  };
+  reader.readAsText(file);
+}
+
+function resetProgress(){
+  if(!confirm('Reset all learning progress? This cannot be undone.'))return;
+  progress={version:1,streak:{lastDate:'',count:0},words:{}};
+  saveProgress();
+  initFcSession();
+  quizQuestions=LESSONS[currentLesson].quiz.map(q=>({...q}));
+  quizAnswered=0;quizCorrect=0;
+  render();
+}
+
+document.addEventListener('keydown',function(e){
+  const fc=document.getElementById('sec-flashcards');
+  if(!fc||!fc.classList.contains('active'))return;
+  if((e.key===' '||e.key==='Enter')&&!fcSessionDone&&fcQueue.length>0){
+    e.preventDefault();
+    const card=fc.querySelector('.flashcard');
+    if(card)fcFlip(card);
+  }else if(e.key==='ArrowRight'&&fcFlipped&&!fcSessionDone){
+    e.preventDefault();fcAnswer(true);
+  }else if(e.key==='ArrowLeft'&&fcFlipped&&!fcSessionDone){
+    e.preventDefault();fcAnswer(false);
+  }
+});
 
 init();
 </script>
