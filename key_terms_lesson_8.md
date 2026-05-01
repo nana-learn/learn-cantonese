@@ -1281,7 +1281,7 @@
 > *His tolerance resolved many contradictions.*
 
 7. 學會包容 (baau1 jung4)係成長嘅一部分。
-> hok6 wui2 baau1 jung4 hai6 sing4 zoeng2 ge3 jat1 bou6 fan6.
+> hok6 wui6 baau1 jung4 hai6 sing4 zoeng2 ge3 jat1 bou6 fan6.
 > *Learning to tolerate is part of growing up.*
 
 8. 佢哋用包容 (baau1 jung4)同理解解決咗分歧。
