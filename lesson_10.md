@@ -73,6 +73,18 @@
 >
 > *That sounds simple enough, but in practice it's really not easy. Sometimes as soon as you get nervous, everything falls apart.*
 
+**B:** 係啊，我以前都係咁，成日講嘢太急，想一次過講曬所有嘢，結果反而突出唔到重點，對方聽完仲更加迷糊，甚至要再問多次。
+
+> hai6 aa3, ngo5 ji5 cin4 dou1 hai6 gam2, sing4 jat6 gong2 je5 taai3 gap1, soeng2 jat1 ci3 gwo3 gong2 saai3 so2 jau5 je5, git3 gwo2 faan2 ji4 dat6 ceot1 m4 dou3 zung6 dim2, deoi3 fong1 ting1 jyun4 zung6 gang3 gaa1 mai4 wu4, sam6 zi3 jiu3 zoi3 man6 do1 ci3.
+>
+> *Yeah, I used to be the same — always speaking too fast, trying to say everything at once, but instead I couldn't get to the point, and the other person ended up even more confused, sometimes having to ask again.*
+
+**A:** 咁你後來係點樣改善嘅？有冇乜嘢方法？
+
+> gam3 nei5 hau6 loi4 hai6 dim2 joeng2 goi2 sin6 ge3? jau5 mou5 mat1 je5 fong1 faat3?
+>
+> *So how did you improve later? Is there some method?*
+
 **B:** 我慢慢學識喺開口之前先整理好思路，例如諗清楚最重要嘅觀點係乜嘢，先講重點，再補充細節。另外我都會留意對方嘅反應，例如佢有冇跟得上，會唔會露出疑惑嘅表情。
 
 > ngo5 maan6 maan2 hok6 sik1 hai2 hoi1 hau2 zi1 cin4 sin1 zing2 lei5 hou2 si1 lou6, lai6 jyu4 nam2 cing1 co2 zeoi3 zung6 jiu3 ge3 gun1 dim2 hai6 mat1 je5, sin1 gong2 zung6 dim2, zoi3 bou2 cung1 sai3 zit3. ling6 ngoi6 ngo5 dou1 wui6 lau4 ji3 deoi3 fong1 ge3 faan2 jing3, lai6 jyu4 keoi5 jau5 mou5 gan1 dak1 soeng5, wui2 m4 wui6 lou6 ceot1 ji4 waak6 ge3 biu2 cing4.
@@ -85,11 +97,35 @@
 >
 > *So if the other person thinks differently from you, or there's even some disagreement, how do you handle it?*
 
-**B:** 我通常會先耐心聽對方講曬，了解清楚佢嘅立場同原因，之後先再回應，而唔會一聽到唔同意就即刻反駁。咁樣大家都會覺得被尊重，氣氛都會好啲。溝通係雙向嘅，如果只係顧住自己講而唔理對方點諗，其實好難達到真正理解。只有建立喺尊重同理解嘅基礎上，表達先會真正發揮到作用。
+**B:** 我通常會先耐心聽對方講曬，了解清楚佢嘅立場同原因，之後先再回應，而唔會一聽到唔同意就即刻反駁。咁樣大家都會覺得被尊重，氣氛都會好啲。
 
-> ngo5 tung1 soeng4 wui6 sin1 noi6 sam1 ting3 deoi3 fong1 gong2 saai3, liu5 gaai2 cing1 co2 keoi5 ge3 lap6 coeng4 tung4 jyun4 jan1, zi1 hau6 sin1 zoi3 wui4 jing1, ji4 m4 wui6 jat1 ting3 dou3 m4 tung4 ji3 zau6 zik1 hak1 faan2 bok3. gam3 joeng6 daai6 gaa1 dou1 wui6 gok3 dak1 bei6 zyun1 zung6, hei3 fan1 dou1 wui6 hou2 di1. kau1 tung1 hai6 soeng1 hoeng3 ge3, jyu4 gwo2 zi2 hai6 gu3 zyu6 zi6 gei2 gong2 ji4 m4 lei5 deoi3 fong1 dim2 nam2, kei4 sat6 hou2 naan4 daat6 dou3 zan1 zing3 lei5 gaai2. zi2 jau5 gin3 lap6 hai2 zyun1 zung6 tung4 lei5 gaai2 ge3 gei1 co2 soeng6, biu2 daat6 sin1 wui6 zan1 zing3 faat3 fai1 dou3 zok3 jung6.
+> ngo5 tung1 soeng4 wui6 sin1 noi6 sam1 ting3 deoi3 fong1 gong2 saai3, liu5 gaai2 cing1 co2 keoi5 ge3 lap6 coeng4 tung4 jyun4 jan1, zi1 hau6 sin1 zoi3 wui4 jing1, ji4 m4 wui6 jat1 ting3 dou3 m4 tung4 ji3 zau6 zik1 hak1 faan2 bok3. gam3 joeng6 daai6 gaa1 dou1 wui6 gok3 dak1 bei6 zyun1 zung6, hei3 fan1 dou1 wui6 hou2 di1.
 >
-> *I usually first listen to the other person fully, understand their position and reasons, and only then respond — rather than rebutting as soon as I hear disagreement. That way everyone feels respected and the atmosphere improves. Communication is two-way — if you only focus on yourself and ignore what the other person thinks, it's really hard to reach true understanding. Only when expression is built on a foundation of respect and understanding can it truly serve its purpose.*
+> *I usually first listen to the other person fully, understand their position and reasons, and only then respond — rather than rebutting as soon as I hear disagreement. That way everyone feels respected and the atmosphere improves.*
+
+**A:** 咁樣聽落，其實良好嘅溝通唔單止係識得講，仲要識得聽同埋觀察對方。
+
+> gam3 joeng2 ting1 lok6, kei4 sat6 loeng4 hou2 ge3 kau1 tung1 m4 daan1 zi2 hai6 sik1 dak1 gong2, zung6 jiu3 sik1 dak1 teng3 tung4 maai4 gun1 caat3 deoi3 fong1.
+>
+> *So it sounds like good communication isn't just about being able to speak, but also about listening and observing the other person.*
+
+**B:** 冇錯，溝通係雙向嘅。如果只係顧住自己講，而唔理對方點諗，其實好難達到真正理解。只有建立喺尊重同理解嘅基礎上，表達先會真正發揮到作用。
+
+> mou5 co3, kau1 tung1 hai6 soeng1 hoeng3 ge3. jyu4 gwo2 zi2 hai6 gu3 zyu6 zi6 gei2 gong2, ji4 m4 lei5 deoi3 fong1 dim2 nam2, kei4 sat6 hou2 naan4 daat6 dou3 zan1 zing3 lei5 gaai2. zi2 jau5 gin3 lap6 hai2 zyun1 zung6 tung4 lei5 gaai2 ge3 gei1 co2 soeng6, biu2 daat6 sin1 wui6 zan1 zing3 faat3 fai1 dou3 zok3 jung6.
+>
+> *That's right, communication is two-way. If you only focus on yourself and ignore what the other person thinks, it's really hard to reach true understanding. Only when expression is built on a foundation of respect and understanding can it truly serve its purpose.*
+
+**A:** 聽你咁講，我都覺得之後開會要更加留意自己點樣表達，唔單止講清楚，仲要講得有條理。
+
+> ting3 nei5 gam2 gong2, ngo5 dou1 gok3 dak1 zi1 hau6 hoi1 wui2 jiu3 gang3 gaa1 lau4 ji3 zi6 gei2 dim2 joeng2 biu2 daat6, m4 daan1 zi2 gong2 cing1 co2, zung6 jiu3 gong2 dak1 jau5 tiu4 lei5.
+>
+> *Hearing you say that, I think from now on I'll pay more attention to how I express myself in meetings — not just speaking clearly, but also speaking with logical structure.*
+
+**B:** 係啊，其實只要慢慢練習，多啲反思自己講嘢嘅方式，同埋多啲觀察人哋點樣表達，溝通能力一定會進步，開會都會順暢好多。
+
+> hai6 aa3, kei4 sat6 zi2 jiu3 maan6 maan2 lin6 zaap6, do1 di1 faan2 si1 zi6 gei2 gong2 je5 ge3 fong1 sik1, tung4 maai4 do1 di1 gun1 caat3 jan4 dei6 dim2 joeng2 biu2 daat6, kau1 tung1 nang4 lik6 jat1 ding6 wui6 zeon3 bou6, hoi1 wui2 dou1 wui6 seon6 coeng3 hou2 do1.
+>
+> *Yeah, as long as you practice slowly, reflect more on your own way of speaking, and observe how others express themselves, your communication skills will definitely improve, and meetings will go much more smoothly.*
 
 ---
 
