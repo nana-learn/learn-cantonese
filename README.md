@@ -50,6 +50,11 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L28 睇醫生 | 掛號、病假紙、食藥 |
 | L29 返工 | 搞掂、加班、交報告 |
 | L30 週末 | 宅、行山、不如、隨緣 |
+| L31 口頭禪 | 即係、唔係呀嘛、算啦 |
+| L32 否定 | 唔冇未咪唔好 |
+| L33 連詞 | 因為所以雖然如果 |
+| L34 方位 | 上落入出 隔離對面 |
+| L35 報數 | phone numbers, 第, 萬 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 
