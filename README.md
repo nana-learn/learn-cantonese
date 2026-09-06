@@ -60,6 +60,11 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L38 投訴 | complain, 經理, 換碟 |
 | L39 搬家 | 按金, 紙箱, 鄰居 |
 | L40 開口日 | review: 敢講, 用得先至記得 |
+| L41 過節 | 利是、團年飯、中秋 |
+| L42 畀人 | passive 畀人鬧 / 讚 |
+| L43 上網 | 中伏、斷網、假消息 |
+| L44 屋邨 | 樓下、保安、夠住 |
+| L45 以前 | 嗰陣、細個、唔同咗 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 
