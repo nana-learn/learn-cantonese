@@ -964,7 +964,7 @@ quiz:[
 ];
 
 const LEVELS=[
-{id:101,title:"L1 基礎",subtitle:"HSK1 · Greetings, names, eat and drink",
+{id:101,title:"L1 基礎",subtitle:"Greetings, names, eat and drink",
 vocab:[
 {c:"你好",j:"nei5 hou2",e:"hello"},
 {c:"早晨",j:"zou2 san4",e:"good morning"},
@@ -1019,7 +1019,7 @@ quiz:[
 {q:'"想" (soeng2) means:',opts:["to know","to want","to be","to go"],ans:1}
 ]},
 
-{id:102,title:"L2 日常",subtitle:"HSK2 · Time, work, shopping, getting around",
+{id:102,title:"L2 日常",subtitle:"Time, work, shopping, getting around",
 vocab:[
 {c:"而家",j:"ji4 gaa1",e:"now"},
 {c:"聽日",j:"ting1 jat6",e:"tomorrow"},
@@ -1075,7 +1075,7 @@ quiz:[
 {q:'"平" (peng4) means:',opts:["flat","cheap","far","like"],ans:1}
 ]},
 
-{id:103,title:"L3 生活",subtitle:"HSK3 · Food, weather, feeling ill, travel",
+{id:103,title:"L3 生活",subtitle:"Food, weather, feeling ill, travel",
 vocab:[
 {c:"天氣",j:"tin1 hei3",e:"weather"},
 {c:"熱",j:"jit6",e:"hot"},
@@ -1130,7 +1130,7 @@ quiz:[
 {q:'"如果…就…" is used for:',opts:["past tense","if… then…","comparisons","orders"],ans:1}
 ]},
 
-{id:104,title:"L4 進階",subtitle:"HSK4 · Opinions, comparing, deciding (renting)",
+{id:104,title:"L4 進階",subtitle:"Opinions, comparing, deciding (renting)",
 vocab:[
 {c:"覺得",j:"gok3 dak1",e:"to feel / think"},
 {c:"同意",j:"tung4 ji3",e:"to agree"},
@@ -3512,7 +3512,8 @@ function renderAchievements(){
     { icon: '💪', name: 'Consistent', desc: '7-day streak', check: stats.streak >= 7 },
     { icon: '✍️', name: 'Penman', desc: 'Practice 5 chars', check: stats.practiced >= 5 },
     { icon: '🖌️', name: 'Calligrapher', desc: 'Practice 20 chars', check: stats.practiced >= 20 },
-    { icon: '🏆', name: 'Explorer', desc: '35 everyday lessons ready', check: true },
+    { icon: '🏆', name: 'Explorer', desc: 'Finish 5 lesson quizzes', check: Object.keys(progress.quizzes||{}).length>=5 },
+    { icon: '🎓', name: 'Graduate', desc: 'Finish 15 lesson quizzes', check: Object.keys(progress.quizzes||{}).length>=15 },
   ];
   const unlocked = achs.filter(a => a.check).length;
   let h = '<div class="match-score" style="margin-top:24px"><span><span class="pairs">' + unlocked + '/' + achs.length + '</span> achievements</span></div>';
