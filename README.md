@@ -91,6 +91,9 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L69 颱風 | 幾號波、停工停課 |
 | L70 助詞2 | 噃之嘛話之你 |
 | L71 量詞2 | 餐場封串層 |
+| L72 常餐 | 餐蛋麵、鴛鴦、走冰 |
+| L73 超市 | 過期、特價、環保袋 |
+| L74 道歉 | 對唔住、唔係有心 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 
