@@ -89,6 +89,8 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L67 東南西北 | 港島九龍、對面海 |
 | L68 講價 | 九折、當熟客、抵 |
 | L69 颱風 | 幾號波、停工停課 |
+| L70 助詞2 | 噃之嘛話之你 |
+| L71 量詞2 | 餐場封串層 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 
