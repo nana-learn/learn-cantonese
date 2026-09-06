@@ -94,6 +94,8 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L72 常餐 | 餐蛋麵、鴛鴦、走冰 |
 | L73 超市 | 過期、特價、環保袋 |
 | L74 道歉 | 對唔住、唔係有心 |
+| L75 祝福 | 生日快樂、一路順風 |
+| L76 季節 | 春夏秋冬、潮濕 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 
