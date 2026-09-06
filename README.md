@@ -65,6 +65,11 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L43 上網 | 中伏、斷網、假消息 |
 | L44 屋邨 | 樓下、保安、夠住 |
 | L45 以前 | 嗰陣、細個、唔同咗 |
+| L46 口語 | 係嘅咗唔冇 — stop sounding Mandarin |
+| L47 比較 | 過、冇咁、寧願、遠遠 |
+| L48 請求 | 麻煩你、勞駕、睇住 |
+| L49 過關 | airport, 護照, 托運 |
+| L50 畢業 | 敢講, 加油, 唔准英文 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 
