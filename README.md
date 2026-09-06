@@ -101,6 +101,9 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L79 嚟港 | visiting-friend review mix |
 | L80 商場 | 扶手電梯、人龍 |
 | L81 羨慕 | 羨慕 vs 妒忌、睇開啲 |
+| L82 辦公室 | 當機、印、附件 |
+| L83 全部 | 大部分、連…都、至少 |
+| L84 粥粉麵 | 撈 vs 湯、乾炒牛河 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 
