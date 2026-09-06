@@ -23,6 +23,10 @@ header p{color:var(--text2);margin-top:5px}
 .ex-en{color:var(--text2);font-size:.8em;margin-top:2px}
 .study-tip{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:12px 14px;margin-bottom:16px;color:var(--text2);font-size:.85em}
 .study-tip b{color:var(--accent2)}
+.due-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 12px;background:var(--surface);border:1px solid var(--surface2);border-radius:8px;margin-bottom:6px;cursor:pointer;font-size:.9em}
+.due-row:hover{border-color:var(--accent)}
+.due-n{color:var(--yellow);font-weight:700;min-width:3.5em;text-align:right}
+.due-n.zero{color:var(--text2);font-weight:400}
 
 .tab:hover{border-color:var(--accent);color:var(--text)}
 .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
@@ -2378,6 +2382,20 @@ function lessonDone(id){
 function persistLesson(){
   localStorage.setItem('cantonese-lesson',JSON.stringify({mode:studyMode,i:currentLesson}));
 }
+function jumpStudy(i,section){
+  if(studyMode!=='levels'){
+    studyMode='levels';
+    localStorage.setItem('cantonese-mode','levels');
+    LESSONS=LEVELS.filter(Boolean);
+    document.getElementById('mode-levels').classList.toggle('active',true);
+    document.getElementById('mode-course').classList.toggle('active',false);
+  }
+  currentSection=section||'flashcards';
+  switchLesson(i);
+}
+function dueCount(L){
+  return L.vocab.filter(v=>isDue(v.c)).length;
+}
 function rebuildTabs(){
   const tabs=document.getElementById('lessonTabs');
   tabs.innerHTML='';
@@ -2625,7 +2643,7 @@ function renderFlashcards(L){
     masteryDots(v.c)+
     '<div class="flashcard'+(fcFlipped?' flipped':'')+'" onclick="fcFlip(this)"><div class="flashcard-inner">'+
     '<div class="flashcard-face flashcard-front"><div class="big">'+v.c+'</div><div class="hint">Click to reveal</div></div>'+
-    '<div class="flashcard-face flashcard-back"><div class="big">'+v.j+'</div><div class="sub">'+v.e+'</div></div>'+
+    '<div class="flashcard-face flashcard-back"><div class="big">'+v.j+'</div><div class="sub">'+v.e+'</div>'+(function(){const ex=exampleFor(L,v.c);return ex?'<div class="hint" style="margin-top:8px">'+ex.c+'</div>':'';})()+'</div>'+
     '</div></div>'+
     '<div class="fc-controls">'+
     '<button class="fc-btn skip" onclick="fcAnswer(false)"'+(fcFlipped?'':' disabled')+'>Don\'t Know</button>'+
@@ -2764,6 +2782,17 @@ function renderProgress(L){
 
   const sk=progress.streak;
   h+='<div class="streak-display"><span class="fire">🔥</span><span class="count">'+sk.count+'</span><span class="label">day streak</span></div>';
+
+  if(studyMode==='levels'){
+    const dueTotal=LEVELS.reduce((s,l)=>s+dueCount(l),0);
+    h+='<div class="mastery-chart"><h3>Due today — tap a lesson to drill</h3>';
+    h+='<p style="color:var(--text2);font-size:.85em;margin-bottom:10px">'+dueTotal+' cards waiting across everyday lessons.</p>';
+    LEVELS.forEach((l,i)=>{
+      const n=dueCount(l);
+      h+='<div class="due-row" onclick="jumpStudy('+i+',\'flashcards\')"><span>'+(lessonDone(l.id)?'✓ ':'')+l.title+'</span><span class="due-n'+(n===0?' zero':'')+'">'+(n?n+' due':'caught up')+'</span></div>';
+    });
+    h+='</div>';
+  }
 
   h+='<div class="mastery-chart"><h3>Mastery Distribution</h3>';
   const maxBox=Math.max(...st.boxes,1);
