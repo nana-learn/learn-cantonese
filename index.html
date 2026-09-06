@@ -14,11 +14,31 @@ header h1{font-size:2em;background:linear-gradient(135deg,var(--accent),var(--ac
 header p{color:var(--text2);margin-top:5px}
 .tabs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
 .tab{padding:10px 20px;background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);cursor:pointer;color:var(--text2);font-size:.95em;transition:all .2s}
-#lessonTabs{gap:6px}
-#lessonTabs .tab{padding:7px 12px;font-size:.82em}
-#lessonBand{justify-content:center;margin-bottom:8px}
-#lessonBand .tab{padding:6px 14px;font-size:.8em}
-#lessonTabs .tab.done{border-color:var(--green)}
+.unit-row{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:10px}
+.unit-chip{padding:6px 12px;border-radius:16px;border:1px solid var(--surface2);background:var(--surface);color:var(--text2);cursor:pointer;font-size:.78em;transition:all .2s}
+.unit-chip:hover{border-color:var(--accent);color:var(--text)}
+.unit-chip.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.unit-chip .hint{display:none}
+.lesson-search{width:100%;max-width:360px;margin:0 auto 12px;display:block;padding:8px 12px;border-radius:8px;border:1px solid var(--surface2);background:var(--surface);color:var(--text);font-size:.9em}
+.lesson-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:6px;margin-bottom:18px}
+.lesson-grid.wide{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+.lesson-cell{padding:8px 6px;text-align:center;background:var(--surface);border:1px solid var(--surface2);border-radius:8px;cursor:pointer;font-size:.72em;line-height:1.25;color:var(--text2);transition:all .15s;min-height:58px}
+.lesson-cell:hover{border-color:var(--accent);color:var(--text)}
+.lesson-cell .n{display:block;font-weight:700;color:var(--accent2);font-size:1.05em;margin-bottom:2px}
+.lesson-cell.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.lesson-cell.active .n{color:#fff}
+.lesson-cell.done{border-color:var(--green)}
+.lesson-cell.due .n{color:var(--yellow)}
+.lesson-hero{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:16px 18px;margin-bottom:16px}
+.lesson-hero-kicker{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:4px}
+.lesson-num{font-weight:700;color:var(--accent2);font-size:.85em;letter-spacing:.04em}
+.pill{font-size:.7em;padding:2px 8px;border-radius:10px;background:var(--surface2);color:var(--text2)}
+.pill.done{background:rgba(0,184,148,.18);color:var(--green)}
+.pill.due{background:rgba(253,203,110,.15);color:var(--yellow)}
+.lesson-hero-title{font-size:1.45em;margin:0 0 4px;line-height:1.25}
+.lesson-hero-sub{color:var(--text2);margin:0 0 6px;font-size:.95em}
+.lesson-hero-meta{color:var(--text2);font-size:.8em;margin:0}
+.dlg-n{display:inline-block;min-width:1.4em;color:var(--text2);font-size:.75em;font-weight:600}
 .lesson-nav{display:flex;justify-content:space-between;gap:10px;margin-top:22px;flex-wrap:wrap}
 .lesson-nav .action-btn{flex:1;min-width:140px;text-align:center}
 .ex-line{margin-top:8px;font-size:.85em;color:var(--text);line-height:1.4}
@@ -269,14 +289,15 @@ h2{font-size:1.4em;margin-bottom:16px}
 <div class="app">
 <header>
 <h1>粵語學習</h1>
-<p>Speak Hong Kong Cantonese — 86 everyday lessons, then the course</p>
+<p>Speak Hong Kong Cantonese — everyday first, then the course</p>
 </header>
 <div class="tabs mode-row" id="modeRow">
-  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 Everyday L1–L86</div>
+  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 Everyday</div>
   <div class="tab" id="mode-course" onclick="setMode('course')">📘 Course 1–11</div>
 </div>
-<div class="tabs" id="lessonBand"></div>
-<div class="tabs" id="lessonTabs"></div>
+<div id="unitRow" class="unit-row"></div>
+<input id="lessonSearch" class="lesson-search" placeholder="Find a lesson…" oninput="filterLessons(this.value)" autocomplete="off">
+<div id="lessonGrid" class="lesson-grid"></div>
 <div id="content"></div>
 </div>
 <script>
@@ -5535,7 +5556,7 @@ const BOX_LABELS=['Box 1 — New','Box 2 — Soon','Box 3 — Familiar','Box 4 �
 let progress=loadProgress();
 let currentLesson=0;
 let lessonBand=0;
-let showJp=false,showEn=false;
+let showJp=localStorage.getItem('cantonese-jp')==='1',showEn=localStorage.getItem('cantonese-en')==='1';
 let currentSection='dialogue';
 let fcMode='due',fcQueue=[],fcQueuePos=0,fcFlipped=false,fcSessionDone=false;
 let fcSessionCorrect=0,fcSessionWrong=0,fcMistakes=[];
@@ -5628,45 +5649,123 @@ function jumpStudy(i,section){
 function dueCount(L){
   return L.vocab.filter(v=>isDue(v.c)).length;
 }
+const UNITS=[
+  {name:'Start', hint:'Hello → classifiers', a:0, b:9},
+  {name:'Core', hint:'Routine, particles, questions', a:10, b:19},
+  {name:'Street', hint:'Food, clock, MTR', a:20, b:29},
+  {name:'Voice', hint:'Fillers, 係嘅咗唔冇', a:30, b:45},
+  {name:'World', hint:'Festivals, airport', a:46, b:54},
+  {name:'Places', hint:'Hotel to address', a:55, b:64},
+  {name:'Body', hint:'Pain, taste, typhoon', a:65, b:73},
+  {name:'More', hint:'Mall, office, degree', a:74, b:85}
+];
+let lessonQuery='';
+function displayTitle(L){
+  return String(L.title||'').replace(/^L\d+\s+/,'');
+}
+function lessonNum(L,i){
+  const m=String(L.title||'').match(/^L(\d+)/);
+  return m?m[1]:String(i+1);
+}
+function unitIndex(i){
+  const u=UNITS.findIndex(x=>i>=x.a&&i<=x.b);
+  return u<0?UNITS.length-1:u;
+}
+function filterLessons(q){
+  lessonQuery=(q||'').trim().toLowerCase();
+  rebuildTabs();
+}
+function shuffledQuiz(q){
+  if(!q||!q.opts)return q;
+  const pairs=q.opts.map((o,i)=>({o,ok:i===q.ans}));
+  const s=shuffle(pairs);
+  return {q:q.q,opts:s.map(x=>x.o),ans:s.findIndex(x=>x.ok),wordKey:q.wordKey};
+}
+function loadLessonQuiz(i){
+  const L=LESSONS[i];
+  quizMode='meaning';
+  quizQuestions=(L.quiz||[]).map(q=>shuffledQuiz({...q}));
+  quizAnswered=0;quizCorrect=0;
+}
 function rebuildTabs(){
-  const bandEl=document.getElementById('lessonBand');
-  if(bandEl){
-    if(studyMode==='levels'){
-      const bands=Math.ceil(LESSONS.length/10);
-      lessonBand=Math.max(0,Math.min(bands-1,Math.floor(currentLesson/10)));
-      bandEl.style.display='flex';
-      bandEl.innerHTML='';
-      for(let b=0;b<bands;b++){
-        const t=document.createElement('div');
-        const from=b*10+1,to=Math.min((b+1)*10,LESSONS.length);
-        t.className='tab'+(b===lessonBand?' active':'');
-        t.textContent='L'+from+'–'+to;
-        t.onclick=()=>{currentLesson=b*10;switchLesson(currentLesson);};
-        bandEl.appendChild(t);
-      }
-    }else{
-      bandEl.style.display='none';
-      bandEl.innerHTML='';
-    }
+  const modeEl=document.getElementById('mode-levels');
+  if(modeEl) modeEl.textContent='🌱 Everyday · '+LEVELS.length;
+  const unitEl=document.getElementById('unitRow');
+  const grid=document.getElementById('lessonGrid');
+  const search=document.getElementById('lessonSearch');
+  if(!grid)return;
+  if(studyMode!=='levels'){
+    if(unitEl){unitEl.style.display='none';unitEl.innerHTML='';}
+    if(search)search.style.display='none';
+    grid.classList.add('wide');
+    grid.innerHTML='';
+    LESSONS.forEach((l,i)=>{
+      const cell=document.createElement('div');
+      cell.className='lesson-cell'+(i===currentLesson?' active':'')+(lessonDone(l.id)?' done':'');
+      cell.innerHTML='<span class="n">'+(i+1)+'</span>'+displayTitle(l).replace(/^第.+課：/,'');
+      cell.title=l.subtitle||l.title;
+      cell.onclick=()=>switchLesson(i);
+      grid.appendChild(cell);
+    });
+    return;
   }
-  const tabs=document.getElementById('lessonTabs');
-  tabs.innerHTML='';
+  grid.classList.remove('wide');
+  if(search)search.style.display='block';
+  lessonBand=unitIndex(currentLesson);
+  if(unitEl){
+    unitEl.style.display='flex';
+    unitEl.innerHTML='';
+    UNITS.forEach((u,bi)=>{
+      const chip=document.createElement('div');
+      chip.className='unit-chip'+(bi===lessonBand&&!lessonQuery?' active':'');
+      chip.textContent=u.name;
+      chip.title=u.hint+' · L'+(u.a+1)+'–L'+(u.b+1);
+      chip.onclick=()=>{
+        lessonQuery='';
+        if(search)search.value='';
+        if(currentLesson<u.a||currentLesson>u.b) switchLesson(u.a);
+        else {lessonBand=bi;rebuildTabs();}
+      };
+      unitEl.appendChild(chip);
+    });
+  }
+  const q=lessonQuery;
+  const u=UNITS[lessonBand]||UNITS[0];
+  grid.innerHTML='';
   LESSONS.forEach((l,i)=>{
-    if(studyMode==='levels'&&(i<lessonBand*10||i>=lessonBand*10+10))return;
-    const t=document.createElement('div');
-    t.className='tab'+(i===currentLesson?' active':'')+(lessonDone(l.id)?' done':'');
-    t.textContent=(lessonDone(l.id)?'✓ ':'')+l.title;
-    t.onclick=()=>switchLesson(i);
-    tabs.appendChild(t);
+    const title=displayTitle(l);
+    const hay=(title+' '+(l.subtitle||'')+' '+l.title).toLowerCase();
+    if(q){ if(hay.indexOf(q)<0 && String(lessonNum(l,i)).indexOf(q)<0) return; }
+    else if(i<u.a||i>u.b) return;
+    const cell=document.createElement('div');
+    const due=dueCount(l);
+    cell.className='lesson-cell'+(i===currentLesson?' active':'')+(lessonDone(l.id)?' done':'')+(due?' due':'');
+    cell.innerHTML='<span class="n">'+(lessonDone(l.id)?'✓ ':'')+lessonNum(l,i)+'</span>'+title;
+    cell.title=(l.subtitle||title)+(due?' · '+due+' due':'');
+    cell.onclick=()=>switchLesson(i);
+    grid.appendChild(cell);
   });
-  const active=tabs.querySelector('.tab.active');
-  if(active) active.scrollIntoView({inline:'nearest',block:'nearest',behavior:'smooth'});
+}
+function lessonHero(L){
+  const n=lessonNum(L,currentLesson);
+  const name=displayTitle(L);
+  const due=dueCount(L);
+  const done=lessonDone(L.id);
+  return '<div class="lesson-hero">'+
+    '<div class="lesson-hero-kicker"><span class="lesson-num">Lesson '+n+' of '+LESSONS.length+'</span>'+
+    (done?'<span class="pill done">Quiz done</span>':'')+
+    (due?'<span class="pill due">'+due+' to review</span>':'')+
+    '</div>'+
+    '<h2 class="lesson-hero-title">'+name+'</h2>'+
+    '<p class="lesson-hero-sub">'+(L.subtitle||'')+'</p>'+
+    '<p class="lesson-hero-meta">'+L.vocab.length+' words · '+L.dialogue.length+' lines · '+L.grammar.length+' patterns</p>'+
+    '</div>';
 }
 function lessonNav(){
   const i=currentLesson,n=LESSONS.length;
   let h='<div class="lesson-nav">';
-  h+=i>0?'<button class="action-btn" onclick="switchLesson('+(i-1)+')">← '+LESSONS[i-1].title+'</button>':'<span></span>';
-  h+=i<n-1?'<button class="action-btn" onclick="switchLesson('+(i+1)+')">'+LESSONS[i+1].title+' →</button>':'<span></span>';
+  h+=i>0?'<button class="action-btn" onclick="switchLesson('+(i-1)+')">← '+lessonNum(LESSONS[i-1],i-1)+' '+displayTitle(LESSONS[i-1])+'</button>':'<span></span>';
+  h+=i<n-1?'<button class="action-btn" onclick="switchLesson('+(i+1)+')">'+lessonNum(LESSONS[i+1],i+1)+' '+displayTitle(LESSONS[i+1])+' →</button>':'<span></span>';
   return h+'</div><div class="kb-hint" style="margin-top:8px">[ and ] : previous / next lesson</div>';
 }
 function setMode(m){
@@ -5679,7 +5778,7 @@ function setMode(m){
   currentLesson=0;currentSection='dialogue';
   showJp=false;showEn=false;
   quizMode='meaning';quizAnswered=0;quizCorrect=0;
-  quizQuestions=LESSONS[0].quiz.map(q=>({...q}));
+  loadLessonQuiz(0);
   initFcSession();
   rebuildTabs();
   render();
@@ -5693,19 +5792,16 @@ function init(){
   }catch(e){}
   rebuildTabs();
   initFcSession();
-  quizQuestions=LESSONS[currentLesson].quiz.map(q=>({...q}));
+  loadLessonQuiz(currentLesson);
   render();
 }
 
 function switchLesson(i){
   currentLesson=i;
   persistLesson();
-  document.querySelectorAll('#lessonTabs .tab').forEach((t,idx)=>t.classList.toggle('active',idx===i));
-  showJp=false;showEn=false;
   initFcSession();
-  quizMode='meaning';
-  quizQuestions=LESSONS[i].quiz.map(q=>({...q}));
-  quizAnswered=0;quizCorrect=0;
+  loadLessonQuiz(i);
+  rebuildTabs();
   render();
 }
 
@@ -5713,6 +5809,7 @@ function render(){
   const L=LESSONS[currentLesson];
   const s=currentSection;
   document.getElementById('content').innerHTML=
+    lessonHero(L)+
     '<div class="tabs" style="margin-bottom:16px">'+
     '<div class="tab'+(s==='dialogue'?' active':'')+'" onclick="showSection(\'dialogue\',this)">💬 Dialogue</div>'+
     '<div class="tab'+(s==='vocab'?' active':'')+'" onclick="showSection(\'vocab\',this)">📚 Vocabulary</div>'+
@@ -5760,11 +5857,13 @@ function speak(text){
 
 function toggleJp(){
   showJp=!showJp;
+  localStorage.setItem('cantonese-jp',showJp?'1':'0');
   document.querySelectorAll('.dialogue-line .jyutping,.sentence-card .sn-jp').forEach(e=>e.style.display=showJp?'block':'none');
   const b=document.getElementById('btn-jp');if(b)b.classList.toggle('on',showJp);
 }
 function toggleEn(){
   showEn=!showEn;
+  localStorage.setItem('cantonese-en',showEn?'1':'0');
   document.querySelectorAll('.dialogue-line .english,.sentence-card .sn-en').forEach(e=>e.style.display=showEn?'block':'none');
   const b=document.getElementById('btn-en');if(b)b.classList.toggle('on',showEn);
 }
@@ -5784,7 +5883,7 @@ function splitSentences(text){
 }
 function allUnits(){return LEVELS.concat(COURSE)}
 function renderDialogue(L){
-  let h='<p style="color:var(--text2);margin-bottom:12px">'+L.subtitle+'</p><div class="study-tip"><b>How to study:</b> listen twice with 🔊 · then turn on Jyutping · then English last. Shadow out loud.</div><div class="toggle-row"><button id="btn-jp" class="toggle-btn'+(showJp?' on':'')+'" onclick="toggleJp()">Jyutping</button><button id="btn-en" class="toggle-btn'+(showEn?' on':'')+'" onclick="toggleEn()">English</button><button class="toggle-btn" onclick="toggleJp();toggleEn()">Toggle All</button><button id="btn-slow" class="toggle-btn'+(speakRate<0.7?' on':'')+'" onclick="toggleSlow()">Slow 0.6×</button></div>';
+  let h='<div class="study-tip"><b>How to study:</b> listen twice with 🔊 · Jyutping on · English last. Shadow out loud. [ and ] change lesson.</div><div class="toggle-row"><button id="btn-jp" class="toggle-btn'+(showJp?' on':'')+'" onclick="toggleJp()">Jyutping</button><button id="btn-en" class="toggle-btn'+(showEn?' on':'')+'" onclick="toggleEn()">English</button><button class="toggle-btn" onclick="toggleJp();toggleEn()">Toggle All</button><button id="btn-slow" class="toggle-btn'+(speakRate<0.7?' on':'')+'" onclick="toggleSlow()">Slow 0.6×</button></div>';
   h+='<div class="sentence-mode-row"><button class="sentence-mode-btn'+(dialogueMode==='full'?' active':'')+'" onclick="setDialogueMode(\'full\')">Full</button><button class="sentence-mode-btn'+(dialogueMode==='sentence'?' active':'')+'" onclick="setDialogueMode(\'sentence\')">Sentence by Sentence</button></div>';
   if(dialogueMode==='sentence'){
     let sn=0;
@@ -5798,8 +5897,8 @@ function renderDialogue(L){
       }
     });
   }else{
-    L.dialogue.forEach(d=>{
-      h+='<div class="dialogue-line"><div class="speaker"><span class="spk-'+d.speaker.toLowerCase()+'">'+d.speaker+'</span> <button class="speak-btn" data-speak="'+d.c.replace(/"/g,'&quot;')+'" onclick="speak(this.dataset.speak)" title="Listen">🔊</button></div><div class="cantonese">'+d.c+'</div><div class="jyutping" style="display:'+(showJp?'block':'none')+'">'+colorJyutping(d.j)+'</div><div class="english" style="display:'+(showEn?'block':'none')+'">'+d.e+'</div></div>';
+    L.dialogue.forEach((d,di)=>{
+      h+='<div class="dialogue-line"><div class="speaker"><span class="dlg-n">'+(di+1)+'</span> <span class="spk-'+d.speaker.toLowerCase()+'">'+d.speaker+'</span> <button class="speak-btn" data-speak="'+d.c.replace(/"/g,'&quot;')+'" onclick="speak(this.dataset.speak)" title="Listen">🔊</button></div><div class="cantonese">'+d.c+'</div><div class="jyutping" style="display:'+(showJp?'block':'none')+'">'+colorJyutping(d.j)+'</div><div class="english" style="display:'+(showEn?'block':'none')+'">'+d.e+'</div></div>';
     });
   }
   return h;
@@ -5956,7 +6055,7 @@ function generateAutoQuiz(L,mode){
 function setQuizMode(mode){
   quizMode=mode;quizAnswered=0;quizCorrect=0;
   const L=LESSONS[currentLesson];
-  quizQuestions=mode==='meaning'?L.quiz.map(q=>({...q})):generateAutoQuiz(L,mode);
+  quizQuestions=mode==='meaning'?(L.quiz||[]).map(q=>shuffledQuiz({...q})):generateAutoQuiz(L,mode);
   document.getElementById('sec-quiz').innerHTML=renderQuiz(L);
 }
 
@@ -6050,7 +6149,8 @@ function renderProgress(L){
     h+='<p style="color:var(--text2);font-size:.85em;margin-bottom:10px">'+dueTotal+' cards waiting across everyday lessons.</p>';
     LEVELS.forEach((l,i)=>{
       const n=dueCount(l);
-      h+='<div class="due-row" onclick="jumpStudy('+i+',\'flashcards\')"><span>'+(lessonDone(l.id)?'✓ ':'')+l.title+'</span><span class="due-n'+(n===0?' zero':'')+'">'+(n?n+' due':'caught up')+'</span></div>';
+      if(!n)return;
+      h+='<div class="due-row" onclick="jumpStudy('+i+',\'flashcards\')"><span>'+lessonNum(l,i)+' '+displayTitle(l)+'</span><span class="due-n">'+n+' due</span></div>';
     });
     h+='</div>';
   }
@@ -6093,7 +6193,7 @@ function importProgress(input){
       if(d.version===1&&d.words){
         progress=d;saveProgress();
         initFcSession();
-        quizQuestions=LESSONS[currentLesson].quiz.map(q=>({...q}));
+        loadLessonQuiz(currentLesson);
         quizAnswered=0;quizCorrect=0;
         render();
       }else{alert('Invalid file format')}
@@ -6107,7 +6207,7 @@ function resetProgress(){
   progress={version:1,streak:{lastDate:'',count:0},words:{},quizzes:{}};
   saveProgress();
   initFcSession();
-  quizQuestions=LESSONS[currentLesson].quiz.map(q=>({...q}));
+  loadLessonQuiz(currentLesson);
   quizAnswered=0;quizCorrect=0;
   render();
 }

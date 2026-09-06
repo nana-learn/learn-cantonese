@@ -16,7 +16,7 @@ A single-page study app covering classroom lessons with:
 
 ## How to study
 
-Start on **Everyday L1–L86** (Hong Kong spoken Cantonese). Do them in order:
+Start on **Everyday** (Hong Kong spoken Cantonese). Units across the top, numbered lesson cells below, search to jump. Do them in order:
 
 | Lesson | What you get |
 |--------|----------------|
