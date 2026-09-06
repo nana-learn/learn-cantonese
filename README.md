@@ -70,6 +70,11 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L48 請求 | 麻煩你、勞駕、睇住 |
 | L49 過關 | airport, 護照, 托運 |
 | L50 畢業 | 敢講, 加油, 唔准英文 |
+| L51 酒店 | 訂房、叫醒、寄存 |
+| L52 海邊 | 游水、防曬、潮水 |
+| L53 運動 | 踢波、贏輸、出汗 |
+| L54 娛樂 | 好睇好聽、套/首 |
+| L55 顏色 | 襯唔襯、淺深鮮 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 
