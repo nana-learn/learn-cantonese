@@ -77,6 +77,14 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L55 顏色 | 襯唔襯、淺深鮮 |
 | L56 學校 | 溫書、合格、小息 |
 | L57 寵物 | 隻、領養、帶出去行 |
+| L58 廚房 | 鑊煲刀砧板 |
+| L59 地址 | 座樓室、地下 |
+| L60 端午 | 糉、龍舟、掃墓 |
+| L61 身體 | 邊度痛、行親 |
+| L62 味道 | 淡鹹鮮膩 |
+| L63 介紹 | 呢位、做咩嘅 |
+| L64 電話 | 喂、唔喺度、留言 |
+| L65 數字 | 第、成、十幾 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 
