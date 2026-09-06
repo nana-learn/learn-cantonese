@@ -96,6 +96,9 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L74 道歉 | 對唔住、唔係有心 |
 | L75 祝福 | 生日快樂、一路順風 |
 | L76 季節 | 春夏秋冬、潮濕 |
+| L77 外套 | 着 vs 戴、帽圍巾 |
+| L78 幾耐 | 成個鐘、好耐冇 |
+| L79 嚟港 | visiting-friend review mix |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 
