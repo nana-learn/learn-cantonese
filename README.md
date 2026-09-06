@@ -75,6 +75,8 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L53 運動 | 踢波、贏輸、出汗 |
 | L54 娛樂 | 好睇好聽、套/首 |
 | L55 顏色 | 襯唔襯、淺深鮮 |
+| L56 學校 | 溫書、合格、小息 |
+| L57 寵物 | 隻、領養、帶出去行 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 
