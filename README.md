@@ -85,6 +85,10 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L63 介紹 | 呢位、做咩嘅 |
 | L64 電話 | 喂、唔喺度、留言 |
 | L65 數字 | 第、成、十幾 |
+| L66 日子 | 今個禮拜、平日、隔日 |
+| L67 東南西北 | 港島九龍、對面海 |
+| L68 講價 | 九折、當熟客、抵 |
+| L69 颱風 | 幾號波、停工停課 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 

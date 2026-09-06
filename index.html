@@ -269,10 +269,10 @@ h2{font-size:1.4em;margin-bottom:16px}
 <div class="app">
 <header>
 <h1>粵語學習</h1>
-<p>Speak Hong Kong Cantonese — 65 everyday lessons, then the course</p>
+<p>Speak Hong Kong Cantonese — 69 everyday lessons, then the course</p>
 </header>
 <div class="tabs mode-row" id="modeRow">
-  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 Everyday L1–L65</div>
+  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 Everyday L1–L69</div>
   <div class="tab" id="mode-course" onclick="setMode('course')">📘 Course 1–11</div>
 </div>
 <div class="tabs" id="lessonBand"></div>
@@ -4414,6 +4414,218 @@ quiz:[
 {q:'"一半" means:',opts:["all","one half","a few","none"],ans:1},
 {q:'"大部分" means:',opts:["none","most","exactly half","one person"],ans:1},
 {q:'"幾多歲" asks:',opts:["price","age","floor","time"],ans:1}
+]}
+,
+{id:166,title:"L66 日子",subtitle:"Days and weeks · 今個禮拜、平日、週末",
+vocab:[
+{c:"禮拜",j:"lai5 baai3",e:"week; Sunday (禮拜日)"},
+{c:"今個禮拜",j:"gam1 go3 lai5 baai3",e:"this week"},
+{c:"上個禮拜",j:"soeng6 go3 lai5 baai3",e:"last week"},
+{c:"下個禮拜",j:"haa6 go3 lai5 baai3",e:"next week"},
+{c:"禮拜一",j:"lai5 baai3 jat1",e:"Monday"},
+{c:"禮拜五",j:"lai5 baai3 ng5",e:"Friday"},
+{c:"禮拜六",j:"lai5 baai3 luk6",e:"Saturday"},
+{c:"禮拜日",j:"lai5 baai3 jat6",e:"Sunday"},
+{c:"平日",j:"ping4 jat6",e:"weekdays"},
+{c:"週末",j:"zau1 mut6",e:"weekend"},
+{c:"每日",j:"mui5 jat6",e:"every day"},
+{c:"成日",j:"sing4 jat6",e:"always / all day"},
+{c:"有時",j:"jau5 si4",e:"sometimes"},
+{c:"間中",j:"gaan3 zung1",e:"occasionally"},
+{c:"很少",j:"han2 siu2",e:"rarely (also 好少)"},
+{c:"好少",j:"hou2 siu2",e:"rarely"},
+{c:"日日",j:"jat6 jat6",e:"every single day"},
+{c:"隔日",j:"gaak3 jat6",e:"every other day"},
+{c:"今個月",j:"gam1 go3 jyut6",e:"this month"},
+{c:"今年",j:"gam1 nin4",e:"this year"}
+],
+dialogue:[
+{speaker:"A",c:"今個禮拜你得唔得閒？",j:"gam1 go3 lai5 baai3 nei5 dak1 m4 dak1 haan4?",e:"Are you free this week?"},
+{speaker:"B",c:"平日唔得。禮拜六禮拜日得。",j:"ping4 jat6 m4 dak1. lai5 baai3 luk6 lai5 baai3 jat6 dak1.",e:"Weekdays no. Saturday and Sunday yes."},
+{speaker:"A",c:"上個禮拜見唔到你。去咗邊？",j:"soeng6 go3 lai5 baai3 gin3 m4 dou2 nei5. heoi3 zo2 bin1?",e:"Didn't see you last week. Where'd you go?"},
+{speaker:"B",c:"出咗差。日日開會。好少出街。",j:"ceot1 zo2 caai1. jat6 jat6 hoi1 wui2. hou2 siu2 ceot1 gaai1.",e:"Work trip. Meetings every single day. Rarely went out."},
+{speaker:"A",c:"下個禮拜一五得唔得？",j:"haa6 go3 lai5 baai3 jat1 ng5 dak1 m4 dak1?",e:"Next week Monday or Friday OK?"},
+{speaker:"B",c:"禮拜一唔得。禮拜五夜晚得。",j:"lai5 baai3 jat1 m4 dak1. lai5 baai3 ng5 je6 maan5 dak1.",e:"Monday no. Friday evening yes."},
+{speaker:"A",c:"你間中運動？定成日宅？",j:"nei5 gaan3 zung1 wan6 dung6? ding6 sing4 jat6 zaak6?",e:"Do you exercise occasionally, or stay in all the time?"},
+{speaker:"B",c:"隔日跑。週末行山。今個月開始。",j:"gaak3 jat6 paau2. zau1 mut6 haang4 saan1. gam1 go3 jyut6 hoi1 ci2.",e:"Run every other day. Hike at the weekend. Started this month."},
+{speaker:"A",c:"今年你有冇放年假？",j:"gam1 nin4 nei5 jau5 mou5 fong3 nin4 gaa3?",e:"Taking annual leave this year?"},
+{speaker:"B",c:"有。下個禮拜開始。每日都想瞓。",j:"jau5. haa6 go3 lai5 baai3 hoi1 ci2. mui5 jat6 dou1 soeng2 fan3.",e:"Yes. Starts next week. I want to sleep every day."}
+],
+grammar:[
+{pattern:"今個 / 上個 / 下個 + 禮拜",desc:"This / last / next week. 個 is required.",ex:"今個禮拜你得唔得閒？上個禮拜見唔到你。(gam1 go3 lai5 baai3 nei5 dak1 m4 dak1 haan4? soeng6 go3 lai5 baai3 gin3 m4 dou2 nei5)",en:"Free this week? Didn't see you last week."},
+{pattern:"禮拜一 … 禮拜日",desc:"Days of the week. 禮拜日 = Sunday (not 禮拜七).",ex:"平日唔得。禮拜六禮拜日得。(ping4 jat6 m4 dak1. lai5 baai3 luk6 lai5 baai3 jat6 dak1)",en:"Weekdays no. Sat and Sun yes."},
+{pattern:"日日 / 每日 / 成日 / 間中 / 好少",desc:"Every single day / every day / always / occasionally / rarely.",ex:"日日開會。間中運動。好少出街。(jat6 jat6 hoi1 wui2. gaan3 zung1 wan6 dung6. hou2 siu2 ceot1 gaai1)",en:"Meetings every single day. Exercise occasionally. Rarely go out."},
+{pattern:"隔日",desc:"Every other day.",ex:"隔日跑。週末行山。(gaak3 jat6 paau2. zau1 mut6 haang4 saan1)",en:"Run every other day. Hike at the weekend."},
+{pattern:"見唔到",desc:"Didn't get to see. 到 = succeed in seeing.",ex:"上個禮拜見唔到你。(soeng6 go3 lai5 baai3 gin3 m4 dou2 nei5)",en:"Didn't see you last week."}
+],
+quiz:[
+{q:'"今個禮拜" means:',opts:["today","this week","this month","Sunday"],ans:1},
+{q:'"平日" means:',opts:["weekend","weekdays","holiday","tonight"],ans:1},
+{q:'"禮拜日" is:',opts:["Monday","Sunday","Saturday","Friday"],ans:1},
+{q:'"隔日" means:',opts:["every day","every other day","never","all day"],ans:1},
+{q:'"間中" means:',opts:["always","occasionally","never","tomorrow"],ans:1},
+{q:'"日日" means:',opts:["sometimes","every single day","last week","rarely"],ans:1},
+{q:'"好少" means:',opts:["often","rarely","always","this week"],ans:1},
+{q:'"下個禮拜" means:',opts:["last week","next week","this week","yesterday"],ans:1}
+]},
+
+{id:167,title:"L67 東南西北",subtitle:"Compass · 東西北南 去邊邊",
+vocab:[
+{c:"東",j:"dung1",e:"east"},
+{c:"南",j:"naam4",e:"south"},
+{c:"西",j:"sai1",e:"west"},
+{c:"北",j:"bak1",e:"north"},
+{c:"東北",j:"dung1 bak1",e:"northeast"},
+{c:"西南",j:"sai1 naam4",e:"southwest"},
+{c:"港島",j:"gong2 dou2",e:"Hong Kong Island"},
+{c:"九龍",j:"gau2 lung4",e:"Kowloon"},
+{c:"新界",j:"san1 gaai3",e:"New Territories"},
+{c:"離島",j:"lei4 dou2",e:"outlying islands"},
+{c:"中環",j:"zung1 waan4",e:"Central"},
+{c:"尖沙咀",j:"zim1 saa1 zeoi2",e:"Tsim Sha Tsui"},
+{c:"銅鑼灣",j:"tung4 lo4 waan1",e:"Causeway Bay"},
+{c:"沙田",j:"saa1 tin4",e:"Sha Tin"},
+{c:"荃灣",j:"cyun4 waan1",e:"Tsuen Wan"},
+{c:"往",j:"wong5",e:"towards / bound for"},
+{c:"方向",j:"fong1 hoeng3",e:"direction"},
+{c:"對面海",j:"deoi3 min6 hoi2",e:"the other side of the harbour"},
+{c:"上環",j:"soeng6 waan4",e:"Sheung Wan"},
+{c:"去邊",j:"heoi3 bin1",e:"where to"}
+],
+dialogue:[
+{speaker:"A",c:"你住港島定九龍？",j:"nei5 zyu6 gong2 dou2 ding6 gau2 lung4?",e:"Do you live on the Island or Kowloon?"},
+{speaker:"B",c:"九龍。尖沙咀。你呢？",j:"gau2 lung4. zim1 saa1 zeoi2. nei5 ne1?",e:"Kowloon. TST. You?"},
+{speaker:"A",c:"港島中環。過海就到對面海。",j:"gong2 dou2 zung1 waan4. gwo3 hoi2 zau6 dou3 deoi3 min6 hoi2.",e:"Central, HK Island. Cross the harbour and you're on the other side."},
+{speaker:"B",c:"銅鑼灣喺東定西啊？",j:"tung4 lo4 waan1 hai2 dung1 ding6 sai1 aa3?",e:"Is Causeway Bay east or west?"},
+{speaker:"A",c:"中環以東。上環就西多。",j:"zung1 waan4 ji5 dung1. soeng6 waan4 zau6 sai1 do1.",e:"East of Central. Sheung Wan is more west."},
+{speaker:"B",c:"沙田同荃灣呢？新界邊邊？",j:"saa1 tin4 tung4 cyun4 waan1 ne1? san1 gaai3 bin1 bin1?",e:"Sha Tin and Tsuen Wan? Which part of the New Territories?"},
+{speaker:"A",c:"沙田東北啲。荃灣西。離島更遠。",j:"saa1 tin4 dung1 bak1 di1. cyun4 waan1 sai1. lei4 dou2 gang3 jyun5.",e:"Sha Tin a bit northeast. Tsuen Wan west. Islands even further."},
+{speaker:"B",c:"往機場搭邊條線？",j:"wong5 gei1 coeng4 daap3 bin1 tiu4 sin3?",e:"Which line towards the airport?"},
+{speaker:"A",c:"機場快線。方向睇車頭。",j:"gei1 coeng4 faai3 sin3. fong1 hoeng3 tai2 ce1 tau4.",e:"Airport Express. Check the direction on the front of the train."},
+{speaker:"B",c:"得。今日去邊？",j:"dak1. gam1 jat6 heoi3 bin1?",e:"OK. Where to today?"}
+],
+grammar:[
+{pattern:"港島 / 九龍 / 新界 / 離島",desc:"The four big pieces of HK. First question: 你住邊？",ex:"你住港島定九龍？九龍。尖沙咀。(nei5 zyu6 gong2 dou2 ding6 gau2 lung4? gau2 lung4. zim1 saa1 zeoi2)",en:"Island or Kowloon? Kowloon. TST."},
+{pattern:"對面海",desc:"The other side of the harbour. Island people saying Kowloon and vice versa.",ex:"過海就到對面海。(gwo3 hoi2 zau6 dou3 deoi3 min6 hoi2)",en:"Cross the harbour and you're on the other side."},
+{pattern:"以東 / 西多",desc:"East of X / more on the west side.",ex:"中環以東。上環就西多。(zung1 waan4 ji5 dung1. soeng6 waan4 zau6 sai1 do1)",en:"East of Central. Sheung Wan is more west."},
+{pattern:"往 + place",desc:"Bound for. 往機場.",ex:"往機場搭邊條線？(wong5 gei1 coeng4 daap3 bin1 tiu4 sin3?)",en:"Which line towards the airport?"},
+{pattern:"去邊",desc:"Where to? Short and spoken.",ex:"今日去邊？(gam1 jat6 heoi3 bin1?)",en:"Where to today?"}
+],
+quiz:[
+{q:'"港島" is:',opts:["Kowloon","Hong Kong Island","New Territories","Macau"],ans:1},
+{q:'"尖沙咀" is in:',opts:["HK Island","Kowloon","Lantau only","the New Territories east"],ans:1},
+{q:'"中環" is:',opts:["TST","Central","Sha Tin","Tsuen Wan"],ans:1},
+{q:'"對面海" means:',opts:["the beach","the other side of the harbour","a mountain","an island always"],ans:1},
+{q:'"往" means:',opts:["from","towards / bound for","inside","without"],ans:1},
+{q:'"離島" means:',opts:["Kowloon","outlying islands","Central","the Peak"],ans:1},
+{q:'Causeway Bay is:',opts:["west of Central","east of Central","in Tuen Mun","on Lantau"],ans:1},
+{q:'"去邊" means:',opts:["go home","where to","go east","stop"],ans:1}
+]},
+
+{id:168,title:"L68 講價",subtitle:"Bargaining · 平啲得唔得、當熟客",
+vocab:[
+{c:"講價",j:"gong2 gaa3",e:"to bargain"},
+{c:"平啲",j:"peng4 di1",e:"a bit cheaper"},
+{c:"再平",j:"zoi3 peng4",e:"even cheaper"},
+{c:"最低",j:"zeoi3 dai1",e:"the lowest (price)"},
+{c:"實價",j:"sat6 gaa3",e:"firm price / no bargaining"},
+{c:"當熟客",j:"dong3 suk6 haak3",e:"treat as a regular"},
+{c:"幫襯",j:"bong1 can3",e:"to patronise (a shop)"},
+{c:"買多啲",j:"maai5 do1 di1",e:"buy more"},
+{c:"包郵",j:"baau1 jau4",e:"free postage"},
+{c:"減",j:"gaam2",e:"to reduce (price)"},
+{c:"折",j:"zit3",e:"discount (九折 = 10% off)"},
+{c:"九折",j:"gau2 zit3",e:"10% off"},
+{c:"半價",j:"bun3 gaa3",e:"half price"},
+{c:"抵",j:"dai2",e:"good value"},
+{c:"唔抵",j:"m4 dai2",e:"not worth it"},
+{c:"算啦",j:"syun3 laa1",e:"forget it"},
+{c:"當唔到",j:"dong3 m4 dou3",e:"can't treat it as…"},
+{c:"最後價",j:"zeoi3 hau6 gaa3",e:"final price"},
+{c:"現金",j:"jin6 gam1",e:"cash"},
+{c:"走貨",j:"zau2 fo3",e:"clear stock"}
+],
+dialogue:[
+{speaker:"A",c:"呢件平啲得唔得？",j:"ni1 gin6 peng4 di1 dak1 m4 dak1?",e:"Can this be a bit cheaper?"},
+{speaker:"B",c:"已經九折。再平就冇。",j:"ji5 ging1 gau2 zit3. zoi3 peng4 zau6 mou5.",e:"Already 10% off. No cheaper."},
+{speaker:"A",c:"我買多兩件。當熟客啦。",j:"ngo5 maai5 do1 loeng5 gin6. dong3 suk6 haak3 laa1.",e:"I'll take two more. Treat me as a regular."},
+{speaker:"B",c:"買三件就八折。現金再減十蚊。",j:"maai5 saam1 gin6 zau6 baat3 zit3. jin6 gam1 zoi3 gaam2 sap6 man1.",e:"Three pieces is 20% off. Cash, another ten dollars off."},
+{speaker:"A",c:"抵啲。最後價係幾多？",j:"dai2 di1. zeoi3 hau6 gaa3 hai6 gei2 do1?",e:"Better value. What's the final price?"},
+{speaker:"B",c:"二百四。走貨價。",j:"ji6 baak3 sei3. zau2 fo3 gaa3.",e:"$240. Clearance."},
+{speaker:"A",c:"包郵唔包？",j:"baau1 jau4 m4 baau1?",e:"Postage included?"},
+{speaker:"B",c:"店舖自取。郵寄唔包。",j:"dim3 pou3 zi6 ceoi2. jau4 gei3 m4 baau1.",e:"Pick up in store. Postage not included."},
+{speaker:"A",c:"唔抵郵費。我自取。",j:"m4 dai2 jau4 fai3. ngo5 zi6 ceoi2.",e:"Postage isn't worth it. I'll pick up."},
+{speaker:"B",c:"得。多謝幫襯。",j:"dak1. do1 ze6 bong1 can3.",e:"OK. Thanks for your custom."}
+],
+grammar:[
+{pattern:"平啲得唔得",desc:"Can it be cheaper? The bargain opener.",ex:"呢件平啲得唔得？已經九折。(ni1 gin6 peng4 di1 dak1 m4 dak1? ji5 ging1 gau2 zit3)",en:"A bit cheaper? Already 10% off."},
+{pattern:"九折 / 八折",desc:"HK discounts: 九折 = pay 90% (10% off). 八折 = 20% off. Not '9% off'.",ex:"已經九折。買三件就八折。(ji5 ging1 gau2 zit3. maai5 saam1 gin6 zau6 baat3 zit3)",en:"Already 10% off. Three pieces is 20% off."},
+{pattern:"當熟客",desc:"Treat me as a regular — the social bargain.",ex:"我買多兩件。當熟客啦。(ngo5 maai5 do1 loeng5 gin6. dong3 suk6 haak3 laa1)",en:"I'll take two more. Treat me as a regular."},
+{pattern:"抵 / 唔抵",desc:"Worth it / not worth it.",ex:"抵啲。唔抵郵費。(dai2 di1. m4 dai2 jau4 fai3)",en:"Better value. Postage isn't worth it."},
+{pattern:"多謝幫襯",desc:"Thanks for shopping here. Shopkeeper close.",ex:"多謝幫襯。(do1 ze6 bong1 can3)",en:"Thanks for your custom."}
+],
+quiz:[
+{q:'"講價" means:',opts:["pay full price","bargain","return an item","complain to a manager"],ans:1},
+{q:'"九折" means:',opts:["90% off","10% off (pay 90%)","9 dollars","buy 9"],ans:1},
+{q:'"八折" means:',opts:["8% off","20% off (pay 80%)","half price","free"],ans:1},
+{q:'"抵" means:',opts:["too expensive","good value","broken","fake"],ans:1},
+{q:'"當熟客" means:',opts:["ignore me","treat me as a regular","call the police","give a receipt"],ans:1},
+{q:'"幫襯" means:',opts:["complain","patronise / shop here","steal","bargain only"],ans:1},
+{q:'"走貨" means:',opts:["run away","clear stock","import","repair"],ans:1},
+{q:'"最後價" means:',opts:["first offer","final price","original price","tax"],ans:1}
+]},
+
+{id:169,title:"L69 颱風",subtitle:"Typhoon signals · 幾號波、停工、掛",
+vocab:[
+{c:"颱風",j:"toi4 fung1",e:"typhoon"},
+{c:"掛波",j:"gwaa3 bo1",e:"typhoon signal is up"},
+{c:"幾號波",j:"gei2 hou6 bo1",e:"which signal"},
+{c:"一號",j:"jat1 hou6",e:"T1 (standby)"},
+{c:"三號",j:"saam1 hou6",e:"T3"},
+{c:"八號",j:"baat3 hou6",e:"T8 (typically off work/school)"},
+{c:"九號",j:"gau2 hou6",e:"T9"},
+{c:"十號",j:"sap6 hou6",e:"T10"},
+{c:"除下",j:"ceoi4 haa5",e:"to lower / cancel (a signal)"},
+{c:"停工",j:"ting4 gung1",e:"stop work"},
+{c:"停課",j:"ting4 fo3",e:"classes suspended"},
+{c:"大風",j:"daai6 fung1",e:"strong wind"},
+{c:"危險",j:"ngai4 him2",e:"danger / dangerous"},
+{c:"逞強",j:"cing2 koeng4",e:"to tough it out / be a hero"},
+{c:"儲水",j:"cyu5 seoi2",e:"to store water"},
+{c:"儲糧",j:"cyu5 loeng4",e:"to store food"},
+{c:"政府",j:"zing3 fu2",e:"government"},
+{c:"指引",j:"zi2 jan5",e:"guidance / guidelines"},
+{c:"改",j:"goi2",e:"to change (to another signal)"},
+{c:"最勁",j:"zeoi3 ging6",e:"the fiercest / strongest"}
+],
+dialogue:[
+{speaker:"A",c:"而家幾號波啊？",j:"ji4 gaa1 gei2 hou6 bo1 aa3?",e:"What's the signal now?"},
+{speaker:"B",c:"三號。聽講話今晚改八號。",j:"saam1 hou6. teng1 gong2 waa6 gam1 maan5 goi2 baat3 hou6.",e:"T3. Heard it may go T8 tonight."},
+{speaker:"A",c:"八號就停工停課。你返唔返？",j:"baat3 hou6 zau6 ting4 gung1 ting4 fo3. nei5 faan1 m4 faan1?",e:"T8 means work and school stop. Are you going in?"},
+{speaker:"B",c:"掛八號之前返到屋企就得。",j:"gwaa3 baat3 hou6 zi1 cin4 faan1 dou3 uk1 kei2 zau6 dak1.",e:"Get home before T8 goes up and you're fine."},
+{speaker:"A",c:"十號就唔好出街。大風危險。",j:"sap6 hou6 zau6 m4 hou2 ceot1 gaai1. daai6 fung1 ngai4 him2.",e:"T10, don't go out. Strong wind is dangerous."},
+{speaker:"B",c:"係。除下先至出。唔好逞強。",j:"hai6. ceoi4 haa5 sin1 zi3 ceot1. m4 hou2 cing2 koeng4.",e:"Yes. Only go out after it's lowered. Don't be a hero."},
+{speaker:"A",c:"一號得閒。三號開始買餸。",j:"jat1 hou6 dak1 haan4. saam1 hou6 hoi1 ci2 maai5 sung3.",e:"T1 is still free time. From T3, start buying groceries."},
+{speaker:"B",c:"九號十號最勁。記得儲水儲糧。",j:"gau2 hou6 sap6 hou6 zeoi3 ging6. gei3 dak1 cyu5 seoi2 cyu5 loeng4.",e:"T9 and T10 are the fiercest. Remember to store water and food."},
+{speaker:"A",c:"你公司八號仲要你返？",j:"nei5 gung1 si1 baat3 hou6 zung6 jiu3 nei5 faan1?",e:"Does your company still want you in at T8?"},
+{speaker:"B",c:"唔使。政府指引跟。",j:"m4 sai2. zing3 fu2 zi2 jan5 gan1.",e:"No. Follow government guidance."}
+],
+grammar:[
+{pattern:"幾號波",desc:"Which typhoon signal? 波 = the hoisted signal ball, still how people talk.",ex:"而家幾號波啊？三號。(ji4 gaa1 gei2 hou6 bo1 aa3? saam1 hou6)",en:"What's the signal now? T3."},
+{pattern:"掛 / 除下",desc:"Hoist / lower the signal.",ex:"掛八號之前返到屋企。除下先至出。(gwaa3 baat3 hou6 zi1 cin4 faan1 dou3 uk1 kei2. ceoi4 haa5 sin1 zi3 ceot1)",en:"Get home before T8 is hoisted. Only go out after it's lowered."},
+{pattern:"八號就停工停課",desc:"T8 → work and school stop. The practical rule.",ex:"八號就停工停課。(baat3 hou6 zau6 ting4 gung1 ting4 fo3)",en:"T8 means work and school stop."},
+{pattern:"先至出",desc:"Only then go out. Safety 先至.",ex:"除下先至出。唔好逞強。(ceoi4 haa5 sin1 zi3 ceot1. m4 hou2 cing2 koeng4)",en:"Only go out after it's down. Don't be a hero."},
+{pattern:"聽講話…",desc:"I heard that… Rumour mill during typhoons.",ex:"聽講話今晚改八號。(teng1 gong2 waa6 gam1 maan5 goi2 baat3 hou6)",en:"I heard it may go T8 tonight."}
+],
+quiz:[
+{q:'"幾號波" asks:',opts:["the bus number","which typhoon signal","the floor","the price"],ans:1},
+{q:'T8 in HK usually means:',opts:["go to the beach","work and school stop","only T1","fireworks"],ans:1},
+{q:'"掛波" means:',opts:["play ball","the signal is up","cancel the signal","go shopping"],ans:1},
+{q:'"除下" here means:',opts:["put on a coat","lower / cancel the signal","go upstairs","take a photo"],ans:1},
+{q:'"停課" means:',opts:["extra class","classes suspended","exam","homework"],ans:1},
+{q:'The fiercest signals are:',opts:["T1 only","T9 and T10","T3 only","no signal"],ans:1},
+{q:'"停工" means:',opts:["overtime","stop work","start work","resign"],ans:1},
+{q:'Get home:',opts:["after T10","before T8 is hoisted","never","at T1 only"],ans:1}
 ]}
 ];
 
