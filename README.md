@@ -99,6 +99,8 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L77 外套 | 着 vs 戴、帽圍巾 |
 | L78 幾耐 | 成個鐘、好耐冇 |
 | L79 嚟港 | visiting-friend review mix |
+| L80 商場 | 扶手電梯、人龍 |
+| L81 羨慕 | 羨慕 vs 妒忌、睇開啲 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 
