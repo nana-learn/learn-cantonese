@@ -109,7 +109,7 @@ Start on **Everyday** (Hong Kong spoken Cantonese). Units across the top, number
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 
-For each lesson: listen to the dialogue → flip vocab → drill flashcards → read grammar → quiz / match / write.
+For each lesson: listen to the dialogue → flip vocab → drill flashcards → read grammar → quiz / match / write. Quizzes mix fill-the-blank from the dialogue with meaning checks — answers are shuffled.
 
 Lesson PDFs and markdown notes for the course track are also in the repo.
 
