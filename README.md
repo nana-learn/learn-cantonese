@@ -45,6 +45,11 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L23 購物 | 試身、換、退錢 |
 | L24 交通 | 巴士的士、拍卡、尾班車 |
 | L25 心情 | 冇心情、嬲、唔緊要 |
+| L26 煮食 | 炒蒸、好食、搞餸 |
+| L27 錢銀 | 出糧、櫃員機、慳 |
+| L28 睇醫生 | 掛號、病假紙、食藥 |
+| L29 返工 | 搞掂、加班、交報告 |
+| L30 週末 | 宅、行山、不如、隨緣 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 

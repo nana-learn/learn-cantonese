@@ -270,7 +270,7 @@ h2{font-size:1.4em;margin-bottom:16px}
 <p>Speak Hong Kong Cantonese — everyday first, then the course</p>
 </header>
 <div class="tabs mode-row" id="modeRow">
-  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 Everyday L1–L25</div>
+  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 Everyday L1–L30</div>
   <div class="tab" id="mode-course" onclick="setMode('course')">📘 Course 1–11</div>
 </div>
 <div class="tabs" id="lessonTabs"></div>
@@ -2292,6 +2292,272 @@ quiz:[
 {q:'"輕鬆" means:',opts:["relaxed","heavy","angry","late"],ans:0},
 {q:'"想喊多過想出街" means:',opts:["wants to go out more","is laughing","is hungry","would rather cry than go out"],ans:3}
 ]}
+,
+{id:126,title:"L26 煮食",subtitle:"Cooking · 切炒煮 好食唔好食",
+vocab:[
+{c:"煮",j:"zyu2",e:"to cook (in water / in general)"},
+{c:"炒",j:"caau2",e:"to stir-fry"},
+{c:"蒸",j:"zing1",e:"to steam"},
+{c:"切",j:"cit3",e:"to cut"},
+{c:"洗",j:"sai2",e:"to wash"},
+{c:"廚房",j:"cyu4 fong2",e:"kitchen"},
+{c:"餸",j:"sung3",e:"dishes; groceries for a meal"},
+{c:"菜",j:"coi3",e:"vegetables; a dish"},
+{c:"肉",j:"juk6",e:"meat"},
+{c:"魚",j:"jyu2",e:"fish"},
+{c:"鹽",j:"jim4",e:"salt"},
+{c:"糖",j:"tong4",e:"sugar"},
+{c:"油",j:"jau4",e:"oil"},
+{c:"豉油",j:"si6 jau4",e:"soy sauce"},
+{c:"生抽",j:"saang1 cau1",e:"light soy"},
+{c:"好食",j:"hou2 sik6",e:"tasty (to eat)"},
+{c:"唔好食",j:"m4 hou2 sik6",e:"not tasty"},
+{c:"生",j:"saang1",e:"undercooked / raw"},
+{c:"熟",j:"suk6",e:"cooked through"},
+{c:"滾",j:"gwan2",e:"boiling"},
+{c:"熄火",j:"sik1 fo2",e:"turn off the heat"}
+],
+dialogue:[
+{speaker:"A",c:"今晚煮咩餸啊？",j:"gam1 maan5 zyu2 me1 sung3 aa3?",e:"What are we cooking tonight?"},
+{speaker:"B",c:"我買咗菜同魚。你切菜，我蒸魚。",j:"ngo5 maai5 zo2 coi3 tung4 jyu2. nei5 cit3 coi3, ngo5 zing1 jyu2.",e:"I bought veg and fish. You cut the veg, I'll steam the fish."},
+{speaker:"A",c:"魚洗咗未？",j:"jyu2 sai2 zo2 mei6?",e:"Has the fish been washed?"},
+{speaker:"B",c:"洗咗。水滾咗先至落。",j:"sai2 zo2. seoi2 gwan2 zo2 sin1 zi3 lok6.",e:"Yes. Put it in only after the water boils."},
+{speaker:"A",c:"我炒菜要幾多鹽？",j:"ngo5 caau2 coi3 jiu3 gei2 do1 jim4?",e:"How much salt for the stir-fry?"},
+{speaker:"B",c:"少少就得。落多啲豉油好食啲。",j:"siu2 siu2 zau6 dak1. lok6 do1 di1 si6 jau4 hou2 sik6 di1.",e:"Just a little. A bit more soy sauce tastes better."},
+{speaker:"A",c:"會唔會生啊？我怕未熟。",j:"wui5 m4 wui5 saang1 aa3? ngo5 paa3 mei6 suk6.",e:"Will it be undercooked? I'm afraid it's not done."},
+{speaker:"B",c:"魚蒸八分鐘就熟。之後熄火。",j:"jyu2 zing1 baat3 fan1 zung1 zau6 suk6. zi1 hau6 sik1 fo2.",e:"Steam the fish eight minutes and it's done. Then turn off the heat."},
+{speaker:"A",c:"好香。今晚一定好食。",j:"hou2 hoeng1. gam1 maan5 jat1 ding6 hou2 sik6.",e:"Smells good. Tonight will definitely be tasty."},
+{speaker:"B",c:"你煮飯，我搞餸。分工合作。",j:"nei5 zyu2 faan6, ngo5 gaau2 sung3. fan1 gung1 hap6 zok3.",e:"You cook the rice, I'll do the dishes. Split the work."}
+],
+grammar:[
+{pattern:"煮 vs 炒 vs 蒸",desc:"煮 = cook/boil (and 煮飯). 炒 = stir-fry. 蒸 = steam. HK home trio.",ex:"你切菜，我蒸魚。你煮飯。(nei5 cit3 coi3, ngo5 zing1 jyu2. nei5 zyu2 faan6)",en:"You cut veg, I steam fish. You cook rice."},
+{pattern:"水滾咗先至落",desc:"Only after the water has boiled, then put (it) in. 先至 again.",ex:"水滾咗先至落。(seoi2 gwan2 zo2 sin1 zi3 lok6)",en:"Put it in only after the water boils."},
+{pattern:"好食 (hou2 sik6)",desc:"Tastes good. Not 好吃. Opposite 唔好食. 好飲 for drinks.",ex:"落多啲豉油好食啲。(lok6 do1 di1 si6 jau4 hou2 sik6 di1)",en:"A bit more soy sauce tastes better."},
+{pattern:"生 vs 熟 (saang1 / suk6)",desc:"Raw or undercooked vs cooked through. 怕未熟.",ex:"會唔會生啊？我怕未熟。(wui5 m4 wui5 saang1 aa3? ngo5 paa3 mei6 suk6)",en:"Will it be undercooked? I'm afraid it's not done."},
+{pattern:"搞餸 (gaau2 sung3)",desc:"Handle the dishes (the cooking). Casual and very HK.",ex:"你煮飯，我搞餸。(nei5 zyu2 faan6, ngo5 gaau2 sung3)",en:"You cook rice, I'll do the dishes."}
+],
+quiz:[
+{q:'"炒" means:',opts:["steam","stir-fry","bake","wash"],ans:1},
+{q:'"蒸" means:',opts:["fry","boil","steam","cut"],ans:2},
+{q:'"好食" means:',opts:["good at eating","tasty","hungry","raw"],ans:1},
+{q:'"熟" here means:',opts:["familiar person","cooked through","hot weather","sugar"],ans:1},
+{q:'"豉油" is:',opts:["oil","soy sauce","salt","vinegar"],ans:1},
+{q:'"熄火" means:',opts:["start the fire","turn off the heat","add oil","wash dishes"],ans:1},
+{q:"Fish is steamed for:",opts:["2 minutes","8 minutes","30 minutes","1 hour"],ans:1},
+{q:'"餸" means:',opts:["rice only","dishes / meal ingredients","the kitchen","a fork"],ans:1}
+]},
+
+{id:127,title:"L27 錢銀",subtitle:"Money admin · ATM, transfer, 貴租",
+vocab:[
+{c:"銀行",j:"ngan4 hong4",e:"bank"},
+{c:"櫃員機",j:"gwai6 jyun4 gei1",e:"ATM"},
+{c:"提款",j:"tai4 fun2",e:"to withdraw cash"},
+{c:"存錢",j:"cyun4 cin2",e:"to deposit / save money"},
+{c:"轉賬",j:"zyun3 zoeng3",e:"to transfer (money)"},
+{c:"密碼",j:"mat6 maa5",e:"PIN / password"},
+{c:"卡",j:"kaat1",e:"card"},
+{c:"月結單",j:"jyut6 git3 daan1",e:"monthly statement"},
+{c:"學費",j:"hok6 fai3",e:"tuition"},
+{c:"租金",j:"zou1 gam1",e:"rent"},
+{c:"薪水",j:"san1 seoi2",e:"salary (also 糧)"},
+{c:"出糧",j:"ceot1 loeng4",e:"to get paid / payday"},
+{c:"慳",j:"haan1",e:"to save (money); stingy in a light way"},
+{c:"洗錢",j:"sai2 cin2",e:"to spend money (not the crime, in speech)"},
+{c:"夠唔夠",j:"gau3 m4 gau3",e:"is it enough"},
+{c:"唔夠",j:"m4 gau3",e:"not enough"},
+{c:"貴",j:"gwai3",e:"expensive"},
+{c:"平",j:"peng4",e:"cheap"},
+{c:"數",j:"sou3",e:"a bill (to pay)"},
+{c:"簽",j:"cim1",e:"to sign"}
+],
+dialogue:[
+{speaker:"A",c:"你出糧未啊？我租金都未交。",j:"nei5 ceot1 loeng4 mei6 aa3? ngo5 zou1 gam1 dou1 mei6 gaau1.",e:"Got paid yet? I haven't paid rent."},
+{speaker:"B",c:"出咗。你去櫃員機提款定轉賬？",j:"ceot1 zo2. nei5 heoi3 gwai6 jyun4 gei1 tai4 fun2 ding6 zyun3 zoeng3?",e:"Yes. You going to the ATM to withdraw, or transfer?"},
+{speaker:"A",c:"轉賬平啲，慳手續費。不過我密碼唔記得。",j:"zyun3 zoeng3 peng4 di1, haan1 sau2 zuk1 fai3. bat1 gwo3 ngo5 mat6 maa5 m4 gei3 dak1.",e:"Transfer is cheaper — saves the fee. But I forgot my PIN."},
+{speaker:"B",c:"去銀行重設。帶身份證同卡。",j:"heoi3 ngan4 hong4 cung4 cit3. daai3 san1 fan2 zing3 tung4 kaat1.",e:"Reset it at the bank. Bring ID and the card."},
+{speaker:"A",c:"今個月洗錢洗得太多。學費都貴。",j:"gam1 go3 jyut6 sai2 cin2 sai2 dak1 taai3 do1. hok6 fai3 dou1 gwai3.",e:"I spent too much this month. Tuition is expensive too."},
+{speaker:"B",c:"慳啲啦。出糧唔等於夠洗。",j:"haan1 di1 laa1. ceot1 loeng4 m4 dang2 jyu1 gau3 sai2.",e:"Save a bit. Payday doesn't mean it's enough to spend."},
+{speaker:"A",c:"今個月錢夠唔夠交租啊？",j:"gam1 go3 jyut6 cin2 gau3 m4 gau3 gaau1 zou1 aa3?",e:"Enough money this month to pay rent?"},
+{speaker:"B",c:"你租金貴過我好多。要唔要搬？",j:"nei5 zou1 gam1 gwai3 gwo3 ngo5 hou2 do1. jiu3 m4 jiu3 bun1?",e:"Your rent is much more expensive than mine. Want to move?"},
+{speaker:"A",c:"暫時唔搬。月結單我未簽。",j:"zaam6 si4 m4 bun1. jyut6 git3 daan1 ngo5 mei6 cim1.",e:"Not moving for now. I haven't signed the statement yet."},
+{speaker:"B",c:"數要準時交。遲咗就罰。",j:"sou3 jiu3 zeon2 si4 gaau1. ci4 zo2 zau6 fat6.",e:"Pay bills on time. Late and you get fined."}
+],
+grammar:[
+{pattern:"出糧 (ceot1 loeng4)",desc:"Get paid. 糧 = salary (rice-money). 出咗糧未？",ex:"你出糧未啊？出咗。(nei5 ceot1 loeng4 mei6 aa3? ceot1 zo2)",en:"Got paid yet? Yes."},
+{pattern:"洗錢 (sai2 cin2) in speech",desc:"Spend money. Not the crime. 今個月洗錢洗得太多.",ex:"今個月洗錢洗得太多。(gam1 go3 jyut6 sai2 cin2 sai2 dak1 taai3 do1)",en:"I spent too much this month."},
+{pattern:"慳 (haan1)",desc:"Save / be sparing. 慳啲, 慳手續費.",ex:"轉賬平啲，慳手續費。慳啲啦。(zyun3 zoeng3 peng4 di1, haan1 sau2 zuk1 fai3. haan1 di1 laa1)",en:"Transfer is cheaper, saves the fee. Save a bit."},
+{pattern:"貴過 (gwai3 gwo3)",desc:"More expensive than. Same 過 as 平過.",ex:"你租金貴過我好多。(nei5 zou1 gam1 gwai3 gwo3 ngo5 hou2 do1)",en:"Your rent is much more expensive than mine."},
+{pattern:"夠唔夠 (gau3 m4 gau3)",desc:"Enough or not. Answer 夠 / 唔夠.",ex:"出糧唔等於夠洗。(ceot1 loeng4 m4 dang2 jyu1 gau3 sai2)",en:"Payday doesn't mean it's enough to spend."}
+],
+quiz:[
+{q:'"出糧" means:',opts:["get paid","buy rice","leave the bank","spend"],ans:0},
+{q:'"櫃員機" is an:',opts:["elevator","octopus","ATM","office"],ans:2},
+{q:'"提款" means:',opts:["deposit","transfer","sign","withdraw cash"],ans:3},
+{q:'"慳" means:',opts:["save / be sparing","spend freely","borrow","owe"],ans:0},
+{q:'Spoken "洗錢" here means:',opts:["money laundering only","wash coins","spend money","get a raise"],ans:2},
+{q:'"轉賬" means:',opts:["open an account","count cash","close the bank","transfer money"],ans:3},
+{q:'"租金" means:',opts:["rent","salary","tuition","a fine"],ans:0},
+{q:'"密碼" means:',opts:["ID card","receipt","bank","PIN / password"],ans:3}
+]},
+
+{id:128,title:"L28 睇醫生",subtitle:"Clinic · 掛號、症、藥、病假",
+vocab:[
+{c:"診所",j:"can2 so2",e:"clinic"},
+{c:"掛號",j:"gwaa3 hou6",e:"to register (at clinic/hospital)"},
+{c:"症",j:"zing3",e:"a condition / case"},
+{c:"睇症",j:"tai2 zing3",e:"to see the doctor (for a case)"},
+{c:"問症",j:"man6 zing3",e:"the doctor taking your history"},
+{c:"發燒",j:"faat3 siu1",e:"fever"},
+{c:"咳",j:"kat1",e:"to cough"},
+{c:"喉嚨痛",j:"hau4 lung4 tung3",e:"sore throat"},
+{c:"流鼻水",j:"lau4 bei6 seoi2",e:"runny nose"},
+{c:"處方",j:"cyu2 fong1",e:"prescription"},
+{c:"藥",j:"joek6",e:"medicine"},
+{c:"食藥",j:"sik6 joek6",e:"to take medicine"},
+{c:"病假",j:"beng6 gaa3",e:"sick leave"},
+{c:"紙",j:"zi2",e:"a certificate / note (病假紙)"},
+{c:"過敏",j:"gwo3 man5",e:"allergy; allergic"},
+{c:"打針",j:"daa2 zam1",e:"to get an injection"},
+{c:"驗血",j:"jim6 hyut3",e:"blood test"},
+{c:"好返",j:"hou2 faan1",e:"to get better"},
+{c:"嚴重",j:"jim4 zung6",e:"serious"},
+{c:"休息",j:"jau1 sik1",e:"to rest"}
+],
+dialogue:[
+{speaker:"A",c:"我喉嚨痛同埋咳。可唔可以掛號睇症？",j:"ngo5 hau4 lung4 tung3 tung4 maai4 kat1. ho2 m4 ho2 ji5 gwaa3 hou6 tai2 zing3?",e:"Sore throat and a cough. Can I register to see the doctor?"},
+{speaker:"B",c:"得。你有冇發燒？有冇過敏？",j:"dak1. nei5 jau5 mou5 faat3 siu1? jau5 mou5 gwo3 man5?",e:"Yes. Fever? Any allergies?"},
+{speaker:"A",c:"朝早量過，三十七度半。花生過敏。",j:"ziu1 zou2 loeng4 gwo3, saam1 sap6 cat1 dou6 bun3. faa1 sang1 gwo3 man5.",e:"Measured this morning, 37.5. Allergic to peanuts."},
+{speaker:"B",c:"唔嚴重。我畀處方你，去隔離藥房攞藥。",j:"m4 jim4 zung6. ngo5 bei2 cyu2 fong1 nei5, heoi3 gaak3 lei4 joek6 fong4 lo2 joek6.",e:"Not serious. I'll give you a prescription — get it at the pharmacy next door."},
+{speaker:"A",c:"一日食幾次藥啊？",j:"jat1 jat6 sik6 gei2 ci3 joek6 aa3?",e:"How many times a day do I take the medicine?"},
+{speaker:"B",c:"三次，食完飯食。要休息，唔好捱夜。",j:"saam1 ci3, sik6 jyun4 faan6 sik6. jiu3 jau1 sik1, m4 hou2 ngaai4 je6.",e:"Three times, after meals. Rest — don't stay up late."},
+{speaker:"A",c:"可唔可以開病假紙？聽日要返工。",j:"ho2 m4 ho2 ji5 hoi1 beng6 gaa3 zi2? ting1 jat6 jiu3 faan1 gung1.",e:"Can you write a sick-leave note? I have work tomorrow."},
+{speaker:"B",c:"開兩日。你好返先返工。",j:"hoi1 loeng5 jat6. nei5 hou2 faan1 sin1 faan1 gung1.",e:"Two days. Only go back to work once you're better."},
+{speaker:"A",c:"要唔要打針或者驗血？",j:"jiu3 m4 jiu3 daa2 zam1 waak6 ze2 jim6 hyut3?",e:"Need a jab or a blood test?"},
+{speaker:"B",c:"而家唔使。如果仲咳就返嚟。",j:"ji4 gaa1 m4 sai2. jyu4 gwo2 zung6 kat1 zau6 faan1 lai4.",e:"Not now. If you're still coughing, come back."}
+],
+grammar:[
+{pattern:"睇症 / 掛號",desc:"睇症 = see the doctor for your case. 掛號 = register at the counter first.",ex:"可唔可以掛號睇症？(ho2 m4 ho2 ji5 gwaa3 hou6 tai2 zing3?)",en:"Can I register to see the doctor?"},
+{pattern:"有冇 + symptom",desc:"有冇發燒 / 有冇過敏 / 有冇咳.",ex:"你有冇發燒？有冇過敏？(nei5 jau5 mou5 faat3 siu1? jau5 mou5 gwo3 man5?)",en:"Got a fever? Any allergies?"},
+{pattern:"病假紙 (beng6 gaa3 zi2)",desc:"Sick-leave certificate. 開紙 = write/issue the note.",ex:"可唔可以開病假紙？開兩日。(ho2 m4 ho2 ji5 hoi1 beng6 gaa3 zi2? hoi1 loeng5 jat6)",en:"Can you issue a sick note? Two days."},
+{pattern:"食完飯食 (sik6 jyun4 faan6 sik6)",desc:"Take (it) after eating. Stacked 食: finish meal, then take medicine.",ex:"三次，食完飯食。(saam1 ci3, sik6 jyun4 faan6 sik6)",en:"Three times, take after meals."},
+{pattern:"好返先 + verb",desc:"Only after recovering, then… Same as L12.",ex:"你好返先返工。(nei5 hou2 faan1 sin1 faan1 gung1)",en:"Only go back to work once you're better."}
+],
+quiz:[
+{q:'"掛號" at a clinic means:',opts:["register","make a phone call","hang a picture","pay rent"],ans:0},
+{q:'"咳" means:',opts:["fever","rash","cough","dizzy"],ans:2},
+{q:'"處方" means:',opts:["waiting room","injection","blood test","prescription"],ans:3},
+{q:'"病假紙" is:',opts:["a sick-leave note","a tissue","a bill","an X-ray"],ans:0},
+{q:'"過敏" means:',opts:["exercise","appetite","a cold","allergy"],ans:3},
+{q:"Medicine is taken:",opts:["once a week","only at night","three times, after meals","never with food"],ans:2},
+{q:'"打針" means:',opts:["get an injection","draw blood","take pills","rest"],ans:0},
+{q:'"開兩日" here means:',opts:["open at 2","work two days","wait two hours","issue two days of leave"],ans:3}
+]},
+
+{id:129,title:"L29 返工",subtitle:"At work · 開會、交、加班、請假",
+vocab:[
+{c:"返工",j:"faan1 gung1",e:"go to work"},
+{c:"放工",j:"fong3 gung1",e:"get off work"},
+{c:"加班",j:"gaa1 baan1",e:"overtime"},
+{c:"開會",j:"hoi1 wui2",e:"have a meeting"},
+{c:"交",j:"gaau1",e:"to submit / hand in"},
+{c:"報告",j:"bou3 gou3",e:"report"},
+{c:"deadline",j:"ded1 laan4",e:"deadline (loanword)"},
+{c:"同事",j:"tung4 si6",e:"colleague"},
+{c:"上司",j:"soeng6 si1",e:"boss / superior"},
+{c:"忙",j:"mong4",e:"busy"},
+{c:"得閒",j:"dak1 haan4",e:"free"},
+{c:"請假",j:"cing2 gaa3",e:"ask for leave"},
+{c:"年假",j:"nin4 gaa3",e:"annual leave"},
+{c:"加班費",j:"gaa1 baan1 fai3",e:"overtime pay"},
+{c:"會議",j:"wui6 ji5",e:"a meeting (noun)"},
+{c:"電郵",j:"din6 jau4",e:"email"},
+{c:"覆",j:"fuk1",e:"reply"},
+{c:"搞掂",j:"gaau2 dim6",e:"done / sorted"},
+{c:"未搞掂",j:"mei6 gaau2 dim6",e:"not done yet"},
+{c:"辛苦",j:"san1 fu2",e:"tough going"}
+],
+dialogue:[
+{speaker:"A",c:"你今日幾點放工啊？",j:"nei5 gam1 jat6 gei2 dim2 fong3 gung1 aa3?",e:"What time do you get off today?"},
+{speaker:"B",c:"唔知。報告未搞掂，可能要加班。",j:"m4 zi1. bou3 gou3 mei6 gaau2 dim6, ho2 nang4 jiu3 gaa1 baan1.",e:"Dunno. Report isn't done — might have to OT."},
+{speaker:"A",c:"Deadline幾時？上司有冇催？",j:"ded1 laan4 gei2 si4? soeng6 si1 jau5 mou5 ceoi1?",e:"When's the deadline? Boss chasing you?"},
+{speaker:"B",c:"聽日朝早。同事肯幫我就搞得掂。",j:"ting1 jat6 ziu1 zou2. tung4 si6 hang2 bong1 ngo5 zau6 gaau2 dak1 dim6.",e:"Tomorrow morning. If a colleague is willing to help I'll get it done."},
+{speaker:"A",c:"你覆咗電郵未？開會係三點。",j:"nei5 fuk1 zo2 din6 jau4 mei6? hoi1 wui2 hai6 saam1 dim2.",e:"Replied to the email yet? Meeting's at three."},
+{speaker:"B",c:"覆咗。我請假聽日晏晝得唔得？",j:"fuk1 zo2. ngo5 cing2 gaa3 ting1 jat6 aan3 zau3 dak1 m4 dak1?",e:"Yes. Can I take tomorrow afternoon off?"},
+{speaker:"A",c:"交完報告先至請。年假仲有冇？",j:"gaau1 jyun4 bou3 gou3 sin1 zi3 cing2. nin4 gaa3 zung6 jau5 mou5?",e:"Hand in the report first, then ask. Any annual leave left?"},
+{speaker:"B",c:"仲有三日。加班有冇加班費啊？",j:"zung6 jau5 saam1 jat6. gaa1 baan1 jau5 mou5 gaa1 baan1 fai3 aa3?",e:"Three days left. OT paid?"},
+{speaker:"A",c:"有。不過你都幾辛苦。返屋企早啲啦。",j:"jau5. bat1 gwo3 nei5 dou1 gei2 san1 fu2. faan1 uk1 kei2 zou2 di1 laa1.",e:"Yes. But you're having a rough time. Go home earlier."},
+{speaker:"B",c:"得。搞掂就走。",j:"dak1. gaau2 dim6 zau6 zau2.",e:"OK. Once it's done, I leave."}
+],
+grammar:[
+{pattern:"搞掂 (gaau2 dim6)",desc:"Sorted / done. The HK completion verb. 未搞掂, 搞得掂, 搞掂就走.",ex:"報告未搞掂。搞掂就走。(bou3 gou3 mei6 gaau2 dim6. gaau2 dim6 zau6 zau2)",en:"The report isn't done. Once it's done, I leave."},
+{pattern:"交完…先至…",desc:"Only after handing in… then…",ex:"交完報告先至請。(gaau1 jyun4 bou3 gou3 sin1 zi3 cing2)",en:"Only ask for leave after submitting the report."},
+{pattern:"肯 (hang2)",desc:"Willing to. 同事肯幫我.",ex:"同事肯幫我就搞得掂。(tung4 si6 hang2 bong1 ngo5 zau6 gaau2 dak1 dim6)",en:"If a colleague is willing to help I'll get it done."},
+{pattern:"有冇加班費",desc:"有冇 + noun. Same 有冇 as existence.",ex:"加班有冇加班費啊？有。(gaa1 baan1 jau5 mou5 gaa1 baan1 fai3 aa3? jau5)",en:"Is there OT pay? Yes."},
+{pattern:"Deadline as a loanword",desc:"HK offices say deadline. You can also 截止日期, but spoken is deadline.",ex:"Deadline幾時？(ded1 laan4 gei2 si4?)",en:"When is the deadline?"}
+],
+quiz:[
+{q:'"搞掂" means:',opts:["sorted / done","start","fail","meeting"],ans:0},
+{q:'"加班" means:',opts:["day off","salary","overtime","email"],ans:2},
+{q:'"放工" means:',opts:["go to work","overtime","resign","get off work"],ans:3},
+{q:'"同事" means:',opts:["colleague","boss","client","family"],ans:0},
+{q:'"請假" — 假 is:',opts:["gaa2 fake","haa6","gaa1","gaa3 leave"],ans:3},
+{q:'"肯" means:',opts:["refuse","already","never","willing to"],ans:3},
+{q:"B's report is due:",opts:["tonight","next month","tomorrow morning","never"],ans:2},
+{q:'"年假" means:',opts:["annual leave","sick leave","maternity leave","a year of work"],ans:0}
+]},
+
+{id:130,title:"L30 週末",subtitle:"Weekend · 行街、運動、宅、約",
+vocab:[
+{c:"週末",j:"zau1 mut6",e:"weekend"},
+{c:"行街",j:"haang4 gaai1",e:"to stroll / shop around"},
+{c:"行山",j:"haang4 saan1",e:"to hike"},
+{c:"運動",j:"wan6 dung6",e:"exercise"},
+{c:"游水",j:"jau4 seoi2",e:"to swim"},
+{c:"睇戲",j:"tai2 hei3",e:"watch a film"},
+{c:"宅",j:"zaak6",e:"to stay home (as a hermit)"},
+{c:"瞓懶覺",j:"fan3 laan5 gaau3",e:"to sleep in"},
+{c:"brunch",j:"ban1 ci2",e:"brunch (loanword)"},
+{c:"約",j:"joek3",e:"to arrange to meet"},
+{c:"冇人約",j:"mou5 jan4 joek3",e:"no plans / nobody to meet"},
+{c:"隨緣",j:"ceoi4 jyun4",e:"whatever happens / no fixed plan"},
+{c:"充充電",j:"cung1 cung1 din6",e:"recharge (rest)"},
+{c:"人多",j:"jan4 do1",e:"crowded"},
+{c:"靜",j:"zing6",e:"quiet"},
+{c:"開心",j:"hoi1 sam1",e:"happy"},
+{c:"無聊",j:"mou4 liu4",e:"bored"},
+{c:"不如",j:"bat1 jyu4",e:"how about… / rather"},
+{c:"定",j:"ding6",e:"or"},
+{c:"得閒",j:"dak1 haan4",e:"free"}
+],
+dialogue:[
+{speaker:"A",c:"週末得唔得閒？想唔想行山？",j:"zau1 mut6 dak1 m4 dak1 haan4? soeng2 m4 soeng2 haang4 saan1?",e:"Free this weekend? Want to hike?"},
+{speaker:"B",c:"我想宅。瞓懶覺，充充電。",j:"ngo5 soeng2 zaak6. fan3 laan5 gaau3, cung1 cung1 din6.",e:"I want to stay in. Sleep in, recharge."},
+{speaker:"A",c:"成日宅會悶。不如brunch然後行街？",j:"sing4 jat6 zaak6 wui5 mun6. bat1 jyu4 ban1 ci2 jin4 hau6 haang4 gaai1?",e:"Staying in every day gets boring. How about brunch then a wander?"},
+{speaker:"B",c:"週末商場人多。我想靜啲。",j:"zau1 mut6 soeng1 coeng4 jan4 do1. ngo5 soeng2 zing6 di1.",e:"Malls are packed at the weekend. I want something quieter."},
+{speaker:"A",c:"咁游水定睇戲？",j:"gam2 jau4 seoi2 ding6 tai2 hei3?",e:"Then swim or a film?"},
+{speaker:"B",c:"睇戲得。夜晚場，朝早隨緣。",j:"tai2 hei3 dak1. je6 maan5 coeng4, ziu1 zou2 ceoi4 jyun4.",e:"Film is OK. Evening showing — morning whatever."},
+{speaker:"A",c:"你冇人約咩？",j:"nei5 mou5 jan4 joek3 me1?",e:"No one else you're meeting?"},
+{speaker:"B",c:"冇。最近好想一個人。",j:"mou5. zeoi3 gan6 hou2 soeng2 jat1 go3 jan4.",e:"No. Lately I just want to be by myself."},
+{speaker:"A",c:"得。我唔迫你。想出隨時call我。",j:"dak1. ngo5 m4 bik1 nei5. soeng2 ceot1 ceoi4 si4 ko1 ngo5.",e:"OK, I won't push. Want to go out, call me anytime."},
+{speaker:"B",c:"多謝。有你約我都開心。",j:"do1 ze6. jau5 nei5 joek3 ngo5 dou1 hoi1 sam1.",e:"Thanks. I'm still glad you asked."}
+],
+grammar:[
+{pattern:"不如 (bat1 jyu4)",desc:"How about…? Suggests an alternative. 不如brunch然後行街.",ex:"不如brunch然後行街？(bat1 jyu4 ban1 ci2 jin4 hau6 haang4 gaai1?)",en:"How about brunch then a wander?"},
+{pattern:"定 (ding6) X定Y",desc:"Or. 游水定睇戲.",ex:"咁游水定睇戲？(gam2 jau4 seoi2 ding6 tai2 hei3?)",en:"Then swim or a film?"},
+{pattern:"宅 (zaak6)",desc:"Stay home, hermit-mode. Verb. 我想宅。成日宅會悶.",ex:"我想宅。瞓懶覺，充充電。(ngo5 soeng2 zaak6. fan3 laan5 gaau3, cung1 cung1 din6)",en:"I want to stay in. Sleep in, recharge."},
+{pattern:"隨緣 (ceoi4 jyun4)",desc:"No fixed plan / go with the flow. Very HK Buddhist-lite.",ex:"夜晚場，朝早隨緣。(je6 maan5 coeng4, ziu1 zou2 ceoi4 jyun4)",en:"Evening showing — morning whatever happens."},
+{pattern:"冇人約",desc:"No plans with anyone. 約 as 'have an arrangement'.",ex:"你冇人約咩？冇。(nei5 mou5 jan4 joek3 me1? mou5)",en:"You're not meeting anyone? No."}
+],
+quiz:[
+{q:'"行山" means:',opts:["hike","go shopping","run a marathon","stay home"],ans:0},
+{q:'"宅" as a verb means:',opts:["buy a flat","go clubbing","stay in / hermit","work OT"],ans:2},
+{q:'"瞓懶覺" means:',opts:["nap at work","have insomnia","wake at 6","sleep in"],ans:3},
+{q:'"不如" starts a:',opts:["suggestion (how about)","complaint","goodbye","order"],ans:0},
+{q:'"隨緣" means:',opts:["must plan everything","never meet","be angry","go with the flow"],ans:3},
+{q:'"人多" means:',opts:["crowded","few people","quiet","far"],ans:0},
+{q:"B prefers the weekend to be:",opts:["packed malls","a hike at 7am","overtime","quieter"],ans:3},
+{q:'"行街" means:',opts:["hike a mountain","drive","stroll / wander the streets","swim"],ans:2}
+]}
 ];
 
 let studyMode=localStorage.getItem('cantonese-mode')||'levels';
@@ -2977,7 +3243,7 @@ function renderAchievements(){
     { icon: '💪', name: 'Consistent', desc: '7-day streak', check: stats.streak >= 7 },
     { icon: '✍️', name: 'Penman', desc: 'Practice 5 chars', check: stats.practiced >= 5 },
     { icon: '🖌️', name: 'Calligrapher', desc: 'Practice 20 chars', check: stats.practiced >= 20 },
-    { icon: '🏆', name: 'Explorer', desc: '25 everyday lessons ready', check: true },
+    { icon: '🏆', name: 'Explorer', desc: '30 everyday lessons ready', check: true },
   ];
   const unlocked = achs.filter(a => a.check).length;
   let h = '<div class="match-score" style="margin-top:24px"><span><span class="pairs">' + unlocked + '/' + achs.length + '</span> achievements</span></div>';
