@@ -40,6 +40,11 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L18 天氣 | 悶熱、落雨、掛波、着多件 |
 | L19 形容 | 大細新舊、啲 / 比 / 最 |
 | L20 開口講 | Speak slower, 即係, 聽唔明 |
+| L21 茶餐廳 | 少甜走甜、加底、打包 |
+| L22 鐘點 | 點半、個字、嚟得切 |
+| L23 購物 | 試身、換、退錢 |
+| L24 交通 | 巴士的士、拍卡、尾班車 |
+| L25 心情 | 冇心情、嬲、唔緊要 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 

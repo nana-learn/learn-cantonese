@@ -266,7 +266,7 @@ h2{font-size:1.4em;margin-bottom:16px}
 <p>Speak Hong Kong Cantonese — everyday first, then the course</p>
 </header>
 <div class="tabs mode-row" id="modeRow">
-  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 Everyday L1–L20</div>
+  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 Everyday L1–L25</div>
   <div class="tab" id="mode-course" onclick="setMode('course')">📘 Course 1–11</div>
 </div>
 <div class="tabs" id="lessonTabs"></div>
@@ -2023,6 +2023,271 @@ quiz:[
 {q:'"再講一次" means:',opts:["say it again","don't repeat","say it faster","write it"],ans:0},
 {q:'"係咪咁解" checks:',opts:["the bill","the time","the weather","whether that's the meaning"],ans:3}
 ]}
+,
+{id:121,title:"L21 茶餐廳",subtitle:"Cha chaan teng · 常餐、加底、少甜、打包",
+vocab:[
+{c:"茶餐廳",j:"caa4 caan1 teng1",e:"Hong Kong diner (cha chaan teng)"},
+{c:"常餐",j:"soeng4 caan1",e:"set meal"},
+{c:"麵",j:"min6",e:"noodles"},
+{c:"飯",j:"faan6",e:"rice / a meal"},
+{c:"多士",j:"do1 si2",e:"toast"},
+{c:"西多士",j:"sai1 do1 si2",e:"French toast (HK style)"},
+{c:"菠蘿油",j:"bo1 lo4 jau4",e:"pineapple bun with butter"},
+{c:"奶茶",j:"naai5 caa4",e:"milk tea"},
+{c:"檸茶",j:"ning2 caa4",e:"lemon tea"},
+{c:"少甜",j:"siu2 tim4",e:"less sugar"},
+{c:"走甜",j:"zau2 tim4",e:"no sugar"},
+{c:"加底",j:"gaa1 dai2",e:"extra noodles / rice in a set"},
+{c:"打包",j:"daa2 baau1",e:"to take away"},
+{c:"熱辣辣",j:"jit6 laat6 laat6",e:"piping hot"},
+{c:"凍",j:"dung3",e:"iced / cold"},
+{c:"快啲",j:"faai3 di1",e:"hurry up / quicker"},
+{c:"未好",j:"mei6 hou2",e:"not ready yet"},
+{c:"好咗",j:"hou2 zo2",e:"it's ready"},
+{c:"茄汁",j:"ke2 zap1",e:"ketchup / tomato sauce"},
+{c:"公仔麵",j:"gung1 zai2 min6",e:"instant noodles (often in cha chaan teng)"}
+],
+dialogue:[
+{speaker:"A",c:"唔該，有位未啊？兩個人。",j:"m4 goi1, jau5 wai2 mei6 aa3? loeng5 go3 jan4.",e:"Excuse me, any seats? Two of us."},
+{speaker:"B",c:"有，呢邊坐。飲咩啊？",j:"jau5, ni1 bin1 co5. jam2 me1 aa3?",e:"Yes, sit here. What are you drinking?"},
+{speaker:"A",c:"我要杯熱奶茶少甜。佢要凍檸茶走甜。",j:"ngo5 jiu3 bui1 jit6 naai5 caa4 siu2 tim4. keoi5 jiu3 dung3 ning2 caa4 zau2 tim4.",e:"Hot milk tea, less sugar. Iced lemon tea, no sugar for them."},
+{speaker:"B",c:"食咩常餐？",j:"sik6 me1 soeng4 caan1?",e:"Which set meal?"},
+{speaker:"A",c:"一個豬扒飯加底，一個西多士。",j:"jat1 go3 zyu1 paa2 faan6 gaa1 dai2, jat1 go3 sai1 do1 si2.",e:"One pork-chop rice with extra rice, one French toast."},
+{speaker:"B",c:"西多士要茄汁定糖漿？",j:"sai1 do1 si2 jiu3 ke2 zap1 ding6 tong4 zoeng1?",e:"French toast — ketchup or syrup?"},
+{speaker:"A",c:"糖漿。快唔快啊？我趕時間。",j:"tong4 zoeng1. faai3 m4 faai3 aa3? ngo5 gon2 si4 gaan3.",e:"Syrup. Is it quick? I'm in a hurry."},
+{speaker:"B",c:"快。等陣好咗叫你。",j:"faai3. dang2 zan6 hou2 zo2 giu3 nei5.",e:"Fast. I'll call you when it's ready."},
+{speaker:"A",c:"呢個打包得唔得？食唔晒。",j:"ni1 go3 daa2 baau1 dak1 m4 dak1? sik6 m4 saai3.",e:"Can I take this away? I can't finish it."},
+{speaker:"B",c:"得。唔該埋單，五十蚊。",j:"dak1. m4 goi1 maai4 daan1, ng5 sap6 man1.",e:"Yes. Bill — fifty dollars."}
+],
+grammar:[
+{pattern:"少甜 / 走甜 (siu2 tim4 / zau2 tim4)",desc:"Drink customisation. 少 = less. 走 = hold / without. Also 走冰, 走青.",ex:"熱奶茶少甜。凍檸茶走甜。(jit6 naai5 caa4 siu2 tim4. dung3 ning2 caa4 zau2 tim4)",en:"Hot milk tea less sugar. Iced lemon tea no sugar."},
+{pattern:"加底 (gaa1 dai2)",desc:"Extra base (rice or noodles) in a set. Classic cha chaan teng.",ex:"豬扒飯加底 (zyu1 paa2 faan6 gaa1 dai2)",en:"Pork-chop rice with extra rice."},
+{pattern:"有位未？(jau5 wai2 mei6?)",desc:"Any seats yet? 位 is wai2 (seat). Don't say wai6.",ex:"唔該，有位未啊？兩個人。(m4 goi1, jau5 wai2 mei6 aa3? loeng5 go3 jan4)",en:"Excuse me, any seats? Two people."},
+{pattern:"打包 (daa2 baau1)",desc:"Take away. 呢個打包 / 打包返屋企.",ex:"呢個打包得唔得？食唔晒。(ni1 go3 daa2 baau1 dak1 m4 dak1? sik6 m4 saai3)",en:"Can I take this away? I can't finish it."},
+{pattern:"食唔晒 (sik6 m4 saai3)",desc:"Can't finish it all. 晒 = completely. Verb + 唔 + 晒.",ex:"食唔晒。(sik6 m4 saai3)",en:"I can't finish it."}
+],
+quiz:[
+{q:'"少甜" means:',opts:["less sugar","no ice","extra rice","take away"],ans:0},
+{q:'"走甜" means:',opts:["less sugar","no sugar","too sweet","add sugar"],ans:1},
+{q:'"加底" means:',opts:["extra rice/noodles in a set","the bill","a seat","ketchup"],ans:0},
+{q:'"打包" means:',opts:["take away","pack a suitcase","order a set","pay"],ans:0},
+{q:'"有位未" asks for:',opts:["the menu","the toilet","a seat","Wi-Fi"],ans:2},
+{q:"A's milk tea is:",opts:["iced, no sugar","hot, no sugar","iced, extra sugar","hot, less sugar"],ans:3},
+{q:'"食唔晒" means:',opts:["not tasty","not cooked","too small","can't finish it all"],ans:3},
+{q:'"茶餐廳" is:',opts:["a HK diner","a tea ceremony hall","a dim sum palace only","a bar"],ans:0}
+]},
+
+{id:122,title:"L22 鐘點",subtitle:"Clock time · 點、半、個字、差、朝早夜晚",
+vocab:[
+{c:"幾點",j:"gei2 dim2",e:"what time"},
+{c:"點鐘",j:"dim2 zung1",e:"o'clock"},
+{c:"半",j:"bun3",e:"half (past)"},
+{c:"個字",j:"go3 zi6",e:"five minutes (on the clock)"},
+{c:"差",j:"caa1",e:"to / short of (time)"},
+{c:"朝早",j:"ziu1 zou2",e:"morning"},
+{c:"中午",j:"zung1 ng5",e:"noon (also 晏晝)"},
+{c:"夜晚",j:"je6 maan5",e:"evening / night"},
+{c:"凌晨",j:"ling4 san4",e:"after midnight / small hours"},
+{c:"準時",j:"zeon2 si4",e:"on time"},
+{c:"早到",j:"zou2 dou3",e:"arrive early"},
+{c:"遲到",j:"ci4 dou3",e:"arrive late"},
+{c:"趕",j:"gon2",e:"to rush; to be in a hurry"},
+{c:"嚟得切",j:"lai4 dak1 cit3",e:"to make it in time"},
+{c:"嚟唔切",j:"lai4 m4 cit3",e:"won't make it in time"},
+{c:"開始",j:"hoi1 ci2",e:"to start"},
+{c:"完",j:"jyun4",e:"to finish"},
+{c:"今日",j:"gam1 jat6",e:"today"},
+{c:"聽日",j:"ting1 jat6",e:"tomorrow"},
+{c:"尋日",j:"cam4 jat6",e:"yesterday"}
+],
+dialogue:[
+{speaker:"A",c:"而家幾點啊？",j:"ji4 gaa1 gei2 dim2 aa3?",e:"What time is it now?"},
+{speaker:"B",c:"十點三個字。即係十點十五分。",j:"sap6 dim2 saam1 go3 zi6. zik1 hai6 sap6 dim2 sap6 ng5 fan1.",e:"Ten and three 'characters' — that's 10:15."},
+{speaker:"A",c:"電影十點半開始。我哋嚟唔切啊？",j:"din6 jing2 sap6 dim2 bun3 hoi1 ci2. ngo5 dei6 lai4 m4 cit3 aa3?",e:"The film starts at 10:30. Will we not make it?"},
+{speaker:"B",c:"而家去就嚟得切。差廿分鐘。",j:"ji4 gaa1 heoi3 zau6 lai4 dak1 cit3. caa1 jaa6 fan1 zung1.",e:"If we go now we'll make it. Twenty minutes short."},
+{speaker:"A",c:"我最怕遲到。不如早到十分鐘。",j:"ngo5 zeoi3 paa3 ci4 dou3. bat1 jyu4 zou2 dou3 sap6 fan1 zung1.",e:"I hate being late. Let's arrive ten minutes early."},
+{speaker:"B",c:"得。你朝早定夜晚睇戲好啲？",j:"dak1. nei5 ziu1 zou2 ding6 je6 maan5 tai2 hei3 hou2 di1?",e:"OK. Morning or evening — which is better for films?"},
+{speaker:"A",c:"夜晚。朝早我趕住返工。",j:"je6 maan5. ziu1 zou2 ngo5 gon2 zyu6 faan1 gung1.",e:"Evening. In the morning I'm rushing to work."},
+{speaker:"B",c:"尋日我睇咗凌晨場，準時到。",j:"cam4 jat6 ngo5 tai2 zo2 ling4 san4 coeng4, zeon2 si4 dou3.",e:"Yesterday I did a late-night showing — got there on time."},
+{speaker:"A",c:"咁癲。聽日七點半見得唔得？",j:"gam3 din1. ting1 jat6 cat1 dim2 bun3 gin3 dak1 m4 dak1?",e:"That's wild. Meet at 7:30 tomorrow?"},
+{speaker:"B",c:"七點半早啲。八點得唔得？",j:"cat1 dim2 bun3 zou2 di1. baat3 dim2 dak1 m4 dak1?",e:"7:30 is a bit early. Is 8 OK?"}
+],
+grammar:[
+{pattern:"X點Y分 / X點半",desc:"10:00 十點. 10:30 十點半. 10:15 十點十五分.",ex:"電影十點半開始。(din6 jing2 sap6 dim2 bun3 hoi1 ci2)",en:"The film starts at 10:30."},
+{pattern:"個字 (go3 zi6)",desc:"Old HK clock-speak: 1 個字 = 5 minutes. 三個字 = 15 min. Still heard.",ex:"十點三個字。即係十點十五分。(sap6 dim2 saam1 go3 zi6. zik1 hai6 sap6 dim2 sap6 ng5 fan1)",en:"Ten and three marks — that's 10:15."},
+{pattern:"差 (caa1) + duration",desc:"Short of / remaining. 差廿分鐘 = 20 minutes left (until start).",ex:"而家去就嚟得切。差廿分鐘。(ji4 gaa1 heoi3 zau6 lai4 dak1 cit3. caa1 jaa6 fan1 zung1)",en:"Go now and we'll make it. Twenty minutes to go."},
+{pattern:"嚟得切 / 嚟唔切",desc:"Make it in time / not make it. 切 = in time. Extremely useful.",ex:"我哋嚟唔切啊？而家去就嚟得切。(ngo5 dei6 lai4 m4 cit3 aa3? ji4 gaa1 heoi3 zau6 lai4 dak1 cit3)",en:"Won't we make it? If we go now we will."},
+{pattern:"朝早 / 夜晚 / 凌晨",desc:"Morning / evening / after midnight. 晏晝 = afternoon (L11).",ex:"朝早我趕住返工。夜晚睇戲好啲。(ziu1 zou2 ngo5 gon2 zyu6 faan1 gung1. je6 maan5 tai2 hei3 hou2 di1)",en:"Mornings I rush to work. Evening is better for films."}
+],
+quiz:[
+{q:'"十點半" is:',opts:["10:00","10:15","10:30","10:45"],ans:2},
+{q:'"一個字" on the clock is:',opts:["5 minutes","1 minute","15 minutes","30 minutes"],ans:0},
+{q:'"三個字" is:',opts:["3 minutes","30 minutes","15 minutes","45 minutes"],ans:2},
+{q:'"嚟唔切" means:',opts:["already here","too early","on time","won't make it in time"],ans:3},
+{q:'"嚟得切" means:',opts:["will make it in time","won't make it","cancelled","lost"],ans:0},
+{q:'"準時" means:',opts:["late","early","on time","never"],ans:2},
+{q:'"凌晨" means:',opts:["after midnight","noon","sunset","weekend"],ans:0},
+{q:'"趕" means:',opts:["relax","sleep","eat","rush / hurry"],ans:3}
+]},
+
+{id:123,title:"L23 購物",subtitle:"Shopping · 試、換、細碼、退錢",
+vocab:[
+{c:"試",j:"si3",e:"to try (on / out)"},
+{c:"試身室",j:"si3 san1 sat1",e:"fitting room"},
+{c:"碼",j:"maa5",e:"size"},
+{c:"細碼",j:"sai3 maa5",e:"small size"},
+{c:"中碼",j:"zung1 maa5",e:"medium"},
+{c:"大碼",j:"daai6 maa5",e:"large"},
+{c:"換",j:"wun6",e:"to exchange"},
+{c:"退錢",j:"teoi3 cin2",e:"to get a refund"},
+{c:"收據",j:"sau1 geoi3",e:"receipt"},
+{c:"平賣",j:"peng4 maai6",e:"on sale / cheap sale"},
+{c:"原價",j:"jyun4 gaa3",e:"original price"},
+{c:"折扣",j:"zit3 kau3",e:"discount"},
+{c:"銀包",j:"ngan4 baau1",e:"wallet"},
+{c:"袋",j:"doi2",e:"bag"},
+{c:"靚",j:"leng3",e:"nice / pretty"},
+{c:"夾",j:"gaap3",e:"to match; to fit well (style)"},
+{c:"緊",j:"gan2",e:"tight (clothes)"},
+{c:"鬆",j:"sung1",e:"loose"},
+{c:"短",j:"dyun2",e:"short"},
+{c:"長",j:"coeng4",e:"long"}
+],
+dialogue:[
+{speaker:"A",c:"呢件衫好靚。有冇細碼啊？",j:"ni1 gin6 saam1 hou2 leng3. jau5 mou5 sai3 maa5 aa3?",e:"This shirt is nice. Got a small?"},
+{speaker:"B",c:"有。試身室喺後面。你試下。",j:"jau5. si3 san1 sat1 hai2 hau6 min6. nei5 si3 haa5.",e:"Yes. Fitting room at the back. Try it."},
+{speaker:"A",c:"有啲緊。有冇大一個碼？",j:"jau5 di1 gan2. jau5 mou5 daai6 jat1 go3 maa5?",e:"A bit tight. Got one size up?"},
+{speaker:"B",c:"中碼有。呢排平賣，原價三百，而家二百。",j:"zung1 maa5 jau5. ni1 paai4 peng4 maai6, jyun4 gaa3 saam1 baak3, ji4 gaa1 ji6 baak3.",e:"Medium yes. On sale — was $300, now $200."},
+{speaker:"A",c:"可唔可以換啊？如果返到屋企唔夾。",j:"ho2 m4 ho2 ji5 wun6 aa3? jyu4 gwo2 faan1 dou3 uk1 kei2 m4 gaap3.",e:"Can I exchange it? If it doesn't match at home."},
+{speaker:"B",c:"七日之內帶收據嚟換得。退錢就唔得。",j:"cat1 jat6 zi1 noi6 daai3 sau1 geoi3 lai4 wun6 dak1. teoi3 cin2 zau6 m4 dak1.",e:"Exchange within seven days with the receipt. No refunds."},
+{speaker:"A",c:"得。我銀包俾八達通得唔得？",j:"dak1. ngo5 ngan4 baau1 bei2 baat3 daat6 tung1 dak1 m4 dak1?",e:"OK. Can I pay by Octopus from my wallet?"},
+{speaker:"B",c:"得。要袋唔要？",j:"dak1. jiu3 doi2 m4 jiu3?",e:"Yes. Want a bag?"},
+{speaker:"A",c:"唔使，我有袋。唔該。",j:"m4 sai2, ngo5 jau5 doi2. m4 goi1.",e:"No need, I've got a bag. Thanks."},
+{speaker:"B",c:"多謝惠顧。慢慢行。",j:"do1 ze6 wai6 gu3. maan6 maan2 haang4.",e:"Thanks for your custom. Take care."}
+],
+grammar:[
+{pattern:"有冇 + size / colour",desc:"Do you have…? 有冇細碼 / 有冇黑色.",ex:"有冇細碼啊？有冇大一個碼？(jau5 mou5 sai3 maa5 aa3? jau5 mou5 daai6 jat1 go3 maa5?)",en:"Got a small? Got one size up?"},
+{pattern:"有啲 + adj",desc:"A bit… 有啲緊, 有啲長, 有啲貴.",ex:"有啲緊。(jau5 di1 gan2)",en:"A bit tight."},
+{pattern:"可唔可以換 (ho2 m4 ho2 ji5 wun6)",desc:"Can I exchange it? Same A-not-A request as L16.",ex:"可唔可以換啊？(ho2 m4 ho2 ji5 wun6 aa3?)",en:"Can I exchange it?"},
+{pattern:"X 就唔得",desc:"X is not OK. Contrast: 換得，退錢就唔得.",ex:"七日之內換得。退錢就唔得。(cat1 jat6 zi1 noi6 wun6 dak1. teoi3 cin2 zau6 m4 dak1)",en:"Exchange within 7 days is OK. Refunds are not."},
+{pattern:"要唔要 (jiu3 m4 jiu3)",desc:"Do you want…? 要袋唔要 / 要唔要袋.",ex:"要袋唔要？唔使，我有袋。(jiu3 doi2 m4 jiu3? m4 sai2, ngo5 jau5 doi2)",en:"Want a bag? No need, I have one."}
+],
+quiz:[
+{q:'"試身室" is the:',opts:["fitting room","cashier","warehouse","toilet"],ans:0},
+{q:'"細碼" means:',opts:["large","receipt","small size","discount"],ans:2},
+{q:'"有啲緊" means:',opts:["a bit tight","too loose","perfect","too long"],ans:0},
+{q:'"換" here means:',opts:["change money","run","hang up","exchange the item"],ans:3},
+{q:'"退錢" means:',opts:["pay extra","tip","get a refund","count coins"],ans:2},
+{q:"Refunds in this shop are:",opts:["always OK","only today","by cash only","not allowed"],ans:3},
+{q:'"平賣" means:',opts:["on sale / selling cheap","full price","too expensive","sold out"],ans:0},
+{q:'"收據" means:',opts:["wallet","bag","size tag","receipt"],ans:3}
+]},
+
+{id:124,title:"L24 交通",subtitle:"Getting around · 巴士、的士、轉車、八達通",
+vocab:[
+{c:"巴士",j:"baa1 si2",e:"bus"},
+{c:"的士",j:"dik1 si2",e:"taxi"},
+{c:"地鐵",j:"dei6 tit3",e:"MTR"},
+{c:"小巴",j:"siu2 baa1",e:"minibus"},
+{c:"轉車",j:"zyun3 ce1",e:"to transfer"},
+{c:"落車",j:"lok6 ce1",e:"to get off"},
+{c:"上車",j:"soeng5 ce1",e:"to get on"},
+{c:"總站",j:"zung2 zaam6",e:"terminus / last stop"},
+{c:"下一站",j:"haa6 jat1 zaam6",e:"next stop"},
+{c:"拍卡",j:"paak3 kaat1",e:"tap the card (Octopus)"},
+{c:"八達通",j:"baat3 daat6 tung1",e:"Octopus card"},
+{c:"車費",j:"ce1 fai3",e:"fare"},
+{c:"塞車",j:"sak1 ce1",e:"traffic jam"},
+{c:"改道",j:"goi2 dou6",e:"diverted route"},
+{c:"尾班車",j:"mei5 baan1 ce1",e:"last train/bus"},
+{c:"直達",j:"zik6 daat6",e:"direct (no transfer)"},
+{c:"幾耐",j:"gei2 noi6",e:"how long"},
+{c:"到未",j:"dou3 mei6",e:"are we there yet / has it arrived"},
+{c:"叫的士",j:"giu3 dik1 si2",e:"to hail / call a taxi"},
+{c:"錶",j:"biu1",e:"meter (taxi)"}
+],
+dialogue:[
+{speaker:"A",c:"去機場搭地鐵定巴士好啊？",j:"heoi3 gei1 coeng4 daap3 dei6 tit3 ding6 baa1 si2 hou2 aa3?",e:"Airport — better by MTR or bus?"},
+{speaker:"B",c:"地鐵直達，大概廿五分鐘。巴士平啲，不過怕塞車。",j:"dei6 tit3 zik6 daat6, daai6 koi3 jaa6 ng5 fan1 zung1. baa1 si2 peng4 di1, bat1 gwo3 paa3 sak1 ce1.",e:"MTR is direct, about 25 minutes. Bus is cheaper, but traffic."},
+{speaker:"A",c:"我帶咗行李箱。上車拍卡得唔得？",j:"ngo5 daai3 zo2 hang4 lei5 soeng1. soeng5 ce1 paak3 kaat1 dak1 m4 dak1?",e:"I've got a suitcase. Can I tap Octopus getting on?"},
+{speaker:"B",c:"地鐵得。巴士都得。八達通要有錢。",j:"dei6 tit3 dak1. baa1 si2 dou1 dak1. baat3 daat6 tung1 jiu3 jau5 cin2.",e:"MTR yes. Bus too. Octopus needs money on it."},
+{speaker:"A",c:"如果尾班車開咗呢？",j:"jyu4 gwo2 mei5 baan1 ce1 hoi1 zo2 ne1?",e:"What if the last train's gone?"},
+{speaker:"B",c:"就叫的士。記住睇錶，唔好唔開錶。",j:"zau6 giu3 dik1 si2. gei3 zyu6 tai2 biu1, m4 hou2 m4 hoi1 biu1.",e:"Then hail a taxi. Watch the meter — don't let them not start it."},
+{speaker:"A",c:"小巴快唔快？要轉車未？",j:"siu2 baa1 faai3 m4 faai3? jiu3 zyun3 ce1 mei6?",e:"Is the minibus fast? Need to transfer?"},
+{speaker:"B",c:"快，不過企位多。下一站總站先至到機場。",j:"faai3, bat1 gwo3 kei5 wai2 do1. haa6 jat1 zaam6 zung2 zaam6 sin1 zi3 dou3 gei1 coeng4.",e:"Fast, but lots of standing. Next stop is the terminus, then the airport… wait."},
+{speaker:"A",c:"吓？即係未到？",j:"haa2? zik1 hai6 mei6 dou3?",e:"Huh? So we're not there yet?"},
+{speaker:"B",c:"講緊小巴啦。地鐵就一程到。走啦。",j:"gong2 gan2 siu2 baa1 laa1. dei6 tit3 zau6 jat1 cing4 dou3. zau2 laa1.",e:"I mean the minibus. MTR is one ride there. Let's go."}
+],
+grammar:[
+{pattern:"搭 + transport (daap3)",desc:"Take (a vehicle). 搭地鐵, 搭巴士, 搭的士. Not 坐 as the default.",ex:"去機場搭地鐵定巴士好啊？(heoi3 gei1 coeng4 daap3 dei6 tit3 ding6 baa1 si2 hou2 aa3?)",en:"Airport — MTR or bus?"},
+{pattern:"上車 / 落車",desc:"Get on / get off. 上車拍卡, 到站落車.",ex:"上車拍卡得唔得？(soeng5 ce1 paak3 kaat1 dak1 m4 dak1?)",en:"Can I tap the card getting on?"},
+{pattern:"直達 (zik6 daat6)",desc:"Goes there directly. Opposite of 要轉車.",ex:"地鐵直達，大概廿五分鐘。(dei6 tit3 zik6 daat6, daai6 koi3 jaa6 ng5 fan1 zung1)",en:"MTR is direct, about 25 minutes."},
+{pattern:"如果…呢？(jyu4 gwo2… ne1?)",desc:"What if…? 呢 hangs the hypothetical.",ex:"如果尾班車開咗呢？(jyu4 gwo2 mei5 baan1 ce1 hoi1 zo2 ne1?)",en:"What if the last train has left?"},
+{pattern:"一程到 (jat1 cing4 dou3)",desc:"One ride and you're there. 程 = a trip/leg.",ex:"地鐵就一程到。(dei6 tit3 zau6 jat1 cing4 dou3)",en:"The MTR is one ride there."}
+],
+quiz:[
+{q:'"的士" means:',opts:["taxi","bus","MTR","ferry"],ans:0},
+{q:'"落車" means:',opts:["get on","miss the bus","get off","drive"],ans:2},
+{q:'"拍卡" means:',opts:["take a photo","buy a ticket from a machine","call a taxi","tap the Octopus"],ans:3},
+{q:'"尾班車" means:',opts:["last train/bus","first train","express","minibus"],ans:0},
+{q:'"塞車" means:',opts:["cheap fare","direct route","empty bus","traffic jam"],ans:3},
+{q:'"搭" before 地鐵 means:',opts:["take (transport)","hit","build","miss"],ans:0},
+{q:"They prefer the airport MTR because it is:",opts:["cheaper always","a minibus","overnight only","direct"],ans:3},
+{q:'"轉車" means:',opts:["get off forever","drive a car","transfer","buy a car"],ans:2}
+]},
+
+{id:125,title:"L25 心情",subtitle:"Moods · 開心悶嬲擔心 冇心情",
+vocab:[
+{c:"開心",j:"hoi1 sam1",e:"happy"},
+{c:"唔開心",j:"m4 hoi1 sam1",e:"unhappy"},
+{c:"悶",j:"mun6",e:"bored; stuffy"},
+{c:"嬲",j:"nau1",e:"angry"},
+{c:"擔心",j:"daam1 sam1",e:"worried"},
+{c:"怕",j:"paa3",e:"afraid; to fear"},
+{c:"緊張",j:"gan2 zoeng1",e:"nervous"},
+{c:"輕鬆",j:"hing1 sung1",e:"relaxed"},
+{c:"失望",j:"sat1 mong6",e:"disappointed"},
+{c:"感動",j:"gam2 dung6",e:"moved / touched"},
+{c:"無聊",j:"mou4 liu4",e:"bored; pointless"},
+{c:"辛苦",j:"san1 fu2",e:"having a hard time"},
+{c:"舒服",j:"syu1 fuk6",e:"comfortable"},
+{c:"唔舒服",j:"m4 syu1 fuk6",e:"unwell / uncomfortable"},
+{c:"心情",j:"sam1 cing4",e:"mood"},
+{c:"冇心情",j:"mou5 sam1 cing4",e:"not in the mood"},
+{c:"放鬆",j:"fong3 sung1",e:"to relax"},
+{c:"笑",j:"siu3",e:"to laugh / smile"},
+{c:"喊",j:"haam3",e:"to cry"},
+{c:"唔緊要",j:"m4 gan2 jiu3",e:"it's OK / never mind"}
+],
+dialogue:[
+{speaker:"A",c:"你今日心情好唔好啊？",j:"nei5 gam1 jat6 sam1 cing4 hou2 m4 hou2 aa3?",e:"How's your mood today?"},
+{speaker:"B",c:"冇心情。返工好辛苦，返到嚟好悶。",j:"mou5 sam1 cing4. faan1 gung1 hou2 san1 fu2, faan1 dou3 lai4 hou2 mun6.",e:"Not in the mood. Work was hard, and I'm bored now I'm back."},
+{speaker:"A",c:"做咩唔開心？有人嬲你？",j:"zou6 me1 m4 hoi1 sam1? jau5 jan4 nau1 nei5?",e:"Why unhappy? Did someone get angry at you?"},
+{speaker:"B",c:"老闆有啲嬲。我怕佢失望。",j:"lou5 baan2 jau5 di1 nau1. ngo5 paa3 keoi5 sat1 mong6.",e:"The boss was a bit angry. I'm afraid he's disappointed."},
+{speaker:"A",c:"唔緊要。你已經好盡力。放鬆啲啦。",j:"m4 gan2 jiu3. nei5 ji5 ging1 hou2 zeon6 lik6. fong3 sung1 di1 laa1.",e:"It's OK. You already tried hard. Relax a bit."},
+{speaker:"B",c:"我知。不過我仲好緊張聽日個會。",j:"ngo5 zi1. bat1 gwo3 ngo5 zung6 hou2 gan2 zoeng1 ting1 jat6 go3 wui2.",e:"I know. But I'm still nervous about tomorrow's meeting."},
+{speaker:"A",c:"一齊出街行下，開心啲。唔好喺屋企悶。",j:"jat1 cai4 ceot1 gaai1 haang4 haa5, hoi1 sam1 di1. m4 hou2 hai2 uk1 kei2 mun6.",e:"Let's go walk around — cheer up. Don't stay home bored."},
+{speaker:"B",c:"我而家冇心情笑。想喊多過想出街。",j:"ngo5 ji4 gaa1 mou5 sam1 cing4 siu3. soeng2 haam3 do1 gwo3 soeng2 ceot1 gaai1.",e:"I'm not in the mood to smile. I'd rather cry than go out."},
+{speaker:"A",c:"喊得就喊。我陪你。之後再輕鬆。",j:"haam3 dak1 zau6 haam3. ngo5 pui4 nei5. zi1 hau6 zoi3 hing1 sung1.",e:"If you need to cry, cry. I'll stay with you. Relax after."},
+{speaker:"B",c:"多謝你。有你喺度我舒服啲。",j:"do1 ze6 nei5. jau5 nei5 hai2 dou6 ngo5 syu1 fuk6 di1.",e:"Thanks. I'm more at ease with you here."}
+],
+grammar:[
+{pattern:"心情好唔好 / 冇心情",desc:"Mood. 冇心情 + verb = not in the mood to…",ex:"你今日心情好唔好啊？我冇心情笑。(nei5 gam1 jat6 sam1 cing4 hou2 m4 hou2 aa3? ngo5 mou5 sam1 cing4 siu3)",en:"How's your mood? I'm not in the mood to smile."},
+{pattern:"有啲 + feeling",desc:"A bit angry / worried / nervous. Softens it.",ex:"老闆有啲嬲。我仲好緊張。(lou5 baan2 jau5 di1 nau1. ngo5 zung6 hou2 gan2 zoeng1)",en:"The boss was a bit angry. I'm still very nervous."},
+{pattern:"多過 (do1 gwo3)",desc:"Rather… than… 想喊多過想出街.",ex:"想喊多過想出街。(soeng2 haam3 do1 gwo3 soeng2 ceot1 gaai1)",en:"I'd rather cry than go out."},
+{pattern:"Adj + 啲 as cheer-up",desc:"開心啲, 放鬆啲, 舒服啲 — a bit more [mood].",ex:"放鬆啲啦。有你喺度我舒服啲。(fong3 sung1 di1 laa1. jau5 nei5 hai2 dou6 ngo5 syu1 fuk6 di1)",en:"Relax a bit. I'm more comfortable with you here."},
+{pattern:"唔緊要 (m4 gan2 jiu3)",desc:"Never mind / it's OK. The default comfort line.",ex:"唔緊要。你已經好盡力。(m4 gan2 jiu3. nei5 ji5 ging1 hou2 zeon6 lik6)",en:"It's OK. You already did your best."}
+],
+quiz:[
+{q:'"冇心情" means:',opts:["not in the mood","heart disease","very happy","busy"],ans:0},
+{q:'"嬲" means:',opts:["shy","sleepy","bored","angry"],ans:3},
+{q:'"悶" often means:',opts:["bored","hungry","rich","late"],ans:0},
+{q:'"緊張" means:',opts:["relaxed","angry","nervous","bored"],ans:2},
+{q:'"喊" means:',opts:["to shout only","to laugh","to sleep","to cry"],ans:3},
+{q:'"唔緊要" is used to:',opts:["scold someone","order food","ask the time","comfort / say it's OK"],ans:3},
+{q:'"輕鬆" means:',opts:["relaxed","heavy","angry","late"],ans:0},
+{q:'"想喊多過想出街" means:',opts:["wants to go out more","is laughing","is hungry","would rather cry than go out"],ans:3}
+]}
 ];
 
 let studyMode=localStorage.getItem('cantonese-mode')||'levels';
@@ -2683,7 +2948,7 @@ function renderAchievements(){
     { icon: '💪', name: 'Consistent', desc: '7-day streak', check: stats.streak >= 7 },
     { icon: '✍️', name: 'Penman', desc: 'Practice 5 chars', check: stats.practiced >= 5 },
     { icon: '🖌️', name: 'Calligrapher', desc: 'Practice 20 chars', check: stats.practiced >= 20 },
-    { icon: '🏆', name: 'Explorer', desc: '20 everyday lessons ready', check: true },
+    { icon: '🏆', name: 'Explorer', desc: '25 everyday lessons ready', check: true },
   ];
   const unlocked = achs.filter(a => a.check).length;
   let h = '<div class="match-score" style="margin-top:24px"><span><span class="pairs">' + unlocked + '/' + achs.length + '</span> achievements</span></div>';
