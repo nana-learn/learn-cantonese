@@ -16,6 +16,8 @@ header p{color:var(--text2);margin-top:5px}
 .tab{padding:10px 20px;background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);cursor:pointer;color:var(--text2);font-size:.95em;transition:all .2s}
 .tab:hover{border-color:var(--accent);color:var(--text)}
 .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.mode-row{justify-content:center;margin-bottom:12px}
+.mode-row .tab{font-weight:600}
 .section{display:none;margin-bottom:30px}
 .section.active{display:block}
 h2{font-size:1.4em;margin-bottom:16px}
@@ -251,13 +253,17 @@ h2{font-size:1.4em;margin-bottom:16px}
 <div class="app">
 <header>
 <h1>粵語學習</h1>
-<p>Cantonese Learner — Interactive Study Tool</p>
+<p>Cantonese Learner — Everyday first, then the course</p>
 </header>
+<div class="tabs mode-row" id="modeRow">
+  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 L1–L4 Everyday</div>
+  <div class="tab" id="mode-course" onclick="setMode('course')">📘 Course 1–11</div>
+</div>
 <div class="tabs" id="lessonTabs"></div>
 <div id="content"></div>
 </div>
 <script>
-const LESSONS=[
+const COURSE=[
 {id:1,title:"第一課：面試經歷",subtitle:"min6 si5 ging1 lik6 — Interview Experience",
 vocab:[
 {c:"面試",j:"min6 si5",e:"job interview",summary:"Preparation is key — research the company and practice self-introduction | Professional knowledge alone is not enough; practical experience matters too | Stay calm and adjust your mindset during the interview | Every interview is a learning opportunity to improve",intro:"Job interviews can be nerve-wracking, but they are also valuable learning experiences. This lesson covers how to prepare, what interviewers look for, and how to reflect on your performance to grow.",summary:"Research the company and practice beforehand | Practical experience matters as much as knowledge | Stay calm and adjust your mindset | Every interview is a chance to learn"},
@@ -948,6 +954,232 @@ quiz:[
 ]},
 ];
 
+const LEVELS=[
+{id:101,title:"L1 基礎",subtitle:"HSK1 · Greetings, names, eat and drink",
+vocab:[
+{c:"你好",j:"nei5 hou2",e:"hello"},
+{c:"早晨",j:"zou2 san4",e:"good morning"},
+{c:"唔該",j:"m4 goi1",e:"please / thanks (service)"},
+{c:"多謝",j:"do1 ze6",e:"thank you (gift/kindness)"},
+{c:"對唔住",j:"deoi3 m4 zyu6",e:"sorry"},
+{c:"我",j:"ngo5",e:"I / me"},
+{c:"你",j:"nei5",e:"you"},
+{c:"叫",j:"giu3",e:"to be called"},
+{c:"係",j:"hai6",e:"to be / yes"},
+{c:"唔係",j:"m4 hai6",e:"is not / no"},
+{c:"好",j:"hou2",e:"good; OK"},
+{c:"食",j:"sik6",e:"to eat"},
+{c:"飲",j:"jam2",e:"to drink"},
+{c:"飯",j:"faan6",e:"rice / a meal"},
+{c:"茶",j:"caa4",e:"tea"},
+{c:"水",j:"seoi2",e:"water"},
+{c:"今日",j:"gam1 jat6",e:"today"},
+{c:"呢度",j:"ni1 dou6",e:"here"},
+{c:"想",j:"soeng2",e:"to want"},
+{c:"一齊",j:"jat1 cai4",e:"together"},
+{c:"未",j:"mei6",e:"not yet"},
+{c:"去",j:"heoi3",e:"to go"},
+{c:"開心",j:"hoi1 sam1",e:"happy"},
+{c:"識",j:"sik1",e:"to know (a person/skill)"}
+],
+dialogue:[
+{speaker:"A",c:"你好！我叫阿明。你叫咩名啊？",j:"nei5 hou2! ngo5 giu3 aa3 ming4. nei5 giu3 me1 meng2 aa3?",e:"Hello! I'm Ming. What's your name?"},
+{speaker:"B",c:"你好，我叫美美。好開心識到你。",j:"nei5 hou2, ngo5 giu3 mei5 mei5. hou2 hoi1 sam1 sik1 dou2 nei5.",e:"Hi, I'm Meimei. Nice to meet you."},
+{speaker:"A",c:"你今日食咗飯未啊？",j:"nei5 gam1 jat6 sik6 zo2 faan6 mei6 aa3?",e:"Have you eaten today yet?"},
+{speaker:"B",c:"未啊。一齊去食啦？",j:"mei6 aa3. jat1 cai4 heoi3 sik6 laa1?",e:"Not yet. Shall we go eat together?"},
+{speaker:"A",c:"好啊。你想食咩？",j:"hou2 aa3. nei5 soeng2 sik6 me1?",e:"Sure. What do you want to eat?"},
+{speaker:"B",c:"我想食飯，再飲杯茶。",j:"ngo5 soeng2 sik6 faan6, zoi3 jam2 bui1 caa4.",e:"I want a meal, then a cup of tea."},
+{speaker:"A",c:"呢度好唔好啊？",j:"ni1 dou6 hou2 m4 hou2 aa3?",e:"Is this place good?"},
+{speaker:"B",c:"好啊，唔該你。",j:"hou2 aa3, m4 goi1 nei5.",e:"Yes — thanks."}
+],
+grammar:[
+{pattern:"係 / 唔係 (hai6 / m4 hai6)",desc:"Be / not be. 唔 + verb = not.",ex:"我係阿明。呢度唔係屋企。(ngo5 hai6 aa3 ming4. ni1 dou6 m4 hai6 uk1 kei2)",en:"I'm Ming. This isn't home."},
+{pattern:"叫 (giu3)",desc:"To be called. 我叫… / 你叫咩名？",ex:"你叫咩名啊？(nei5 giu3 me1 meng2 aa3?)",en:"What's your name?"},
+{pattern:"未 (mei6)",desc:"Not yet — often at the end: …未啊？",ex:"你食咗飯未啊？(nei5 sik6 zo2 faan6 mei6 aa3?)",en:"Have you eaten yet?"},
+{pattern:"一齊 (jat1 cai4)",desc:"Together. Put before the verb.",ex:"一齊去食啦 (jat1 cai4 heoi3 sik6 laa1)",en:"Let's go eat together."},
+{pattern:"好唔好？(hou2 m4 hou2?)",desc:"A-not-A yes/no question.",ex:"呢度好唔好啊？(ni1 dou6 hou2 m4 hou2 aa3?)",en:"Is this place good?"}
+],
+quiz:[
+{q:'"唔該" is mainly used to:',opts:["thank someone for a gift","say please / thanks for a service","say sorry","say goodbye"],ans:1},
+{q:'"多謝" is closer to:',opts:["excuse me","please","thank you (a gift or big help)","you're welcome"],ans:2},
+{q:'"你叫咩名啊？" means:',opts:["How old are you?","Where are you?","What's your name?","Have you eaten?"],ans:2},
+{q:'"未啊" means:',opts:["already","not yet","never","tomorrow"],ans:1},
+{q:'"一齊" means:',opts:["alone","together","later","here"],ans:1},
+{q:'B wants to eat:',opts:["noodles only","a meal, then tea","just water","nothing"],ans:1},
+{q:'"食" (sik6) means:',opts:["drink","eat","buy","go"],ans:1},
+{q:'"想" (soeng2) means:',opts:["to know","to want","to be","to go"],ans:1}
+]},
+
+{id:102,title:"L2 日常",subtitle:"HSK2 · Time, work, shopping, getting around",
+vocab:[
+{c:"而家",j:"ji4 gaa1",e:"now"},
+{c:"聽日",j:"ting1 jat6",e:"tomorrow"},
+{c:"尋日",j:"cam4 jat6",e:"yesterday"},
+{c:"朝早",j:"ziu1 zou2",e:"morning"},
+{c:"返工",j:"faan1 gung1",e:"to go to work"},
+{c:"放工",j:"fong3 gung1",e:"to get off work"},
+{c:"得閒",j:"dak1 haan4",e:"free (have time)"},
+{c:"買嘢",j:"maai5 je5",e:"to shop / buy things"},
+{c:"商場",j:"soeng1 coeng4",e:"mall"},
+{c:"平",j:"peng4",e:"cheap"},
+{c:"貴",j:"gwai3",e:"expensive"},
+{c:"鍾意",j:"zung1 ji3",e:"to like"},
+{c:"搭",j:"daap3",e:"to take (transport)"},
+{c:"地鐵",j:"dei6 tit3",e:"MTR / subway"},
+{c:"巴士",j:"baa1 si2",e:"bus"},
+{c:"遠",j:"jyun5",e:"far"},
+{c:"近",j:"kan5",e:"near"},
+{c:"分鐘",j:"fan1 zung1",e:"minute"},
+{c:"點鐘",j:"dim2 zung1",e:"o'clock"},
+{c:"衫",j:"saam1",e:"clothes"},
+{c:"門口",j:"mun4 hau2",e:"entrance"},
+{c:"簡單",j:"gaan2 daan1",e:"simple"},
+{c:"得",j:"dak1",e:"OK / can"},
+{c:"見",j:"gin3",e:"to meet / see"}
+],
+dialogue:[
+{speaker:"A",c:"聽日你得唔得閒啊？",j:"ting1 jat6 nei5 dak1 m4 dak1 haan4 aa3?",e:"Are you free tomorrow?"},
+{speaker:"B",c:"聽日朝早要返工，放工之後得。",j:"ting1 jat6 ziu1 zou2 jiu3 faan1 gung1, fong3 gung1 zi1 hau6 dak1.",e:"I work in the morning; after work I'm free."},
+{speaker:"A",c:"咁我哋放工之後去商場買嘢？",j:"gam2 ngo5 dei6 fong3 gung1 zi1 hau6 heoi3 soeng1 coeng4 maai5 je5?",e:"Then shall we go shopping after work?"},
+{speaker:"B",c:"得。嗰度遠唔遠啊？",j:"dak1. go2 dou6 jyun5 m4 jyun5 aa3?",e:"OK. Is it far?"},
+{speaker:"A",c:"唔遠，搭地鐵十分鐘就到。",j:"m4 jyun5, daap3 dei6 tit3 sap6 fan1 zung1 zau6 dou3.",e:"Not far — ten minutes on the MTR."},
+{speaker:"B",c:"好。我想買件衫，唔好太貴。",j:"hou2. ngo5 soeng2 maai5 gin6 saam1, m4 hou2 taai3 gwai3.",e:"Good. I want a shirt, not too expensive."},
+{speaker:"A",c:"嗰度好多平嘢。你鍾意邊種啊？",j:"go2 dou6 hou2 do1 peng4 je5. nei5 zung1 ji3 bin1 zung2 aa3?",e:"Lots of cheap stuff there. What kind do you like?"},
+{speaker:"B",c:"我鍾意簡單啲。聽日七點鐘商場門口見？",j:"ngo5 zung1 ji3 gaan2 daan1 di1. ting1 jat6 cat1 dim2 zung1 soeng1 coeng4 mun4 hau2 gin3?",e:"I like simpler ones. Meet at the mall entrance at 7 tomorrow?"},
+{speaker:"A",c:"得，到時見。",j:"dak1, dou3 si4 gin3.",e:"OK, see you then."}
+],
+grammar:[
+{pattern:"得唔得閒？(dak1 m4 dak1 haan4?)",desc:"Are you free? A-not-A with 得閒.",ex:"聽日你得唔得閒啊？(ting1 jat6 nei5 dak1 m4 dak1 haan4 aa3?)",en:"Are you free tomorrow?"},
+{pattern:"遠唔遠 / 貴唔貴",desc:"Adjective-not-adjective yes/no questions.",ex:"嗰度遠唔遠啊？(go2 dou6 jyun5 m4 jyun5 aa3?)",en:"Is it far?"},
+{pattern:"之後 (zi1 hau6)",desc:"After…",ex:"放工之後去商場 (fong3 gung1 zi1 hau6 heoi3 soeng1 coeng4)",en:"Go to the mall after work."},
+{pattern:"就到 (zau6 dou3)",desc:"Then (you're) there — quick result.",ex:"搭地鐵十分鐘就到 (daap3 dei6 tit3 sap6 fan1 zung1 zau6 dou3)",en:"Ten minutes on the MTR and you're there."},
+{pattern:"唔好太… (m4 hou2 taai3…)",desc:"Don't be too… / not too…",ex:"唔好太貴 (m4 hou2 taai3 gwai3)",en:"Not too expensive."}
+],
+quiz:[
+{q:'"聽日" means:',opts:["today","yesterday","tomorrow","now"],ans:2},
+{q:'"返工" means:',opts:["get off work","go to work","overtime","job interview"],ans:1},
+{q:'"放工" means:',opts:["go to work","get off work","take leave","work overtime"],ans:1},
+{q:'"得閒" means:',opts:["busy","free / have time","expensive","near"],ans:1},
+{q:'How do they get to the mall?',opts:["bus 30 minutes","walk","MTR 10 minutes","taxi"],ans:2},
+{q:'B wants clothes that are:',opts:["brand-name","not too expensive","the most expensive","for work only"],ans:1},
+{q:'They meet at:',opts:["6 at the station","7 at the mall entrance","noon at work","8 at home"],ans:1},
+{q:'"平" (peng4) means:',opts:["flat","cheap","far","like"],ans:1}
+]},
+
+{id:103,title:"L3 生活",subtitle:"HSK3 · Food, weather, feeling ill, travel",
+vocab:[
+{c:"天氣",j:"tin1 hei3",e:"weather"},
+{c:"熱",j:"jit6",e:"hot"},
+{c:"凍",j:"dung3",e:"cold"},
+{c:"落雨",j:"lok6 jyu5",e:"to rain"},
+{c:"餐廳",j:"caan1 teng1",e:"restaurant"},
+{c:"食晏",j:"sik6 aan3",e:"to eat lunch"},
+{c:"預約",j:"jyu6 joek3",e:"to book / reserve"},
+{c:"外賣",j:"ngoi6 maai6",e:"takeaway"},
+{c:"辣",j:"laat6",e:"spicy"},
+{c:"淡",j:"taam5",e:"mild / not salty"},
+{c:"病",j:"beng6",e:"sick; illness"},
+{c:"藥房",j:"joek6 fong4",e:"pharmacy"},
+{c:"休息",j:"jau1 sik1",e:"to rest"},
+{c:"放假",j:"fong3 gaa3",e:"to be on holiday"},
+{c:"旅行",j:"leoi5 hang4",e:"to travel"},
+{c:"機場",j:"gei1 coeng4",e:"airport"},
+{c:"轉車",j:"zyun3 ce1",e:"to transfer (transport)"},
+{c:"問路",j:"man6 lou6",e:"to ask for directions"},
+{c:"唔使",j:"m4 sai2",e:"no need"},
+{c:"如果",j:"jyu4 gwo2",e:"if"},
+{c:"陪",j:"pui4",e:"to accompany"},
+{c:"其實",j:"kei4 sat6",e:"actually"},
+{c:"冇問題",j:"mou5 man6 tai4",e:"no problem"},
+{c:"先",j:"sin1",e:"first"}
+],
+dialogue:[
+{speaker:"A",c:"今日天氣好熱，一齊去餐廳食晏啦。",j:"gam1 jat6 tin1 hei3 hou2 jit6, jat1 cai4 heoi3 caan1 teng1 sik6 aan3 laa1.",e:"It's so hot today — let's go to a restaurant for lunch."},
+{speaker:"B",c:"好啊。要唔要預約啊？",j:"hou2 aa3. jiu3 m4 jiu3 jyu6 joek3 aa3?",e:"Sure. Do we need a reservation?"},
+{speaker:"A",c:"唔使，而家去都得。如果落雨我哋就叫外賣。",j:"m4 sai2, ji4 gaa1 heoi3 dou1 dak1. jyu4 gwo2 lok6 jyu5 ngo5 dei6 zau6 giu3 ngoi6 maai6.",e:"No need, going now is fine. If it rains we'll get takeaway."},
+{speaker:"B",c:"我有啲病，想食淡啲，唔好太辣。",j:"ngo5 jau5 di1 beng6, soeng2 sik6 taam5 di1, m4 hou2 taai3 laat6.",e:"I'm a bit sick — I want mild food, not too spicy."},
+{speaker:"A",c:"冇問題。食完我陪你去藥房。",j:"mou5 man6 tai4. sik6 jyun4 ngo5 pui4 nei5 heoi3 joek6 fong4.",e:"No problem. After eating I'll go with you to the pharmacy."},
+{speaker:"B",c:"唔該。其實我想休息兩日，放假去旅行都好。",j:"m4 goi1. kei4 sat6 ngo5 soeng2 jau1 sik1 loeng5 jat6, fong3 gaa3 heoi3 leoi5 hang4 dou1 hou2.",e:"Thanks. I actually want two days' rest — a holiday trip would be nice too."},
+{speaker:"A",c:"如果去旅行，機場遠唔遠？",j:"jyu4 gwo2 heoi3 leoi5 hang4, gei1 coeng4 jyun5 m4 jyun5 aa3?",e:"If we travel, is the airport far?"},
+{speaker:"B",c:"唔遠，轉一次車就到。到時我哋先問路。",j:"m4 jyun5, zyun3 jat1 ci3 ce1 zau6 dou3. dou3 si4 ngo5 dei6 sin1 man6 lou6.",e:"Not far — one transfer and we're there. We can ask for directions then."}
+],
+grammar:[
+{pattern:"唔使 (m4 sai2)",desc:"No need to…",ex:"唔使預約 (m4 sai2 jyu6 joek3)",en:"No need to book."},
+{pattern:"如果…就… (jyu4 gwo2… zau6…)",desc:"If… then…",ex:"如果落雨我哋就叫外賣 (jyu4 gwo2 lok6 jyu5 ngo5 dei6 zau6 giu3 ngoi6 maai6)",en:"If it rains we'll get takeaway."},
+{pattern:"要唔要…？(jiu3 m4 jiu3…?)",desc:"Do we need to / want to…?",ex:"要唔要預約啊？(jiu3 m4 jiu3 jyu6 joek3 aa3?)",en:"Do we need a reservation?"},
+{pattern:"食完 (sik6 jyun4)",desc:"Verb + 完 = after finishing the action.",ex:"食完我陪你去藥房 (sik6 jyun4 ngo5 pui4 nei5 heoi3 joek6 fong4)",en:"After eating I'll go with you to the pharmacy."},
+{pattern:"先 (sin1)",desc:"First / beforehand.",ex:"到時我哋先問路 (dou3 si4 ngo5 dei6 sin1 man6 lou6)",en:"We'll ask for directions first then."}
+],
+quiz:[
+{q:'"落雨" means:',opts:["hot weather","to rain","cold wind","sunny"],ans:1},
+{q:'"唔使" means:',opts:["must","no need","cannot","not yet"],ans:1},
+{q:'"外賣" means:',opts:["menu","takeaway","bill","seat"],ans:1},
+{q:'Why does B want mild food?',opts:["on a diet","a bit sick","too expensive","doesn't like rice"],ans:1},
+{q:'After the meal A will:',opts:["go home","go with B to the pharmacy","call a taxi","book a flight"],ans:1},
+{q:'"預約" means:',opts:["order food","reserve / book","ask directions","take medicine"],ans:1},
+{q:'To reach the airport they need:',opts:["a taxi only","one transfer","to walk","a hotel shuttle"],ans:1},
+{q:'"如果…就…" is used for:',opts:["past tense","if… then…","comparisons","orders"],ans:1}
+]},
+
+{id:104,title:"L4 進階",subtitle:"HSK4 · Opinions, comparing, deciding (renting)",
+vocab:[
+{c:"覺得",j:"gok3 dak1",e:"to feel / think"},
+{c:"同意",j:"tung4 ji3",e:"to agree"},
+{c:"方便",j:"fong1 bin6",e:"convenient"},
+{c:"麻煩",j:"maa4 faan4",e:"troublesome"},
+{c:"租屋",j:"zou1 uk1",e:"to rent a place"},
+{c:"租金",j:"zou1 gam1",e:"rent (money)"},
+{c:"嘈",j:"cou4",e:"noisy"},
+{c:"安靜",j:"on1 zing6",e:"quiet"},
+{c:"環境",j:"waan4 ging2",e:"environment / surroundings"},
+{c:"交通",j:"gaau1 tung1",e:"transport / traffic"},
+{c:"比較",j:"bei2 gaau3",e:"to compare"},
+{c:"寧願",j:"ning4 jyun3",e:"would rather"},
+{c:"適合",j:"sik1 hap6",e:"to suit"},
+{c:"建議",j:"gin3 ji5",e:"to suggest; a suggestion"},
+{c:"決定",j:"kyut3 ding6",e:"to decide"},
+{c:"無論",j:"mou4 leon6",e:"no matter"},
+{c:"越嚟越",j:"jyut6 lai4 jyut6",e:"more and more"},
+{c:"唔單止",j:"m4 daan1 zi2",e:"not only"},
+{c:"不過",j:"bat1 gwo3",e:"but / however"},
+{c:"其實",j:"kei4 sat6",e:"actually"},
+{c:"值得",j:"zik6 dak1",e:"worth it"},
+{c:"住",j:"zyu6",e:"to live (somewhere)"},
+{c:"間",j:"gaan1",e:"classifier for buildings/rooms"},
+{c:"睇",j:"tai2",e:"to look / see (a place)"}
+],
+dialogue:[
+{speaker:"A",c:"你覺得呢間屋點啊？",j:"nei5 gok3 dak1 ni1 gaan1 uk1 dim2 aa3?",e:"What do you think of this place?"},
+{speaker:"B",c:"租金平，不過有啲嘈。交通倒係好方便。",j:"zou1 gam1 peng4, bat1 gwo3 jau5 di1 cou4. gaau1 tung1 dou3 hai6 hou2 fong1 bin6.",e:"Rent is cheap, but it's a bit noisy. Transport is actually convenient."},
+{speaker:"A",c:"我寧願貴少少，住得安靜啲。",j:"ngo5 ning4 jyun3 gwai3 siu2 siu2, zyu6 dak1 on1 zing6 di1.",e:"I'd rather pay a bit more and live somewhere quieter."},
+{speaker:"B",c:"其實呢度環境唔錯，而且越嚟越方便。",j:"kei4 sat6 ni1 dou6 waan4 ging2 m4 co3, ji4 ce2 jyut6 lai4 jyut6 fong1 bin6.",e:"The area's actually not bad, and it's getting more convenient."},
+{speaker:"A",c:"我同意交通好，但係唔適合我。",j:"ngo5 tung4 ji3 gaau1 tung1 hou2, daan6 hai6 m4 sik1 hap6 ngo5.",e:"I agree the transport is good, but it doesn't suit me."},
+{speaker:"B",c:"咁你有冇其他建議？",j:"gam2 nei5 jau5 mou5 kei4 taa1 gin3 ji5?",e:"Then do you have another suggestion?"},
+{speaker:"A",c:"無論幾平，嘈就好麻煩。我建議再睇多兩間。",j:"mou4 leon6 gei2 peng4, cou4 zau6 hou2 maa4 faan4. ngo5 gin3 ji5 zoi3 tai2 do1 loeng5 gaan1.",e:"No matter how cheap, noisy is a pain. I suggest we look at two more."},
+{speaker:"B",c:"得。唔單止睇屋，仲要比較租金同交通，然後先決定。",j:"dak1. m4 daan1 zi2 tai2 uk1, zung6 jiu3 bei2 gaau3 zou1 gam1 tung4 gaau1 tung1, jin4 hau6 sin1 kyut3 ding6.",e:"OK. Not just look at flats — also compare rent and transport, then decide."}
+],
+grammar:[
+{pattern:"覺得…點啊？(gok3 dak1… dim2 aa3?)",desc:"What do you think of…?",ex:"你覺得呢間屋點啊？(nei5 gok3 dak1 ni1 gaan1 uk1 dim2 aa3?)",en:"What do you think of this place?"},
+{pattern:"寧願 (ning4 jyun3)",desc:"Would rather…",ex:"我寧願貴少少，住得安靜啲 (ngo5 ning4 jyun3 gwai3 siu2 siu2, zyu6 dak1 on1 zing6 di1)",en:"I'd rather pay a bit more and live quieter."},
+{pattern:"無論…都/就… (mou4 leon6…)",desc:"No matter…",ex:"無論幾平，嘈就好麻煩 (mou4 leon6 gei2 peng4, cou4 zau6 hou2 maa4 faan4)",en:"No matter how cheap, noisy is a pain."},
+{pattern:"唔單止…仲… (m4 daan1 zi2… zung6…)",desc:"Not only… but also…",ex:"唔單止睇屋，仲要比較租金 (m4 daan1 zi2 tai2 uk1, zung6 jiu3 bei2 gaau3 zou1 gam1)",en:"Not only look at flats, also compare rent."},
+{pattern:"越嚟越… (jyut6 lai4 jyut6…)",desc:"More and more…",ex:"越嚟越方便 (jyut6 lai4 jyut6 fong1 bin6)",en:"More and more convenient."}
+],
+quiz:[
+{q:'"覺得" means:',opts:["to decide","to feel / think","to agree","to rent"],ans:1},
+{q:'"寧願" means:',opts:["must","would rather","never","compare"],ans:1},
+{q:'B likes this flat because:',opts:["it's quiet","rent is cheap and transport is convenient","it's huge","it's new"],ans:1},
+{q:"A's problem with the flat is:",opts:["too expensive","too far","too noisy","no kitchen"],ans:2},
+{q:'"無論" means:',opts:["because","no matter","instead","after"],ans:1},
+{q:'"唔單止…仲…" means:',opts:["either… or…","not only… but also…","if… then…","as soon as"],ans:1},
+{q:'They will decide after:',opts:["signing today","comparing rent and transport on more flats","asking the boss","flipping a coin"],ans:1},
+{q:'"租金" means:',opts:["deposit","rent (money)","address","landlord"],ans:1}
+]}
+];
+
+let studyMode=localStorage.getItem('cantonese-mode')||'levels';
+let LESSONS=studyMode==='course'?COURSE:LEVELS;
+
 const INTERVALS=[0,86400000,259200000,604800000,1209600000];
 const BOX_COLORS=['var(--red)','var(--yellow)','var(--blue)','var(--green)','var(--accent2)'];
 const BOX_LABELS=['Box 1 — New','Box 2 — Soon','Box 3 — Familiar','Box 4 — Known','Box 5 — Mastered'];
@@ -1023,15 +1255,36 @@ function shuffle(arr){
   return a;
 }
 
-function init(){
+function rebuildTabs(){
   const tabs=document.getElementById('lessonTabs');
+  tabs.innerHTML='';
   LESSONS.forEach((l,i)=>{
     const t=document.createElement('div');
-    t.className='tab'+(i===0?' active':'');
+    t.className='tab'+(i===currentLesson?' active':'');
     t.textContent=l.title;
     t.onclick=()=>switchLesson(i);
     tabs.appendChild(t);
   });
+}
+function setMode(m){
+  if(studyMode===m)return;
+  studyMode=m;
+  localStorage.setItem('cantonese-mode',m);
+  LESSONS=m==='course'?COURSE:LEVELS;
+  document.getElementById('mode-levels').classList.toggle('active',m==='levels');
+  document.getElementById('mode-course').classList.toggle('active',m==='course');
+  currentLesson=0;currentSection='dialogue';
+  showJp=false;showEn=false;
+  quizMode='meaning';quizAnswered=0;quizCorrect=0;
+  quizQuestions=LESSONS[0].quiz.map(q=>({...q}));
+  initFcSession();
+  rebuildTabs();
+  render();
+}
+function init(){
+  document.getElementById('mode-levels').classList.toggle('active',studyMode==='levels');
+  document.getElementById('mode-course').classList.toggle('active',studyMode==='course');
+  rebuildTabs();
   initFcSession();
   quizQuestions=LESSONS[0].quiz.map(q=>({...q}));
   render();
@@ -1114,8 +1367,9 @@ function splitSentences(text){
   const parts=text.split(/(?<=[。？！，])/);
   return parts.filter(p=>p.trim());
 }
+function allUnits(){return LEVELS.concat(COURSE)}
 function renderDialogue(L){
-  let h='<div class="toggle-row"><button id="btn-jp" class="toggle-btn'+(showJp?' on':'')+'" onclick="toggleJp()">Jyutping</button><button id="btn-en" class="toggle-btn'+(showEn?' on':'')+'" onclick="toggleEn()">English</button><button class="toggle-btn" onclick="toggleJp();toggleEn()">Toggle All</button></div>';
+  let h='<p style="color:var(--text2);margin-bottom:12px">'+L.subtitle+'</p><div class="toggle-row"><button id="btn-jp" class="toggle-btn'+(showJp?' on':'')+'" onclick="toggleJp()">Jyutping</button><button id="btn-en" class="toggle-btn'+(showEn?' on':'')+'" onclick="toggleEn()">English</button><button class="toggle-btn" onclick="toggleJp();toggleEn()">Toggle All</button></div>';
   h+='<div class="sentence-mode-row"><button class="sentence-mode-btn'+(dialogueMode==='full'?' active':'')+'" onclick="setDialogueMode(\'full\')">Full</button><button class="sentence-mode-btn'+(dialogueMode==='sentence'?' active':'')+'" onclick="setDialogueMode(\'sentence\')">Sentence by Sentence</button></div>';
   if(dialogueMode==='sentence'){
     let sn=0;
@@ -1345,10 +1599,11 @@ function answerQuiz(qi,oi){
 
 function renderProgress(L){
   const st=getLessonStats(L);
-  const allTotal=LESSONS.reduce((s,l)=>s+l.vocab.length,0);
-  const allMastered=LESSONS.reduce((s,l)=>s+getLessonStats(l).mastered,0);
+  const units=allUnits();
+  const allTotal=units.reduce((s,l)=>s+l.vocab.length,0);
+  const allMastered=units.reduce((s,l)=>s+getLessonStats(l).mastered,0);
   const allWords={};
-  LESSONS.forEach(l=>l.vocab.forEach(v=>{const w=progress.words[v.c];if(w)allWords[v.c]=w}));
+  units.forEach(l=>l.vocab.forEach(v=>{const w=progress.words[v.c];if(w)allWords[v.c]=w}));
   const allUnique=Object.keys(allWords).length;
 
   let h='<h2>📊 Progress — '+L.title+'</h2>';
@@ -1493,7 +1748,7 @@ function showCharModal(ch){
   const inner = document.getElementById('modalInner');
   if(!modal || !inner) return;
   let ctx = '', jp = '', en = '';
-  for(const L of LESSONS){ for(const v of L.vocab){ if(v.c.includes(ch)){ ctx = v.c; jp = v.j; en = v.e; break; } } if(ctx) break; }
+  for(const L of allUnits()){ for(const v of L.vocab){ if(v.c.includes(ch)){ ctx = v.c; jp = v.j; en = v.e; break; } } if(ctx) break; }
   let grid = '<div class="modal-grid-big">';
   grid += '<div class="modal-cell-big ref">' + ch + '</div>';
   for(let i = 0; i < 15; i++) grid += '<div class="modal-cell-big prac"></div>';
@@ -1534,7 +1789,7 @@ function renderGame(L){
 
 // ── Achievements ──
 function renderAchievements(){
-  const allWords = {}; LESSONS.forEach(l => l.vocab.forEach(v => { if(progress.words[v.c]) allWords[v.c] = progress.words[v.c]; }));
+  const allWords = {}; allUnits().forEach(l => l.vocab.forEach(v => { if(progress.words[v.c]) allWords[v.c] = progress.words[v.c]; }));
   const stats = { total: Object.keys(allWords).length, mastered: Object.values(allWords).filter(w => w.box >= 4).length, streak: progress.streak.count, practiced: practicedChars.size };
   const achs = [
     { icon: '🌱', name: 'First Steps', desc: 'Study 1 word', check: stats.total >= 1 },
