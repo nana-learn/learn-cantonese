@@ -35,6 +35,11 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L13 語氣助詞 | 喇啦喎啫咩嘅咋啩囉 — how Cantonese actually feels |
 | L14 做咗做緊 | Aspect: done / doing / ever / will |
 | L15 量詞 | Classifiers 個隻件杯間條張本 |
+| L16 問句 | 邊個幾時點解點樣、有冇、可唔可以 |
+| L17 覆訊 | Call, reply, 聽唔到, 得閒先覆 |
+| L18 天氣 | 悶熱、落雨、掛波、着多件 |
+| L19 形容 | 大細新舊、啲 / 比 / 最 |
+| L20 開口講 | Speak slower, 即係, 聽唔明 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 

@@ -266,7 +266,7 @@ h2{font-size:1.4em;margin-bottom:16px}
 <p>Speak Hong Kong Cantonese — everyday first, then the course</p>
 </header>
 <div class="tabs mode-row" id="modeRow">
-  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 Everyday L1–L15</div>
+  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 Everyday L1–L20</div>
   <div class="tab" id="mode-course" onclick="setMode('course')">📘 Course 1–11</div>
 </div>
 <div class="tabs" id="lessonTabs"></div>
@@ -1758,6 +1758,271 @@ quiz:[
 {q:'"平過" means:',opts:["cheaper than","flatter than","nearer than","later than"],ans:0},
 {q:'"隔籬" means:',opts:["far away","upstairs","opposite a river","next door"],ans:3}
 ]}
+,
+{id:116,title:"L16 問句",subtitle:"Questions · 邊個幾時點解點樣幾多 有冇",
+vocab:[
+{c:"邊個",j:"bin1 go3",e:"who"},
+{c:"邊度",j:"bin1 dou6",e:"where"},
+{c:"幾時",j:"gei2 si4",e:"when"},
+{c:"點解",j:"dim2 gaai2",e:"why"},
+{c:"點樣",j:"dim2 joeng2",e:"how (in what way)"},
+{c:"幾多",j:"gei2 do1",e:"how many / how much"},
+{c:"做咩",j:"zou6 me1",e:"what are you doing; why (casual)"},
+{c:"有冇",j:"jau5 mou5",e:"have you / is there (yes-no)"},
+{c:"可唔可以",j:"ho2 m4 ho2 ji5",e:"can I / may I"},
+{c:"會唔會",j:"wui5 m4 wui5",e:"will you / would you"},
+{c:"想唔想",j:"soeng2 m4 soeng2",e:"do you want to"},
+{c:"係咪",j:"hai6 mai6",e:"is it…? / right?"},
+{c:"邊個電話",j:"bin1 go3 din6 waa2",e:"whose phone (lit. which person's)"},
+{c:"點去",j:"dim2 heoi3",e:"how do you get there"},
+{c:"為咗",j:"wai6 zo2",e:"for (the sake of)"},
+{c:"所以",j:"so2 ji5",e:"so / therefore"},
+{c:"因為",j:"jan1 wai6",e:"because"},
+{c:"聚會",j:"zeoi6 wui2",e:"get-together / gathering"},
+{c:"參加",j:"caam1 gaa1",e:"to join / take part"},
+{c:"得唔得",j:"dak1 m4 dak1",e:"is it OK / can we"}
+],
+dialogue:[
+{speaker:"A",c:"聽日邊個聚會啊？",j:"ting1 jat6 bin1 go3 zeoi6 wui2 aa3?",e:"Whose gathering is it tomorrow?"},
+{speaker:"B",c:"阿明嘅。你會唔會嚟啊？",j:"aa3 ming4 ge3. nei5 wui5 m4 wui5 lai4 aa3?",e:"Ming's. Will you come?"},
+{speaker:"A",c:"想啊。幾時開始？邊度啊？",j:"soeng2 aa3. gei2 si4 hoi1 ci2? bin1 dou6 aa3?",e:"I want to. What time does it start? Where?"},
+{speaker:"B",c:"八點，旺角。你知唔知點去？",j:"baat3 dim2, wong6 gok3. nei5 zi1 m4 zi1 dim2 heoi3?",e:"Eight, Mong Kok. Do you know how to get there?"},
+{speaker:"A",c:"知。點解咁夜啊？",j:"zi1. dim2 gaai2 gam3 je6 aa3?",e:"Yes. Why so late?"},
+{speaker:"B",c:"因為佢放工遲。你可唔可以早啲到幫下手？",j:"jan1 wai6 keoi5 fong3 gung1 ci4. nei5 ho2 m4 ho2 ji5 zou2 di1 dou3 bong1 haa5 sau2?",e:"Because he gets off work late. Can you arrive a bit early and help?"},
+{speaker:"A",c:"得。有冇人帶嘢食？",j:"dak1. jau5 mou5 jan4 daai3 je5 sik6?",e:"OK. Is anyone bringing food?"},
+{speaker:"B",c:"有。你想唔想買飲品？",j:"jau5. nei5 soeng2 m4 soeng2 maai5 jam2 ban2?",e:"Yes. Do you want to buy drinks?"},
+{speaker:"A",c:"得，我買。咁一共幾多人啊？",j:"dak1, ngo5 maai5. gam2 jat1 gung6 gei2 do1 jan4 aa3?",e:"Sure, I'll buy them. So how many people in total?"},
+{speaker:"B",c:"大概八個。你唔好遲到啊。",j:"daai6 koi3 baat3 go3. nei5 m4 hou2 ci4 dou3 aa3.",e:"About eight. Don't be late."}
+],
+grammar:[
+{pattern:"Question word stays in place",desc:"Don't move 邊個 / 幾時 / 邊度 to the front like English. 聽日邊個聚會 / 你幾時嚟.",ex:"幾時開始？邊度啊？(gei2 si4 hoi1 ci2? bin1 dou6 aa3?)",en:"What time does it start? Where?"},
+{pattern:"A-not-A (會唔會 / 想唔想 / 可唔可以)",desc:"Verb + 唔 + verb = yes/no. Answer with the verb: 會 / 唔會, 想 / 唔想, 可以 / 唔可以.",ex:"你會唔會嚟啊？想啊。(nei5 wui5 m4 wui5 lai4 aa3? soeng2 aa3)",en:"Will you come? I want to."},
+{pattern:"有冇 (jau5 mou5)",desc:"Have you / is there. Don't say 有沒有. Answer 有 or 冇.",ex:"有冇人帶嘢食？有。(jau5 mou5 jan4 daai3 je5 sik6? jau5)",en:"Is anyone bringing food? Yes."},
+{pattern:"點解…因為… (dim2 gaai2… jan1 wai6…)",desc:"Why… because…",ex:"點解咁夜啊？因為佢放工遲。(dim2 gaai2 gam3 je6 aa3? jan1 wai6 keoi5 fong3 gung1 ci4)",en:"Why so late? Because he gets off work late."},
+{pattern:"做咩 (zou6 me1)",desc:"Casual 'what are you doing?' or 'why on earth…?'. 你做咩啊？ / 做咩唔覆我？",ex:"你做咩啊？(nei5 zou6 me1 aa3?)",en:"What are you up to?"}
+],
+quiz:[
+{q:'"點解" means:',opts:["how","where","why","when"],ans:2},
+{q:'"幾時" means:',opts:["when","how many","who","why"],ans:0},
+{q:'"邊個" means:',opts:["where","which exit","how","who"],ans:3},
+{q:'"有冇" is answered with:',opts:["yes / no (English)","係咪","有 or 冇","OK"],ans:2},
+{q:'"可唔可以" means:',opts:["can I / may I","must I","did I","won't I"],ans:0},
+{q:"The party is at:",opts:["7 in Central","9 at home","noon in Causeway Bay","8 in Mong Kok"],ans:3},
+{q:'A-not-A questions repeat the:',opts:["noun","adjective only","English word","verb (會唔會, 想唔想)"],ans:3},
+{q:'"點樣" means:',opts:["how (in what way)","why","how much","who"],ans:0}
+]},
+
+{id:117,title:"L17 覆訊",subtitle:"Phone and messages · 打俾、覆、聽唔到",
+vocab:[
+{c:"電話",j:"din6 waa2",e:"phone; phone call"},
+{c:"打俾",j:"daa2 bei2",e:"to call (someone)"},
+{c:"覆",j:"fuk1",e:"to reply (a message)"},
+{c:"訊息",j:"seon3 sik1",e:"message"},
+{c:"未睇",j:"mei6 tai2",e:"haven't read / seen yet"},
+{c:"出咗街",j:"ceot1 zo2 gaai1",e:"already gone out"},
+{c:"聽唔到",j:"teng1 m4 dou2",e:"can't hear"},
+{c:"收線",j:"sau1 sin3",e:"to hang up"},
+{c:"留言",j:"lau4 jin4",e:"to leave a message; a voicemail"},
+{c:"訊號",j:"seon3 hou6",e:"signal (phone/network)"},
+{c:"數據",j:"sou3 geoi3",e:"mobile data"},
+{c:"WiFi",j:"waai1 faai1",e:"Wi‑Fi"},
+{c:"語音",j:"jyu5 jam1",e:"voice message"},
+{c:"截圖",j:"zit6 tou4",e:"screenshot"},
+{c:"得閒先覆",j:"dak1 haan4 sin1 fuk1",e:"I'll reply when I'm free"},
+{c:"打錯",j:"daa2 co3",e:"to dial the wrong number"},
+{c:"聽電話",j:"teng1 din6 waa2",e:"to answer the phone"},
+{c:"唔方便",j:"m4 fong1 bin6",e:"not convenient (can't talk)"},
+{c:"遲啲打返",j:"ci4 di1 daa2 faan1",e:"I'll call back later"},
+{c:"見到",j:"gin3 dou2",e:"got it / I see (your message)"}
+],
+dialogue:[
+{speaker:"A",c:"你做咩唔覆我啊？我打咗兩次俾你。",j:"nei5 zou6 me1 m4 fuk1 ngo5 aa3? ngo5 daa2 zo2 loeng5 ci3 bei2 nei5.",e:"Why didn't you reply? I called you twice."},
+{speaker:"B",c:"對唔住，我出咗街，訊號好差，聽唔到。",j:"deoi3 m4 zyu6, ngo5 ceot1 zo2 gaai1, seon3 hou6 hou2 caa1, teng1 m4 dou2.",e:"Sorry — I was out, signal was terrible, I couldn't hear."},
+{speaker:"A",c:"你而家方便聽電話未啊？",j:"nei5 ji4 gaa1 fong1 bin6 teng1 din6 waa2 mei6 aa3?",e:"Are you free to take a call now?"},
+{speaker:"B",c:"唔方便，我喺地鐵。得閒先覆你。",j:"m4 fong1 bin6, ngo5 hai2 dei6 tit3. dak1 haan4 sin1 fuk1 nei5.",e:"Not convenient — I'm on the MTR. I'll reply when I'm free."},
+{speaker:"A",c:"得。我留咗語音，你出到去再聽。",j:"dak1. ngo5 lau4 zo2 jyu5 jam1, nei5 ceot1 dou3 heoi3 zoi3 teng1.",e:"OK. I left a voice message — listen when you're out."},
+{speaker:"B",c:"見到。係咪今晚仲係七點見？",j:"gin3 dou2. hai6 mai6 gam1 maan5 zung6 hai6 cat1 dim2 gin3?",e:"Got it. Are we still meeting at seven tonight?"},
+{speaker:"A",c:"係。我截圖咗地址俾你。",j:"hai6. ngo5 zit6 tou4 zo2 dei6 zi2 bei2 nei5.",e:"Yes. I screenshotted the address for you."},
+{speaker:"B",c:"收到。地鐵冇WiFi，我用緊數據。",j:"sau1 dou3. dei6 tit3 mou5 waai1 faai1, ngo5 jung6 gan2 sou3 geoi3.",e:"Received. No Wi‑Fi on the MTR — I'm on data."},
+{speaker:"A",c:"唔使而家覆。到咗打俾我。",j:"m4 sai2 ji4 gaa1 fuk1. dou3 zo2 daa2 bei2 ngo5.",e:"No need to reply now. Call me when you arrive."},
+{speaker:"B",c:"得。遲啲打返俾你。",j:"dak1. ci4 di1 daa2 faan1 bei2 nei5.",e:"OK. I'll call you back later."}
+],
+grammar:[
+{pattern:"做咩唔… (zou6 me1 m4…)",desc:"Why didn't you…? Mild complaint. 做咩唔覆我 / 做咩唔嚟.",ex:"你做咩唔覆我啊？(nei5 zou6 me1 m4 fuk1 ngo5 aa3?)",en:"Why didn't you reply to me?"},
+{pattern:"聽唔到 (teng1 m4 dou2)",desc:"Verb + 唔 + 到 = can't succeed. 聽唔到, 睇唔到, 搵唔到.",ex:"訊號好差，聽唔到。(seon3 hou6 hou2 caa1, teng1 m4 dou2)",en:"Signal is bad — I can't hear."},
+{pattern:"得閒先覆 (dak1 haan4 sin1 fuk1)",desc:"I'll reply when I'm free. Extremely common text. 先 = only then.",ex:"我喺地鐵。得閒先覆你。(ngo5 hai2 dei6 tit3. dak1 haan4 sin1 fuk1 nei5)",en:"I'm on the MTR. I'll reply when free."},
+{pattern:"見到 / 收到",desc:"Text acknowledgements. 見到 = I saw it. 收到 = received.",ex:"見到。收到。(gin3 dou2. sau1 dou3)",en:"Got it. Received."},
+{pattern:"打返俾你 (daa2 faan1 bei2 nei5)",desc:"Call you back. 返 = back (return the call).",ex:"遲啲打返俾你。(ci4 di1 daa2 faan1 bei2 nei5)",en:"I'll call you back later."}
+],
+quiz:[
+{q:'"覆" in messaging means:',opts:["reply","cover","repeat a class","hang up"],ans:0},
+{q:'"聽唔到" means:',opts:["don't want to hear","heard already","can't hear","hang up"],ans:2},
+{q:'"得閒先覆" means:',opts:["reply immediately","never reply","reply in English","I'll reply when I'm free"],ans:3},
+{q:'"打俾你" means:',opts:["hit you","text you","hang up on you","call you"],ans:3},
+{q:"B can't talk because:",opts:["asleep","in a meeting","on the MTR","no phone"],ans:2},
+{q:'"截圖" means:',opts:["screenshot","map","ticket","photo album"],ans:0},
+{q:'"收到" as a reply means:',opts:["I'm rich","come here","hang up","received / got it"],ans:3},
+{q:'"遲啲打返" means:',opts:["I'll call back later","call someone else","don't call","lost the phone"],ans:0}
+]},
+
+{id:118,title:"L18 天氣",subtitle:"Weather · 熱凍落雨颱風 着多件",
+vocab:[
+{c:"天氣",j:"tin1 hei3",e:"weather"},
+{c:"熱",j:"jit6",e:"hot"},
+{c:"凍",j:"dung3",e:"cold"},
+{c:"暖",j:"nyun5",e:"warm"},
+{c:"涼",j:"loeng4",e:"cool"},
+{c:"落雨",j:"lok6 jyu5",e:"to rain"},
+{c:"出太陽",j:"ceot1 taai3 joeng4",e:"the sun's out"},
+{c:"颱風",j:"toi4 fung1",e:"typhoon"},
+{c:"掛波",j:"gwaa3 bo1",e:"typhoon signal (lit. hang a ball)"},
+{c:"潮濕",j:"ciu4 sap1",e:"humid"},
+{c:"冷氣",j:"laang5 hei3",e:"air-con"},
+{c:"風扇",j:"fung1 sin3",e:"fan"},
+{c:"着多件",j:"zoek3 do1 gin6",e:"put on an extra layer"},
+{c:"除衫",j:"ceoi4 saam1",e:"to take off a layer / clothes"},
+{c:"遮",j:"ze1",e:"umbrella"},
+{c:"天氣預報",j:"tin1 hei3 jyu6 bou3",e:"weather forecast"},
+{c:"悶熱",j:"mun6 jit6",e:"muggy / stuffy-hot"},
+{c:"大風",j:"daai6 fung1",e:"strong wind"},
+{c:"取消",j:"ceoi2 siu1",e:"to cancel"},
+{c:"喺屋企",j:"hai2 uk1 kei2",e:"at home"}
+],
+dialogue:[
+{speaker:"A",c:"今日天氣好悶熱，出唔出街啊？",j:"gam1 jat6 tin1 hei3 hou2 mun6 jit6, ceot1 m4 ceot1 gaai1 aa3?",e:"It's so muggy today — going out?"},
+{speaker:"B",c:"我想出，不過天氣預報話會落雨。",j:"ngo5 soeng2 ceot1, bat1 gwo3 tin1 hei3 jyu6 bou3 waa6 wui5 lok6 jyu5.",e:"I want to, but the forecast says rain."},
+{speaker:"A",c:"真係？我都冇帶遮。",j:"zan1 hai6? ngo5 dou1 mou5 daai3 ze1.",e:"Really? I didn't bring an umbrella either."},
+{speaker:"B",c:"聽日更加差，話有颱風，可能掛波。",j:"ting1 jat6 gang3 gaa1 caa1, waa6 jau5 toi4 fung1, ho2 nang4 gwaa3 bo1.",e:"Tomorrow's worse — they say a typhoon, maybe a signal."},
+{speaker:"A",c:"如果掛波，我哋聽日取消得唔得？",j:"jyu4 gwo2 gwaa3 bo1, ngo5 dei6 ting1 jat6 ceoi2 siu1 dak1 m4 dak1?",e:"If there's a signal, can we cancel tomorrow?"},
+{speaker:"B",c:"得。掛波就喺屋企，開冷氣睇戲。",j:"dak1. gwaa3 bo1 zau6 hai2 uk1 kei2, hoi1 laang5 hei3 tai2 hei3.",e:"Yes. Signal up, stay home, air-con and a film."},
+{speaker:"A",c:"而家都好潮濕。你着多件啦，夜晚會涼。",j:"ji4 gaa1 dou1 hou2 ciu4 sap1. nei5 zoek3 do1 gin6 laa1, je6 maan5 wui5 loeng4.",e:"It's humid now too. Put on an extra layer — it'll be cool at night."},
+{speaker:"B",c:"我怕熱，除咗件外套。",j:"ngo5 paa3 jit6, ceoi4 zo2 gin6 ngoi6 tou3.",e:"I run hot — I took the jacket off."},
+{speaker:"A",c:"出到太陽又熱，落雨又凍，香港天氣真係癲。",j:"ceot1 dou3 taai3 joeng4 jau6 jit6, lok6 jyu5 jau6 dung3, hoeng1 gong2 tin1 hei3 zan1 hai6 din1.",e:"Sun and it's hot, rain and it's cold — HK weather is wild."},
+{speaker:"B",c:"係囉。咁而家去食個雪糕先。",j:"hai6 lo1. gam2 ji4 gaa1 heoi3 sik6 go3 syut3 gou1 sin1.",e:"Right. Let's get an ice cream first then."}
+],
+grammar:[
+{pattern:"出唔出街 (ceot1 m4 ceot1 gaai1)",desc:"A-not-A with 出. Same pattern: 熱唔熱, 落唔落雨.",ex:"今日天氣好悶熱，出唔出街啊？(gam1 jat6 tin1 hei3 hou2 mun6 jit6, ceot1 m4 ceot1 gaai1 aa3?)",en:"So muggy today — going out or not?"},
+{pattern:"話會… (waa6 wui5…)",desc:"They say it will… 話 = say (report). 天氣預報話會落雨.",ex:"天氣預報話會落雨。(tin1 hei3 jyu6 bou3 waa6 wui5 lok6 jyu5)",en:"The forecast says it will rain."},
+{pattern:"掛波 (gwaa3 bo1)",desc:"Typhoon signal is up. HK daily life. 掛八號波 = T8, stay home.",ex:"如果掛波，我哋聽日取消。(jyu4 gwo2 gwaa3 bo1, ngo5 dei6 ting1 jat6 ceoi2 siu1)",en:"If there's a typhoon signal, we cancel tomorrow."},
+{pattern:"着多件 (zoek3 do1 gin6)",desc:"Put on an extra piece. 着 = wear (zoek3). 除 = take off.",ex:"你着多件啦，夜晚會涼。(nei5 zoek3 do1 gin6 laa1, je6 maan5 wui5 loeng4)",en:"Put on an extra layer — night will be cool."},
+{pattern:"又…又… (jau6… jau6…)",desc:"Both… and… 出太陽又熱，落雨又凍.",ex:"出到太陽又熱，落雨又凍。(ceot1 dou3 taai3 joeng4 jau6 jit6, lok6 jyu5 jau6 dung3)",en:"Sun and it's hot; rain and it's cold."}
+],
+quiz:[
+{q:'"落雨" means:',opts:["to rain","hot sun","typhoon","humid"],ans:0},
+{q:'"掛波" means:',opts:["play ball","hang clothes","typhoon signal is up","cancel school only"],ans:2},
+{q:'"悶熱" means:',opts:["cold and dry","snowing","windy","muggy / stuffy-hot"],ans:3},
+{q:'"着多件" means:',opts:["put on an extra layer","buy more clothes","take everything off","wash clothes"],ans:0},
+{q:'"冷氣" means:',opts:["cold wind outside","fridge","air-con","ice"],ans:2},
+{q:"If there's a typhoon signal they will:",opts:["still go hiking","fly to Japan","go swimming","stay home with air-con"],ans:3},
+{q:'"潮濕" means:',opts:["humid","dry","snowy","dark"],ans:0},
+{q:'"着" (wear) is:',opts:["zyu3","zoek6","zoek3","cyu5"],ans:2}
+]},
+
+{id:119,title:"L19 形容",subtitle:"Adjectives · 大細新舊靚醜快慢",
+vocab:[
+{c:"大",j:"daai6",e:"big"},
+{c:"細",j:"sai3",e:"small"},
+{c:"長",j:"coeng4",e:"long"},
+{c:"短",j:"dyun2",e:"short (length)"},
+{c:"高",j:"gou1",e:"tall / high"},
+{c:"矮",j:"ai2",e:"short (height)"},
+{c:"新",j:"san1",e:"new"},
+{c:"舊",j:"gau6",e:"old (thing, not person)"},
+{c:"靚",j:"leng3",e:"good-looking; nice"},
+{c:"醜",j:"cau2",e:"ugly"},
+{c:"快",j:"faai3",e:"fast"},
+{c:"慢",j:"maan6",e:"slow"},
+{c:"多",j:"do1",e:"many / much"},
+{c:"少",j:"siu2",e:"few / little"},
+{c:"遠",j:"jyun5",e:"far"},
+{c:"近",j:"kan5",e:"near"},
+{c:"比較",j:"bei2 gaau3",e:"to compare"},
+{c:"最",j:"zeoi3",e:"the most"},
+{c:"一樣",j:"jat1 joeng6",e:"the same"},
+{c:"唔同",j:"m4 tung4",e:"different"}
+],
+dialogue:[
+{speaker:"A",c:"呢兩部電話你覺得邊部靚啲？",j:"ni1 loeng5 bou6 din6 waa2 nei5 gok3 dak1 bin1 bou6 leng3 di1?",e:"These two phones — which do you think looks nicer?"},
+{speaker:"B",c:"黑色嗰部新啲，不過貴好多。",j:"hak1 sik1 go2 bou6 san1 di1, bat1 gwo3 gwai3 hou2 do1.",e:"The black one is newer, but much more expensive."},
+{speaker:"A",c:"白色嗰部細啲，放袋好啲。",j:"baak6 sik1 go2 bou6 sai3 di1, fong3 doi2 hou2 di1.",e:"The white one is smaller — better in a pocket."},
+{speaker:"B",c:"我寧願大啲。螢幕大，睇嘢快。",j:"ngo5 ning4 jyun3 daai6 di1. jing4 mok6 daai6, tai2 je5 faai3.",e:"I'd rather a bigger one. Big screen, faster to look at stuff."},
+{speaker:"A",c:"舊嗰部都仲用得。唔使最貴嗰個。",j:"gau6 go2 bou6 dou1 zung6 jung6 dak1. m4 sai2 zeoi3 gwai3 go2 go3.",e:"The old one still works. No need for the most expensive."},
+{speaker:"B",c:"係。兩部其實差唔多樣。",j:"hai6. loeng5 bou6 kei4 sat6 caa1 m4 do1 joeng6.",e:"Yeah. The two are actually almost the same."},
+{speaker:"A",c:"電器舖近唔近啊？",j:"din6 hei3 pou3 kan5 m4 kan5 aa3?",e:"Is the electronics shop close?"},
+{speaker:"B",c:"唔遠，行五分鐘。比商場平。",j:"m4 jyun5, haang4 ng5 fan1 zung1. bei2 soeng1 coeng4 peng4.",e:"Not far — five minutes' walk. Cheaper than the mall."},
+{speaker:"A",c:"咁去睇下。我最怕買錯。",j:"gam2 heoi3 tai2 haa5. ngo5 zeoi3 paa3 maai5 co3.",e:"Then let's go look. I hate buying the wrong one most."},
+{speaker:"B",c:"得。慢慢比較，唔好太快決定。",j:"dak1. maan6 maan2 bei2 gaau3, m4 hou2 taai3 faai3 kyut3 ding6.",e:"OK. Compare slowly — don't decide too fast."}
+],
+grammar:[
+{pattern:"Adj + 啲 (di1)",desc:"-er / a bit more. 靚啲, 新啲, 大啲, 平啲. The everyday comparative.",ex:"邊部靚啲？黑色嗰部新啲。(bin1 bou6 leng3 di1? hak1 sik1 go2 bou6 san1 di1)",en:"Which looks nicer? The black one is newer."},
+{pattern:"Adj + 好多 (hou2 do1)",desc:"Much more… 貴好多, 快好多, 遠好多.",ex:"不過貴好多。(bat1 gwo3 gwai3 hou2 do1)",en:"But much more expensive."},
+{pattern:"最 (zeoi3)",desc:"The most. 最貴, 最怕, 最好.",ex:"唔使最貴嗰個。我最怕買錯。(m4 sai2 zeoi3 gwai3 go2 go3. ngo5 zeoi3 paa3 maai5 co3)",en:"No need for the most expensive. What I fear most is buying wrong."},
+{pattern:"比 (bei2)",desc:"A 比 B + adj. 比商場平 = cheaper than the mall.",ex:"行五分鐘。比商場平。(haang4 ng5 fan1 zung1. bei2 soeng1 coeng4 peng4)",en:"Five minutes' walk. Cheaper than the mall."},
+{pattern:"大/細 vs 高/矮 vs 長/短",desc:"大細 = size. 高矮 = height of people. 長短 = length. Don't mix.",ex:"白色嗰部細啲。我寧願大啲。(baak6 sik1 go2 bou6 sai3 di1. ngo5 ning4 jyun3 daai6 di1)",en:"The white one is smaller. I'd rather bigger."}
+],
+quiz:[
+{q:'"細" means:',opts:["big","tall","small","old"],ans:2},
+{q:'"舊" for objects means:',opts:["old (thing)","old (person)","new","cheap"],ans:0},
+{q:'"靚啲" means:',opts:["the ugliest","not nice","too nice","a bit nicer / nicer"],ans:3},
+{q:'"最" means:',opts:["the most","a bit","not","than"],ans:0},
+{q:'"比商場平" means:',opts:["the mall is cheaper","same as the mall","cheaper than the mall","inside the mall"],ans:2},
+{q:"B prefers a phone that is:",opts:["smaller","the most expensive","white","bigger"],ans:3},
+{q:'People\'s height uses:',opts:["大 / 細","長 / 短","高 / 矮","新 / 舊"],ans:2},
+{q:'"差唔多樣" means:',opts:["almost the same","completely different","very expensive","too far"],ans:0}
+]},
+
+{id:120,title:"L20 開口講",subtitle:"Survival lines · slow down, how do I say, 即係",
+vocab:[
+{c:"唔該借借",j:"m4 goi1 ze3 ze3",e:"excuse me (passing through)"},
+{c:"我唔識講",j:"ngo5 m4 sik1 gong2",e:"I don't know how to say it"},
+{c:"講慢啲",j:"gong2 maan6 di1",e:"speak a bit slower"},
+{c:"再講一次",j:"zoi3 gong2 jat1 ci3",e:"say it again"},
+{c:"點講",j:"dim2 gong2",e:"how do you say…"},
+{c:"即係",j:"zik1 hai6",e:"that is / you mean…"},
+{c:"係咪咁解",j:"hai6 mai6 gam2 gaai2",e:"is that what it means?"},
+{c:"我聽唔明",j:"ngo5 teng1 m4 ming4",e:"I don't understand (what I heard)"},
+{c:"我睇唔明",j:"ngo5 tai2 m4 ming4",e:"I don't understand (what I read)"},
+{c:"英文得唔得",j:"jing1 man2 dak1 m4 dak1",e:"is English OK?"},
+{c:"等等",j:"dang2 dang2",e:"wait a second"},
+{c:"差唔多",j:"caa1 m4 do1",e:"almost; more or less"},
+{c:"唔好意思",j:"m4 hou2 ji3 si1",e:"excuse me / sorry (polite)"},
+{c:"麻煩你",j:"maa4 faan4 nei5",e:"could I trouble you to…"},
+{c:"得唔得啊",j:"dak1 m4 dak1 aa3",e:"is that OK?"},
+{c:"我學緊粵語",j:"ngo5 hok6 gan2 jyut6 jyu5",e:"I'm learning Cantonese"},
+{c:"唔該你幫我",j:"m4 goi1 nei5 bong1 ngo5",e:"please help me"},
+{c:"呢個叫咩",j:"ni1 go3 giu3 me1",e:"what's this called"},
+{c:"可唔可以寫低",j:"ho2 m4 ho2 ji5 se2 dai1",e:"can you write it down"},
+{c:"多謝指教",j:"do1 ze6 zi2 gaau3",e:"thanks for teaching me"}
+],
+dialogue:[
+{speaker:"A",c:"唔好意思，可唔可以講慢啲？我學緊粵語。",j:"m4 hou2 ji3 si1, ho2 m4 ho2 ji5 gong2 maan6 di1? ngo5 hok6 gan2 jyut6 jyu5.",e:"Sorry — can you speak a bit slower? I'm learning Cantonese."},
+{speaker:"B",c:"得得得。你聽唔明邊句啊？",j:"dak1 dak1 dak1. nei5 teng1 m4 ming4 bin1 geoi3 aa3?",e:"Sure sure. Which sentence didn't you get?"},
+{speaker:"A",c:"頭先嗰句。即係點解啊？",j:"tau4 sin1 go2 geoi3. zik1 hai6 dim2 gaai2 aa3?",e:"The one just now. So what does it mean?"},
+{speaker:"B",c:"即係叫你轉右。係咪咁解？",j:"zik1 hai6 giu3 nei5 zyun3 jau6. hai6 mai6 gam2 gaai2?",e:"It means turn right. Is that what you thought?"},
+{speaker:"A",c:"差唔多。『轉右』英文點講我知，粵語我唔識講。",j:"caa1 m4 do1. zyun3 jau6 jing1 man2 dim2 gong2 ngo5 zi1, jyut6 jyu5 ngo5 m4 sik1 gong2.",e:"Almost. I know 'turn right' in English — I just can't say it in Cantonese."},
+{speaker:"B",c:"你跟我講：轉右。",j:"nei5 gan1 ngo5 gong2: zyun3 jau6.",e:"Say it after me: zyun3 jau6."},
+{speaker:"A",c:"轉右。啱唔啱啊？",j:"zyun3 jau6. ngaam1 m4 ngaam1 aa3?",e:"Zyun3 jau6. Is that right?"},
+{speaker:"B",c:"啱。可唔可以寫低俾你？",j:"ngaam1. ho2 m4 ho2 ji5 se2 dai1 bei2 nei5?",e:"Correct. Want me to write it down for you?"},
+{speaker:"A",c:"唔該你幫我。英文得唔得？我怕睇唔明。",j:"m4 goi1 nei5 bong1 ngo5. jing1 man2 dak1 m4 dak1? ngo5 paa3 tai2 m4 ming4.",e:"Please. Is English OK? I'm afraid I won't understand the writing."},
+{speaker:"B",c:"得。慢慢嚟。多謝你肯開口講。",j:"dak1. maan6 maan2 lai4. do1 ze6 nei5 hang2 hoi1 hau2 gong2.",e:"Yes. Take it slow. Thanks for being willing to speak."}
+],
+grammar:[
+{pattern:"可唔可以 + verb",desc:"Can you…? The polite request workhorse.",ex:"可唔可以講慢啲？可唔可以寫低？(ho2 m4 ho2 ji5 gong2 maan6 di1? ho2 m4 ho2 ji5 se2 dai1?)",en:"Can you speak slower? Can you write it down?"},
+{pattern:"即係 (zik1 hai6)",desc:"That is / you mean… Use it to check meaning. 即係點解 / 即係轉右.",ex:"即係叫你轉右。即係點解啊？(zik1 hai6 giu3 nei5 zyun3 jau6. zik1 hai6 dim2 gaai2 aa3?)",en:"It means turn right. So what does it mean?"},
+{pattern:"聽唔明 / 睇唔明",desc:"Don't understand what you hear vs what you read. 明 = understand.",ex:"我聽唔明。我怕睇唔明。(ngo5 teng1 m4 ming4. ngo5 paa3 tai2 m4 ming4)",en:"I don't understand (heard). I'm afraid I won't understand (written)."},
+{pattern:"點講 (dim2 gong2)",desc:"How do you say…? X 點講？ / 粵語點講？",ex:"『轉右』英文點講我知 (zyun3 jau6 jing1 man2 dim2 gong2 ngo5 zi1)",en:"I know how to say turn-right in English."},
+{pattern:"開口講 (hoi1 hau2 gong2)",desc:"Open your mouth and speak. The whole point of this lesson.",ex:"多謝你肯開口講。(do1 ze6 nei5 hang2 hoi1 hau2 gong2)",en:"Thanks for being willing to speak."}
+],
+quiz:[
+{q:'"講慢啲" means:',opts:["speak a bit slower","speak faster","don't speak","speak English"],ans:0},
+{q:'"即係" means:',opts:["because","never","please","that is / you mean"],ans:3},
+{q:'"聽唔明" means:',opts:["can't see","can't walk","don't understand (heard)","don't want to"],ans:2},
+{q:'"睇唔明" is about:',opts:["reading / seeing","hearing","smelling","money"],ans:0},
+{q:'"唔該借借" is for:',opts:["thanking a gift","ordering food","saying sorry for being late","passing through a crowd"],ans:3},
+{q:'"我學緊粵語" means:',opts:["I teach Cantonese","I forgot Cantonese","I'm learning Cantonese","I hate Cantonese"],ans:2},
+{q:'"再講一次" means:',opts:["say it again","don't repeat","say it faster","write it"],ans:0},
+{q:'"係咪咁解" checks:',opts:["the bill","the time","the weather","whether that's the meaning"],ans:3}
+]}
 ];
 
 let studyMode=localStorage.getItem('cantonese-mode')||'levels';
@@ -2418,7 +2683,7 @@ function renderAchievements(){
     { icon: '💪', name: 'Consistent', desc: '7-day streak', check: stats.streak >= 7 },
     { icon: '✍️', name: 'Penman', desc: 'Practice 5 chars', check: stats.practiced >= 5 },
     { icon: '🖌️', name: 'Calligrapher', desc: 'Practice 20 chars', check: stats.practiced >= 20 },
-    { icon: '🏆', name: 'Explorer', desc: '15 everyday lessons ready', check: true },
+    { icon: '🏆', name: 'Explorer', desc: '20 everyday lessons ready', check: true },
   ];
   const unlocked = achs.filter(a => a.check).length;
   let h = '<div class="match-score" style="margin-top:24px"><span><span class="pairs">' + unlocked + '/' + achs.length + '</span> achievements</span></div>';
