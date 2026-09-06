@@ -16,6 +16,8 @@ header p{color:var(--text2);margin-top:5px}
 .tab{padding:10px 20px;background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);cursor:pointer;color:var(--text2);font-size:.95em;transition:all .2s}
 #lessonTabs{gap:6px}
 #lessonTabs .tab{padding:7px 12px;font-size:.82em}
+#lessonBand{justify-content:center;margin-bottom:8px}
+#lessonBand .tab{padding:6px 14px;font-size:.8em}
 #lessonTabs .tab.done{border-color:var(--green)}
 .lesson-nav{display:flex;justify-content:space-between;gap:10px;margin-top:22px;flex-wrap:wrap}
 .lesson-nav .action-btn{flex:1;min-width:140px;text-align:center}
@@ -270,9 +272,10 @@ h2{font-size:1.4em;margin-bottom:16px}
 <p>Speak Hong Kong Cantonese — everyday first, then the course</p>
 </header>
 <div class="tabs mode-row" id="modeRow">
-  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 Everyday L1–L35</div>
+  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 Everyday L1–L40</div>
   <div class="tab" id="mode-course" onclick="setMode('course')">📘 Course 1–11</div>
 </div>
+<div class="tabs" id="lessonBand"></div>
 <div class="tabs" id="lessonTabs"></div>
 <div id="content"></div>
 </div>
@@ -2823,6 +2826,270 @@ quiz:[
 {q:'"雙數" means:',opts:["odd number","even number","phone number","zero"],ans:1},
 {q:'"第三年" means:',opts:["three years ago","the third year","year 13","never"],ans:1}
 ]}
+,
+{id:136,title:"L36 動詞",subtitle:"Core verbs · 畀拎放擺攞搵用開關",
+vocab:[
+{c:"畀",j:"bei2",e:"to give; to let; for"},
+{c:"拎",j:"ling1",e:"to take / carry (in hand)"},
+{c:"放",j:"fong3",e:"to put down"},
+{c:"擺",j:"baai2",e:"to place / set out"},
+{c:"攞",j:"lo2",e:"to take / get / pick up"},
+{c:"搵",j:"wan2",e:"to look for / find"},
+{c:"用",j:"jung6",e:"to use"},
+{c:"開",j:"hoi1",e:"to open; to turn on"},
+{c:"關",j:"gwaan1",e:"to close; to turn off"},
+{c:"幫",j:"bong1",e:"to help"},
+{c:"等",j:"dang2",e:"to wait"},
+{c:"叫",j:"giu3",e:"to call; to order; to be named"},
+{c:"問",j:"man6",e:"to ask"},
+{c:"答",j:"daap3",e:"to answer"},
+{c:"帶",j:"daai3",e:"to bring / take (along)"},
+{c:"送",j:"sung3",e:"to send; to give a gift; to see off"},
+{c:"借",j:"ze3",e:"to borrow / lend"},
+{c:"還",j:"waan4",e:"to return (something)"},
+{c:"記得",j:"gei3 dak1",e:"to remember"},
+{c:"唔記得",j:"m4 gei3 dak1",e:"to forget"}
+],
+dialogue:[
+{speaker:"A",c:"可唔可以畀支筆我？",j:"ho2 m4 ho2 ji5 bei2 zi1 bat1 ngo5?",e:"Can you give me a pen?"},
+{speaker:"B",c:"枱上面有。你自己攞。",j:"toi2 soeng6 min6 jau5. nei5 zi6 gei2 lo2.",e:"There's one on the table. Grab it yourself."},
+{speaker:"A",c:"搵唔到。你擺咗邊啊？",j:"wan2 m4 dou2. nei5 baai2 zo2 bin1 aa3?",e:"Can't find it. Where did you put it?"},
+{speaker:"B",c:"我拎咗入房。等我幫你攞。",j:"ngo5 ling1 zo2 jap6 fong2. dang2 ngo5 bong1 nei5 lo2.",e:"I carried it into the room. Wait, I'll get it for you."},
+{speaker:"A",c:"唔該。用完我會放返原位。",j:"m4 goi1. jung6 jyun4 ngo5 wui5 fong3 faan1 jyun4 wai2.",e:"Thanks. I'll put it back when I'm done."},
+{speaker:"B",c:"記得關燈。走之前開咗窗就關返。",j:"gei3 dak1 gwaan1 dang1. zau2 zi1 cin4 hoi1 zo2 coeng1 zau6 gwaan1 faan1.",e:"Remember to turn off the light. If you opened the window before leaving, close it."},
+{speaker:"A",c:"得。呢本書可唔可以借？",j:"dak1. ni1 bun2 syu1 ho2 m4 ho2 ji5 ze3?",e:"OK. Can I borrow this book?"},
+{speaker:"B",c:"得。聽日還。我要送俾人。",j:"dak1. ting1 jat6 waan4. ngo5 jiu3 sung3 bei2 jan4.",e:"Yes. Return it tomorrow. I need to give it to someone."},
+{speaker:"A",c:"你帶埋鎖匙未？我唔記得攞。",j:"nei5 daai3 maai4 so2 si4 mei6? ngo5 m4 gei3 dak1 lo2.",e:"Did you bring the keys too? I forgot to pick them up."},
+{speaker:"B",c:"帶咗。走啦。",j:"daai3 zo2. zau2 laa1.",e:"Got them. Let's go."}
+],
+grammar:[
+{pattern:"畀 (bei2)",desc:"Give / let / for. 畀支筆我 = give me a pen. 送俾人 = give to someone. Same word as 俾.",ex:"可唔可以畀支筆我？送俾人。(ho2 m4 ho2 ji5 bei2 zi1 bat1 ngo5? sung3 bei2 jan4)",en:"Can you give me a pen? Give it to someone."},
+{pattern:"拎 vs 攞 vs 帶",desc:"拎 = carry in hand. 攞 = pick up / go get. 帶 = bring along with you.",ex:"我拎咗入房。你自己攞。你帶埋鎖匙未？(ngo5 ling1 zo2 jap6 fong2. nei5 zi6 gei2 lo2. nei5 daai3 maai4 so2 si4 mei6?)",en:"I carried it into the room. Grab it yourself. Did you bring the keys?"},
+{pattern:"放 vs 擺",desc:"放 = put down / put back. 擺 = place, set (often with more care / arrangement).",ex:"用完放返原位。你擺咗邊啊？(jung6 jyun4 fong3 faan1 jyun4 wai2. nei5 baai2 zo2 bin1 aa3?)",en:"Put it back when done. Where did you place it?"},
+{pattern:"開 / 關",desc:"Open or turn on / close or turn off. 開燈關燈, 開窗關窗.",ex:"記得關燈。開咗窗就關返。(gei3 dak1 gwaan1 dang1. hoi1 zo2 coeng1 zau6 gwaan1 faan1)",en:"Remember to turn off the light. If you opened the window, close it."},
+{pattern:"Verb + 唔 + 到",desc:"Can't succeed. 搵唔到, 聽唔到, 睇唔到.",ex:"搵唔到。(wan2 m4 dou2)",en:"Can't find it."}
+],
+quiz:[
+{q:'"畀" means:',opts:["to give / let","to steal","to close","to wait"],ans:0},
+{q:'"拎" means:',opts:["put down","carry in hand","forget","open"],ans:1},
+{q:'"攞" means:',opts:["throw away","pick up / get","sleep","sell"],ans:1},
+{q:'"搵唔到" means:',opts:["found it","can't find it","don't look","lost forever always"],ans:1},
+{q:'"關燈" means:',opts:["turn on the light","turn off the light","buy a lamp","open the window"],ans:1},
+{q:'"借" means:',opts:["buy","borrow / lend","sell","throw"],ans:1},
+{q:'"還" (waan4) means:',opts:["still","return (something)","play","run"],ans:1},
+{q:'"帶" means:',opts:["put down","bring along","close","forget"],ans:1}
+]},
+
+{id:137,title:"L37 拍拖",subtitle:"Dating · 鍾意、分手、見家長",
+vocab:[
+{c:"拍拖",j:"paak3 to1",e:"to date / be a couple"},
+{c:"鍾意",j:"zung1 ji3",e:"to like"},
+{c:"愛",j:"oi3",e:"to love"},
+{c:"表白",j:"biu2 baak6",e:"to confess feelings"},
+{c:"拒絕",j:"keoi5 zyut6",e:"to refuse"},
+{c:"分手",j:"fan1 sau2",e:"to break up"},
+{c:"復合",j:"fuk6 hap6",e:"to get back together"},
+{c:"見家長",j:"gin3 gaa1 zoeng2",e:"meet the parents"},
+{c:"情人節",j:"cing4 jan4 zit3",e:"Valentine's Day"},
+{c:"送花",j:"sung3 faa1",e:"to give flowers"},
+{c:"尷尬",j:"gaam3 gaai3",e:"awkward"},
+{c:"閃",j:"sim2",e:"to show off being a couple (閃光)"},
+{c:"單身",j:"daan1 san1",e:"single"},
+{c:"認真",j:"jing6 zan1",e:"serious"},
+{c:"玩",j:"waan2",e:"to play; not serious"},
+{c:"關心",j:"gwaan1 sam1",e:"to care about"},
+{c:"想念",j:"soeng2 nim6",e:"to miss (someone)"},
+{c:"一齊",j:"jat1 cai4",e:"together"},
+{c:"將來",j:"zoeng1 loi4",e:"the future"}
+],
+dialogue:[
+{speaker:"A",c:"你哋拍拖幾耐啊？",j:"nei5 dei6 paak3 to1 gei2 noi6 aa3?",e:"How long have you two been dating?"},
+{speaker:"B",c:"一年。我認真，唔係玩。",j:"jat1 nin4. ngo5 jing6 zan1, m4 hai6 waan2.",e:"A year. I'm serious — not playing around."},
+{speaker:"A",c:"見家長未啊？",j:"gin3 gaa1 zoeng2 mei6 aa3?",e:"Met the parents yet?"},
+{speaker:"B",c:"未。我有啲尷尬，怕佢屋企人唔鍾意我。",j:"mei6. ngo5 jau5 di1 gaam3 gaai3, paa3 keoi5 uk1 kei2 jan4 m4 zung1 ji3 ngo5.",e:"Not yet. I'm a bit awkward — afraid their family won't like me."},
+{speaker:"A",c:"情人節送花得唔得？",j:"cing4 jan4 zit3 sung3 faa1 dak1 m4 dak1?",e:"Flowers on Valentine's OK?"},
+{speaker:"B",c:"得。不過佢話唔好太閃。",j:"dak1. bat1 gwo3 keoi5 waa6 m4 hou2 taai3 sim2.",e:"Yes. But they said don't be too extra / PDA."},
+{speaker:"A",c:"你有冇想過將來？",j:"nei5 jau5 mou5 soeng2 gwo3 zoeng1 loi4?",e:"Have you thought about the future?"},
+{speaker:"B",c:"有。想一齊住。唔想分手。",j:"jau5. soeng2 jat1 cai4 zyu6. m4 soeng2 fan1 sau2.",e:"Yes. Want to live together. Don't want to break up."},
+{speaker:"A",c:"如果當初被拒絕呢？",j:"jyu4 gwo2 dong1 co1 bei6 keoi5 zyut6 ne1?",e:"What if you'd been rejected at the start?"},
+{speaker:"B",c:"都會關心佢。鍾意就表白，冇後悔。",j:"dou1 wui5 gwaan1 sam1 keoi5. zung1 ji3 zau6 biu2 baak6, mou5 hau6 fui3.",e:"I'd still care. If you like someone, confess — no regrets."}
+],
+grammar:[
+{pattern:"拍拖 (paak3 to1)",desc:"Be a couple / go out. The default HK verb. Not 談戀愛 in speech.",ex:"你哋拍拖幾耐啊？(nei5 dei6 paak3 to1 gei2 noi6 aa3?)",en:"How long have you been dating?"},
+{pattern:"認真 vs 玩",desc:"Serious vs casual. 我認真，唔係玩.",ex:"我認真，唔係玩。(ngo5 jing6 zan1, m4 hai6 waan2)",en:"I'm serious, not playing."},
+{pattern:"見家長",desc:"Meet the parents — a relationship milestone in HK.",ex:"見家長未啊？未。我有啲尷尬。(gin3 gaa1 zoeng2 mei6 aa3? mei6. ngo5 jau5 di1 gaam3 gaai3)",en:"Met the parents yet? Not yet. I'm a bit awkward."},
+{pattern:"閃 (sim2)",desc:"PDA / showing off couple-ness. 唔好太閃.",ex:"佢話唔好太閃。(keoi5 waa6 m4 hou2 taai3 sim2)",en:"They said don't be too extra."},
+{pattern:"鍾意就表白",desc:"If you like them, say so. 就 = then.",ex:"鍾意就表白，冇後悔。(zung1 ji3 zau6 biu2 baak6, mou5 hau6 fui3)",en:"If you like them, confess — no regrets."}
+],
+quiz:[
+{q:'"拍拖" means:',opts:["take a photo","date / be a couple","break up","move house"],ans:1},
+{q:'"表白" means:',opts:["break up","confess feelings","meet parents","send email"],ans:1},
+{q:'"分手" means:',opts:["hold hands","break up","get married","move in"],ans:1},
+{q:'"見家長" means:',opts:["see a teacher","meet the parents","job interview","see a doctor"],ans:1},
+{q:'"尷尬" means:',opts:["happy","awkward","hungry","late"],ans:1},
+{q:'"認真" vs "玩": 認真 means:',opts:["joking","serious","busy","single"],ans:1},
+{q:'"閃" in dating slang means:',opts:["run away","PDA / show off being a couple","turn off the light","be shy"],ans:1},
+{q:'"鍾意" means:',opts:["hate","like","forget","wait"],ans:1}
+]},
+
+{id:138,title:"L38 投訴",subtitle:"Complaining · 唔滿意、換、經理",
+vocab:[
+{c:"投訴",j:"tau4 sou3",e:"to complain; a complaint"},
+{c:"唔滿意",j:"m4 mun5 ji3",e:"not satisfied"},
+{c:"經理",j:"ging1 lei5",e:"manager"},
+{c:"服務員",j:"fuk6 mou6 jyun4",e:"staff / attendant"},
+{c:"態度",j:"taai3 dou6",e:"attitude"},
+{c:"品質",j:"ban2 zat1",e:"quality"},
+{c:"壞咗",j:"waai6 zo2",e:"broken"},
+{c:"錯",j:"co3",e:"wrong"},
+{c:"換",j:"wun6",e:"to exchange"},
+{c:"退錢",j:"teoi3 cin2",e:"refund"},
+{c:"道歉",j:"dou6 hip3",e:"to apologise"},
+{c:"解釋",j:"gaai2 sik1",e:"to explain"},
+{c:"等咗好耐",j:"dang2 zo2 hou2 noi6",e:"waited a long time"},
+{c:"未好",j:"mei6 hou2",e:"not ready yet"},
+{c:"冷",j:"laang5",e:"cold (food/drink gone cold)"},
+{c:"熟",j:"suk6",e:"cooked; also 'done well'"},
+{c:"生",j:"saang1",e:"undercooked"},
+{c:"要求",j:"jiu1 kau4",e:"to request; a demand"},
+{c:"處理",j:"cyu5 lei5",e:"to handle"},
+{c:"下次",j:"haa6 ci3",e:"next time"}
+],
+dialogue:[
+{speaker:"A",c:"唔好意思，我要投訴。呢碟餸冷咗，而且好生。",j:"m4 hou2 ji3 si1, ngo5 jiu3 tau4 sou3. ni1 dip6 sung3 laang5 zo2, ji4 ce2 hou2 saang1.",e:"Sorry, I need to complain. This dish is cold, and undercooked."},
+{speaker:"B",c:"對唔住。我叫廚房換碟。",j:"deoi3 m4 zyu6. ngo5 giu3 cyu4 fong2 wun6 dip6.",e:"Sorry. I'll have the kitchen replace the plate."},
+{speaker:"A",c:"我等咗好耐。可唔可以叫經理出嚟？",j:"ngo5 dang2 zo2 hou2 noi6. ho2 m4 ho2 ji5 giu3 ging1 lei5 ceot1 lai4?",e:"I've waited a long time. Can you get the manager?"},
+{speaker:"B",c:"得。經理而家過嚟。我哋會處理。",j:"dak1. ging1 lei5 ji4 gaa1 gwo3 lai4. ngo5 dei6 wui5 cyu5 lei5.",e:"Yes. The manager is coming. We'll handle it."},
+{speaker:"A",c:"服務員態度都唔好。我唔滿意。",j:"fuk6 mou6 jyun4 taai3 dou6 dou1 m4 hou2. ngo5 m4 mun5 ji3.",e:"The staff attitude wasn't good either. I'm not satisfied."},
+{speaker:"B",c:"真係對唔住。我道歉。今次唔收錢得唔得？",j:"zan1 hai6 deoi3 m4 zyu6. ngo5 dou6 hip3. gam1 ci3 m4 sau1 cin2 dak1 m4 dak1?",e:"Really sorry. I apologise. This one's on the house?"},
+{speaker:"A",c:"退錢定換都得。我要求品質好啲。",j:"teoi3 cin2 ding6 wun6 dou1 dak1. ngo5 jiu1 kau4 ban2 zat1 hou2 di1.",e:"Refund or exchange is fine. I want better quality."},
+{speaker:"B",c:"下次一定改善。可唔可以解釋多句？",j:"haa6 ci3 jat1 ding6 goi2 sin6. ho2 m4 ho2 ji5 gaai2 sik1 do1 geoi3?",e:"Next time we'll improve. May I explain a bit more?"},
+{speaker:"A",c:"唔使解釋。換碟就得。",j:"m4 sai2 gaai2 sik1. wun6 dip6 zau6 dak1.",e:"No need to explain. Replacing the dish is enough."},
+{speaker:"B",c:"好，而家去。唔該你體諒。",j:"hou2, ji4 gaa1 heoi3. m4 goi1 nei5 tai2 loeng6.",e:"OK, going now. Thanks for your understanding."}
+],
+grammar:[
+{pattern:"我要投訴",desc:"I want to complain. Direct and normal in HK service contexts.",ex:"唔好意思，我要投訴。(m4 hou2 ji3 si1, ngo5 jiu3 tau4 sou3)",en:"Sorry, I need to complain."},
+{pattern:"而且 (ji4 ce2)",desc:"And also / moreover. Stacks complaints.",ex:"呢碟餸冷咗，而且好生。(ni1 dip6 sung3 laang5 zo2, ji4 ce2 hou2 saang1)",en:"This dish is cold, and also undercooked."},
+{pattern:"今次唔收錢",desc:"This time we won't charge. Service recovery.",ex:"今次唔收錢得唔得？(gam1 ci3 m4 sau1 cin2 dak1 m4 dak1?)",en:"This one's free, OK?"},
+{pattern:"定…都得",desc:"Either… is fine. 退錢定換都得.",ex:"退錢定換都得。(teoi3 cin2 ding6 wun6 dou1 dak1)",en:"Refund or exchange, either is fine."},
+{pattern:"下次一定…",desc:"Next time we definitely… The recovery promise.",ex:"下次一定改善。(haa6 ci3 jat1 ding6 goi2 sin6)",en:"Next time we'll definitely improve."}
+],
+quiz:[
+{q:'"投訴" means:',opts:["to praise","to complain","to order","to pay"],ans:1},
+{q:'"唔滿意" means:',opts:["full","not satisfied","hungry","late"],ans:1},
+{q:'"經理" means:',opts:["chef","manager","customer","driver"],ans:1},
+{q:'"壞咗" means:',opts:["new","broken","cheap","hot"],ans:1},
+{q:'"道歉" means:',opts:["to complain","to apologise","to refund","to shout"],ans:1},
+{q:'"而且" means:',opts:["because","and also / moreover","or","never"],ans:1},
+{q:"A's food was:",opts:["perfect","cold and undercooked","too spicy only","missing"],ans:1},
+{q:'"處理" means:',opts:["ignore","handle / deal with","eat","leave"],ans:1}
+]},
+
+{id:139,title:"L39 搬家",subtitle:"Moving · 紙箱、電梯、按金、鄰居",
+vocab:[
+{c:"搬家",j:"bun1 gaa1",e:"to move house"},
+{c:"紙箱",j:"zi2 soeng1",e:"cardboard box"},
+{c:"行李",j:"hang4 lei5",e:"luggage / belongings"},
+{c:"電梯",j:"din6 tai1",e:"lift / elevator"},
+{c:"樓梯",j:"lau4 tai1",e:"stairs"},
+{c:"按金",j:"on3 gam1",e:"deposit"},
+{c:"房東",j:"fong4 dung1",e:"landlord"},
+{c:"鄰居",j:"leon4 geoi1",e:"neighbour"},
+{c:"鎖匙",j:"so2 si4",e:"keys"},
+{c:"合約",j:"hap6 joek3",e:"contract"},
+{c:"搬入",j:"bun1 jap6",e:"move in"},
+{c:"搬出",j:"bun1 ceot1",e:"move out"},
+{c:"裝修",j:"zong1 sau1",e:"renovation / fitting out"},
+{c:"傢俬",j:"gaa1 si1",e:"furniture"},
+{c:"垃圾",j:"laap6 saap3",e:"rubbish"},
+{c:"幫手",j:"bong1 sau2",e:"to help out"},
+{c:"重",j:"cung5",e:"heavy"},
+{c:"小心",j:"siu2 sam1",e:"careful"},
+{c:"到齊",j:"dou3 cai4",e:"all arrived"},
+{c:"新屋",j:"san1 uk1",e:"the new place"}
+],
+dialogue:[
+{speaker:"A",c:"聽日搬家，你可唔可以幫手？",j:"ting1 jat6 bun1 gaa1, nei5 ho2 m4 ho2 ji5 bong1 sau2?",e:"Moving tomorrow — can you help?"},
+{speaker:"B",c:"得。幾點到齊？有冇電梯？",j:"dak1. gei2 dim2 dou3 cai4? jau5 mou5 din6 tai1?",e:"Yes. What time is everyone there? Is there a lift?"},
+{speaker:"A",c:"朝早十點。有電梯，不過紙箱好重。",j:"ziu1 zou2 sap6 dim2. jau5 din6 tai1, bat1 gwo3 zi2 soeng1 hou2 cung5.",e:"Ten in the morning. There's a lift, but the boxes are heavy."},
+{speaker:"B",c:"按金退咗未？合約簽咗未？",j:"on3 gam1 teoi3 zo2 mei6? hap6 joek3 cim1 zo2 mei6?",e:"Deposit back yet? Contract signed?"},
+{speaker:"A",c:"新屋簽咗。舊屋按金房東話下個禮拜退。",j:"san1 uk1 cim1 zo2. gau6 uk1 on3 gam1 fong4 dung1 waa6 haa6 go3 lai5 baai3 teoi3.",e:"New place signed. Old landlord says the deposit comes back next week."},
+{speaker:"B",c:"鄰居知唔知你搬？垃圾要分類。",j:"leon4 geoi1 zi1 m4 zi1 nei5 bun1? laap6 saap3 jiu3 fan1 leoi6.",e:"Do the neighbours know you're moving? Rubbish has to be sorted."},
+{speaker:"A",c:"知。傢俬太大，樓梯搬唔到就拆。",j:"zi1. gaa1 si1 taai3 daai6, lau4 tai1 bun1 m4 dou2 zau6 caak3.",e:"Yes. If the furniture is too big for the stairs we'll dismantle it."},
+{speaker:"B",c:"鎖匙交咗未？小心唔好搞錯。",j:"so2 si4 gaau1 zo2 mei6? siu2 sam1 m4 hou2 gaau2 co3.",e:"Keys handed over? Careful not to mix them up."},
+{speaker:"A",c:"搬入先至交舊鎖匙。你幫我拎紙箱。",j:"bun1 jap6 sin1 zi3 gaau1 gau6 so2 si4. nei5 bong1 ngo5 ling1 zi2 soeng1.",e:"Hand over the old keys only after moving in. Help me carry boxes."},
+{speaker:"B",c:"得。搬完請食飯啊。",j:"dak1. bun1 jyun4 ceng2 sik6 faan6 aa3.",e:"OK. After the move, you treat dinner."}
+],
+grammar:[
+{pattern:"搬家 / 搬入 / 搬出",desc:"Move house / move in / move out.",ex:"聽日搬家。搬入先至交舊鎖匙。(ting1 jat6 bun1 gaa1. bun1 jap6 sin1 zi3 gaau1 gau6 so2 si4)",en:"Moving tomorrow. Hand over old keys only after moving in."},
+{pattern:"Verb + 唔 + 到",desc:"Can't manage to. 樓梯搬唔到.",ex:"傢俬太大，樓梯搬唔到就拆。(gaa1 si1 taai3 daai6, lau4 tai1 bun1 m4 dou2 zau6 caak3)",en:"Furniture too big — if we can't move it via the stairs, dismantle it."},
+{pattern:"退按金",desc:"Get the deposit back. 按金退咗未？",ex:"按金退咗未？房東話下個禮拜退。(on3 gam1 teoi3 zo2 mei6? fong4 dung1 waa6 haa6 go3 lai5 baai3 teoi3)",en:"Deposit back yet? Landlord says next week."},
+{pattern:"到齊 (dou3 cai4)",desc:"Everyone has arrived. 齊 = complete/together.",ex:"幾點到齊？(gei2 dim2 dou3 cai4?)",en:"What time is everyone there?"},
+{pattern:"搬完請食飯",desc:"After finishing X, treat a meal. Classic HK thanks.",ex:"搬完請食飯啊。(bun1 jyun4 ceng2 sik6 faan6 aa3)",en:"After the move you treat dinner."}
+],
+quiz:[
+{q:'"搬家" means:',opts:["buy furniture","move house","renovate only","pay rent"],ans:1},
+{q:'"按金" means:',opts:["salary","deposit","keys","lift"],ans:1},
+{q:'"電梯" means:',opts:["stairs","lift / elevator","truck","door"],ans:1},
+{q:'"鄰居" means:',opts:["landlord","neighbour","mover","lawyer"],ans:1},
+{q:'"傢俬" means:',opts:["rubbish","furniture","boxes","contract"],ans:1},
+{q:'"紙箱" means:',opts:["suitcase","cardboard box","envelope","bag"],ans:1},
+{q:'"搬入" means:',opts:["move out","move in","visit","demolish"],ans:1},
+{q:'"重" (cung5) means:',opts:["again","heavy","empty","new"],ans:1}
+]},
+
+{id:140,title:"L40 開口日",subtitle:"Review day · mix L1–L39 in one conversation",
+vocab:[
+{c:"複習",j:"fuk1 zaap6",e:"to review"},
+{c:"進步",j:"zeon3 bou6",e:"progress"},
+{c:"流利",j:"lau4 lei6",e:"fluent"},
+{c:"口音",j:"hau2 jam1",e:"accent"},
+{c:"文法",j:"man4 faat3",e:"grammar"},
+{c:"生字",j:"saang1 zi6",e:"new words"},
+{c:"練習",j:"lin6 zaap6",e:"practice"},
+{c:"聽",j:"ting1",e:"to listen"},
+{c:"講",j:"gong2",e:"to speak"},
+{c:"讀",j:"duk6",e:"to read"},
+{c:"寫",j:"se2",e:"to write"},
+{c:"記住",j:"gei3 zyu6",e:"to keep in mind"},
+{c:"用得",j:"jung6 dak1",e:"usable / can use"},
+{c:"敢講",j:"gam2 gong2",e:"dare to speak"},
+{c:"錯",j:"co3",e:"wrong"},
+{c:"唔緊要",j:"m4 gan2 jiu3",e:"never mind"},
+{c:"繼續",j:"gai3 zuk6",e:"to continue"},
+{c:"每日",j:"mui5 jat6",e:"every day"},
+{c:"已經",j:"ji5 ging1",e:"already"},
+{c:"仲要",j:"zung6 jiu3",e:"still need to"}
+],
+dialogue:[
+{speaker:"A",c:"你粵語學咗幾耐啊？有冇進步？",j:"nei5 jyut6 jyu5 hok6 zo2 gei2 noi6 aa3? jau5 mou5 zeon3 bou6?",e:"How long have you been learning Cantonese? Any progress?"},
+{speaker:"B",c:"幾個月。識講日常，不過未夠流利。",j:"gei2 go3 jyut6. sik1 gong2 jat6 soeng4, bat1 gwo3 mei6 gau3 lau4 lei6.",e:"A few months. I can do daily stuff, but not fluent enough yet."},
+{speaker:"A",c:"口音唔緊要。敢講就得。錯咗我哋明。",j:"hau2 jam1 m4 gan2 jiu3. gam2 gong2 zau6 dak1. co3 zo2 ngo5 dei6 ming4.",e:"Accent doesn't matter. Dare to speak and that's enough. If you're wrong, we still get it."},
+{speaker:"B",c:"我最怕文法。生字又多。",j:"ngo5 zeoi3 paa3 man4 faat3. saang1 zi6 jau6 do1.",e:"Grammar scares me most. And so many new words."},
+{speaker:"A",c:"每日聽同講。複習舊課，然後用得先至記得。",j:"mui5 jat6 ting1 tung4 gong2. fuk1 zaap6 gau6 fo3, jin4 hau6 jung6 dak1 sin1 zi3 gei3 dak1.",e:"Listen and speak every day. Review old lessons, then you remember only once you can use it."},
+{speaker:"B",c:"即係開口講，唔好淨係讀？",j:"zik1 hai6 hoi1 hau2 gong2, m4 hou2 zing6 hai6 duk6?",e:"So open my mouth — don't just read?"},
+{speaker:"A",c:"係囉。讀寫都要，不過講先。",j:"hai6 lo1. duk6 se2 dou1 jiu3, bat1 gwo3 gong2 sin1.",e:"Exactly. Reading and writing too, but speaking first."},
+{speaker:"B",c:"今日我已經複習咗聲調同助詞。仲要練數字。",j:"gam1 jat6 ngo5 ji5 ging1 fuk1 zaap6 zo2 sing1 diu6 tung4 zo6 ci4. zung6 jiu3 lin6 sou3 zi6.",e:"Today I already reviewed tones and particles. Still need to drill numbers."},
+{speaker:"A",c:"搞掂。記住：唔該、對唔住、可唔可以講慢啲。",j:"gaau2 dim6. gei3 zyu6: m4 goi1, deoi3 m4 zyu6, ho2 m4 ho2 ji5 gong2 maan6 di1.",e:"Sorted. Remember: please, sorry, can you speak slower."},
+{speaker:"B",c:"得。繼續練習。多謝你教我。",j:"dak1. gai3 zuk6 lin6 zaap6. do1 ze6 nei5 gaau3 ngo5.",e:"OK. Keep practising. Thanks for teaching me."}
+],
+grammar:[
+{pattern:"有冇進步？",desc:"Any progress? 有冇 + noun/verb.",ex:"你粵語學咗幾耐啊？有冇進步？(nei5 jyut6 jyu5 hok6 zo2 gei2 noi6 aa3? jau5 mou5 zeon3 bou6?)",en:"How long have you learned Cantonese? Any progress?"},
+{pattern:"未夠 + adj",desc:"Not [adj] enough. 未夠流利, 未夠膽.",ex:"識講日常，不過未夠流利。(sik1 gong2 jat6 soeng4, bat1 gwo3 mei6 gau3 lau4 lei6)",en:"Can do daily speech, but not fluent enough."},
+{pattern:"敢講 (gam2 gong2)",desc:"Dare to speak. The whole course in two syllables.",ex:"口音唔緊要。敢講就得。(hau2 jam1 m4 gan2 jiu3. gam2 gong2 zau6 dak1)",en:"Accent doesn't matter. Dare to speak and that's enough."},
+{pattern:"用得先至記得",desc:"Only once you can use it do you remember. 先至 again.",ex:"用得先至記得。(jung6 dak1 sin1 zi3 gei3 dak1)",en:"You only remember it once you can use it."},
+{pattern:"淨係 (zing6 hai6)",desc:"Only / just. 唔好淨係讀.",ex:"即係開口講，唔好淨係讀？(zik1 hai6 hoi1 hau2 gong2, m4 hou2 zing6 hai6 duk6?)",en:"So speak — don't only read?"}
+],
+quiz:[
+{q:'"進步" means:',opts:["give up","progress","homework","accent"],ans:1},
+{q:'"流利" means:',opts:["broken","fluent","quiet","slow"],ans:1},
+{q:'"敢講" means:',opts:["dare to speak","refuse to speak","speak English","whisper"],ans:1},
+{q:'"生字" means:',opts:["raw fish","new words","grammar","tones"],ans:1},
+{q:'"複習" means:',opts:["skip","review","forget","teach"],ans:1},
+{q:'"淨係" means:',opts:["always","only / just","never","maybe"],ans:1},
+{q:'"繼續" means:',opts:["stop","continue","start over","give up"],ans:1},
+{q:"A says the most important thing is:",opts:["perfect accent first","dare to speak","only reading","never making mistakes"],ans:1}
+]}
 ];
 
 let studyMode=localStorage.getItem('cantonese-mode')||'levels';
@@ -2834,6 +3101,7 @@ const BOX_LABELS=['Box 1 — New','Box 2 — Soon','Box 3 — Familiar','Box 4 �
 
 let progress=loadProgress();
 let currentLesson=0;
+let lessonBand=0;
 let showJp=false,showEn=false;
 let currentSection='dialogue';
 let fcMode='due',fcQueue=[],fcQueuePos=0,fcFlipped=false,fcSessionDone=false;
@@ -2928,9 +3196,30 @@ function dueCount(L){
   return L.vocab.filter(v=>isDue(v.c)).length;
 }
 function rebuildTabs(){
+  const bandEl=document.getElementById('lessonBand');
+  if(bandEl){
+    if(studyMode==='levels'){
+      const bands=Math.ceil(LESSONS.length/10);
+      lessonBand=Math.max(0,Math.min(bands-1,Math.floor(currentLesson/10)));
+      bandEl.style.display='flex';
+      bandEl.innerHTML='';
+      for(let b=0;b<bands;b++){
+        const t=document.createElement('div');
+        const from=b*10+1,to=Math.min((b+1)*10,LESSONS.length);
+        t.className='tab'+(b===lessonBand?' active':'');
+        t.textContent='L'+from+'–'+to;
+        t.onclick=()=>{currentLesson=b*10;switchLesson(currentLesson);};
+        bandEl.appendChild(t);
+      }
+    }else{
+      bandEl.style.display='none';
+      bandEl.innerHTML='';
+    }
+  }
   const tabs=document.getElementById('lessonTabs');
   tabs.innerHTML='';
   LESSONS.forEach((l,i)=>{
+    if(studyMode==='levels'&&(i<lessonBand*10||i>=lessonBand*10+10))return;
     const t=document.createElement('div');
     t.className='tab'+(i===currentLesson?' active':'')+(lessonDone(l.id)?' done':'');
     t.textContent=(lessonDone(l.id)?'✓ ':'')+l.title;

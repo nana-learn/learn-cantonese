@@ -55,6 +55,11 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L33 連詞 | 因為所以雖然如果 |
 | L34 方位 | 上落入出 隔離對面 |
 | L35 報數 | phone numbers, 第, 萬 |
+| L36 動詞 | 畀拎放擺攞搵開關 |
+| L37 拍拖 | dating, 表白, 見家長 |
+| L38 投訴 | complain, 經理, 換碟 |
+| L39 搬家 | 按金, 紙箱, 鄰居 |
+| L40 開口日 | review: 敢講, 用得先至記得 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 
