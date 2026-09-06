@@ -269,7 +269,7 @@ h2{font-size:1.4em;margin-bottom:16px}
 <div class="app">
 <header>
 <h1>粵語學習</h1>
-<p>Speak Hong Kong Cantonese — everyday first, then the course</p>
+<p>Speak Hong Kong Cantonese — 50 everyday lessons, then the course</p>
 </header>
 <div class="tabs mode-row" id="modeRow">
   <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 Everyday L1–L50</div>
@@ -3756,6 +3756,8 @@ function rebuildTabs(){
     t.onclick=()=>switchLesson(i);
     tabs.appendChild(t);
   });
+  const active=tabs.querySelector('.tab.active');
+  if(active) active.scrollIntoView({inline:'nearest',block:'nearest',behavior:'smooth'});
 }
 function lessonNav(){
   const i=currentLesson,n=LESSONS.length;
