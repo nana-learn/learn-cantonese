@@ -269,10 +269,10 @@ h2{font-size:1.4em;margin-bottom:16px}
 <div class="app">
 <header>
 <h1>粵語學習</h1>
-<p>Speak Hong Kong Cantonese — 84 everyday lessons, then the course</p>
+<p>Speak Hong Kong Cantonese — 86 everyday lessons, then the course</p>
 </header>
 <div class="tabs mode-row" id="modeRow">
-  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 Everyday L1–L84</div>
+  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 Everyday L1–L86</div>
   <div class="tab" id="mode-course" onclick="setMode('course')">📘 Course 1–11</div>
 </div>
 <div class="tabs" id="lessonBand"></div>
@@ -5416,6 +5416,112 @@ quiz:[
 {q:'"加蛋" means:',opts:["no egg","add an egg","extra rice","no soup"],ans:1},
 {q:'"雲吞" means:',opts:["siu mai","wonton","ho fun","ramen"],ans:1},
 {q:'"食得滯" means:',opts:["still hungry","might be a bit too much food","not cooked","too spicy"],ans:1}
+]}
+,
+{id:185,title:"L85 應該",subtitle:"Modals · 應該、一定、可能、未必",
+vocab:[
+{c:"應該",j:"jing1 goi1",e:"should"},
+{c:"一定",j:"jat1 ding6",e:"must / definitely"},
+{c:"可能",j:"ho2 nang4",e:"maybe / possible"},
+{c:"未必",j:"mei6 bit1",e:"not necessarily"},
+{c:"可以",j:"ho2 ji5",e:"can / may"},
+{c:"唔可以",j:"m4 ho2 ji5",e:"must not / cannot"},
+{c:"要",j:"jiu3",e:"need to / want to"},
+{c:"唔使",j:"m4 sai2",e:"no need"},
+{c:"最好",j:"zeoi3 hou2",e:"had better"},
+{c:"寧可",j:"ning4 ho2",e:"would rather (more formal)"},
+{c:"寧願",j:"ning4 jyun3",e:"would rather"},
+{c:"不得不",j:"bat1 dak1 bat1",e:"have no choice but to (formal)"},
+{c:"唯有",j:"wai4 jau5",e:"the only thing is to"},
+{c:"差啲",j:"caa1 di1",e:"almost (did)"},
+{c:"險啲",j:"him2 di1",e:"nearly (dangerously)"},
+{c:"梗係",j:"gang2 hai6",e:"of course"},
+{c:"當然",j:"dong1 jin4",e:"of course"},
+{c:"未必得",j:"mei6 bit1 dak1",e:"might not work"},
+{c:"一定得",j:"jat1 ding6 dak1",e:"will definitely work"},
+{c:"睇吓先",j:"tai2 haa5 sin1",e:"see first / wait and see"}
+],
+dialogue:[
+{speaker:"A",c:"我應該去唔去啊？",j:"ngo5 jing1 goi1 heoi3 m4 heoi3 aa3?",e:"Should I go or not?"},
+{speaker:"B",c:"最好去。一定有用。",j:"zeoi3 hou2 heoi3. jat1 ding6 jau5 jung6.",e:"Better go. Definitely useful."},
+{speaker:"A",c:"可能下雨。未必得閒。",j:"ho2 nang4 lok6 jyu5. mei6 bit1 dak1 haan4.",e:"Might rain. Might not be free."},
+{speaker:"B",c:"梗係帶遮。唔使怕。",j:"gang2 hai6 daai3 ze1. m4 sai2 paa3.",e:"Of course bring an umbrella. No need to fear."},
+{speaker:"A",c:"我可以遲到？",j:"ngo5 ho2 ji5 ci4 dou3?",e:"Can I be late?"},
+{speaker:"B",c:"唔可以。你要準時。",j:"m4 ho2 ji5. nei5 jiu3 zeon2 si4.",e:"No. You need to be on time."},
+{speaker:"A",c:"差啲唔記得。險啲遲到。",j:"caa1 di1 m4 gei3 dak1. him2 di1 ci4 dou3.",e:"Almost forgot. Nearly late."},
+{speaker:"B",c:"唯有而家出。睇吓先。",j:"wai4 jau5 ji4 gaa1 ceot1. tai2 haa5 sin1.",e:"Only thing is to leave now. See how it goes."},
+{speaker:"A",c:"一定得㗎？",j:"jat1 ding6 dak1 gaa3?",e:"It'll definitely work?"},
+{speaker:"B",c:"當然。去啦。",j:"dong1 jin4. heoi3 laa1.",e:"Of course. Go."}
+],
+grammar:[
+{pattern:"應該 / 最好 / 一定 / 可能 / 未必",desc:"Should / had better / definitely / maybe / not necessarily. The modal ladder.",ex:"應該去。最好去。一定有用。可能下雨。未必得閒。(jing1 goi1 heoi3. zeoi3 hou2 heoi3. jat1 ding6 jau5 jung6. ho2 nang4 lok6 jyu5. mei6 bit1 dak1 haan4)",en:"Should go. Better go. Definitely useful. Might rain. Might not be free."},
+{pattern:"可以 vs 唔可以 vs 要 vs 唔使",desc:"May / must not / need to / no need.",ex:"我可以遲到？唔可以。你要準時。唔使怕。(ngo5 ho2 ji5 ci4 dou3? m4 ho2 ji5. nei5 jiu3 zeon2 si4. m4 sai2 paa3)",en:"Can I be late? No. You need to be on time. No need to fear."},
+{pattern:"梗係 / 當然",desc:"Of course. 梗係 is more spoken.",ex:"梗係帶遮。當然。(gang2 hai6 daai3 ze1. dong1 jin4)",en:"Of course bring an umbrella. Of course."},
+{pattern:"差啲 / 險啲",desc:"Almost. 險啲 is closer to 'narrowly / dangerously almost'.",ex:"差啲唔記得。險啲遲到。(caa1 di1 m4 gei3 dak1. him2 di1 ci4 dou3)",en:"Almost forgot. Nearly late."},
+{pattern:"唯有",desc:"The only option left. 唯有而家出.",ex:"唯有而家出。睇吓先。(wai4 jau5 ji4 gaa1 ceot1. tai2 haa5 sin1)",en:"Only thing is leave now. See first."}
+],
+quiz:[
+{q:'"應該" means:',opts:["must not","should","never","already"],ans:1},
+{q:'"一定" means:',opts:["maybe","definitely / must","rarely","never"],ans:1},
+{q:'"可能" means:',opts:["impossible","maybe / possible","always","never"],ans:1},
+{q:'"未必" means:',opts:["definitely","not necessarily","always","must"],ans:1},
+{q:'"梗係" means:',opts:["maybe","of course","never","sorry"],ans:1},
+{q:'"唔使" means:',opts:["must","no need","cannot","not yet"],ans:1},
+{q:'"差啲" means:',opts:["exactly","almost","never","later"],ans:1},
+{q:'"最好" as advice means:',opts:["the most beautiful","had better","the worst","never"],ans:1}
+]},
+
+{id:186,title:"L86 幾咁",subtitle:"Degree · 幾、咁、非常、超",
+vocab:[
+{c:"幾",j:"gei2",e:"quite / how (幾好 = quite good)"},
+{c:"咁",j:"gam3",e:"so / that (degree)"},
+{c:"非常",j:"fei1 soeng4",e:"extremely"},
+{c:"超",j:"ciu1",e:"super (slang)"},
+{c:"好",j:"hou2",e:"very (before adj)"},
+{c:"太",j:"taai3",e:"too"},
+{c:"最",j:"zeoi3",e:"the most"},
+{c:"更加",j:"gang3 gaa1",e:"even more"},
+{c:"比較",j:"bei2 gaau3",e:"relatively"},
+{c:"有啲",j:"jau5 di1",e:"a bit"},
+{c:"少少",j:"siu2 siu2",e:"a little"},
+{c:"十分",j:"sap6 fan1",e:"very (more formal)"},
+{c:"極",j:"gik6",e:"extremely"},
+{c:"死",j:"sei2",e:"to death (好熱死)"},
+{c:"得滯",j:"dak1 zai6",e:"a bit too much"},
+{c:"過頭",j:"gwo3 tau4",e:"over the top / too far"},
+{c:"唔算",j:"m4 syun3",e:"not really / not counted as"},
+{c:"真係",j:"zan1 hai6",e:"really"},
+{c:"也",j:"jaa5",e:"also (less spoken than 都)"},
+{c:"都幾",j:"dou1 gei2",e:"pretty / quite"}
+],
+dialogue:[
+{speaker:"A",c:"今日幾熱啊。",j:"gam1 jat6 gei2 jit6 aa3.",e:"It's quite hot today."},
+{speaker:"B",c:"真係好熱。熱死。",j:"zan1 hai6 hou2 jit6. jit6 sei2.",e:"Really very hot. Hot to death."},
+{speaker:"A",c:"咁熱你仲出街？太拼命。",j:"gam3 jit6 nei5 zung6 ceot1 gaai1? taai3 ping1 meng6.",e:"So hot and you're still going out? Too much."},
+{speaker:"B",c:"都幾想食雪糕。超想。",j:"dou1 gei2 soeng2 sik6 syut3 gou1. ciu1 soeng2.",e:"Pretty much want ice cream. Super want."},
+{speaker:"A",c:"有啲貴。少少甜得滯。",j:"jau5 di1 gwai3. siu2 siu2 tim4 dak1 zai6.",e:"A bit expensive. A little too sweet."},
+{speaker:"B",c:"唔算貴。非常好食。",j:"m4 syun3 gwai3. fei1 soeng4 hou2 sik6.",e:"Not really expensive. Extremely tasty."},
+{speaker:"A",c:"最熱係下午。更加唔好出。",j:"zeoi3 jit6 hai6 haa6 ng5. gang3 gaa1 m4 hou2 ceot1.",e:"Hottest is afternoon. Even more reason not to go out."},
+{speaker:"B",c:"比較早出就得。過頭就唔好。",j:"bei2 gaau3 zou2 ceot1 zau6 dak1. gwo3 tau4 zau6 m4 hou2.",e:"Go out relatively early then. Don't overdo it."},
+{speaker:"A",c:"十分同意。",j:"sap6 fan1 tung4 ji3.",e:"Very much agree."},
+{speaker:"B",c:"極熱都要食。走。",j:"gik6 jit6 dou1 jiu3 sik6. zau2.",e:"Even extremely hot we still eat. Let's go."}
+],
+grammar:[
+{pattern:"幾 + adj",desc:"Quite / how. 幾熱 = quite hot (or 'how hot!' with tone). Not 多少.",ex:"今日幾熱啊。都幾想食雪糕。(gam1 jat6 gei2 jit6 aa3. dou1 gei2 soeng2 sik6 syut3 gou1)",en:"Quite hot today. Pretty much want ice cream."},
+{pattern:"咁 + adj",desc:"So / that much. 咁熱. Degree 咁 is gam3, not gam2 (then).",ex:"咁熱你仲出街？(gam3 jit6 nei5 zung6 ceot1 gaai1?)",en:"So hot and you're still going out?"},
+{pattern:"好 / 非常 / 超 / 極 / 十分",desc:"Very ladder. 好 is default. 超 is slang. 非常/十分 a bit formal.",ex:"真係好熱。非常好食。超想。十分同意。(zan1 hai6 hou2 jit6. fei1 soeng4 hou2 sik6. ciu1 soeng2. sap6 fan1 tung4 ji3)",en:"Really very hot. Extremely tasty. Super want. Very much agree."},
+{pattern:"Adj + 死 / 得滯 / 過頭",desc:"To death / a bit too / over the top.",ex:"熱死。甜得滯。過頭就唔好。(jit6 sei2. tim4 dak1 zai6. gwo3 tau4 zau6 m4 hou2)",en:"Hot to death. A bit too sweet. Don't overdo it."},
+{pattern:"唔算",desc:"Not really counted as. 唔算貴.",ex:"唔算貴。(m4 syun3 gwai3)",en:"Not really expensive."}
+],
+quiz:[
+{q:'"幾熱" means:',opts:["not hot","quite hot","cold","tomorrow"],ans:1},
+{q:'Degree 咁 is pronounced:',opts:["gam2 (then)","gam3 (so)","gam1","kam2"],ans:1},
+{q:'"超" before a verb/adj is:',opts:["less","slang for super","never","please"],ans:1},
+{q:'"熱死" means:',opts:["a little warm","hot to death / extremely hot","cold","rain"],ans:1},
+{q:'"得滯" means:',opts:["not enough","a bit too much","perfect","never"],ans:1},
+{q:'"過頭" means:',opts:["not enough","over the top / too far","early","cheap"],ans:1},
+{q:'"唔算貴" means:',opts:["very expensive","not really expensive","free","sold out"],ans:1},
+{q:'Default spoken "very" is:',opts:["非常 always","好","極 only","十分 only"],ans:1}
 ]}
 ];
 

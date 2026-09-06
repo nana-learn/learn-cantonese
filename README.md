@@ -16,7 +16,7 @@ A single-page study app covering classroom lessons with:
 
 ## How to study
 
-Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
+Start on **Everyday L1–L86** (Hong Kong spoken Cantonese). Do them in order:
 
 | Lesson | What you get |
 |--------|----------------|
@@ -104,6 +104,8 @@ Start on **Everyday L1–L15** (Hong Kong spoken Cantonese). Do them in order:
 | L82 辦公室 | 當機、印、附件 |
 | L83 全部 | 大部分、連…都、至少 |
 | L84 粥粉麵 | 撈 vs 湯、乾炒牛河 |
+| L85 應該 | 應該一定可能未必 |
+| L86 幾咁 | 幾、咁、好熱死、得滯 |
 
 **Course 1–11** is later: longer classroom dialogues (interviews, work, culture).
 
