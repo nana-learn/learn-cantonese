@@ -16,6 +16,14 @@ header p{color:var(--text2);margin-top:5px}
 .tab{padding:10px 20px;background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);cursor:pointer;color:var(--text2);font-size:.95em;transition:all .2s}
 #lessonTabs{gap:6px}
 #lessonTabs .tab{padding:7px 12px;font-size:.82em}
+#lessonTabs .tab.done{border-color:var(--green)}
+.lesson-nav{display:flex;justify-content:space-between;gap:10px;margin-top:22px;flex-wrap:wrap}
+.lesson-nav .action-btn{flex:1;min-width:140px;text-align:center}
+.ex-line{margin-top:8px;font-size:.85em;color:var(--text);line-height:1.4}
+.ex-en{color:var(--text2);font-size:.8em;margin-top:2px}
+.study-tip{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:12px 14px;margin-bottom:16px;color:var(--text2);font-size:.85em}
+.study-tip b{color:var(--accent2)}
+
 .tab:hover{border-color:var(--accent);color:var(--text)}
 .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
 .mode-row{justify-content:center;margin-bottom:12px}
@@ -340,8 +348,6 @@ quiz:[
 {q:'"收穫" (sau1 wok6) means:',opts:["harvest/gain","loss","salary","interview"],ans:0},
 {q:"B's main takeaway was:",opts:["interviews are easy","theory alone is not enough, need practical experience","preparation is unnecessary","nervousness is good"],ans:1}
 ]},
-
-,
 {id:2,title:"第二課：工作壓力",subtitle:"gung1 zok3 aat3 lik6 — Work Pressure",
 vocab:[
 {c:"工作壓力",j:"gung1 zok3 aat3 lik6",e:"work pressure",summary:"Toughing it out alone makes things worse — 硬撐 leads to burnout and insomnia | Prioritize tasks by urgency and importance | Set boundaries between work and personal time | Exercise and social connection are essential for stress relief | No matter how busy, take care of your body and emotions",intro:"Work pressure is inevitable, but how you handle it makes all the difference. This lesson explores practical strategies for managing workplace stress — from setting priorities and boundaries to using exercise and social connection as pressure-release valves.",summary:"硬撐 alone makes things worse | Prioritize by urgency and importance | Set boundaries between work and personal time | Exercise and socializing relieve stress | Take care of your body and emotions"},
@@ -611,8 +617,6 @@ quiz:[
 {q:'The dialogue suggests the key to a fulfilling career is:',opts:["highest salary possible","fastest promotion","sense of purpose and following your heart","pleasing others"],ans:2},
 {q:'"隨遇而安" (ceoi4 jyu6 ji4 on1) means:',opts:["always plan ahead","go with the flow and be content","fight for everything","never compromise"],ans:1}
 ]},
-
-,
 {id:6,title:"第六課：友誼的本質同深度",subtitle:"jau5 ji6 ge3 bun2 zat1 tung4 sam1 dou6 — The Nature and Depth of Friendship",
 vocab:[
 {c:"友誼",j:"jau5 ji6",e:"friendship",summary:"Quality of friends matters far more than quantity — one 知己 (zi1 gei2 — true friend) beats ten acquaintances | 君子之交淡如水 (gwan1 zi2 zi1 gaau1 taam5 jyu4 seoi2) — true friendship needs no constant contact | Face-to-face warmth cannot be replaced by social media interactions | 日久見人心 (jat6 gau2 gin3 jan4 sam1) — time reveals a person's true heart",intro:"As life gets busier, friendships get tested. This lesson explores the difference between deep connections and surface-level acquaintances, why quality trumps quantity, and how time alone reveals who your true friends really are.",summary:"Quality of friends matters far more than quantity | 君子之交淡如水 — true friendship needs no constant contact | Face-to-face warmth cannot be replaced online | 日久見人心 — time reveals a person's true heart"},
@@ -668,7 +672,6 @@ quiz:[
 {q:'What metaphor does B use for friendship?',opts:["a machine","a plant that needs nurturing","a transaction","a competition"],ans:1},
 {q:'The dialogue concludes that one should:',opts:["never maintain friendships","cherish friends before losing them","collect as many friends as possible","only socialize online"],ans:1}
 ]},
-,
 {id:7,title:"第七課：表達意見同討論",subtitle:"biu2 daat6 ji3 gin3 tung4 tou2 leon6 — Expressing Opinions and Discussion",
 vocab:[
 {c:"建議",j:"gin3 ji5",e:"suggestion; to suggest",summary:"Different viewpoints lead to more comprehensive analysis, not worse outcomes | 達成共識 (daat6 sing4 gung6 sik1 — reaching consensus) matters more than winning the argument | Appropriate 妥協 (to5 hip3 — compromise) is wisdom, not weakness | Discussion is for finding the best solution, not for proving you are right",intro:"Disagreement does not have to mean conflict. This lesson teaches you how to express opinions respectfully, listen to opposing views, and reach consensus without compromising your integrity — skills essential in any workplace.",summary:"Different viewpoints lead to better analysis | 達成共識 matters more than winning | Appropriate 妥協 is wisdom, not weakness | Discussion is for finding the best solution"},
@@ -1758,7 +1761,7 @@ quiz:[
 ];
 
 let studyMode=localStorage.getItem('cantonese-mode')||'levels';
-let LESSONS=studyMode==='course'?COURSE:LEVELS;
+let LESSONS=(studyMode==='course'?COURSE:LEVELS).filter(Boolean);
 
 const INTERVALS=[0,86400000,259200000,604800000,1209600000];
 const BOX_COLORS=['var(--red)','var(--yellow)','var(--blue)','var(--green)','var(--accent2)'];
@@ -1773,10 +1776,14 @@ let fcSessionCorrect=0,fcSessionWrong=0,fcMistakes=[];
 let quizMode='meaning',quizQuestions=[],quizAnswered=0,quizCorrect=0;
 
 function loadProgress(){
-  try{const d=JSON.parse(localStorage.getItem('cantonese"progress'));if(d&&d.version===1)return d}catch(e){}
-  return{version:1,streak:{lastDate:'',count:0},words:{}};
+  try{
+    const raw=localStorage.getItem('cantonese-progress')||localStorage.getItem('cantonese"progress');
+    const d=JSON.parse(raw);
+    if(d&&d.version===1){if(!d.quizzes)d.quizzes={};return d}
+  }catch(e){}
+  return{version:1,streak:{lastDate:'',count:0},words:{},quizzes:{}};
 }
-function saveProgress(){localStorage.setItem('cantonese"progress',JSON.stringify(progress))}
+function saveProgress(){localStorage.setItem('cantonese-progress',JSON.stringify(progress))}
 
 function markWord(char,correct){
   if(!progress.words[char])progress.words[char]={box:1,lastReview:0,nextReview:0,correct:0,wrong:0};
@@ -1835,22 +1842,35 @@ function shuffle(arr){
   return a;
 }
 
+function lessonDone(id){
+  return !!(progress.quizzes&&progress.quizzes[id]);
+}
+function persistLesson(){
+  localStorage.setItem('cantonese-lesson',JSON.stringify({mode:studyMode,i:currentLesson}));
+}
 function rebuildTabs(){
   const tabs=document.getElementById('lessonTabs');
   tabs.innerHTML='';
   LESSONS.forEach((l,i)=>{
     const t=document.createElement('div');
-    t.className='tab'+(i===currentLesson?' active':'');
-    t.textContent=l.title;
+    t.className='tab'+(i===currentLesson?' active':'')+(lessonDone(l.id)?' done':'');
+    t.textContent=(lessonDone(l.id)?'✓ ':'')+l.title;
     t.onclick=()=>switchLesson(i);
     tabs.appendChild(t);
   });
+}
+function lessonNav(){
+  const i=currentLesson,n=LESSONS.length;
+  let h='<div class="lesson-nav">';
+  h+=i>0?'<button class="action-btn" onclick="switchLesson('+(i-1)+')">← '+LESSONS[i-1].title+'</button>':'<span></span>';
+  h+=i<n-1?'<button class="action-btn" onclick="switchLesson('+(i+1)+')">'+LESSONS[i+1].title+' →</button>':'<span></span>';
+  return h+'</div>';
 }
 function setMode(m){
   if(studyMode===m)return;
   studyMode=m;
   localStorage.setItem('cantonese-mode',m);
-  LESSONS=m==='course'?COURSE:LEVELS;
+  LESSONS=(m==='course'?COURSE:LEVELS).filter(Boolean);
   document.getElementById('mode-levels').classList.toggle('active',m==='levels');
   document.getElementById('mode-course').classList.toggle('active',m==='course');
   currentLesson=0;currentSection='dialogue';
@@ -1864,14 +1884,19 @@ function setMode(m){
 function init(){
   document.getElementById('mode-levels').classList.toggle('active',studyMode==='levels');
   document.getElementById('mode-course').classList.toggle('active',studyMode==='course');
+  try{
+    const s=JSON.parse(localStorage.getItem('cantonese-lesson')||'null');
+    if(s&&s.mode===studyMode&&typeof s.i==='number'&&s.i>=0&&s.i<LESSONS.length) currentLesson=s.i;
+  }catch(e){}
   rebuildTabs();
   initFcSession();
-  quizQuestions=LESSONS[0].quiz.map(q=>({...q}));
+  quizQuestions=LESSONS[currentLesson].quiz.map(q=>({...q}));
   render();
 }
 
 function switchLesson(i){
   currentLesson=i;
+  persistLesson();
   document.querySelectorAll('#lessonTabs .tab').forEach((t,idx)=>t.classList.toggle('active',idx===i));
   showJp=false;showEn=false;
   initFcSession();
@@ -1902,8 +1927,9 @@ function render(){
     '<div id="sec-quiz" class="section'+(s==='quiz'?' active':'')+'">'+renderQuiz(L)+'</div>'+
         '<div id="sec-match" class="section'+(s==='match'?' active':'')+'">'+renderMatch(L)+'</div>'+    '<div id="sec-game" class="section'+(s==='game'?' active':'')+'">'+renderGame(L)+'</div>'+
     '<div id="sec-progress" class="section'+(s==='progress'?' active':'')+'">'+renderProgress(L)+'</div>'+
-    '<div id="writingModal" class="modal-overlay" onclick="closeModal(event)"><div class="modal-content" id="modalInner"></div></div>';
-;
+    '<div id="writingModal" class="modal-overlay" onclick="closeModal(event)"><div class="modal-content" id="modalInner"></div></div>'+
+    lessonNav();
+
 }
 
 function showSection(id,el){
@@ -1949,7 +1975,7 @@ function splitSentences(text){
 }
 function allUnits(){return LEVELS.concat(COURSE)}
 function renderDialogue(L){
-  let h='<p style="color:var(--text2);margin-bottom:12px">'+L.subtitle+'</p><div class="toggle-row"><button id="btn-jp" class="toggle-btn'+(showJp?' on':'')+'" onclick="toggleJp()">Jyutping</button><button id="btn-en" class="toggle-btn'+(showEn?' on':'')+'" onclick="toggleEn()">English</button><button class="toggle-btn" onclick="toggleJp();toggleEn()">Toggle All</button></div>';
+  let h='<p style="color:var(--text2);margin-bottom:12px">'+L.subtitle+'</p><div class="study-tip"><b>How to study:</b> listen twice with 🔊 · then turn on Jyutping · then English last. Shadow out loud.</div><div class="toggle-row"><button id="btn-jp" class="toggle-btn'+(showJp?' on':'')+'" onclick="toggleJp()">Jyutping</button><button id="btn-en" class="toggle-btn'+(showEn?' on':'')+'" onclick="toggleEn()">English</button><button class="toggle-btn" onclick="toggleJp();toggleEn()">Toggle All</button></div>';
   h+='<div class="sentence-mode-row"><button class="sentence-mode-btn'+(dialogueMode==='full'?' active':'')+'" onclick="setDialogueMode(\'full\')">Full</button><button class="sentence-mode-btn'+(dialogueMode==='sentence'?' active':'')+'" onclick="setDialogueMode(\'sentence\')">Sentence by Sentence</button></div>';
   if(dialogueMode==='sentence'){
     let sn=0;
@@ -1979,17 +2005,22 @@ function setDialogueMode(mode){
 
 
 function markDirect(c){
-  const box=(progress.words[c]&&progress.words[c].box)||0;
-  const newBox=box>=4?5:box+2;
-  recordWord(c,newBox>4);
+  markWord(c,true);
   const L=LESSONS[currentLesson];
   const sec=document.getElementById('sec-vocab');
   if(sec)sec.innerHTML=renderVocab(L);
 }
+function exampleFor(L,word){
+  if(!word)return null;
+  const d=L.dialogue.find(x=>x.c.includes(word));
+  return d||null;
+}
 function renderVocab(L){
-  let h='<p style="color:var(--text2);margin-bottom:12px">Click a card to see the English meaning</p><div class="vocab-grid">';
+  let h='<p style="color:var(--text2);margin-bottom:12px">Click a card for English + a line from this lesson</p><div class="vocab-grid">';
   L.vocab.forEach(v=>{
-    h+='<div class="vocab-card" onclick="this.classList.toggle(\'flipped\')"><div class="front"><div class="word">'+v.c.split('').map(c=>'<span class="char-link" onclick="event.stopPropagation();showCharModal(\''+c+'\')">'+c+'</span>').join('')+' <button class="speak-btn" data-speak="'+v.c.replace(/"/g,'&quot;')+'" onclick="event.stopPropagation();speak(this.dataset.speak)" title="Listen">🔊</button></div><div class="jp">'+colorJyutping(v.j)+'</div>'+masteryDots(v.c)+'<div class="tag">click to flip</div></div><div class="back"><div class="word" style="color:var(--yellow)">'+v.e+'</div><div class="jp">'+v.c+'</div><div class="meaning">'+v.j+'</div></div></div>';
+    const ex=exampleFor(L,v.c);
+    const exHtml=ex?'<div class="ex-line">'+ex.c+'</div><div class="ex-en">'+ex.e+'</div>':'';
+    h+='<div class="vocab-card" onclick="this.classList.toggle(\'flipped\')"><div class="front"><div class="word">'+v.c.split('').map(c=>'<span class="char-link" onclick="event.stopPropagation();showCharModal(\''+c+'\')">'+c+'</span>').join('')+' <button class="speak-btn" data-speak="'+v.c.replace(/"/g,'&quot;')+'" onclick="event.stopPropagation();speak(this.dataset.speak)" title="Listen">🔊</button></div><div class="jp">'+colorJyutping(v.j)+'</div>'+masteryDots(v.c)+'<div class="tag">click to flip</div></div><div class="back"><div class="word" style="color:var(--yellow)">'+v.e+'</div><div class="jp">'+v.c+' · '+v.j+'</div>'+exHtml+'</div></div>';
   });
   return h+'</div>';
 }
@@ -2175,6 +2206,12 @@ function answerQuiz(qi,oi){
   if(bar)bar.style.width=quizAnswered/quizQuestions.length*100+'%';
   const score=sec.querySelector('.score');
   if(score)score.textContent=quizCorrect;
+  if(quizAnswered>=quizQuestions.length && quizCorrect>=Math.ceil(quizQuestions.length*0.7)){
+    progress.quizzes=progress.quizzes||{};
+    progress.quizzes[LESSONS[currentLesson].id]=true;
+    saveProgress();
+    rebuildTabs();
+  }
 }
 
 function renderProgress(L){
@@ -2247,7 +2284,7 @@ function importProgress(input){
 
 function resetProgress(){
   if(!confirm('Reset all learning progress? This cannot be undone.'))return;
-  progress={version:1,streak:{lastDate:'',count:0},words:{}};
+  progress={version:1,streak:{lastDate:'',count:0},words:{},quizzes:{}};
   saveProgress();
   initFcSession();
   quizQuestions=LESSONS[currentLesson].quiz.map(q=>({...q}));
