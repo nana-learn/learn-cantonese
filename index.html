@@ -4106,11 +4106,12 @@ function showSection(id,el){
 }
 
 let dialogueMode=localStorage.getItem('dialogueMode')||'full';
+let speakRate=parseFloat(localStorage.getItem('cantonese-rate')||'0.85');
 
 function speak(text){
   if(window.speechSynthesis.speaking){window.speechSynthesis.cancel();return}
   const u=new SpeechSynthesisUtterance(text);
-  u.lang='zh-HK';u.rate=0.85;
+  u.lang='zh-HK';u.rate=speakRate;
   u.onend=()=>{document.querySelectorAll('.speak-btn.speaking').forEach(b=>b.classList.remove('speaking'))};
   u.onerror=()=>{document.querySelectorAll('.speak-btn.speaking').forEach(b=>b.classList.remove('speaking'))};
   document.querySelectorAll('.speak-btn.speaking').forEach(b=>b.classList.remove('speaking'));
@@ -4129,6 +4130,11 @@ function toggleEn(){
   document.querySelectorAll('.dialogue-line .english,.sentence-card .sn-en').forEach(e=>e.style.display=showEn?'block':'none');
   const b=document.getElementById('btn-en');if(b)b.classList.toggle('on',showEn);
 }
+function toggleSlow(){
+  speakRate=speakRate<0.7?0.85:0.6;
+  localStorage.setItem('cantonese-rate',String(speakRate));
+  const b=document.getElementById('btn-slow');if(b)b.classList.toggle('on',speakRate<0.7);
+}
 
 
 function colorJyutping(jp){
@@ -4140,7 +4146,7 @@ function splitSentences(text){
 }
 function allUnits(){return LEVELS.concat(COURSE)}
 function renderDialogue(L){
-  let h='<p style="color:var(--text2);margin-bottom:12px">'+L.subtitle+'</p><div class="study-tip"><b>How to study:</b> listen twice with 🔊 · then turn on Jyutping · then English last. Shadow out loud.</div><div class="toggle-row"><button id="btn-jp" class="toggle-btn'+(showJp?' on':'')+'" onclick="toggleJp()">Jyutping</button><button id="btn-en" class="toggle-btn'+(showEn?' on':'')+'" onclick="toggleEn()">English</button><button class="toggle-btn" onclick="toggleJp();toggleEn()">Toggle All</button></div>';
+  let h='<p style="color:var(--text2);margin-bottom:12px">'+L.subtitle+'</p><div class="study-tip"><b>How to study:</b> listen twice with 🔊 · then turn on Jyutping · then English last. Shadow out loud.</div><div class="toggle-row"><button id="btn-jp" class="toggle-btn'+(showJp?' on':'')+'" onclick="toggleJp()">Jyutping</button><button id="btn-en" class="toggle-btn'+(showEn?' on':'')+'" onclick="toggleEn()">English</button><button class="toggle-btn" onclick="toggleJp();toggleEn()">Toggle All</button><button id="btn-slow" class="toggle-btn'+(speakRate<0.7?' on':'')+'" onclick="toggleSlow()">Slow 0.6×</button></div>';
   h+='<div class="sentence-mode-row"><button class="sentence-mode-btn'+(dialogueMode==='full'?' active':'')+'" onclick="setDialogueMode(\'full\')">Full</button><button class="sentence-mode-btn'+(dialogueMode==='sentence'?' active':'')+'" onclick="setDialogueMode(\'sentence\')">Sentence by Sentence</button></div>';
   if(dialogueMode==='sentence'){
     let sn=0;
