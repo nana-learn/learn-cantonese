@@ -21,8 +21,8 @@ def strip_punct(text):
     return "".join(ch for ch in text if ch not in PUNCT and unicodedata.category(ch)[0] not in ("P", "S"))
 
 
-def extract_lessons_js(html):
-    start = html.index("const LESSONS=") + len("const LESSONS=")
+def extract_array(html, const_name):
+    start = html.index(f"const {const_name}=") + len(f"const {const_name}=")
     depth = 0
     i = start
     while i < len(html):
@@ -36,8 +36,10 @@ def extract_lessons_js(html):
     return html[start : i + 1]
 
 
-def parse_with_node(raw_js):
-    js_code = f"const LESSONS={raw_js};\nconsole.log(JSON.stringify(LESSONS));"
+def parse_with_node(html):
+    levels = extract_array(html, "LEVELS")
+    course = extract_array(html, "COURSE")
+    js_code = f"const LEVELS={levels};\nconst COURSE={course};\nconst LESSONS=LEVELS.concat(COURSE);\nconsole.log(JSON.stringify(LESSONS));"
     result = subprocess.run(["node", "-e", js_code], capture_output=True, text=True)
     if result.returncode != 0:
         print("Node error:", result.stderr)
@@ -74,8 +76,7 @@ def main():
     with open(HTML_FILE, "r", encoding="utf-8") as f:
         html = f.read()
 
-    raw_js = extract_lessons_js(html)
-    lessons = parse_with_node(raw_js)
+    lessons = parse_with_node(html)
     print(f"Found {len(lessons)} lessons\n")
 
     real_errors = []

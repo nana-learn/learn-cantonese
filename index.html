@@ -14,6 +14,8 @@ header h1{font-size:2em;background:linear-gradient(135deg,var(--accent),var(--ac
 header p{color:var(--text2);margin-top:5px}
 .tabs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
 .tab{padding:10px 20px;background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);cursor:pointer;color:var(--text2);font-size:.95em;transition:all .2s}
+#lessonTabs{gap:6px}
+#lessonTabs .tab{padding:7px 12px;font-size:.82em}
 .tab:hover{border-color:var(--accent);color:var(--text)}
 .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
 .mode-row{justify-content:center;margin-bottom:12px}
@@ -253,10 +255,10 @@ h2{font-size:1.4em;margin-bottom:16px}
 <div class="app">
 <header>
 <h1>粵語學習</h1>
-<p>Cantonese Learner — Everyday first, then the course</p>
+<p>Speak Hong Kong Cantonese — everyday first, then the course</p>
 </header>
 <div class="tabs mode-row" id="modeRow">
-  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 L1–L4 Everyday</div>
+  <div class="tab" id="mode-levels" onclick="setMode('levels')">🌱 Everyday L1–L15</div>
   <div class="tab" id="mode-course" onclick="setMode('course')">📘 Course 1–11</div>
 </div>
 <div class="tabs" id="lessonTabs"></div>
@@ -1175,6 +1177,584 @@ quiz:[
 {q:'They will decide after:',opts:["signing today","comparing rent and transport on more flats","asking the boss","flipping a coin"],ans:1},
 {q:'"租金" means:',opts:["deposit","rent (money)","address","landlord"],ans:1}
 ]}
+,
+{id:105,title:"L5 聲調",subtitle:"Tones · pitch changes the meaning",
+vocab:[
+{c:"聲調",j:"sing1 diu6",e:"tone (pitch)"},
+{c:"詩",j:"si1",e:"poem (tone 1 — high level)"},
+{c:"史",j:"si2",e:"history (tone 2 — high rising)"},
+{c:"試",j:"si3",e:"to try (tone 3 — mid level)"},
+{c:"時",j:"si4",e:"time (tone 4 — low falling)"},
+{c:"市",j:"si5",e:"market (tone 5 — low rising)"},
+{c:"事",j:"si6",e:"matter / thing (tone 6 — low level)"},
+{c:"買",j:"maai5",e:"to buy (tone 5)"},
+{c:"賣",j:"maai6",e:"to sell (tone 6)"},
+{c:"街市",j:"gaai1 si5",e:"wet market"},
+{c:"餸",j:"sung3",e:"groceries / dishes with rice"},
+{c:"意思",j:"ji3 si3",e:"meaning"},
+{c:"唔同",j:"m4 tung4",e:"not the same"},
+{c:"以為",j:"ji5 wai4",e:"to think (mistakenly)"},
+{c:"原來",j:"jyun4 loi4",e:"so it turns out / actually"},
+{c:"頭先",j:"tau4 sin1",e:"just now"},
+{c:"讀",j:"duk6",e:"to read / pronounce"},
+{c:"啱",j:"ngaam1",e:"correct; suitable"},
+{c:"跟住",j:"gan1 zyu6",e:"and then; follow"},
+{c:"每日",j:"mui5 jat6",e:"every day"}
+],
+dialogue:[
+{speaker:"A",c:"你聽日去唔去街市啊？",j:"nei5 ting1 jat6 heoi3 m4 heoi3 gaai1 si5 aa3?",e:"Are you going to the wet market tomorrow?"},
+{speaker:"B",c:"去啊，我想買餸。",j:"heoi3 aa3, ngo5 soeng2 maai5 sung3.",e:"Yes — I want to buy groceries."},
+{speaker:"A",c:"我頭先以為你講有事，原來係街市。",j:"ngo5 tau4 sin1 ji5 wai4 nei5 gong2 jau5 si6, jyun4 loi4 hai6 gaai1 si5.",e:"Just now I thought you said you had something (si6). Turns out it was the market (si5)."},
+{speaker:"B",c:"哈哈，聲調差少少，意思完全唔同。",j:"haa1 haa1, sing1 diu6 caa1 siu2 siu2, ji3 si3 jyun4 cyun4 m4 tung4.",e:"Haha — a tiny tone difference, completely different meaning."},
+{speaker:"A",c:"好似買同賣咁，一個係買入，一個係賣出。",j:"hou2 ci5 maai5 tung4 maai6 gam2, jat1 go3 hai6 maai5 jap6, jat1 go3 hai6 maai6 ceot1.",e:"Like buy (maai5) and sell (maai6) — one is buying in, one is selling out."},
+{speaker:"B",c:"你教我點讀呢六個音？詩、史、試、時、市、事。",j:"nei5 gaau3 ngo5 dim2 duk6 ni1 luk6 go3 jam1? si1, si2, si3, si4, si5, si6.",e:"Teach me how to say these six sounds? Poem, history, try, time, market, matter."},
+{speaker:"A",c:"你試下讀：詩、史、試、時、市、事。",j:"nei5 si3 haa5 duk6: si1, si2, si3, si4, si5, si6.",e:"Try reading them: si1 si2 si3 si4 si5 si6."},
+{speaker:"B",c:"詩、史、試、時、市、事。我讀得啱唔啱啊？",j:"si1, si2, si3, si4, si5, si6. ngo5 duk6 dak1 ngaam1 m4 ngaam1 aa3?",e:"Si1 si2 si3 si4 si5 si6. Did I say them right?"},
+{speaker:"A",c:"差唔多！再聽我讀多次，然後你跟住讀。",j:"caa1 m4 do1! zoi3 ting1 ngo5 duk6 do1 ci3, jin4 hau6 nei5 gan1 zyu6 duk6.",e:"Pretty close! Listen to me a few more times, then you follow."},
+{speaker:"B",c:"好，我每日都練習。",j:"hou2, ngo5 mui5 jat6 dou1 lin6 zaap6.",e:"OK — I'll practice every day."}
+],
+grammar:[
+{pattern:"六聲 (luk6 sing1)",desc:"Cantonese has 6 tones. The number after a Jyutping syllable is the tone: si1 si2 si3 si4 si5 si6.",ex:"詩 si1 · 史 si2 · 試 si3 · 時 si4 · 市 si5 · 事 si6",en:"Same letters, six meanings — only pitch changes."},
+{pattern:"Tone 1 / 2 / 3",desc:"1 high and flat. 2 rises (like asking 'huh?'). 3 mid and flat — shorter, plainer.",ex:"新 san1 (new) · 好 hou2 (good) · 去 heoi3 (go)",en:"High level, rising, mid level."},
+{pattern:"Tone 4 / 5 / 6",desc:"The low tones. 4 falls and is breathy. 5 rises from low. 6 is low and flat.",ex:"人 jan4 (person) · 我 ngo5 (I) · 食 sik6 (eat)",en:"Low falling, low rising, low level."},
+{pattern:"買 maai5 vs 賣 maai6",desc:"Minimal pair. Tone 5 vs 6 is easy to mix up — and it swaps buy/sell.",ex:"我想買餸，唔係賣餸。(ngo5 soeng2 maai5 sung3, m4 hai6 maai6 sung3)",en:"I want to buy groceries, not sell them."},
+{pattern:"市 si5 vs 事 si6",desc:"Another daily pair. 街市 = wet market. 有事 = something's up / I'm busy.",ex:"我頭先以為你講有事，原來係街市。(ngo5 tau4 sin1 ji5 wai4 nei5 gong2 jau5 si6, jyun4 loi4 hai6 gaai1 si5)",en:"I thought you had something going on — it was the market."}
+],
+quiz:[
+{q:"Cantonese has how many tones?",opts:["4","5","6","8"],ans:2},
+{q:'The number in Jyutping (si5) tells you the:',opts:["word class","tone","speed","dialect"],ans:1},
+{q:'"詩" si1 is tone:',opts:["1 high level","2 rising","5 low rising","6 low level"],ans:0},
+{q:'"市" (si5) means:',opts:["poem","to try","market","matter"],ans:2},
+{q:'"事" (si6) means:',opts:["market","matter / thing","to buy","history"],ans:1},
+{q:'"買" vs "賣" is:',opts:["maai5 buy vs maai6 sell","maai6 buy vs maai5 sell","same tone","not a tone pair"],ans:0},
+{q:'A misheard 街市 as:',opts:["tea","有事 (something's up)","a bus","tomorrow"],ans:1},
+{q:"Best daily practice for tones:",opts:["Skip Jyutping","Read si1–si6 every day out loud","Only study characters","Ignore pitch"],ans:1}
+]},
+
+{id:106,title:"L6 數字同錢",subtitle:"Numbers and money · 蚊, Octopus, change",
+vocab:[
+{c:"一",j:"jat1",e:"one"},
+{c:"二",j:"ji6",e:"two (in numbers: 十二, 二十)"},
+{c:"兩",j:"loeng5",e:"two (when counting things)"},
+{c:"三",j:"saam1",e:"three"},
+{c:"四",j:"sei3",e:"four"},
+{c:"五",j:"ng5",e:"five"},
+{c:"六",j:"luk6",e:"six"},
+{c:"七",j:"cat1",e:"seven"},
+{c:"八",j:"baat3",e:"eight"},
+{c:"九",j:"gau2",e:"nine"},
+{c:"十",j:"sap6",e:"ten"},
+{c:"百",j:"baak3",e:"hundred"},
+{c:"千",j:"cin1",e:"thousand"},
+{c:"蚊",j:"man1",e:"Hong Kong dollar (colloquial)"},
+{c:"幾多錢",j:"gei2 do1 cin2",e:"how much money"},
+{c:"一共",j:"jat1 gung6",e:"in total"},
+{c:"斤",j:"gan1",e:"catty (~600g)"},
+{c:"俾",j:"bei2",e:"to give / to pay"},
+{c:"找錢",j:"zaau2 cin2",e:"to give change"},
+{c:"八達通",j:"baat3 daat6 tung1",e:"Octopus card"},
+{c:"現金",j:"jin6 gam1",e:"cash"},
+{c:"平啲",j:"peng4 di1",e:"cheaper"}
+],
+dialogue:[
+{speaker:"A",c:"呢啲橙幾多錢一斤啊？",j:"ni1 di1 caang2 gei2 do1 cin2 jat1 gan1 aa3?",e:"How much are these oranges per catty?"},
+{speaker:"B",c:"十二蚊一斤。",j:"sap6 ji6 man1 jat1 gan1.",e:"Twelve dollars a catty."},
+{speaker:"A",c:"咁貴嘅？有冇平啲啊？",j:"gam3 gwai3 ge2? jau5 mou5 peng4 di1 aa3?",e:"That expensive? Got anything cheaper?"},
+{speaker:"B",c:"嗰啲細啲，十蚊一斤。",j:"go2 di1 sai3 di1, sap6 man1 jat1 gan1.",e:"Those smaller ones — ten dollars a catty."},
+{speaker:"A",c:"好，我要兩斤。一共幾多錢？",j:"hou2, ngo5 jiu3 loeng5 gan1. jat1 gung6 gei2 do1 cin2?",e:"OK, I want two catties. How much in total?"},
+{speaker:"B",c:"二十蚊。八達通定現金？",j:"ji6 sap6 man1. baat3 daat6 tung1 ding6 jin6 gam1?",e:"Twenty dollars. Octopus or cash?"},
+{speaker:"A",c:"現金。我俾五十蚊你。",j:"jin6 gam1. ngo5 bei2 ng5 sap6 man1 nei5.",e:"Cash. Here's fifty."},
+{speaker:"B",c:"找你三十蚊。唔該晒。",j:"zaau2 nei5 saam1 sap6 man1. m4 goi1 saai3.",e:"Thirty dollars change. Thanks a lot."}
+],
+grammar:[
+{pattern:"兩 vs 二 (loeng5 vs ji6)",desc:"兩 before a classifier (兩斤, 兩個人). 二 inside numbers (十二, 二十, 第二).",ex:"我要兩斤。一共二十蚊。(ngo5 jiu3 loeng5 gan1. jat1 gung6 ji6 sap6 man1)",en:"I want two catties. Twenty dollars in total."},
+{pattern:"幾多錢？(gei2 do1 cin2?)",desc:"How much? Put the unit after: 幾多錢一斤 / 幾多錢一件.",ex:"呢啲橙幾多錢一斤啊？(ni1 di1 caang2 gei2 do1 cin2 jat1 gan1 aa3?)",en:"How much are these oranges per catty?"},
+{pattern:"蚊 (man1)",desc:"Spoken HKD. 十二蚊 = $12. Formal 塊 is Mandarin; in HK say 蚊.",ex:"十蚊一斤 (sap6 man1 jat1 gan1)",en:"Ten dollars a catty."},
+{pattern:"定 (ding6)",desc:"Or. A 定 B — often 定係.",ex:"八達通定現金？(baat3 daat6 tung1 ding6 jin6 gam1?)",en:"Octopus or cash?"},
+{pattern:"俾…你 (bei2… nei5)",desc:"Give / pay someone. 我俾五十蚊你.",ex:"我俾五十蚊你。找你三十蚊。(ngo5 bei2 ng5 sap6 man1 nei5. zaau2 nei5 saam1 sap6 man1)",en:"I give you fifty. Thirty change."}
+],
+quiz:[
+{q:'"蚊" (man1) means:',opts:["Hong Kong dollar (spoken)","mosquito only","credit card","a catty"],ans:0},
+{q:"You want two catties. Say:",opts:["二斤","二十斤","兩斤","兩蚊"],ans:2},
+{q:'"十二" is:',opts:["ji6 sap6","loeng5 sap6","sap6 loeng5","sap6 ji6"],ans:3},
+{q:'"二十" is:',opts:["sap6 ji6","ji6 sap6","loeng5 sap6","saa1"],ans:1},
+{q:'"幾多錢" means:',opts:["how many people","too expensive","how much (money)","change"],ans:2},
+{q:"A pays with:",opts:["Octopus","PayMe","credit card","cash, a fifty"],ans:3},
+{q:"Change given is:",opts:["$10","$20","$30","$50"],ans:2},
+{q:'"平啲" means:',opts:["cheaper","flatter","heavier","further"],ans:0}
+]},
+
+{id:107,title:"L7 屋企人",subtitle:"Family · parents, siblings, partners",
+vocab:[
+{c:"屋企人",j:"uk1 kei2 jan4",e:"family / household"},
+{c:"阿爸",j:"aa3 baa4",e:"dad"},
+{c:"阿媽",j:"aa3 maa1",e:"mum"},
+{c:"家姐",j:"gaa1 ze1",e:"older sister"},
+{c:"哥哥",j:"go4 go1",e:"older brother"},
+{c:"細佬",j:"sai3 lou2",e:"younger brother"},
+{c:"細妹",j:"sai3 mui6",e:"younger sister"},
+{c:"老公",j:"lou5 gung1",e:"husband"},
+{c:"老婆",j:"lou5 po4",e:"wife"},
+{c:"仔",j:"zai2",e:"son; boy"},
+{c:"女",j:"neoi5",e:"daughter; girl"},
+{c:"小朋友",j:"siu2 pang4 jau5",e:"child / kid"},
+{c:"結婚",j:"git3 fan1",e:"to get married"},
+{c:"單身",j:"daan1 san1",e:"single"},
+{c:"男朋友",j:"naam4 pang4 jau5",e:"boyfriend"},
+{c:"女朋友",j:"neoi5 pang4 jau5",e:"girlfriend"},
+{c:"幾多歲",j:"gei2 do1 seoi3",e:"how old"},
+{c:"幾耐",j:"gei2 noi6",e:"how long"},
+{c:"恭喜",j:"gung1 hei2",e:"congratulations"},
+{c:"一齊住",j:"jat1 cai4 zyu6",e:"to live together"}
+],
+dialogue:[
+{speaker:"A",c:"你屋企有幾多個人啊？",j:"nei5 uk1 kei2 jau5 gei2 do1 go3 jan4 aa3?",e:"How many people in your family?"},
+{speaker:"B",c:"四個。阿爸阿媽、一個家姐，同埋我。",j:"sei3 go3. aa3 baa4 aa3 maa1, jat1 go3 gaa1 ze1, tung4 maai4 ngo5.",e:"Four. Dad, mum, one older sister, and me."},
+{speaker:"A",c:"你家姐結婚未啊？",j:"nei5 gaa1 ze1 git3 fan1 mei6 aa3?",e:"Is your older sister married yet?"},
+{speaker:"B",c:"結咗喇，仲有個兩歲仔。",j:"git3 zo2 laa3, zung6 jau5 go3 loeng5 seoi3 zai2.",e:"Already married — and she's got a two-year-old boy."},
+{speaker:"A",c:"咁你呢？單身定有人啊？",j:"gam2 nei5 ne1? daan1 san1 ding6 jau5 jan4 aa3?",e:"What about you? Single or seeing someone?"},
+{speaker:"B",c:"而家單身。你呢？",j:"ji4 gaa1 daan1 san1. nei5 ne1?",e:"Single at the moment. You?"},
+{speaker:"A",c:"我有個女朋友，我哋一齊住。",j:"ngo5 jau5 go3 neoi5 pang4 jau5, ngo5 dei6 jat1 cai4 zyu6.",e:"I have a girlfriend. We live together."},
+{speaker:"B",c:"你哋識咗幾耐啊？",j:"nei5 dei6 sik1 zo2 gei2 noi6 aa3?",e:"How long have you known each other?"},
+{speaker:"A",c:"三年喇。遲啲想結婚。",j:"saam1 nin4 laa3. ci4 di1 soeng2 git3 fan1.",e:"Three years. Thinking of getting married later."},
+{speaker:"B",c:"恭喜你啊！",j:"gung1 hei2 nei5 aa3!",e:"Congrats!"}
+],
+grammar:[
+{pattern:"屋企 (uk1 kei2)",desc:"Home / family. 屋企人 = the people in your household. More natural than 家.",ex:"你屋企有幾多個人啊？(nei5 uk1 kei2 jau5 gei2 do1 go3 jan4 aa3?)",en:"How many people in your family?"},
+{pattern:"未啊？(mei6 aa3?)",desc:"…yet? End of yes/no about something expected.",ex:"你家姐結婚未啊？(nei5 gaa1 ze1 git3 fan1 mei6 aa3?)",en:"Is your older sister married yet?"},
+{pattern:"結咗喇 (git3 zo2 laa3)",desc:"咗 = done. 喇 = already / new situation. Together: it's already happened.",ex:"結咗喇，仲有個兩歲仔。(git3 zo2 laa3, zung6 jau5 go3 loeng5 seoi3 zai2)",en:"Already married, and there's a two-year-old boy too."},
+{pattern:"你呢？(nei5 ne1?)",desc:"What about you? 呢 parks a topic and tosses it back.",ex:"而家單身。你呢？(ji4 gaa1 daan1 san1. nei5 ne1?)",en:"Single now. You?"},
+{pattern:"識咗幾耐 (sik1 zo2 gei2 noi6)",desc:"How long have you known…? 識 = know a person. 幾耐 = how long.",ex:"你哋識咗幾耐啊？(nei5 dei6 sik1 zo2 gei2 noi6 aa3?)",en:"How long have you two known each other?"}
+],
+quiz:[
+{q:'"屋企人" means:',opts:["landlord","neighbour","family / household","colleague"],ans:2},
+{q:'"家姐" is:',opts:["older sister (HK)","younger sister","aunt","mum"],ans:0},
+{q:'"細佬" is:',opts:["older brother","dad","cousin","younger brother"],ans:3},
+{q:"B's sister has:",opts:["a two-year-old son","twins","no kids","a daughter"],ans:0},
+{q:'"單身" means:',opts:["married","engaged","single","divorced"],ans:2},
+{q:'"一齊住" means:',opts:["date sometimes","break up","visit family","live together"],ans:3},
+{q:"They have known each other:",opts:["three months","ten years","three years","since childhood"],ans:2},
+{q:'"恭喜" means:',opts:["sorry","please","congratulations","you're welcome"],ans:2}
+]},
+
+{id:108,title:"L8 飲茶",subtitle:"Yum cha · dim sum, the bill, treating",
+vocab:[
+{c:"飲茶",j:"jam2 caa4",e:"yum cha (dim sum meal)"},
+{c:"點心",j:"dim2 sam1",e:"dim sum"},
+{c:"蝦餃",j:"haa1 gaau2",e:"shrimp dumpling"},
+{c:"腸粉",j:"coeng4 fan2",e:"rice noodle roll"},
+{c:"叉燒包",j:"caa1 siu1 baau1",e:"BBQ pork bun"},
+{c:"燒賣",j:"siu1 maai6",e:"siu mai (pork dumpling)"},
+{c:"籠",j:"lung4",e:"bamboo steamer (classifier)"},
+{c:"奶茶",j:"naai5 caa4",e:"milk tea"},
+{c:"凍檸茶",j:"dung3 ning2 caa4",e:"iced lemon tea"},
+{c:"咖啡",j:"gaa3 fe1",e:"coffee"},
+{c:"好味",j:"hou2 mei6",e:"tasty; delicious"},
+{c:"夠晒",j:"gau3 saai3",e:"plenty / that's enough"},
+{c:"再加",j:"zoi3 gaa1",e:"add more"},
+{c:"埋單",j:"maai4 daan1",e:"the bill / to pay"},
+{c:"請",j:"ceng2",e:"to treat (pay for someone)"},
+{c:"爭",j:"zang1",e:"to fight over (the bill)"},
+{c:"樣樣",j:"joeng6 joeng6",e:"every kind; all of them"},
+{c:"熱",j:"jit6",e:"hot"},
+{c:"凍",j:"dung3",e:"cold / iced"},
+{c:"今次",j:"gam1 ci3",e:"this time"}
+],
+dialogue:[
+{speaker:"A",c:"今日去飲茶好唔好？",j:"gam1 jat6 heoi3 jam2 caa4 hou2 m4 hou2?",e:"Shall we go for yum cha today?"},
+{speaker:"B",c:"好啊，我好耐冇食點心。",j:"hou2 aa3, ngo5 hou2 noi6 mou5 sik6 dim2 sam1.",e:"Yes! I haven't had dim sum in ages."},
+{speaker:"A",c:"你想要咩？",j:"nei5 soeng2 jiu3 me1?",e:"What do you want?"},
+{speaker:"B",c:"蝦餃、腸粉、叉燒包，樣樣都要。",j:"haa1 gaau2, coeng4 fan2, caa1 siu1 baau1, joeng6 joeng6 dou1 jiu3.",e:"Har gow, rice rolls, char siu bao — I want them all."},
+{speaker:"A",c:"我哋叫多籠燒賣都得。你飲奶茶定咖啡？",j:"ngo5 dei6 giu3 do1 lung4 siu1 maai6 dou1 dak1. nei5 jam2 naai5 caa4 ding6 gaa3 fe1?",e:"We can order a steamer of siu mai too. Milk tea or coffee?"},
+{speaker:"B",c:"熱奶茶。你呢？",j:"jit6 naai5 caa4. nei5 ne1?",e:"Hot milk tea. You?"},
+{speaker:"A",c:"我要凍檸茶。",j:"ngo5 jiu3 dung3 ning2 caa4.",e:"I'll have iced lemon tea."},
+{speaker:"B",c:"呢籠蝦餃好味喎。",j:"ni1 lung4 haa1 gaau2 hou2 mei6 wo3.",e:"This steamer of har gow is really good."},
+{speaker:"A",c:"夠晒未啊？要唔要再加？",j:"gau3 saai3 mei6 aa3? jiu3 m4 jiu3 zoi3 gaa1?",e:"Had enough? Want to add more?"},
+{speaker:"B",c:"夠喇。唔該埋單！",j:"gau3 laa3. m4 goi1 maai4 daan1!",e:"Enough. Bill please!"},
+{speaker:"A",c:"今次我請，你唔好同我爭。",j:"gam1 ci3 ngo5 ceng2, nei5 m4 hou2 tung4 ngo5 zang1.",e:"This one's on me — don't fight me for the bill."}
+],
+grammar:[
+{pattern:"飲茶 (jam2 caa4)",desc:"Not just 'drink tea' — it means the whole dim sum meal, often morning or lunch.",ex:"今日去飲茶好唔好？(gam1 jat6 heoi3 jam2 caa4 hou2 m4 hou2?)",en:"Shall we go for yum cha today?"},
+{pattern:"籠 (lung4)",desc:"Classifier for a steamer of dim sum. 一籠蝦餃, 呢籠燒賣.",ex:"呢籠蝦餃好味喎。(ni1 lung4 haa1 gaau2 hou2 mei6 wo3)",en:"This steamer of har gow is tasty."},
+{pattern:"埋單 (maai4 daan1)",desc:"Ask for the bill. Call it out: 唔該埋單！",ex:"夠喇。唔該埋單！(gau3 laa3. m4 goi1 maai4 daan1!)",en:"That's enough. Bill please!"},
+{pattern:"請 (ceng2)",desc:"Treat someone (you pay). Different from 請問 cing2 man6 (excuse me / ask).",ex:"今次我請 (gam1 ci3 ngo5 ceng2)",en:"This time I treat."},
+{pattern:"唔好同我爭 (m4 hou2 tung4 ngo5 zang1)",desc:"Don't compete with me — classic bill-fight line after 我請.",ex:"你唔好同我爭 (nei5 m4 hou2 tung4 ngo5 zang1)",en:"Don't fight me (for the bill)."}
+],
+quiz:[
+{q:'"飲茶" in HK usually means:',opts:["go for dim sum","only drink tea at home","a tea ceremony","coffee break"],ans:0},
+{q:'"蝦餃" is:',opts:["pork bun","rice roll","shrimp dumpling","egg tart"],ans:2},
+{q:'"腸粉" Jyutping is:',opts:["coeng2 fan2","coeng1 fan2","zoeng2 fan2","coeng4 fan2"],ans:3},
+{q:'"埋單" means:',opts:["order food","split the table","the bill / to pay","reserve"],ans:2},
+{q:'"我請" means:',opts:["I invite you to speak","please sit","I order","this is on me"],ans:3},
+{q:"A drinks:",opts:["hot milk tea","coffee","iced lemon tea","water"],ans:2},
+{q:'"夠晒" means:',opts:["plenty / that's enough","not enough","too spicy","too expensive"],ans:0},
+{q:'"籠" here is:',opts:["a dragon","the kitchen","a steamer basket (classifier)","a plate"],ans:2}
+]},
+
+{id:109,title:"L9 問路",subtitle:"Directions · left, right, MTR, getting lost",
+vocab:[
+{c:"邊度",j:"bin1 dou6",e:"where"},
+{c:"點去",j:"dim2 heoi3",e:"how to get (there)"},
+{c:"左邊",j:"zo2 bin6",e:"left side"},
+{c:"右邊",j:"jau6 bin6",e:"right side"},
+{c:"前面",j:"cin4 min6",e:"in front"},
+{c:"後面",j:"hau6 min6",e:"behind"},
+{c:"直行",j:"zik6 haang4",e:"go straight"},
+{c:"轉右",j:"zyun3 jau6",e:"turn right"},
+{c:"轉左",j:"zyun3 zo2",e:"turn left"},
+{c:"對面",j:"deoi3 min6",e:"opposite"},
+{c:"隔離",j:"gaak3 lei4",e:"next to / beside"},
+{c:"附近",j:"fu6 gan6",e:"nearby"},
+{c:"出口",j:"ceot1 hau2",e:"exit"},
+{c:"地鐵站",j:"dei6 tit3 zaam6",e:"MTR station"},
+{c:"紅綠燈",j:"hung4 luk6 dang1",e:"traffic light"},
+{c:"過馬路",j:"gwo3 maa5 lou6",e:"to cross the road"},
+{c:"迷路",j:"mai4 lou6",e:"to get lost"},
+{c:"搵",j:"wan2",e:"to look for / find"},
+{c:"請問",j:"cing2 man6",e:"excuse me (to ask)"},
+{c:"唔使客氣",j:"m4 sai2 haak3 hei3",e:"you're welcome / don't mention it"}
+],
+dialogue:[
+{speaker:"A",c:"唔該，請問地鐵站喺邊度啊？",j:"m4 goi1, cing2 man6 dei6 tit3 zaam6 hai2 bin1 dou6 aa3?",e:"Excuse me, where's the MTR station?"},
+{speaker:"B",c:"你而家喺呢度。直行大約三分鐘，到紅綠燈就轉右。",j:"nei5 ji4 gaa1 hai2 ni1 dou6. zik6 haang4 daai6 joek3 saam1 fan1 zung1, dou3 hung4 luk6 dang1 zau6 zyun3 jau6.",e:"You're here. Go straight about three minutes; at the lights, turn right."},
+{speaker:"A",c:"轉右之後呢？",j:"zyun3 jau6 zi1 hau6 ne1?",e:"And after turning right?"},
+{speaker:"B",c:"對面就係出口。地鐵站就喺隔離。",j:"deoi3 min6 zau6 hai6 ceot1 hau2. dei6 tit3 zaam6 zau6 hai2 gaak3 lei4.",e:"The exit is opposite. The station is right next to it."},
+{speaker:"A",c:"遠唔遠啊？我有啲迷路。",j:"jyun5 m4 jyun5 aa3? ngo5 jau5 di1 mai4 lou6.",e:"Is it far? I'm a bit lost."},
+{speaker:"B",c:"唔遠，五分鐘就到。唔難搵。",j:"m4 jyun5, ng5 fan1 zung1 zau6 dou3. m4 naan4 wan2.",e:"Not far — five minutes and you're there. Easy to find."},
+{speaker:"A",c:"係咪附近嗰間商場隔離？",j:"hai6 mai6 fu6 gan6 go2 gaan1 soeng1 coeng4 gaak3 lei4?",e:"Is it next to that mall nearby?"},
+{speaker:"B",c:"係啊，商場後面就係。",j:"hai6 aa3, soeng1 coeng4 hau6 min6 zau6 hai6.",e:"Yes — it's behind the mall."},
+{speaker:"A",c:"唔該晒！",j:"m4 goi1 saai3!",e:"Thanks so much!"},
+{speaker:"B",c:"唔使客氣，小心過馬路。",j:"m4 sai2 haak3 hei3, siu2 sam1 gwo3 maa5 lou6.",e:"You're welcome. Careful crossing the road."}
+],
+grammar:[
+{pattern:"喺邊度？(hai2 bin1 dou6?)",desc:"Where is…? 喺 marks location. 邊度 = where.",ex:"地鐵站喺邊度啊？(dei6 tit3 zaam6 hai2 bin1 dou6 aa3?)",en:"Where's the MTR station?"},
+{pattern:"直行…就… (zik6 haang4… zau6…)",desc:"Go straight… then… 就 = and then / that's when.",ex:"直行大約三分鐘，到紅綠燈就轉右。(zik6 haang4 daai6 joek3 saam1 fan1 zung1, dou3 hung4 luk6 dang1 zau6 zyun3 jau6)",en:"Go straight about three minutes; at the lights, turn right."},
+{pattern:"之後呢？(zi1 hau6 ne1?)",desc:"And then? / After that? 呢 invites the next step.",ex:"轉右之後呢？(zyun3 jau6 zi1 hau6 ne1?)",en:"And after turning right?"},
+{pattern:"係咪…？(hai6 mai6…?)",desc:"Is it…? Checking a guess. Never hai6 mi1.",ex:"係咪附近嗰間商場隔離？(hai6 mai6 fu6 gan6 go2 gaan1 soeng1 coeng4 gaak3 lei4?)",en:"Is it next to that mall nearby?"},
+{pattern:"唔該 vs 唔該晒 vs 唔使客氣",desc:"唔該 = thanks / excuse me (service). 唔該晒 = thanks a lot. Reply: 唔使客氣.",ex:"唔該晒！唔使客氣。(m4 goi1 saai3! m4 sai2 haak3 hei3)",en:"Thanks so much! Don't mention it."}
+],
+quiz:[
+{q:'"邊度" means:',opts:["who","when","why","where"],ans:3},
+{q:'"直行" means:',opts:["go straight","turn back","run","stop"],ans:0},
+{q:'"轉右" means:',opts:["turn left","go up","turn right","go down"],ans:2},
+{q:'"隔離" here means:',opts:["quarantine only","far away","inside","next to / beside"],ans:3},
+{q:"At the traffic light they should:",opts:["turn left","stop forever","go home","turn right"],ans:3},
+{q:'"迷路" means:',opts:["ask the way","cross the road","get lost","take the MTR"],ans:2},
+{q:'"係咪" is pronounced:',opts:["hai6 mi1","hai6 mei1","hai6 mai6","si6 mai6"],ans:2},
+{q:'"唔使客氣" is a reply to thanks meaning:',opts:["please sit","excuse me","I'm sorry","you're welcome"],ans:3}
+]},
+
+{id:110,title:"L10 約出嚟",subtitle:"Making plans · when, where, running late",
+vocab:[
+{c:"約",j:"joek3",e:"to arrange to meet"},
+{c:"出街",j:"ceot1 gaai1",e:"to go out"},
+{c:"幾時",j:"gei2 si4",e:"when"},
+{c:"幾點",j:"gei2 dim2",e:"what time"},
+{c:"邊度見",j:"bin1 dou6 gin3",e:"where shall we meet"},
+{c:"今晚",j:"gam1 maan5",e:"tonight"},
+{c:"聽朝",j:"ting1 ziu1",e:"tomorrow morning"},
+{c:"銅鑼灣",j:"tung4 lo4 waan1",e:"Causeway Bay"},
+{c:"出口",j:"ceot1 hau2",e:"exit"},
+{c:"到時見",j:"dou3 si4 gin3",e:"see you then"},
+{c:"塞車",j:"sak1 ce1",e:"traffic jam"},
+{c:"遲到",j:"ci4 dou3",e:"to be late"},
+{c:"嚟緊",j:"lai4 gan2",e:"on the way / coming"},
+{c:"等",j:"dang2",e:"to wait"},
+{c:"著",j:"zoek3",e:"to wear"},
+{c:"藍色",j:"laam4 sik1",e:"blue"},
+{c:"唔緊要",j:"m4 gan2 jiu3",e:"never mind / it's OK"},
+{c:"改期",j:"goi2 kei4",e:"to reschedule"},
+{c:"取消",j:"ceoi2 siu1",e:"to cancel"},
+{c:"打電話",j:"daa2 din6 waa2",e:"to call (phone)"}
+],
+dialogue:[
+{speaker:"A",c:"今晚得唔得閒出街啊？",j:"gam1 maan5 dak1 m4 dak1 haan4 ceot1 gaai1 aa3?",e:"Free to go out tonight?"},
+{speaker:"B",c:"得。約幾點？邊度見？",j:"dak1. joek3 gei2 dim2? bin1 dou6 gin3?",e:"Yes. What time? Where do we meet?"},
+{speaker:"A",c:"七點，銅鑼灣地鐵站A出口。",j:"cat1 dim2, tung4 lo4 waan1 dei6 tit3 zaam6 A ceot1 hau2.",e:"Seven, Causeway Bay MTR exit A."},
+{speaker:"B",c:"得，到時見。",j:"dak1, dou3 si4 gin3.",e:"OK, see you then."},
+{speaker:"A",c:"對唔住，我塞車，會遲十分鐘。",j:"deoi3 m4 zyu6, ngo5 sak1 ce1, wui5 ci4 sap6 fan1 zung1.",e:"Sorry — traffic jam. I'll be ten minutes late."},
+{speaker:"B",c:"冇問題，我喺度等你。",j:"mou5 man6 tai4, ngo5 hai2 dou6 dang2 nei5.",e:"No problem, I'll wait here."},
+{speaker:"A",c:"我而家嚟緊，五分鐘到。",j:"ngo5 ji4 gaa1 lai4 gan2, ng5 fan1 zung1 dou3.",e:"I'm on my way now — five minutes."},
+{speaker:"B",c:"見到你喇。我著藍色衫。",j:"gin3 dou2 nei5 laa3. ngo5 zoek3 laam4 sik1 saam1.",e:"I see you. I'm wearing a blue shirt."},
+{speaker:"A",c:"見到。對唔住，遲到。",j:"gin3 dou2. deoi3 m4 zyu6, ci4 dou3.",e:"See you. Sorry I'm late."},
+{speaker:"B",c:"唔緊要，去食飯啦。",j:"m4 gan2 jiu3, heoi3 sik6 faan6 laa1.",e:"Don't worry — let's go eat."}
+],
+grammar:[
+{pattern:"得唔得閒 (dak1 m4 dak1 haan4)",desc:"Are you free? A-not-A of 得閒. Answer 得 or 唔得.",ex:"今晚得唔得閒出街啊？(gam1 maan5 dak1 m4 dak1 haan4 ceot1 gaai1 aa3?)",en:"Free to go out tonight?"},
+{pattern:"約幾點？邊度見？",desc:"The two questions that close a plan: when and where.",ex:"約幾點？邊度見？(joek3 gei2 dim2? bin1 dou6 gin3?)",en:"What time? Where do we meet?"},
+{pattern:"會遲 (wui5 ci4)",desc:"會 = will (not wui6 'meeting'). 遲 = late. 會遲十分鐘.",ex:"我塞車，會遲十分鐘。(ngo5 sak1 ce1, wui5 ci4 sap6 fan1 zung1)",en:"I'm in traffic — I'll be ten minutes late."},
+{pattern:"嚟緊 (lai4 gan2)",desc:"緊 = in progress. 嚟緊 = I'm coming / on the way.",ex:"我而家嚟緊，五分鐘到。(ngo5 ji4 gaa1 lai4 gan2, ng5 fan1 zung1 dou3)",en:"I'm on the way now, five minutes."},
+{pattern:"著 (zoek3)",desc:"To wear. Not zyu3. 著藍色衫, 著褲, 著鞋.",ex:"我著藍色衫。(ngo5 zoek3 laam4 sik1 saam1)",en:"I'm wearing a blue shirt."}
+],
+quiz:[
+{q:'"出街" means:',opts:["leave Hong Kong","go to work","go out (into town)","go home"],ans:2},
+{q:'"約" means:',opts:["arrange to meet","maybe","cancel","wait"],ans:0},
+{q:"They meet at:",opts:["6 at Central","8 at home","noon at work","7 at Causeway Bay exit A"],ans:3},
+{q:'"塞車" means:',opts:["the car is broken","no parking","traffic jam","a taxi"],ans:2},
+{q:'"嚟緊" means:',opts:["already here","cancelled","lost","on the way"],ans:3},
+{q:'"著" (to wear) is:',opts:["zyu3","zoek6","zoek3","zyu6"],ans:2},
+{q:'"唔緊要" means:',opts:["never mind / it's OK","very important","hurry up","I disagree"],ans:0},
+{q:'"會" meaning "will" is tone:',opts:["wui6","wui2","wui1","wui5"],ans:3}
+]},
+
+{id:111,title:"L11 一日",subtitle:"A day in life · wake up to sleep",
+vocab:[
+{c:"起身",j:"hei2 san1",e:"to get up"},
+{c:"洗面",j:"sai2 min6",e:"to wash your face"},
+{c:"刷牙",j:"caat3 ngaa4",e:"to brush teeth"},
+{c:"沖涼",j:"cung1 loeng4",e:"to shower"},
+{c:"食早餐",j:"sik6 zou2 caan1",e:"to eat breakfast"},
+{c:"晏晝",j:"aan3 zau3",e:"afternoon"},
+{c:"夜晚",j:"je6 maan5",e:"night / evening"},
+{c:"返屋企",j:"faan1 uk1 kei2",e:"to go home"},
+{c:"煮飯",j:"zyu2 faan6",e:"to cook (rice / a meal)"},
+{c:"洗碗",j:"sai2 wun2",e:"to wash dishes"},
+{c:"睇戲",j:"tai2 hei3",e:"to watch a film / show"},
+{c:"瞓覺",j:"fan3 gaau3",e:"to sleep"},
+{c:"平時",j:"ping4 si4",e:"usually / normally"},
+{c:"有時",j:"jau5 si4",e:"sometimes"},
+{c:"先至",j:"sin1 zi3",e:"not until; only then"},
+{c:"運動",j:"wan6 dung6",e:"exercise"},
+{c:"週末",j:"zau1 mut6",e:"weekend"},
+{c:"忙",j:"mong4",e:"busy"},
+{c:"攰",j:"gui6",e:"tired (HK)"},
+{c:"半",j:"bun3",e:"half (八點半)"}
+],
+dialogue:[
+{speaker:"A",c:"你平時幾點起身啊？",j:"nei5 ping4 si4 gei2 dim2 hei2 san1 aa3?",e:"What time do you usually get up?"},
+{speaker:"B",c:"我七點起身，洗面刷牙，八點出街返工。",j:"ngo5 cat1 dim2 hei2 san1, sai2 min6 caat3 ngaa4, baat3 dim2 ceot1 gaai1 faan1 gung1.",e:"I get up at seven, wash my face and brush my teeth, out the door at eight for work."},
+{speaker:"A",c:"咁早？我八點半先至起身。",j:"gam3 zou2? ngo5 baat3 dim2 bun3 sin1 zi3 hei2 san1.",e:"That early? I don't get up until 8:30."},
+{speaker:"B",c:"你唔使返工咩？",j:"nei5 m4 sai2 faan1 gung1 me1?",e:"You don't have to go to work?"},
+{speaker:"A",c:"我返夜晚，晏晝先至出。",j:"ngo5 faan1 je6 maan5, aan3 zau3 sin1 zi3 ceot1.",e:"I work nights — I don't go out until the afternoon."},
+{speaker:"B",c:"放工之後做咩啊？",j:"fong3 gung1 zi1 hau6 zou6 me1 aa3?",e:"What do you do after work?"},
+{speaker:"A",c:"返屋企煮飯，睇下戲，十一點瞓。",j:"faan1 uk1 kei2 zyu2 faan6, tai2 haa5 hei3, sap6 jat1 dim2 fan3.",e:"Go home, cook, watch a bit of something, sleep at eleven."},
+{speaker:"B",c:"我返到屋企已經好攰，沖完涼就瞓。",j:"ngo5 faan1 dou3 uk1 kei2 ji5 ging1 hou2 gui6, cung1 jyun4 loeng4 zau6 fan3.",e:"By the time I'm home I'm exhausted — shower and sleep."},
+{speaker:"A",c:"你有冇時間運動啊？",j:"nei5 jau5 mou5 si4 gaan3 wan6 dung6 aa3?",e:"Do you have time to exercise?"},
+{speaker:"B",c:"有時週末先有。平時真係好忙。",j:"jau5 si4 zau1 mut6 sin1 jau5. ping4 si4 zan1 hai6 hou2 mong4.",e:"Sometimes only at the weekend. Weekdays I'm really busy."}
+],
+grammar:[
+{pattern:"平時 (ping4 si4)",desc:"Usually / in normal times. Contrast with 有時 (sometimes).",ex:"你平時幾點起身啊？(nei5 ping4 si4 gei2 dim2 hei2 san1 aa3?)",en:"What time do you usually get up?"},
+{pattern:"先至 (sin1 zi3)",desc:"Not until… / only then. The thing happens later than you'd think.",ex:"我八點半先至起身。(ngo5 baat3 dim2 bun3 sin1 zi3 hei2 san1)",en:"I don't get up until 8:30."},
+{pattern:"返 (faan1)",desc:"Return / go to (a usual place). 返工, 返屋企, 返夜晚. Tone 1 — not faan2.",ex:"返屋企煮飯 (faan1 uk1 kei2 zyu2 faan6)",en:"Go home and cook."},
+{pattern:"沖完涼 (cung1 jyun4 loeng4)",desc:"Verb + 完 = after finishing. 沖涼 = shower, so 沖完涼 = after showering.",ex:"沖完涼就瞓 (cung1 jyun4 loeng4 zau6 fan3)",en:"After showering, (I) sleep."},
+{pattern:"唔使…咩？(m4 sai2… me1?)",desc:"You don't need to…? 咩 adds surprise.",ex:"你唔使返工咩？(nei5 m4 sai2 faan1 gung1 me1?)",en:"You don't have to work (or what)?"}
+],
+quiz:[
+{q:'"起身" means:',opts:["get up","sit down","lie down","go out"],ans:0},
+{q:'"晏晝" means:',opts:["morning","midnight","afternoon","weekend"],ans:2},
+{q:'"沖涼" means:',opts:["wash clothes","swim","drink cold water","shower"],ans:3},
+{q:'"瞓覺" means:',opts:["wake up","exercise","sleep","cook"],ans:2},
+{q:'"先至" means:',opts:["already","never","always","not until / only then"],ans:3},
+{q:'"攰" means:',opts:["hungry","happy","busy","tired"],ans:3},
+{q:"A works:",opts:["early mornings","weekends only","nights","from home at 7"],ans:2},
+{q:'"返" (go back / to work) is:',opts:["faan2","faan4","faan1","faan6"],ans:2}
+]},
+
+{id:112,title:"L12 身體感覺",subtitle:"Body and feelings · sick, tired, angry, worried",
+vocab:[
+{c:"身體",j:"san1 tai2",e:"body; health"},
+{c:"唔舒服",j:"m4 syu1 fuk6",e:"unwell / not comfortable"},
+{c:"頭痛",j:"tau4 tung3",e:"headache"},
+{c:"肚痛",j:"tou5 tung3",e:"stomach ache"},
+{c:"發燒",j:"faat3 siu1",e:"to have a fever"},
+{c:"攰",j:"gui6",e:"tired"},
+{c:"精神",j:"zing1 san4",e:"energetic; in good spirits"},
+{c:"嬲",j:"nau1",e:"angry"},
+{c:"擔心",j:"daam1 sam1",e:"to worry"},
+{c:"怕",j:"paa3",e:"to be afraid"},
+{c:"辛苦",j:"san1 fu2",e:"tough; having a hard time"},
+{c:"暈",j:"wan4",e:"dizzy"},
+{c:"痛",j:"tung3",e:"painful; to hurt"},
+{c:"面色",j:"min6 sik1",e:"complexion / how you look"},
+{c:"睇醫生",j:"tai2 ji1 sang1",e:"to see a doctor"},
+{c:"食藥",j:"sik6 joek6",e:"to take medicine"},
+{c:"請假",j:"cing2 gaa3",e:"to ask for leave"},
+{c:"好返",j:"hou2 faan1",e:"to get better"},
+{c:"休息",j:"jau1 sik1",e:"to rest"},
+{c:"打俾",j:"daa2 bei2",e:"to call (someone)"}
+],
+dialogue:[
+{speaker:"A",c:"你今日點啊？睇你面色唔係幾好。",j:"nei5 gam1 jat6 dim2 aa3? tai2 nei5 min6 sik1 m4 hai6 gei2 hou2.",e:"How are you today? You don't look great."},
+{speaker:"B",c:"我有啲唔舒服，頭痛同埋好攰。",j:"ngo5 jau5 di1 m4 syu1 fuk6, tau4 tung3 tung4 maai4 hou2 gui6.",e:"I'm a bit unwell — headache and really tired."},
+{speaker:"A",c:"有冇發燒啊？",j:"jau5 mou5 faat3 siu1 aa3?",e:"Got a fever?"},
+{speaker:"B",c:"冇，不過肚都有啲痛。",j:"mou5, bat1 gwo3 tou5 dou1 jau5 di1 tung3.",e:"No, but my stomach hurts a bit too."},
+{speaker:"A",c:"你請假未啊？應該去睇醫生。",j:"nei5 cing2 gaa3 mei6 aa3? jing1 goi1 heoi3 tai2 ji1 sang1.",e:"Have you taken leave yet? You should see a doctor."},
+{speaker:"B",c:"我請咗假。而家返咗屋企休息。",j:"ngo5 cing2 zo2 gaa3. ji4 gaa1 faan1 zo2 uk1 kei2 jau1 sik1.",e:"I already took leave. I'm home resting now."},
+{speaker:"A",c:"有冇食藥？要唔要我買嘢畀你？",j:"jau5 mou5 sik6 joek6? jiu3 m4 jiu3 ngo5 maai5 je5 bei2 nei5?",e:"Taken medicine? Want me to buy you anything?"},
+{speaker:"B",c:"食咗喇。唔使，多謝你擔心。",j:"sik6 zo2 laa3. m4 sai2, do1 ze6 nei5 daam1 sam1.",e:"Already have. No need — thanks for worrying."},
+{speaker:"A",c:"你好返先出街。有事打俾我。",j:"nei5 hou2 faan1 sin1 ceot1 gaai1. jau5 si6 daa2 bei2 ngo5.",e:"Only go out once you're better. Call me if anything."},
+{speaker:"B",c:"得，我休息兩日應該得。",j:"dak1, ngo5 jau1 sik1 loeng5 jat6 jing1 goi1 dak1.",e:"OK. Two days' rest should do it."}
+],
+grammar:[
+{pattern:"今日點啊？(gam1 jat6 dim2 aa3?)",desc:"How are you today? 點 = how. Casual check-in.",ex:"你今日點啊？睇你面色唔係幾好。(nei5 gam1 jat6 dim2 aa3? tai2 nei5 min6 sik1 m4 hai6 gei2 hou2)",en:"How are you today? You don't look so good."},
+{pattern:"請假 (cing2 gaa3)",desc:"Ask for time off. 假 is gaa3 (leave), not gaa2 (fake).",ex:"我請咗假。(ngo5 cing2 zo2 gaa3)",en:"I've taken leave."},
+{pattern:"好返先… (hou2 faan1 sin1…)",desc:"Only after recovering, then… 返 = back to a good state.",ex:"你好返先出街。(nei5 hou2 faan1 sin1 ceot1 gaai1)",en:"Only go out once you're better."},
+{pattern:"打俾 (daa2 bei2)",desc:"Call (someone). 打俾我 / 打俾佢. Same 俾 as 'give'.",ex:"有事打俾我。(jau5 si6 daa2 bei2 ngo5)",en:"If anything comes up, call me."},
+{pattern:"有啲 + adjective",desc:"A bit… 有啲唔舒服, 有啲痛, 有啲攰.",ex:"我有啲唔舒服。(ngo5 jau5 di1 m4 syu1 fuk6)",en:"I'm a bit unwell."}
+],
+quiz:[
+{q:'"唔舒服" means:',opts:["unwell","uncomfortable chair","unhappy only","busy"],ans:0},
+{q:'"攰" means:',opts:["hungry","cold","tired","bored"],ans:2},
+{q:'"請假" — 假 is pronounced:',opts:["gaa2 (fake)","haa6","gaa1","gaa3 (leave)"],ans:3},
+{q:'"睇醫生" means:',opts:["become a doctor","visit a friend","see a doctor","buy medicine"],ans:2},
+{q:'"好返" means:',opts:["go home","return a gift","look good","get better"],ans:3},
+{q:"B has:",opts:["only a fever","a broken arm","headache, tired, some stomach pain","nothing wrong"],ans:2},
+{q:'"嬲" means:',opts:["shy","sleepy","hungry","angry"],ans:3},
+{q:'"打俾我" means:',opts:["hit me","give me money","call me","wait for me"],ans:2}
+]},
+
+{id:113,title:"L13 語氣助詞",subtitle:"Particles · 喇啦喎啫咩嘅咋啩囉 — the soul of Cantonese",
+vocab:[
+{c:"啊",j:"aa3",e:"softens a sentence (very common)"},
+{c:"喇",j:"laa3",e:"already / a new situation"},
+{c:"啦",j:"laa1",e:"suggestion · come on / let's"},
+{c:"喎",j:"wo3",e:"new info / mild surprise"},
+{c:"啫",j:"ze1",e:"merely / just (downplaying)"},
+{c:"咩",j:"me1",e:"surprised question"},
+{c:"嘅",j:"ge2",e:"how come? (puzzled)"},
+{c:"咋",j:"zaa3",e:"only / that's all"},
+{c:"啩",j:"gwaa3",e:"I guess / probably"},
+{c:"囉",j:"lo1",e:"obvious / as you know"},
+{c:"㗎",j:"gaa3",e:"assertive 'it is so'"},
+{c:"添",j:"tim1",e:"even / on top of that"},
+{c:"呢",j:"ne1",e:"what about…? (topic)"},
+{c:"吓",j:"haa5",e:"a little / try doing"}
+],
+dialogue:[
+{speaker:"A",c:"你食飯喇未？",j:"nei5 sik6 faan6 laa3 mei6?",e:"Have you eaten yet?"},
+{speaker:"B",c:"食咗喇。",j:"sik6 zo2 laa3.",e:"Already have."},
+{speaker:"A",c:"咁早嘅？而家先六點喎。",j:"gam3 zou2 ge2? ji4 gaa1 sin1 luk6 dim2 wo3.",e:"How come so early? It's only six, you know."},
+{speaker:"B",c:"今日放得早啫，做咗六個鐘咋。",j:"gam1 jat6 fong3 dak1 zou2 ze1, zou6 zo2 luk6 go3 zung1 zaa3.",e:"Just got off early today — only worked six hours."},
+{speaker:"A",c:"你唔使加班咩？",j:"nei5 m4 sai2 gaa1 baan1 me1?",e:"You don't have to do overtime?"},
+{speaker:"B",c:"唔使喎，老闆冇嚟。",j:"m4 sai2 wo3, lou5 baan2 mou5 lai4.",e:"Turns out no — the boss didn't come in."},
+{speaker:"A",c:"咁好㗎。我仲要做到九點添。",j:"gam3 hou2 gaa3. ngo5 zung6 jiu3 zou6 dou3 gau2 dim2 tim1.",e:"That's so nice. I even have to work until nine."},
+{speaker:"B",c:"你做完就快啲返屋企啦。",j:"nei5 zou6 jyun4 zau6 faai3 di1 faan1 uk1 kei2 laa1.",e:"When you're done, hurry home."},
+{speaker:"A",c:"得囉。聽日約唔約得啊？",j:"dak1 lo1. ting1 jat6 joek3 m4 joek3 dak1 aa3?",e:"Alright then. Can we meet tomorrow?"},
+{speaker:"B",c:"應該得啩。到時覆你。",j:"jing1 goi1 dak1 gwaa3. dou3 si4 fuk1 nei5.",e:"Should be OK, I guess. I'll reply then."}
+],
+grammar:[
+{pattern:"喇 laa3 vs 啦 laa1",desc:"喇 = already / change of state (食咗喇). 啦 = suggestion or softening (去啦, 返屋企啦).",ex:"食咗喇。快啲返屋企啦。(sik6 zo2 laa3. faai3 di1 faan1 uk1 kei2 laa1)",en:"Already eaten. Hurry home, eh."},
+{pattern:"喎 (wo3)",desc:"Marks news or a small contradiction. 'I'll have you know… / turns out…'",ex:"而家先六點喎。唔使喎。(ji4 gaa1 sin1 luk6 dim2 wo3. m4 sai2 wo3)",en:"It's only six, you know. Oh — no need, actually."},
+{pattern:"啫 ze1 / 咋 zaa3",desc:"啫 downplays (it's just…). 咋 = only that much. Don't over-claim.",ex:"放得早啫，做咗六個鐘咋。(fong3 dak1 zou2 ze1, zou6 zo2 luk6 go3 zung1 zaa3)",en:"Just got off early — only six hours."},
+{pattern:"咩 me1 / 嘅 ge2",desc:"咩 = surprised question (唔使咩？). 嘅 ge2 = how come? (咁早嘅？) Not possessive ge3.",ex:"咁早嘅？你唔使加班咩？(gam3 zou2 ge2? nei5 m4 sai2 gaa1 baan1 me1?)",en:"How come so early? You don't have OT?"},
+{pattern:"啩 gwaa3 / 囉 lo1 / 㗎 gaa3 / 添 tim1",desc:"啩 = I guess. 囉 = obviously / closing the point. 㗎 = I assert. 添 = even, on top.",ex:"咁好㗎。應該得啩。得囉。做到九點添。(gam3 hou2 gaa3. jing1 goi1 dak1 gwaa3. dak1 lo1. zou6 dou3 gau2 dim2 tim1)",en:"That's so nice. Should be OK I guess. Alright. Even until nine."}
+],
+quiz:[
+{q:'"食咗喇" means:',opts:["let's eat","don't eat","already eaten","eat later"],ans:2},
+{q:'"去啦" is mainly:',opts:["a suggestion: come on, let's go","already gone","a question","anger"],ans:0},
+{q:'"喎" often marks:',opts:["past tense","a command","plural","new info / mild surprise"],ans:3},
+{q:'"啫" downplays, like:',opts:["definitely","never","just / merely","please"],ans:2},
+{q:'"咋" means:',opts:["only / that's all","too much","hurry","maybe"],ans:0},
+{q:'"啩" means:',opts:["definitely","never","thanks","I guess / probably"],ans:3},
+{q:'"咁早嘅？" — 嘅 is:',opts:["ge3 possessive","gaa3 assertive","ge2 how come?","gwaa3 guess"],ans:2},
+{q:'"添" in 做到九點添 means:',opts:["add food","already","please","even / on top of that"],ans:3}
+]},
+
+{id:114,title:"L14 做咗做緊",subtitle:"Aspect · done, doing, ever, will",
+vocab:[
+{c:"咗",j:"zo2",e:"completed (did / have done)"},
+{c:"緊",j:"gan2",e:"in progress (doing)"},
+{c:"過",j:"gwo3",e:"ever experienced"},
+{c:"會",j:"wui5",e:"will (future)"},
+{c:"住",j:"zyu6",e:"continuous state (hold / wait)"},
+{c:"完",j:"jyun4",e:"finished (verb+完)"},
+{c:"已經",j:"ji5 ging1",e:"already"},
+{c:"啱啱",j:"ngaam1 ngaam1",e:"just now"},
+{c:"打算",j:"daa2 syun3",e:"to plan to"},
+{c:"差唔多",j:"caa1 m4 do1",e:"almost / more or less"},
+{c:"先至",j:"sin1 zi3",e:"not until"},
+{c:"做緊",j:"zou6 gan2",e:"doing (right now)"},
+{c:"做咗",j:"zou6 zo2",e:"did / have done"},
+{c:"做過",j:"zou6 gwo3",e:"have done before"},
+{c:"食緊",j:"sik6 gan2",e:"eating (now)"},
+{c:"寫緊",j:"se2 gan2",e:"writing (now)"},
+{c:"開會",j:"hoi1 wui2",e:"to have a meeting"},
+{c:"跑步",j:"paau2 bou6",e:"to run / jogging"},
+{c:"報告",j:"bou3 gou3",e:"a report"},
+{c:"等住",j:"dang2 zyu6",e:"waiting (for someone)"}
+],
+dialogue:[
+{speaker:"A",c:"你食咗飯未啊？",j:"nei5 sik6 zo2 faan6 mei6 aa3?",e:"Have you eaten yet?"},
+{speaker:"B",c:"我食緊。你呢？",j:"ngo5 sik6 gan2. nei5 ne1?",e:"I'm eating. You?"},
+{speaker:"A",c:"我啱啱食完。你今日做過啲咩？",j:"ngo5 ngaam1 ngaam1 sik6 jyun4. nei5 gam1 jat6 zou6 gwo3 di1 me1?",e:"I just finished eating. What have you done today?"},
+{speaker:"B",c:"朝早開咗會，而家寫緊報告。",j:"ziu1 zou2 hoi1 zo2 wui2, ji4 gaa1 se2 gan2 bou3 gou3.",e:"Had a meeting this morning, writing a report now."},
+{speaker:"A",c:"你做完會去邊啊？",j:"nei5 zou6 jyun4 wui5 heoi3 bin1 aa3?",e:"Where will you go when you're done?"},
+{speaker:"B",c:"打算去跑步。你有冇跑過步啊？",j:"daa2 syun3 heoi3 paau2 bou6. nei5 jau5 mou5 paau2 gwo3 bou6 aa3?",e:"Planning to go for a run. Have you ever gone running?"},
+{speaker:"A",c:"跑過，不過好耐冇跑。",j:"paau2 gwo3, bat1 gwo3 hou2 noi6 mou5 paau2.",e:"I have — but not for a long time."},
+{speaker:"B",c:"一齊去啦，我差唔多寫完。",j:"jat1 cai4 heoi3 laa1, ngo5 caa1 m4 do1 se2 jyun4.",e:"Come with me — I'm almost done writing."},
+{speaker:"A",c:"我等你。你寫完先至出？",j:"ngo5 dang2 nei5. nei5 se2 jyun4 sin1 zi3 ceot1?",e:"I'll wait. You won't leave until you finish writing?"},
+{speaker:"B",c:"係，十分鐘。你喺度等住我。",j:"hai6, sap6 fan1 zung1. nei5 hai2 dou6 dang2 zyu6 ngo5.",e:"Yes, ten minutes. Wait here for me."}
+],
+grammar:[
+{pattern:"咗 (zo2) vs 完 (jyun4)",desc:"咗 = the action happened. 完 = it is finished through. 食咗 = have eaten; 食完 = finished eating.",ex:"我啱啱食完。你食咗飯未？(ngo5 ngaam1 ngaam1 sik6 jyun4. nei5 sik6 zo2 faan6 mei6?)",en:"I just finished eating. Have you eaten?"},
+{pattern:"緊 (gan2)",desc:"Right now in progress. 食緊, 寫緊, 嚟緊. Put after the verb.",ex:"我食緊。而家寫緊報告。(ngo5 sik6 gan2. ji4 gaa1 se2 gan2 bou3 gou3)",en:"I'm eating. Writing a report now."},
+{pattern:"過 (gwo3)",desc:"Have you ever…? Experience, not 'just now'. 有冇跑過步, 去過日本.",ex:"你有冇跑過步啊？跑過，不過好耐冇跑。(nei5 jau5 mou5 paau2 gwo3 bou6 aa3? paau2 gwo3, bat1 gwo3 hou2 noi6 mou5 paau2)",en:"Have you ever gone running? I have, but not for ages."},
+{pattern:"會 (wui5)",desc:"Will. Tone 5 — not wui6 (a club / meeting). 會去邊, 會遲.",ex:"你做完會去邊啊？(nei5 zou6 jyun4 wui5 heoi3 bin1 aa3?)",en:"Where will you go when you're done?"},
+{pattern:"住 (zyu6)",desc:"Hold a state. 等住 = keep waiting. 拎住 = holding. Not the same as 住 'to live'.",ex:"你喺度等住我。(nei5 hai2 dou6 dang2 zyu6 ngo5)",en:"Wait here for me."}
+],
+quiz:[
+{q:'"食緊" means:',opts:["already ate","will eat","eating now","never eats"],ans:2},
+{q:'"食咗" means:',opts:["have eaten / ate","eating now","please eat","won't eat"],ans:0},
+{q:'"跑過" means:',opts:["running now","will run","can't run","have run before (ever)"],ans:3},
+{q:'"會" (will) is:',opts:["wui6","wui2","wui5","wui1"],ans:2},
+{q:'"啱啱" means:',opts:["almost","always","just now","never"],ans:2},
+{q:'"差唔多" means:',opts:["exactly","too much","never","almost / more or less"],ans:3},
+{q:'"等住" means:',opts:["lived there","give up","keep waiting","sit down"],ans:2},
+{q:"B will go running:",opts:["yesterday","never","in the meeting","after finishing the report"],ans:3}
+]},
+
+{id:115,title:"L15 量詞",subtitle:"Classifiers · 個隻件杯間條張本",
+vocab:[
+{c:"個",j:"go3",e:"general classifier (人, 橙, 鐘)"},
+{c:"隻",j:"zek3",e:"classifier for animals, one of a pair"},
+{c:"件",j:"gin6",e:"classifier for clothes / matters"},
+{c:"杯",j:"bui1",e:"classifier for cups of drink"},
+{c:"碗",j:"wun2",e:"classifier for bowls"},
+{c:"碟",j:"dip6",e:"classifier for plates"},
+{c:"間",j:"gaan1",e:"classifier for buildings / shops / rooms"},
+{c:"條",j:"tiu4",e:"classifier for long things (路, 魚, 褲)"},
+{c:"張",j:"zoeng1",e:"classifier for flat things (紙, 檯, 床)"},
+{c:"本",j:"bun2",e:"classifier for books"},
+{c:"把",j:"baa2",e:"classifier for umbrellas, knives, chairs"},
+{c:"啲",j:"di1",e:"some (plural / uncounted)"},
+{c:"靚",j:"leng3",e:"good-looking; pretty"},
+{c:"遮",j:"ze1",e:"umbrella"},
+{c:"雜誌",j:"zaap6 zi3",e:"magazine"},
+{c:"青菜",j:"ceng1 coi3",e:"green vegetables"},
+{c:"麵",j:"min6",e:"noodles"},
+{c:"顏色",j:"ngaan4 sik1",e:"colour"},
+{c:"舖",j:"pou3",e:"shop"},
+{c:"隔籬",j:"gaak3 lei4",e:"next door"}
+],
+dialogue:[
+{speaker:"A",c:"你想飲咩？",j:"nei5 soeng2 jam2 me1?",e:"What do you want to drink?"},
+{speaker:"B",c:"我要一杯凍咖啡。你呢？",j:"ngo5 jiu3 jat1 bui1 dung3 gaa3 fe1. nei5 ne1?",e:"A cup of iced coffee. You?"},
+{speaker:"A",c:"我要一碗麵，再加碟青菜。",j:"ngo5 jiu3 jat1 wun2 min6, zoi3 gaa1 dip6 ceng1 coi3.",e:"A bowl of noodles, plus a plate of greens."},
+{speaker:"B",c:"你件衫好靚喎，邊度買啊？",j:"nei5 gin6 saam1 hou2 leng3 wo3, bin1 dou6 maai5 aa3?",e:"That shirt of yours is nice — where did you buy it?"},
+{speaker:"A",c:"隔籬間舖。平過百貨公司好多。",j:"gaak3 lei4 gaan1 pou3. peng4 gwo3 baak3 fo3 gung1 si1 hou2 do1.",e:"The shop next door. Much cheaper than the department store."},
+{speaker:"B",c:"我想買兩件。有冇其他顏色？",j:"ngo5 soeng2 maai5 loeng5 gin6. jau5 mou5 kei4 taa1 ngaan4 sik1?",e:"I want to buy two. Any other colours?"},
+{speaker:"A",c:"有啊。嗰件黑色都好睇。",j:"jau5 aa3. go2 gin6 hak1 sik1 dou1 hou2 tai2.",e:"Yes. That black one looks good too."},
+{speaker:"B",c:"我哋去睇下。你帶咗把遮未？而家好似要落雨。",j:"ngo5 dei6 heoi3 tai2 haa5. nei5 daai3 zo2 baa2 ze1 mei6? ji4 gaa1 hou2 ci5 jiu3 lok6 jyu5.",e:"Let's go look. Did you bring an umbrella? Looks like rain."},
+{speaker:"A",c:"帶咗。仲有本雜誌想喺咖啡店睇。",j:"daai3 zo2. zung6 jau5 bun2 zaap6 zi3 soeng2 hai2 gaa3 fe1 dim3 tai2.",e:"Got it. I've also got a magazine I want to read at the café."},
+{speaker:"B",c:"得，買完衫去飲咖啡。",j:"dak1, maai5 jyun4 saam1 heoi3 jam2 gaa3 fe1.",e:"OK — after buying clothes, coffee."}
+],
+grammar:[
+{pattern:"number + classifier + noun",desc:"Cantonese almost never says 一衫. It's 一件衫, 一碗麵, 一杯茶.",ex:"一杯凍咖啡、一碗麵、一碟青菜 (jat1 bui1 dung3 gaa3 fe1, jat1 wun2 min6, jat1 dip6 ceng1 coi3)",en:"A cup of iced coffee, a bowl of noodles, a plate of greens."},
+{pattern:"間 (gaan1)",desc:"Buildings, shops, rooms. 一間舖, 呢間屋, 嗰間商場. Not haan4.",ex:"隔籬間舖 (gaak3 lei4 gaan1 pou3)",en:"The shop next door."},
+{pattern:"件 (gin6)",desc:"Clothes and 'matters'. 一件衫, 呢件事. 兩件 = two pieces.",ex:"我想買兩件。嗰件黑色都好睇。(ngo5 soeng2 maai5 loeng5 gin6. go2 gin6 hak1 sik1 dou1 hou2 tai2)",en:"I want to buy two. That black one looks good too."},
+{pattern:"把 / 本 (baa2 / bun2)",desc:"把: umbrellas, knives, chairs (一把遮). 本: books and magazines (一本雜誌).",ex:"你帶咗把遮未？仲有本雜誌。(nei5 daai3 zo2 baa2 ze1 mei6? zung6 jau5 bun2 zaap6 zi3)",en:"Did you bring an umbrella? I've also got a magazine."},
+{pattern:"平過 (peng4 gwo3)",desc:"Cheaper than… 過 after an adjective = than. 靚過, 貴過, 遠過.",ex:"平過百貨公司好多 (peng4 gwo3 baak3 fo3 gung1 si1 hou2 do1)",en:"Much cheaper than the department store."}
+],
+quiz:[
+{q:"A cup of coffee is:",opts:["一個咖啡","一隻咖啡","一杯咖啡","一件咖啡"],ans:2},
+{q:"A shirt uses classifier:",opts:["隻","條","本","件"],ans:3},
+{q:"A shop / building uses:",opts:["間 gaan1","個","隻","把"],ans:0},
+{q:"An umbrella uses:",opts:["本","件","把","碗"],ans:2},
+{q:"A magazine / book uses:",opts:["張","隻","間","本"],ans:3},
+{q:'"靚" means:',opts:["cheap","far","good-looking","hot"],ans:2},
+{q:'"平過" means:',opts:["cheaper than","flatter than","nearer than","later than"],ans:0},
+{q:'"隔籬" means:',opts:["far away","upstairs","opposite a river","next door"],ans:3}
+]}
 ];
 
 let studyMode=localStorage.getItem('cantonese-mode')||'levels';
@@ -1311,8 +1891,8 @@ function render(){
     '<div class="tab'+(s==='flashcards'?' active':'')+'" onclick="showSection(\'flashcards\',this)">🃏 Flashcards</div>'+
     '<div class="tab'+(s==='grammar'?' active':'')+'" onclick="showSection(\'grammar\',this)">🔑 Grammar</div>'+
     '<div class="tab'+(s==='quiz'?' active':'')+'" onclick="showSection(\'quiz\',this)">❓ Quiz</div>'+
-        '<div class="tab'+(s==='quiz'?' active':'')+'" onclick="showSection(\'match\',this);initMatch()">🎯 Match</div>'+
-        '<div class="tab'+(s==='quiz'?' active':'')+'" onclick="showSection(\'game\',this)">✍️ Write</div>'+
+        '<div class="tab'+(s==='match'?' active':'')+'" onclick="showSection(\'match\',this);initMatch()">🎯 Match</div>'+
+        '<div class="tab'+(s==='game'?' active':'')+'" onclick="showSection(\'game\',this)">✍️ Write</div>'+
     '<div class="tab'+(s==='progress'?' active':'')+'" onclick="showSection(\'progress\',this)">📊 Progress</div>'+
     '</div>'+
     '<div id="sec-dialogue" class="section'+(s==='dialogue'?' active':'')+'">'+renderDialogue(L)+'</div>'+
@@ -1801,7 +2381,7 @@ function renderAchievements(){
     { icon: '💪', name: 'Consistent', desc: '7-day streak', check: stats.streak >= 7 },
     { icon: '✍️', name: 'Penman', desc: 'Practice 5 chars', check: stats.practiced >= 5 },
     { icon: '🖌️', name: 'Calligrapher', desc: 'Practice 20 chars', check: stats.practiced >= 20 },
-    { icon: '🏆', name: 'Explorer', desc: 'Open all 10 lessons', check: true },
+    { icon: '🏆', name: 'Explorer', desc: '15 everyday lessons ready', check: true },
   ];
   const unlocked = achs.filter(a => a.check).length;
   let h = '<div class="match-score" style="margin-top:24px"><span><span class="pairs">' + unlocked + '/' + achs.length + '</span> achievements</span></div>';
